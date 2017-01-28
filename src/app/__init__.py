@@ -5,6 +5,8 @@ from werkzeug.local import LocalProxy
 
 flask_app = Flask(__name__)
 
+def bootstrap_version():
+    return 'bootstrap 3.3.7'
 
 
 @flask_app.route('/')
@@ -14,4 +16,4 @@ def home():
 
 @flask_app.route('/bootstrap_info')
 def print_bootstrap_info():
-    return "We will be using bootstrap 3.3.7"
+    return "We will be using " + bootstrap_version()
