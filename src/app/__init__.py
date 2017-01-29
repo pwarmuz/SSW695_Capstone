@@ -5,6 +5,7 @@ from werkzeug.local import LocalProxy
 
 flask_app = Flask(__name__)
 
+
 @flask_app.url_defaults
 def hashed_static_file_url(endpoint, values):
     """
@@ -33,13 +34,8 @@ def hashed_static_file_url(endpoint, values):
 def static_file_hash(filename):
     return int(os.stat(filename).st_mtime)
 
+
 @flask_app.route('/')
 def home():
     return render_template('index.html')
 
-def bootstrap_version():
-    return 'bootstrap 3.3.7'
-
-@flask_app.route('/bootstrap_info')
-def print_bootstrap_info():
-    return "We will be using " + bootstrap_version()
