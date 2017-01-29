@@ -1,10 +1,24 @@
 <!DOCTYPE HTML>
-<html>
-<title>Welcome to Stevens Book Marketplace</title>
-<head>
-
-</head>
-<body>
-<h3> If you see this, flask is running...</h3>
-</body>
+<html lang="en">
+	<title>Welcome to Stevens Book Marketplace</title>
+	<head>
+		<meta charset="utf-8"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Static minified CSS -->
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrap-3.3.7-dist/css/bootstrap.min.css') }}" > 
+		<!-- googleapi minified CSS -->
+		<script type="text/javascript" src=https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" ></script>
+		<!-- Static minified CSS -->
+		<script type="text/javascript" src="{{ url_for('static', filename='bootstrap-3.3.7-dist/js/bootstrap.min.js') }}" ></script>
+	</head>
+	<body>
+		<div class="container-fluid">
+			<p><mark>Resize</mark> to see effects. This is all placed in a <code>container-fluid</code></p>
+			<div class="row">
+				<div class="col-md-4" style="background-color:lavender;">If you see this, flask is running</div>
+				<div class="col-md-4" style="background-color:lavenderblush;"> If you see this in lavenderblush then bootstrap is working</div>
+				<div class="col-md-4" class="bg-warning">This column should be bottom on mobile</div>
+			</div>
+		</div>
+	</body>
 </html>
