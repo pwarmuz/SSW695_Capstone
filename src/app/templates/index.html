@@ -1,9 +1,8 @@
 <!DOCTYPE HTML>
 <html lang="en">
-<title>Welcome to Stevens Book Marketplace</title>
-
 <head>
-    <meta charset="utf-8">
+    <title>Welcome to Stevens Book Marketplace</title>
+	<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/stylesheet.css') }}">
     <!-- Static minified CSS -->
@@ -12,129 +11,130 @@
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js " ></script>
 	<!-- Static minified CSS -->
 	<script type="text/javascript " src="{{ url_for( 'static', filename='bootstrap-3.3.7-dist/js/bootstrap.min.js' ) }} " ></script>
-	</head>
-	<body>
-		<nav id="mainNav " class="navbar navbar-default navbar-fixed-top navbar-custom affix-top ">
-        <div class="container ">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header page-scroll ">
-                <button type="button " class="navbar-toggle " data-toggle="collapse " data-target="#bs-example-navbar-collapse-1 ">
-                    <span class="sr-only ">Toggle navigation</span> Menu <i class="fa fa-bars "></i>
-                </button>
-                <a class="navbar-brand " href="#page-top ">Stevens Book Marketplace</a>
-            </div>
+</head>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse " id="bs-example-navbar-collapse-1 ">
-                <ul class="nav navbar-nav navbar-right">
-			    <li class="hidden active ">
-                        <a href="#page-top "></a>
-                    </li>
-                    <li class="page-scroll ">
-                        <a href="#about ">About</a>
-                    </li>
-                    <li class="page-scroll ">
-                        <a href="#contact ">Contact</a>
-                    </li>
-			    <li class="dropdown">
-			        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>
-			        <ul id="login-dp" class="dropdown-menu">
-			            <li>
-			                <div class="row">
-			                    <div class="col-md-12">
-			                        <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
-			                            <div class="form-group">
-			                                <label class="sr-only" for="exampleInputEmail2">Email address</label>
-			                                <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Email address" required>
-			                            </div>
-			                            <div class="form-group">
-			                                <label class="sr-only" for="exampleInputPassword2">Password</label>
-			                                <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
-			                                <div class="help-block text-right"><a href="">Forget the password ?</a></div>
-			                            </div>
-			                            <div class="form-group">
-			                                <button type="submit" class="btn btn-primary btn-block">Sign in</button>
-			                            </div>
-			                            <div class="checkbox">
-			                                <label>
-			                                    <input type="checkbox"> keep me logged-in
-			                                </label>
-			                            </div>
-			                        </form>
-			                    </div>
-			                    <div class="bottom text-center">
-			                        New here ? <a href="#"><b>Join Us</b></a>
-			                    </div>
-			                </div>
-			            </li>
-			        </ul>
-
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container-fluid -->
-    	</nav>
-
-		<div class="jumbotron text-center" id="stevens-banner">
-			<h1>Stevens Book Marketplace</h1>
-			<form class="form-inline ">
-  				<div class="input-group ">
-    				<input type="text " class="form-control " size="50 " placeholder="Search for books or by class ">
-    				<div class="input-group-btn ">
-      					<button class="btn btn-default " type="submit ">
-        					<i class="glyphicon glyphicon-search "></i>
-      					</button>
-    				</div>
-  				</div>
-			</form>	
+<body>
+	<nav id="mainNav " class="navbar navbar-default navbar-fixed-top " role="navigation " >
+	<div class="container ">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header page-scroll ">
+			<button type="button " class="navbar-toggle " data-toggle="collapse " data-target="#bs-example-navbar-collapse-1 ">
+				<span class="sr-only ">Toggle navigation</span> Menu <i class="fa fa-bars "></i>
+			</button>
+			<a class="navbar-brand " href="#page-top ">Stevens Book Marketplace</a>
 		</div>
 
-		<div class="container ">
-		    <div class="row ">
-		        <nav class="col-sm-3 " id="myScrollspy ">
-		            <ul class="nav nav-pills nav-stacked " data-spy="affix " data-offset-top="205 ">
-		                <li><a href="#BIA">BIA: Business Intelligence and Analytics</a></li>
-		                <li><a href="#BME">BME: Biomedical Engineering</a></li>
-		                <li><a href="#BT">BT: Business Technology</a></li>
-		            </ul>
-		        </nav>
-		        <div class="col-sm-9 ">
-					<div class="list-group">
-						<a href="#BIA" class="list-group-item active">BIA: Business Intelligence and Analytics - 686</a>
-						<div class="list-group-item">
-							Handbook Of Statistical Analysis & Data Mining Appl 
-							<span class="badge">ISBN 0123747651</span>
-							<span class="badge">Required</span>
-							<span class="badge">2</span>
-						</div>
-						<div class="list-group-item">
-							Analytics In A Big Data WorldBaesens
-							<span class="badge">ISBN 1118892704</span>
-							<span class="badge">Required</span>
-							<span class="badge">5</span>
-						</div>
-						<a href="#BME" class="list-group-item active">BME: Bio Medical Engineering - 420</a>
-						<div class="list-group-item">
-							Dsp First
-							<span class="badge">ISBN 0123747651</span>
-							<span class="badge">3</span>
-						</div>
-						<div class="list-group-item">
-							Biomedical Engineering Principles
-							<span class="badge">ISBN 1118892704</span>
-							<span class="badge">Required</span>
-							<span class="badge">0</span>
-						</div>
-						<a href="#BT" class="list-group-item active">BT: Business Technology - 100</a>
-						<div class="list-group-item">
-							Fundamentals Of Management
-							<span class="badge">ISBN 0123747651</span>
-							<span class="badge">1</span>
-						</div>
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse " id="bs-example-navbar-collapse-1 ">
+			<ul class="nav navbar-nav navbar-right">
+				<li class="hidden active ">
+					<a href="#page-top "></a>
+				</li>
+				<li class="page-scroll ">
+					<a href="#about ">About</a>
+				</li>
+				<li class="page-scroll ">
+					<a href="#contact ">Contact</a>
+				</li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>
+					<ul id="login-dp" class="dropdown-menu">
+						<li>
+							<div class="row">
+								<div class="col-md-12">
+									<form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
+										<div class="form-group">
+											<label class="sr-only" for="exampleInputEmail2">Email address</label>
+											<input type="email" class="form-control" id="exampleInputEmail2" placeholder="Email address" required>
+										</div>
+										<div class="form-group">
+											<label class="sr-only" for="exampleInputPassword2">Password</label>
+											<input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
+											<div class="help-block text-right"><a href="">Forget the password ?</a></div>
+										</div>
+										<div class="form-group">
+											<button type="submit" class="btn btn-primary btn-block">Sign in</button>
+										</div>
+										<div class="checkbox">
+											<label>
+												<input type="checkbox"> keep me logged-in
+											</label>
+										</div>
+									</form>
+								</div>
+								<div class="bottom text-center">
+									New here ? <a href="#"><b>Join Us</b></a>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<!-- /.navbar-collapse -->
+	</div>
+	<!-- /.container-fluid -->
+	</nav>
+
+	<div class="jumbotron text-center" id="stevens-banner">
+		<h1>Stevens Book Marketplace</h1>
+		<form class="form-inline ">
+			<div class="input-group ">
+				<input type="text " class="form-control " size="50 " placeholder="Search for books or by class ">
+				<div class="input-group-btn ">
+					<button class="btn btn-default " type="submit ">
+						<i class="glyphicon glyphicon-search "></i>
+					</button>
+				</div>
+			</div>
+		</form>
+	</div>
+
+	<div class="container ">
+		<div class="row ">
+			<nav class="col-sm-3 " id="myScrollspy ">
+				<ul class="nav nav-pills nav-stacked " data-spy="affix " data-offset-top="205 ">
+					<li><a href="#BIA">BIA: Business Intelligence and Analytics</a></li>
+					<li><a href="#BME">BME: Biomedical Engineering</a></li>
+					<li><a href="#BT">BT: Business Technology</a></li>
+				</ul>
+			</nav>
+			<div class="col-sm-9 ">
+				<div class="list-group">
+					<a href="#BIA" class="list-group-item active">BIA: Business Intelligence and Analytics - 686</a>
+					<div class="list-group-item">
+						Handbook Of Statistical Analysis & Data Mining Appl
+						<span class="badge">ISBN 0123747651</span>
+						<span class="badge">Required</span>
+						<span class="badge">2</span>
 					</div>
-		        </div>
-		    </div>
+					<div class="list-group-item">
+						Analytics In A Big Data WorldBaesens
+						<span class="badge">ISBN 1118892704</span>
+						<span class="badge">Required</span>
+						<span class="badge">5</span>
+					</div>
+					<a href="#BME" class="list-group-item active">BME: Bio Medical Engineering - 420</a>
+					<div class="list-group-item">
+						Dsp First
+						<span class="badge">ISBN 0123747651</span>
+						<span class="badge">3</span>
+					</div>
+					<div class="list-group-item">
+						Biomedical Engineering Principles
+						<span class="badge">ISBN 1118892704</span>
+						<span class="badge">Required</span>
+						<span class="badge">0</span>
+					</div>
+					<a href="#BT" class="list-group-item active">BT: Business Technology - 100</a>
+					<div class="list-group-item">
+						Fundamentals Of Management
+						<span class="badge">ISBN 0123747651</span>
+						<span class="badge">1</span>
+					</div>
+				</div>
+			</div>
 		</div>
-
-	</body>
+	</div>
+</body>
 </html>

@@ -3,6 +3,10 @@ Stevens Default Red #9D1535
 Stevens Hover Red #7e102a
 Stevens Grey #BBBCBE
 */
+/* 
+Required for NavBar
+*/
+body { padding-top: 70px; }
 
 #login-dp{
     min-width: 250px;

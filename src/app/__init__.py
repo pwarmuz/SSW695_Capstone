@@ -1,7 +1,6 @@
 import os
 
-from flask import Flask, render_template, jsonify, abort, request
-from werkzeug.local import LocalProxy
+from flask import Flask, render_template, request
 
 flask_app = Flask(__name__)
 
@@ -39,3 +38,6 @@ def static_file_hash(filename):
 def home():
     return render_template('index.html')
 
+@flask_app.route('/about')
+def about_page():
+    return render_template('about.html')

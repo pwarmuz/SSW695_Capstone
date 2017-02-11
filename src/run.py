@@ -2,8 +2,12 @@
 
 """ Run Web Server """
 import sys
+import signal
 import config_public as config
 from app import flask_app
+
+""" This fixes the slow Ctrl+C python interpreter """
+signal.signal(signal.SIGINT, signal.SIG_DFL)
 
 
 def local_server():
