@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <title>{% block title %}{% endblock %}</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/stylesheet.css') }}">
+    <!-- Static minified CSS -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrap-3.3.7-dist/css/bootstrap.min.css') }}">
+    <!-- googleapi minified CSS -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js "></script>
+    <!-- Static minified CSS -->
+    <script type="text/javascript " src="{{ url_for( 'static', filename='bootstrap-3.3.7-dist/js/bootstrap.min.js' ) }} "></script>
+
+    <!-- custom scripts -->
+    <script type="text/javascript " src="{{ url_for( 'static', filename='js/scripts.js' ) }} "></script>
+    <script type="text/javascript " src="{{ url_for( 'static', filename='js/sha256.js' ) }} "></script>
+</head>
+
+<body>
+  {% include 'nav.html' %}
+  {% block content %}
+  {% endblock %}
+</body>
+
+</html>
