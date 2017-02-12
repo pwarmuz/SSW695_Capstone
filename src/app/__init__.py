@@ -1,6 +1,6 @@
 import os
 
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request, jsonify, session, redirect, url_for
 from werkzeug.local import LocalProxy
 from context import get_db
 
@@ -50,6 +50,7 @@ def home():
 @flask_app.route('/signup', methods=['POST'])
 def signup():
 
+    name = request.form.get('name')
     email = request.form.get('email')
     password = request.form.get('password')
     
@@ -59,12 +60,14 @@ def signup():
     if r is not None:
         return 'already signed up!'
     
-    user = { 'email' : email,
+    user = { 'name' : name,
+             'email' : email,
              'password' : password }
 
     mongo_client.ssw695.users.insert_one(user)
 
-    return 'successfully signed up!'
+    session['username'] = name
+    return redirect(url_for('home'))
 
 @flask_app.route('/login', methods=['POST'])
 def login():
@@ -78,10 +81,20 @@ def login():
         if password != r.get('password'):
             return 'password is not correct.'
 
-        return 'Welcome!'
+        session['username'] = r.get('name')
+        return redirect(url_for('home'))
 
     return 'User not found.'
+
+@flask_app.route('/logout', methods=['POST'])
+def logout():
+    # remove the username from the session if it's there
+    session.pop('username', None)
+    return redirect(url_for('home'))
 
 @flask_app.route('/about')
 def about_page():
     return render_template('about.html')
+
+# set the secret key. 
+flask_app.secret_key = flask_app.config.get('secret_key')
