@@ -5,3 +5,6 @@
 .idea/*.xml
 .idea/*.iml
 .idea/*
+
+# private python files
+*_private.py
