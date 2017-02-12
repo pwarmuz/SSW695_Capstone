@@ -12,6 +12,10 @@
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js "></script>
     <!-- Static minified CSS -->
     <script type="text/javascript " src="{{ url_for( 'static', filename='bootstrap-3.3.7-dist/js/bootstrap.min.js' ) }} "></script>
+
+    <!-- custom scripts -->
+    <script type="text/javascript " src="{{ url_for( 'static', filename='js/scripts.js' ) }} "></script>
+    <script type="text/javascript " src="{{ url_for( 'static', filename='js/sha256.js' ) }} "></script>
 </head>
 
 <body>
@@ -31,7 +35,7 @@
                         <a href="#page-top "></a>
                     </li>
                     <li class="page-scroll ">
-                        <a href="#about ">About</a>
+                        <a href="/about ">About</a>
                     </li>
                     <li class="page-scroll ">
                         <a href="#contact ">Contact</a>
@@ -42,24 +46,28 @@
                             <li>
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
-                                            <div class="form-group">
-                                                <label class="sr-only" for="exampleInputEmail2">Email address</label>
-                                                <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Email address" required>
-                                            </div>
-                                            <div class="form-group">
-                                                <label class="sr-only" for="exampleInputPassword2">Password</label>
-                                                <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
-                                                <div class="help-block text-right"><a href="">Forget the password ?</a></div>
-                                            </div>
-                                            <div class="form-group">
-                                                <button type="submit" class="btn btn-primary btn-block">Sign in</button>
-                                            </div>
-                                            <div class="checkbox">
-                                                <label>
-                                                    <input type="checkbox"> keep me logged-in
-                                                </label>
-                                            </div>
+                                        <form class="form" onsubmit="return onLoginSubmit(this);" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
+                                        	<fieldset>
+	                                            <div class="form-group">
+	                                                <label class="sr-only" for="login-email">Email address</label>
+	                                                <input type="email" class="form-control" name="email" id="login-email" placeholder="Email address" required>
+	                                            </div>
+	                                            <div class="form-group">
+	                                                <label class="sr-only" for="login-password">Password</label>
+	                                                <input type="password" class="form-control" name="password" id="login-password" placeholder="Password" required>
+	                                                <!-- <div class="help-block text-right"><a href="">Forget the password ?</a></div> -->
+	                                            </div>
+	                                            <div class="form-group">
+	                                                <input id="login-submit" name="login-submit" type="submit" class="btn btn-primary btn-block" value="Sign In"></input>
+	                                            </div>
+	                                            <!--
+	                                            <div class="checkbox">
+	                                                <label>
+	                                                    <input type="checkbox"> keep me logged-in
+	                                                </label>
+	                                            </div>
+	                                            -->
+                                            </fieldset>
                                         </form>
                                     </div>
                                     <div class="bottom text-center">
@@ -91,28 +99,21 @@
 	            <div class="modal-body">
 	                <div id="myTabContent" class="tab-content">
 	                	<div class="tab-pane fade active in" id="signup">
-	                        <form class="form-horizontal">
+	                        <form class="form-horizontal" onsubmit="return onSignUpSubmit(this);" role="form" action="signup" method="post" accept-charset="UTF-8"> 
 	                            <fieldset>
 	                                <!-- Sign Up Form -->
 	                                <!-- Text input-->
 	                                <div class="control-group">
 	                                    <label class="control-label" for="Email">Email:</label>
 	                                    <div class="controls">
-	                                        <input id="Email" name="Email" class="form-control" type="text" placeholder="jsmith@stevens.edu" class="input-large" required="">
-	                                    </div>
-	                                </div>
-	                                <!-- Text input-->
-	                                <div class="control-group">
-	                                    <label class="control-label" for="userid">Username:</label>
-	                                    <div class="controls">
-	                                        <input id="userid" name="userid" class="form-control" type="text" placeholder="username" class="input-large" required="">
+	                                        <input id="email" name="email" class="form-control" type="email" placeholder="Email address" class="input-large" required>
 	                                    </div>
 	                                </div>
 	                                <!-- Password input-->
 	                                <div class="control-group">
 	                                    <label class="control-label" for="password">Password:</label>
 	                                    <div class="controls">
-	                                        <input id="password" name="password" class="form-control" type="password" placeholder="********" class="input-large" required="">
+	                                        <input id="password" name="password" class="form-control" type="password" placeholder="********" class="input-large" required>
 	                                        <em>1-8 Characters</em>
 	                                    </div>
 	                                </div>
@@ -120,42 +121,43 @@
 	                                <div class="control-group">
 	                                    <label class="control-label" for="reenterpassword">Re-Enter Password:</label>
 	                                    <div class="controls">
-	                                        <input id="reenterpassword" class="form-control" name="reenterpassword" type="password" placeholder="********" class="input-large" required="">
+	                                        <input id="reenterpassword" class="form-control" name="reenterpassword" type="password" placeholder="********" class="input-large" onChange="checkPasswordsMatch();" required>
 	                                    </div>
+	                                    <div class="registrationFormAlert" id="divCheckPasswordMatch">
 	                                </div>
 	                                <!-- Button -->
 	                                <div class="control-group">
 	                                    <label class="control-label" for="confirmsignup"></label>
 	                                    <div class="controls">
-	                                        <button id="confirmsignup" name="confirmsignup" class="btn btn-success">Sign Up</button>
+	                                        <input id="confirmsignup" type="submit" name="confirmsignup" class="btn btn-success" value="Sign Up"></input>
 	                                    </div>
 	                                </div>
 	                            </fieldset>
 	                        </form>
 	                    </div>
 	                    <div class="tab-pane fade" id="signin">
-	                        <form class="form-horizontal">
+	                        <form class="form-horizontal" onsubmit="return onLoginSubmit(this);" method="post" action="login" accept-charset="UTF-8" >
 	                            <fieldset>
 	                                <!-- Sign In Form -->
 	                                <!-- Text input-->
 	                                <div class="control-group">
-	                                    <label class="control-label" for="userid">Username:</label>
+	                                    <label class="control-label" for="emailinput">Email:</label>
 	                                    <div class="controls">
-	                                        <input required="" id="userid" name="userid" type="text" class="form-control" placeholder="username" class="input-medium" required="">
+	                                        <input required="" id="emailinput" name="email" type="text" class="form-control" placeholder="Email address" class="input-medium" required>
 	                                    </div>
 	                                </div>
 	                                <!-- Password input-->
 	                                <div class="control-group">
 	                                    <label class="control-label" for="passwordinput">Password:</label>
 	                                    <div class="controls">
-	                                        <input required="" id="passwordinput" name="passwordinput" class="form-control" type="password" placeholder="********" class="input-medium">
+	                                        <input required id="passwordinput" name="password" class="form-control" type="password" placeholder="********" class="input-medium">
 	                                    </div>
 	                                </div>
 	                                <!-- Button -->
 	                                <div class="control-group">
 	                                    <label class="control-label" for="signin"></label>
 	                                    <div class="controls">
-	                                        <button id="signin" name="signin" class="btn btn-success">Sign In</button>
+	                                        <input id="signin" type="submit" name="signin" class="btn btn-success" value="Sign In"></input>
 	                                    </div>
 	                                </div>
 	                            </fieldset>
