@@ -1,7 +1,21 @@
+/* 
+Stevens Default Red #9D1535
+Stevens Hover Red #7e102a
+Stevens Grey #BBBCBE
+*/
+/* 
+Required for NavBar
+*/
+body { padding-top: 70px; }
 
 #login-dp{
     min-width: 250px;
     padding: 14px 14px 0;
     overflow:hidden;
     background-color:rgba(255,255,255,.8);
+}
+
+#stevens-banner {
+	background-color: #9D1535;
+	color: #BBBCBE;
 }

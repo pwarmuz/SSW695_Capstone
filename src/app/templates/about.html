@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>About the Stevens book marketplace</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/stylesheet.css') }}">
+    <!-- Static minified CSS -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrap-3.3.7-dist/css/bootstrap.min.css') }}">
+    <!-- googleapi minified CSS -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js " ></script>
+	<!-- Static minified CSS -->
+	<script type="text/javascript " src="{{ url_for( 'static', filename='bootstrap-3.3.7-dist/js/bootstrap.min.js' ) }} " ></script>
+</head>
+<body>
+<nav id="mainNav " class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container ">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header page-scroll ">
+			<button type="button " class="navbar-toggle " data-toggle="collapse " data-target="#bs-example-navbar-collapse-1 ">
+				<span class="sr-only ">Toggle navigation</span> Menu <i class="fa fa-bars "></i>
+			</button>
+			<a class="navbar-brand " href="/">Stevens Book Marketplace</a>
+		</div>
+
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse " id="bs-example-navbar-collapse-1 ">
+			<ul class="nav navbar-nav navbar-right">
+				<li class="hidden active ">
+					<a href="#page-top "></a>
+				</li>
+				<li class="page-scroll ">
+					<a href="/about ">About</a>
+				</li>
+				<li class="page-scroll ">
+					<a href="#contact ">Contact</a>
+				</li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>
+					<ul id="login-dp" class="dropdown-menu">
+						<li>
+							<div class="row">
+								<div class="col-md-12">
+									<form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
+										<div class="form-group">
+											<label class="sr-only" for="exampleInputEmail2">Email address</label>
+											<input type="email" class="form-control" id="exampleInputEmail2" placeholder="Email address" required>
+										</div>
+										<div class="form-group">
+											<label class="sr-only" for="exampleInputPassword2">Password</label>
+											<input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
+											<div class="help-block text-right"><a href="">Forget the password ?</a></div>
+										</div>
+										<div class="form-group">
+											<button type="submit" class="btn btn-primary btn-block">Sign in</button>
+										</div>
+										<div class="checkbox">
+											<label>
+												<input type="checkbox"> keep me logged-in
+											</label>
+										</div>
+									</form>
+								</div>
+								<div class="bottom text-center">
+									New here ? <a href="#"><b>Join Us</b></a>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<!-- /.navbar-collapse -->
+	</div>
+	<!-- /.container-fluid -->
+</nav>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <p class="text-primary text-left">
+                <strong>Welcome to the Stevens book marketplace.</strong>
+                <em>The purpose of this project</em>
+                We hope our project inspires
+                <small>Thanks for using this.</small>
+            </p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="panel-group" id="panel-98210">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                         <a class="panel-title collapsed" data-toggle="collapse" data-parent="#panel-98210" href="#panel-element-226613">Phil Warmuz</a>
+                    </div>
+                    <div id="panel-element-226613" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <div class="list-group">
+                                <div class="list-group-item">
+                                Development Lead
+                                </div>
+                                <div class="list-group-item">
+                                Developer
+                                </div>
+                                <div class="list-group-item">
+                                Documentation Administrator
+                                </div>
+                                <div class="list-group-item">
+                                User Interface Design
+                                </div>
+                                <div class="list-group-item">
+                                Tester
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                         <a class="panel-title collapsed" data-toggle="collapse" data-parent="#panel-98210" href="#panel-element-707229">Constantine Davantzis</a>
+                    </div>
+                    <div id="panel-element-707229" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <div class="list-group">
+                                <div class="list-group-item">
+                                Architect
+                                </div>
+                                <div class="list-group-item">
+                                Developer
+                                </div>
+                                <div class="list-group-item">
+                                User Interface Design
+                                </div>
+                                <div class="list-group-item">
+                                Documentation
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                         <a class="panel-title collapsed" data-toggle="collapse" data-parent="#panel-98210" href="#panel-element-707230">Sal Amato</a>
+                    </div>
+                    <div id="panel-element-707230" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <div class="list-group">
+                                <div class="list-group-item">
+                                System Administrator
+                                </div>
+                                <div class="list-group-item">
+                                Developer
+                                </div>
+                                <div class="list-group-item">
+                                User Interface Design
+                                </div>
+                                <div class="list-group-item">
+                                Documentation
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                         <a class="panel-title collapsed" data-toggle="collapse" data-parent="#panel-98210" href="#panel-element-707233">Miguel Camacho</a>
+                    </div>
+                    <div id="panel-element-707233" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <div class="list-group">
+                                <div class="list-group-item">
+                                Test Lead
+                                </div>
+                                <div class="list-group-item">
+                                Developer
+                                </div>
+                                <div class="list-group-item">
+                                User Interface Design
+                                </div>
+                                <div class="list-group-item">
+                                Documentation
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="carousel slide" id="carousel-13236">
+                <ol class="carousel-indicators">
+                    <li data-slide-to="0" data-target="#carousel-13236">
+                    </li>
+                    <li data-slide-to="1" data-target="#carousel-13236">
+                    </li>
+                    <li data-slide-to="2" data-target="#carousel-13236" class="active">
+                    </li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <img alt="Carousel Bootstrap First" src="http://lorempixel.com/output/sports-q-c-1600-500-1.jpg">
+                        <div class="carousel-caption">
+                            <h4>
+                                Phil Warmuz
+                            </h4>
+                            <p>
+                                Had successfully lead the team for the SSW 690 project.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img alt="Carousel Bootstrap Second" src="http://lorempixel.com/output/sports-q-c-1600-500-2.jpg">
+                        <div class="carousel-caption">
+                            <h4>
+                                Constantine Davantzis
+                            </h4>
+                            <p>
+                                Had successfully designed the architecture for the SSW 690 project. Programmed the back end of the project.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img alt="Carousel Bootstrap Third" src="http://lorempixel.com/output/sports-q-c-1600-500-3.jpg">
+                        <div class="carousel-caption">
+                            <h4>
+                                Sal Amato
+                            </h4>
+                            <p>
+                                Had successfully administrated the server for the SSW 690 project. Programmed the front end of the project.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img alt="Carousel Bootstrap Third" src="http://lorempixel.com/output/sports-q-c-1600-500-3.jpg">
+                        <div class="carousel-caption">
+                            <h4>
+                                Miguel Camacho
+                            </h4>
+                            <p>
+                                New member to the team with extensive software engineering experience. Will be the lead tester of the current project.
+                            </p>
+                        </div>
+                    </div>
+                </div> <a class="left carousel-control" href="#carousel-13236" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a> <a class="right carousel-control" href="#carousel-13236" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2>
+                We hope you enjoy using the book marketplace.
+            </h2>
+            <p>
+                Some paragraph here.
+            </p>
+            <p>
+                <a class="btn" href="#">View details »</a>
+            </p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
