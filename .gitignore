@@ -8,3 +8,4 @@
 
 # private python files
 *_private.py
+src/app/scrapping/geckodriver.log
