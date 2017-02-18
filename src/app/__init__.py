@@ -47,6 +47,7 @@ def static_file_hash(filename):
 def home():
     return render_template('index.html')
 
+
 @flask_app.route('/signup', methods=['POST'])
 def signup():
 
@@ -69,6 +70,7 @@ def signup():
     session['username'] = name
     return redirect(url_for('home'))
 
+
 @flask_app.route('/login', methods=['POST'])
 def login():
     email = request.form.get('email')
@@ -86,15 +88,13 @@ def login():
 
     return 'User not found.'
 
+
 @flask_app.route('/logout', methods=['POST'])
 def logout():
     # remove the username from the session if it's there
     session.pop('username', None)
     return redirect(url_for('home'))
 
-@flask_app.route('/about')
-def about_page():
-    return render_template('about.html')
 
-# set the secret key. 
+# set the secret key.
 flask_app.secret_key = flask_app.config.get('secret_key')
