@@ -21,3 +21,9 @@ Environment:
 Features:
 ---------
   Website and Mobile Version
+
+Running Local copy:
+---------
+  Pre-requisite: You need Python 2.7
+  Call the run.py script. You can double click it in windows.
+  Connect to http://127.0.0.1:5000/ in your browser to view webpage.
