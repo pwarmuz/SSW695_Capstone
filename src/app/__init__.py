@@ -96,5 +96,15 @@ def logout():
     return redirect(url_for('home'))
 
 
+@flask_app.route('/submit_form', methods=['POST'])
+def submit_form():
+    username = request.form['username']
+    email = request.form['email']
+    subject = request.form['subject']
+    message = request.form['message']
+    print("contact form message from: {0} and email: {1} and subject: {2} and message {3}" .format(username, email, subject, message))
+    return redirect(url_for('home'))
+
+
 # set the secret key.
 flask_app.secret_key = flask_app.config.get('secret_key')

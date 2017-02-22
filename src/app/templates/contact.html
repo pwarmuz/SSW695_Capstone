@@ -9,7 +9,7 @@
     <h2 class="text-center">Contact Us</h2>
     <div class="errors">
     </div>
-    <form action="<?=$_SERVER['PHP_SELF']?>" class="contact-form" method="POST">
+    <form action="/submit_form" class="contact-form" method="POST">
         <div class="form-group">
         <input type="text" name="username" id="username" class="username form-control" placeholder="Your Username" value="">
         <i class="fa fa-user"></i>
@@ -23,7 +23,7 @@
 
 
         <div class="form-group">
-        <input type="text" name="email" class=" email form-control" placeholder="Your Email" value="">
+        <input type="text" name="email" class="email form-control" placeholder="Your Email" value="">
         <i class="fa fa-envelope"></i>
         <span class="asterix">*</span>
         <span class="cross">x</span>
@@ -53,11 +53,11 @@
         <span class="cross">x</span>
         <span class="verify"><i class="fa fa-check" aria-hidden="true"></i></span>
         <div class="alert alert-danger custom-alert">
-            message should be more than <b>10</b> characteres
+            message should be more than <b>10</b> characters
         </div>
         </div>
 
-        <div class="form-group">
+
         <input type="submit" value="send" class="btn btn-success btn-block">
         <i class="fa fa-paper-plane send-icon"></i>
         </div>
