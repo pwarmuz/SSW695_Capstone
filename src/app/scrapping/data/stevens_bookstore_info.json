@@ -137,16 +137,7 @@
             }
         }
     ],
-    "BT - 310": [
-        {
-            "is_required": true,
-            "stevens-metadata": {
-                "book-author": "None",
-                "book-binding": "Binding None",
-                "book-title": "No Text Required"
-            }
-        }
-    ],
+    "BT - 310": [],
     "BT - 321": [
         {
             "is_required": true,
@@ -719,26 +710,8 @@
             }
         }
     ],
-    "CPE - 424": [
-        {
-            "is_required": true,
-            "stevens-metadata": {
-                "book-author": "None",
-                "book-binding": "Binding None",
-                "book-title": "No Text Required"
-            }
-        }
-    ],
-    "CPE - 441": [
-        {
-            "is_required": true,
-            "stevens-metadata": {
-                "book-author": "None",
-                "book-binding": "Binding None",
-                "book-title": "No Text Required"
-            }
-        }
-    ],
+    "CPE - 424": [],
+    "CPE - 441": [],
     "CPE - 462": [
         {
             "is_required": true,
@@ -849,16 +822,7 @@
             }
         }
     ],
-    "CPE - 556": [
-        {
-            "is_required": true,
-            "stevens-metadata": {
-                "book-author": "None",
-                "book-binding": "Binding None",
-                "book-title": "No Text Required"
-            }
-        }
-    ],
+    "CPE - 556": [],
     "CPE - 593": [
         {
             "is_required": true,
@@ -895,26 +859,8 @@
             }
         }
     ],
-    "CPE - 631": [
-        {
-            "is_required": true,
-            "stevens-metadata": {
-                "book-author": "None",
-                "book-binding": "Binding None",
-                "book-title": "No Text Required"
-            }
-        }
-    ],
-    "CPE - 640": [
-        {
-            "is_required": true,
-            "stevens-metadata": {
-                "book-author": "None",
-                "book-binding": "Binding None",
-                "book-title": "No Text Required"
-            }
-        }
-    ],
+    "CPE - 631": [],
+    "CPE - 640": [],
     "CPE - 645": [
         {
             "is_required": true,
@@ -982,16 +928,7 @@
             }
         }
     ],
-    "CPE - 695": [
-        {
-            "is_required": true,
-            "stevens-metadata": {
-                "book-author": "None",
-                "book-binding": "Binding None",
-                "book-title": "No Text Required"
-            }
-        }
-    ],
+    "CPE - 695": [],
     "CS - 105": [
         {
             "is_required": true,
@@ -1004,16 +941,7 @@
             }
         }
     ],
-    "CS - 115": [
-        {
-            "is_required": true,
-            "stevens-metadata": {
-                "book-author": "None",
-                "book-binding": "Binding None",
-                "book-title": "No Text Required"
-            }
-        }
-    ],
+    "CS - 115": [],
     "CS - 135": [
         {
             "is_required": true,
@@ -1048,26 +976,8 @@
             }
         }
     ],
-    "CS - 347": [
-        {
-            "is_required": true,
-            "stevens-metadata": {
-                "book-author": "None",
-                "book-binding": "Binding None",
-                "book-title": "No Text Required"
-            }
-        }
-    ],
-    "CS - 370": [
-        {
-            "is_required": true,
-            "stevens-metadata": {
-                "book-author": "None",
-                "book-binding": "Binding None",
-                "book-title": "No Text Required"
-            }
-        }
-    ],
+    "CS - 347": [],
+    "CS - 370": [],
     "CS - 385": [
         {
             "is_required": false,
@@ -1198,16 +1108,7 @@
             }
         }
     ],
-    "CS - 595": [
-        {
-            "is_required": true,
-            "stevens-metadata": {
-                "book-author": "None",
-                "book-binding": "Binding None",
-                "book-title": "No Text Required"
-            }
-        }
-    ],
+    "CS - 595": [],
     "CS - 600": [
         {
             "is_required": true,
@@ -1219,26 +1120,8 @@
             }
         }
     ],
-    "CS - 677": [
-        {
-            "is_required": true,
-            "stevens-metadata": {
-                "book-author": "None",
-                "book-binding": "Binding None",
-                "book-title": "No Text Required"
-            }
-        }
-    ],
-    "CS - 810": [
-        {
-            "is_required": true,
-            "stevens-metadata": {
-                "book-author": "None",
-                "book-binding": "Binding None",
-                "book-title": "No Text Required"
-            }
-        }
-    ],
+    "CS - 677": [],
+    "CS - 810": [],
     "E - 126": [
         {
             "is_required": true,
@@ -1392,26 +1275,8 @@
             }
         }
     ],
-    "EE - 424": [
-        {
-            "is_required": true,
-            "stevens-metadata": {
-                "book-author": "None",
-                "book-binding": "Binding None",
-                "book-title": "No Text Required"
-            }
-        }
-    ],
-    "EE - 441": [
-        {
-            "is_required": true,
-            "stevens-metadata": {
-                "book-author": "None",
-                "book-binding": "Binding None",
-                "book-title": "No Text Required"
-            }
-        }
-    ],
+    "EE - 424": [],
+    "EE - 441": [],
     "EE - 448": [
         {
             "is_required": true,
@@ -1492,26 +1357,8 @@
             }
         }
     ],
-    "EE - 551": [
-        {
-            "is_required": true,
-            "stevens-metadata": {
-                "book-author": "None",
-                "book-binding": "Binding None",
-                "book-title": "No Text Required"
-            }
-        }
-    ],
-    "EE - 556": [
-        {
-            "is_required": true,
-            "stevens-metadata": {
-                "book-author": "None",
-                "book-binding": "Binding None",
-                "book-title": "No Text Required"
-            }
-        }
-    ],
+    "EE - 551": [],
+    "EE - 556": [],
     "EE - 575": [
         {
             "is_required": true,
@@ -1524,16 +1371,7 @@
             }
         }
     ],
-    "EE - 585": [
-        {
-            "is_required": true,
-            "stevens-metadata": {
-                "book-author": "None",
-                "book-binding": "Binding None",
-                "book-title": "No Text Required"
-            }
-        }
-    ],
+    "EE - 585": [],
     "EE - 590": [
         {
             "is_required": true,
@@ -1626,26 +1464,8 @@
             }
         }
     ],
-    "EE - 627": [
-        {
-            "is_required": true,
-            "stevens-metadata": {
-                "book-author": "None",
-                "book-binding": "Binding None",
-                "book-title": "No Text Required"
-            }
-        }
-    ],
-    "EE - 629": [
-        {
-            "is_required": true,
-            "stevens-metadata": {
-                "book-author": "None",
-                "book-binding": "Binding None",
-                "book-title": "No Text Required"
-            }
-        }
-    ],
+    "EE - 627": [],
+    "EE - 629": [],
     "EM - 322": [
         {
             "is_required": true,
@@ -1658,16 +1478,7 @@
             }
         }
     ],
-    "EM - 345": [
-        {
-            "is_required": true,
-            "stevens-metadata": {
-                "book-author": "None",
-                "book-binding": "Binding None",
-                "book-title": "No Text Required"
-            }
-        }
-    ],
+    "EM - 345": [],
     "EM - 357": [
         {
             "is_required": true,
@@ -2685,16 +2496,7 @@
             }
         }
     ],
-    "HST - 415": [
-        {
-            "is_required": true,
-            "stevens-metadata": {
-                "book-author": "None",
-                "book-binding": "Binding None",
-                "book-title": "No Text Required"
-            }
-        }
-    ],
+    "HST - 415": [],
     "MA - 119": [
         {
             "is_required": true,
@@ -2717,26 +2519,8 @@
             }
         }
     ],
-    "MA - 122": [
-        {
-            "is_required": true,
-            "stevens-metadata": {
-                "book-author": "None",
-                "book-binding": "Binding None",
-                "book-title": "No Text Required"
-            }
-        }
-    ],
-    "MA - 123": [
-        {
-            "is_required": true,
-            "stevens-metadata": {
-                "book-author": "None",
-                "book-binding": "Binding None",
-                "book-title": "No Text Required"
-            }
-        }
-    ],
+    "MA - 122": [],
+    "MA - 123": [],
     "MA - 134": [
         {
             "is_required": true,
@@ -2749,16 +2533,7 @@
             }
         }
     ],
-    "MA - 188": [
-        {
-            "is_required": true,
-            "stevens-metadata": {
-                "book-author": "None",
-                "book-binding": "Binding None",
-                "book-title": "No Text Required"
-            }
-        }
-    ],
+    "MA - 188": [],
     "MA - 221": [
         {
             "is_required": true,
@@ -2876,16 +2651,7 @@
             }
         }
     ],
-    "MA - 606": [
-        {
-            "is_required": true,
-            "stevens-metadata": {
-                "book-author": "None",
-                "book-binding": "Binding None",
-                "book-title": "No Text Required"
-            }
-        }
-    ],
+    "MA - 606": [],
     "MA - 612": [
         {
             "is_required": true,
@@ -2898,16 +2664,7 @@
             }
         }
     ],
-    "MA - 620": [
-        {
-            "is_required": true,
-            "stevens-metadata": {
-                "book-author": "None",
-                "book-binding": "Binding None",
-                "book-title": "No Text Required"
-            }
-        }
-    ],
+    "MA - 620": [],
     "MA - 623": [
         {
             "is_required": true,
@@ -3393,16 +3150,7 @@
             }
         }
     ],
-    "MGT - 546": [
-        {
-            "is_required": true,
-            "stevens-metadata": {
-                "book-author": "None",
-                "book-binding": "Binding None",
-                "book-title": "No Text Required"
-            }
-        }
-    ],
+    "MGT - 546": [],
     "MGT - 606": [
         {
             "is_required": true,
@@ -3573,16 +3321,7 @@
             }
         }
     ],
-    "MT - 685": [
-        {
-            "is_required": true,
-            "stevens-metadata": {
-                "book-author": "None",
-                "book-binding": "Binding None",
-                "book-title": "No Text Required"
-            }
-        }
-    ],
+    "MT - 685": [],
     "MT - 690": [
         {
             "is_required": false,
@@ -3637,16 +3376,7 @@
             }
         }
     ],
-    "NIS - 584": [
-        {
-            "is_required": true,
-            "stevens-metadata": {
-                "book-author": "None",
-                "book-binding": "Binding None",
-                "book-title": "No Text Required"
-            }
-        }
-    ],
+    "NIS - 584": [],
     "NIS - 593": [
         {
             "is_required": true,
@@ -3851,16 +3581,7 @@
             }
         }
     ],
-    "PEP - 351": [
-        {
-            "is_required": true,
-            "stevens-metadata": {
-                "book-author": "None",
-                "book-binding": "Binding None",
-                "book-title": "No Text Required"
-            }
-        }
-    ],
+    "PEP - 351": [],
     "PEP - 503": [
         {
             "is_required": true,
@@ -3894,16 +3615,7 @@
             }
         }
     ],
-    "PEP - 528": [
-        {
-            "is_required": true,
-            "stevens-metadata": {
-                "book-author": "None",
-                "book-binding": "Binding None",
-                "book-title": "No Text Required"
-            }
-        }
-    ],
+    "PEP - 528": [],
     "PEP - 542": [
         {
             "is_required": true,
@@ -3928,16 +3640,7 @@
             }
         }
     ],
-    "PEP - 685": [
-        {
-            "is_required": true,
-            "stevens-metadata": {
-                "book-author": "None",
-                "book-binding": "Binding None",
-                "book-title": "No Text Required"
-            }
-        }
-    ],
+    "PEP - 685": [],
     "PEP - 690": [
         {
             "is_required": false,
@@ -4043,16 +3746,7 @@
             }
         }
     ],
-    "QF - 402": [
-        {
-            "is_required": true,
-            "stevens-metadata": {
-                "book-author": "None",
-                "book-binding": "Binding None",
-                "book-title": "No Text Required"
-            }
-        }
-    ],
+    "QF - 402": [],
     "SSW - 215": [
         {
             "is_required": false,
@@ -4144,16 +3838,7 @@
             }
         }
     ],
-    "TM - 584": [
-        {
-            "is_required": true,
-            "stevens-metadata": {
-                "book-author": "None",
-                "book-binding": "Binding None",
-                "book-title": "No Text Required"
-            }
-        }
-    ],
+    "TM - 584": [],
     "TM - 605": [
         {
             "is_required": true,
@@ -4178,16 +3863,7 @@
             }
         }
     ],
-    "TM - 617": [
-        {
-            "is_required": true,
-            "stevens-metadata": {s
-                "book-author": "None",
-                "book-binding": "Binding None",
-                "book-title": "No Text Required"
-            }
-        }
-    ],
+    "TM - 617": [],
     "TM - 650": [
         {
             "is_required": true,
