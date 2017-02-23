@@ -1,0 +1,108 @@
+
+/*start .contact-form*/
+
+.contact-section h2{
+	font-weight: bold;
+	font-size: 40px;
+}
+.contact-form{
+	max-width: 500px;
+	margin: 50px auto;
+}
+
+.contact-form .form-group{
+	margin-bottom: 0;
+	position: relative;
+}
+.contact-form input,
+.contact-form textarea{
+	margin-bottom: 20px;
+	background: #ececec;
+}
+
+.contact-form input:focus{
+
+	border: 1px solid #999;
+	outline: none !important;
+}
+
+
+.contact-form input{
+	padding-left: 30px;
+}
+
+.contact-form textarea{
+	height: 300px !important;
+	padding-left: 30px;
+
+}
+.contact-form input[type="submit"]{
+
+	background: #5cb85c;
+}
+
+.contact-form i{
+	height: 0;
+	float: left;
+	position: relative;
+	top: -44px;
+	left: 10px;
+	color: #fff;
+}
+
+.contact-form .message-icon{
+	position: relative;
+    top: -310px;
+}
+
+.contact-form .send-icon{
+	color: #fff;
+}
+
+
+.asterix{
+	position: absolute;
+    color: red;
+    float: right;
+    font-size: 59px;
+    height: 0;
+    /* overflow: hidden; */
+    right: 0;
+    top: -11px;/
+}
+
+span.cross {
+    position: absolute;
+    color: red;
+    float: right;
+    font-size: 26px;
+    height: 0;
+    /* overflow: hidden; */
+    right: 3px;
+    top: -5px;
+    display: none;
+}
+
+i.fa.fa-check {
+    color: green;
+}
+
+span.verify {
+    position: absolute;
+    float: right;
+    font-size: 22px;
+    height: 0;
+    right: 10px;
+    top: 49px;
+    display: none;
+}
+
+#alert-custom {
+    padding: 7px;
+    padding-right: 31px;
+}
+
+.custom-alert{
+	 padding: 7px;
+	 display: none;
+}

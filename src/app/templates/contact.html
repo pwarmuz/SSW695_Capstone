@@ -1,0 +1,77 @@
+{% block contact %}
+<!-- custom scripts -->
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/contact.css') }}">
+<script type="text/javascript " src="{{ url_for( 'static', filename='js/contact.js' ) }} "></script>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+    <h2 class="text-center">Contact Us</h2>
+    <div class="errors">
+    </div>
+    <form action="/submit_form" class="contact-form" method="POST">
+        <div class="form-group">
+        <input type="text" name="username" id="username" class="username form-control" placeholder="Your Username" value="">
+        <i class="fa fa-user"></i>
+        <span class="asterix">*</span>
+        <span class="cross">x</span>
+        <span class="verify"><i class="fa fa-check" aria-hidden="true"></i></span>
+        <div class="alert alert-danger custom-alert">
+            user must be more than 3 letter
+        </div>
+        </div>
+
+
+        <div class="form-group">
+        <input type="text" name="email" class="email form-control" placeholder="Your Email" value="">
+        <i class="fa fa-envelope"></i>
+        <span class="asterix">*</span>
+        <span class="cross">x</span>
+        <span class="verify"><i class="fa fa-check" aria-hidden="true"></i></span>
+        <div class="alert alert-danger custom-alert">
+            Email can not be empty
+        </div>
+        </div>
+
+
+        <div class="form-group">
+        <input type="text" name="subject" class="subject form-control" placeholder="Your subject" value="">
+        <i class="fa fa-pencil"></i>
+        <span class="asterix">*</span>
+        <span class="cross">x</span>
+        <span class="verify"><i class="fa fa-check" aria-hidden="true"></i></span>
+        <div class="alert alert-danger custom-alert">
+            Subject can not be empty
+        </div>
+        </div>
+
+
+        <div class="form-group">
+        <textarea class=" message form-control" name="message" placeholder="Your Message"></textarea>
+        <i class="fa fa-comments message-icon"></i>
+        <span class="asterix">*</span>
+        <span class="cross">x</span>
+        <span class="verify"><i class="fa fa-check" aria-hidden="true"></i></span>
+        <div class="alert alert-danger custom-alert">
+            message should be more than <b>10</b> characters
+        </div>
+        </div>
+
+
+        <input type="submit" value="send" class="btn btn-success btn-block">
+        <i class="fa fa-paper-plane send-icon"></i>
+        </div>
+    </form>
+        </div>
+    </div>
+    <div class="row">
+		<div class="col-md-12">
+			<address>
+                <strong>The Stevens Book Marketplace</strong><br /> Stevens Institute of Technology<br /> 1 Castle Point Terrace<br /> Hoboken, NJ 07030 <br />
+			</address>
+		</div>
+	</div>
+</div>
+
+{% endblock %}
+
