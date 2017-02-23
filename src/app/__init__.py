@@ -47,6 +47,17 @@ def static_file_hash(filename):
 def home():
     return render_template('index.html')
 
+
+@flask_app.route('/about')
+def about():
+    return render_template('about.html')
+
+
+@flask_app.route('/contact')
+def contact():
+    return render_template('contact.html')
+
+
 @flask_app.route('/signup', methods=['POST'])
 def signup():
 
@@ -69,6 +80,7 @@ def signup():
     session['username'] = name
     return redirect(url_for('home'))
 
+
 @flask_app.route('/login', methods=['POST'])
 def login():
     email = request.form.get('email')
@@ -86,15 +98,23 @@ def login():
 
     return 'User not found.'
 
+
 @flask_app.route('/logout', methods=['POST'])
 def logout():
     # remove the username from the session if it's there
     session.pop('username', None)
     return redirect(url_for('home'))
 
-@flask_app.route('/about')
-def about_page():
-    return render_template('about.html')
 
-# set the secret key. 
+@flask_app.route('/submit_form', methods=['POST'])
+def submit_form():
+    username = request.form['username']
+    email = request.form['email']
+    subject = request.form['subject']
+    message = request.form['message']
+    print("contact form message from: {0} and email: {1} and subject: {2} and message {3}" .format(username, email, subject, message))
+    return redirect(url_for('home'))
+
+
+# set the secret key.
 flask_app.secret_key = flask_app.config.get('secret_key')
