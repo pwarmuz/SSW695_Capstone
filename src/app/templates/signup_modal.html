@@ -1,0 +1,92 @@
+<!-- Modal -->
+<div class="modal fade bs-modal-sm" id="signup-modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <br>
+            <div class="bs-example bs-example-tabs">
+                <ul id="myTab" class="nav nav-tabs">
+                    <li class="active"><a href="#signup" data-toggle="tab">Sign Up</a></li>
+                    <li class=""><a href="#signin" data-toggle="tab">Sign In</a></li>
+                </ul>
+            </div>
+            <div class="modal-body">
+                <div id="myTabContent" class="tab-content">
+                    <div class="tab-pane fade active in" id="signup">
+                        <form class="form-horizontal" onsubmit="return onSignUpSubmit(this);" role="form" action="signup" method="post" accept-charset="UTF-8">
+                            <fieldset>
+                                <!-- Sign Up Form -->
+                                <!-- Text input-->
+                                <div class="control-group">
+                                    <label class="control-label" for="Name">Name:</label>
+                                    <div class="controls">
+                                        <input id="name" name="name" class="form-control" type="text" placeholder="Your Name" class="input-large" required>
+                                    </div>
+                                </div>
+                                <!-- Text input-->
+                                <div class="control-group">
+                                    <label class="control-label" for="Email">Email:</label>
+                                    <div class="controls">
+                                        <input id="email" name="email" class="form-control" type="email" placeholder="Email address" class="input-large" required>
+                                    </div>
+                                </div>
+                                <!-- Password input-->
+                                <div class="control-group">
+                                    <label class="control-label" for="password">Password:</label>
+                                    <div class="controls">
+                                        <input id="password" name="password" class="form-control" type="password" placeholder="********" class="input-large" required>
+                                        <em>1-8 Characters</em>
+                                    </div>
+                                </div>
+                                <!-- Text input-->
+                                <div class="control-group">
+                                    <label class="control-label" for="reenterpassword">Re-Enter Password:</label>
+                                    <div class="controls">
+                                        <input id="reenterpassword" class="form-control" name="reenterpassword" type="password" placeholder="********" class="input-large" onChange="checkPasswordsMatch();" required>
+                                    </div>
+                                    <div class="registrationFormAlert" id="divCheckPasswordMatch">
+                                    </div>
+                                    <!-- Button -->
+                                    <div class="control-group">
+                                        <label class="control-label" for="confirmsignup"></label>
+                                        <div class="controls">
+                                            <input id="confirmsignup" type="submit" name="confirmsignup" class="btn btn-success" value="Sign Up"></input>
+                                        </div>
+                                    </div>
+                            </fieldset>
+                        </form>
+                        </div>
+                        <div class="tab-pane fade" id="signin">
+                            <form class="form-horizontal" onsubmit="return onLoginSubmit(this);" method="post" action="login" accept-charset="UTF-8">
+                                <fieldset>
+                                    <!-- Sign In Form -->
+                                    <!-- Text input-->
+                                    <div class="control-group">
+                                        <label class="control-label" for="emailinput">Email:</label>
+                                        <div class="controls">
+                                            <input required="" id="emailinput" name="email" type="text" class="form-control" placeholder="Email address" class="input-medium" required>
+                                        </div>
+                                    </div>
+                                    <!-- Password input-->
+                                    <div class="control-group">
+                                        <label class="control-label" for="passwordinput">Password:</label>
+                                        <div class="controls">
+                                            <input required id="passwordinput" name="password" class="form-control" type="password" placeholder="********" class="input-medium">
+                                        </div>
+                                    </div>
+                                    <!-- Button -->
+                                    <div class="control-group">
+                                        <label class="control-label" for="signin"></label>
+                                        <div class="controls">
+                                            <input id="signin" type="submit" name="signin" class="btn btn-success" value="Sign In"></input>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end signup modal -->

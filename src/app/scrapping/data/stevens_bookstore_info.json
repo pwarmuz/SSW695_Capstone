@@ -1,0 +1,4203 @@
+{
+    "BIA - 686": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Nisbet",
+                "book-binding": "Binding Hardback",
+                "book-title": "Handbook Of Statistical Analysis & Data Mining Appl (W/Cd Only)",
+                "isbn": "0123747651"
+            }
+        },
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Baesens",
+                "book-binding": "Binding None",
+                "book-edition": "Edition 1",
+                "book-title": "Analytics In A Big Data World",
+                "isbn": "1118892704"
+            }
+        }
+    ],
+    "BIA - 810": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Hurwitz",
+                "book-binding": "Binding None",
+                "book-edition": "Edition 1",
+                "book-title": "Cognitive Computing",
+                "isbn": "1118896629"
+            }
+        }
+    ],
+    "BME - 460": [
+        {
+            "is_required": false,
+            "stevens-metadata": {
+                "book-author": "Mcclellan",
+                "book-binding": "Binding Hardback",
+                "book-title": "Dsp First (W/Cd Only)",
+                "isbn": "0132431718"
+            }
+        },
+        {
+            "is_required": false,
+            "stevens-metadata": {
+                "book-author": "Ritter",
+                "book-binding": "Binding None",
+                "book-edition": "Edition 2",
+                "book-title": "Biomedical Engineering Principles",
+                "isbn": "1439812322"
+            }
+        }
+    ],
+    "BME - 506": [
+        {
+            "is_required": false,
+            "stevens-metadata": {
+                "book-author": "Brinckmann",
+                "book-binding": "Binding None",
+                "book-edition": "Edition 1",
+                "book-title": "Musculoskeletal Biomechenics",
+                "isbn": "1588900800"
+            }
+        }
+    ],
+    "BME - 556": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Ethier",
+                "book-binding": "Binding Hardback",
+                "book-title": "Introductory Biomechanics",
+                "isbn": "0521841127"
+            }
+        }
+    ],
+    "BME - 690": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Gomperts",
+                "book-binding": "Binding Paperback",
+                "book-edition": "Edition 3",
+                "book-title": "Signal Transduction",
+                "isbn": "0123948037"
+            }
+        }
+    ],
+    "BT - 100": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Robbins",
+                "book-binding": "Binding Paperback",
+                "book-edition": "Edition 10",
+                "book-title": "Fundamentals Of Management",
+                "isbn": "0134237471"
+            }
+        }
+    ],
+    "BT - 200": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Liu",
+                "book-binding": "Binding None",
+                "book-edition": "Edition 1",
+                "book-title": "Business (Swp) Stevens Custom-Bt 200 W/Code",
+                "isbn": "1269819038"
+            }
+        }
+    ],
+    "BT - 215": [],
+    "BT - 243": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Case",
+                "book-binding": "Binding Paperback",
+                "book-edition": "Edition 12",
+                "book-title": "Principles Of Macroeconomics",
+                "isbn": "0134078802"
+            }
+        }
+    ],
+    "BT - 244": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Case",
+                "book-binding": "Binding Paperback",
+                "book-edition": "Edition 12",
+                "book-title": "Principles Of Microeconomics",
+                "isbn": "0134078810"
+            }
+        }
+    ],
+    "BT - 310": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "None",
+                "book-binding": "Binding None",
+                "book-title": "No Text Required"
+            }
+        }
+    ],
+    "BT - 321": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Titman",
+                "book-binding": "Binding None",
+                "book-edition": "Edition 12",
+                "book-title": "Financial Mgmt:Principles... Looseleaf W/Mylab",
+                "isbn": "0133485560"
+            }
+        }
+    ],
+    "BT - 343": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Abel",
+                "book-binding": "Binding Looseleaf",
+                "book-edition": "Edition 9",
+                "book-title": "Macroeconomics",
+                "isbn": "013447256X"
+            }
+        }
+    ],
+    "BT - 372": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Blank",
+                "book-binding": "Binding Hardback",
+                "book-title": "Startup Owner's Manual",
+                "isbn": "0984999302"
+            }
+        }
+    ],
+    "BT - 413": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Cheeseman",
+                "book-binding": "Binding Hardback",
+                "book-edition": "Edition 9",
+                "book-title": "Business Law",
+                "isbn": "0134004000"
+            }
+        }
+    ],
+    "BT - 421": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Valacich",
+                "book-binding": "Binding None",
+                "book-edition": "Edition 8",
+                "book-title": "Modern Systems And Design",
+                "isbn": "0134204921"
+            }
+        }
+    ],
+    "BT - 445": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Schiffman",
+                "book-binding": "Binding Hardback",
+                "book-edition": "Edition 10",
+                "book-title": "Consumer Behavior",
+                "isbn": "0132544369"
+            }
+        }
+    ],
+    "BT - 454": [
+        {
+            "is_required": false,
+            "stevens-metadata": {
+                "book-author": "Shapiro",
+                "book-binding": "Binding Hardback",
+                "book-edition": "Edition 10",
+                "book-title": "Multinational Financial Management",
+                "isbn": "1118572386"
+            }
+        },
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Krugman",
+                "book-binding": "Binding None",
+                "book-edition": "Edition 10",
+                "book-title": "International Economics",
+                "isbn": "0133423646"
+            }
+        }
+    ],
+    "CAL - 103": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Graff",
+                "book-binding": "Binding None",
+                "book-edition": "Edition 3",
+                "book-title": "They Say I Say: W/Modern Lang. Guide",
+                "isbn": "0393617432"
+            }
+        }
+    ],
+    "CE - 240": [
+        {
+            "is_required": false,
+            "stevens-metadata": {
+                "book-author": "Marshak",
+                "book-binding": "Binding None",
+                "book-edition": "Edition 5",
+                "book-title": "Introductory Gelogy Lab Manual",
+                "isbn": "0393937917"
+            }
+        },
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Marshak",
+                "book-binding": "Binding Hardback",
+                "book-title": "Essentials Of Geology Package",
+                "isbn": "0393572730"
+            }
+        }
+    ],
+    "CE - 304": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Mccuen",
+                "book-binding": "Binding Paperback",
+                "book-edition": "Edition 4",
+                "book-title": "Hydrologic Analysis & Design",
+                "isbn": "0134313127"
+            }
+        }
+    ],
+    "CE - 373": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Hibbeler",
+                "book-binding": "Binding None",
+                "book-edition": "Edition 9",
+                "book-title": "Structural Analysis",
+                "isbn": "0133942848"
+            }
+        }
+    ],
+    "CE - 410": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Mannering",
+                "book-binding": "Binding None",
+                "book-edition": "Edition 5",
+                "book-title": "Principles Of Highway Engineering",
+                "isbn": "1118120140"
+            }
+        }
+    ],
+    "CE - 483": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Bowles",
+                "book-binding": "Binding Spiral",
+                "book-edition": "Edition 4",
+                "book-title": "Engineering Properties Of Soils And Their Measurement",
+                "isbn": "0070067783"
+            }
+        },
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Das",
+                "book-binding": "Binding None",
+                "book-edition": "Edition 8",
+                "book-title": "Principles Of Geotechnical Engineering",
+                "isbn": "1133108660"
+            }
+        }
+    ],
+    "CE - 591": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Wallace",
+                "book-binding": "Binding Hardback",
+                "book-edition": "Edition 2",
+                "book-title": "Atmospheric Science",
+                "isbn": "012732951X"
+            }
+        },
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Holton",
+                "book-binding": "Binding Hardback",
+                "book-edition": "Edition 5",
+                "book-title": "Intro To Dynamic Meteorology",
+                "isbn": "0123848660"
+            }
+        }
+    ],
+    "CE - 595": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Das",
+                "book-binding": "Binding Hardback",
+                "book-edition": "Edition 7",
+                "book-title": "Principles Of Foundation Engineering",
+                "isbn": "0495668109"
+            }
+        }
+    ],
+    "CE - 621": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Tonias-Zhao",
+                "book-binding": "Binding None",
+                "book-edition": "Edition 3",
+                "book-title": "Bridge Engineering",
+                "isbn": "0071752498"
+            }
+        }
+    ],
+    "CE - 681": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Cook",
+                "book-binding": "Binding Hardback",
+                "book-edition": "Edition 4",
+                "book-title": "Concepts & Appl Of Finite Element Analysis",
+                "isbn": "0471356050"
+            }
+        }
+    ],
+    "CH - 116": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Tro",
+                "book-binding": "Binding None",
+                "book-title": "Chemistry-A Molecular Approach-Binder Version",
+                "isbn": "0134465652"
+            }
+        }
+    ],
+    "CH - 118": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Beran",
+                "book-binding": "Binding None",
+                "book-edition": "Edition 10",
+                "book-title": "Berans Lab Manual-Custom",
+                "isbn": "1118975197"
+            }
+        }
+    ],
+    "CH - 281": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Russell",
+                "book-binding": "Binding None",
+                "book-edition": "Edition 4",
+                "book-title": "Biology:The Dynamic Science Looseleaf Package",
+                "isbn": "1337086924"
+            }
+        }
+    ],
+    "CH - 282": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Kumbaraci",
+                "book-binding": "Binding None",
+                "book-edition": "Edition 4",
+                "book-title": "Lab Manual",
+                "isbn": "1119926343"
+            }
+        }
+    ],
+    "CH - 321": [
+        {
+            "is_required": false,
+            "stevens-metadata": {
+                "book-author": "Atkins",
+                "book-binding": "Binding Paperback",
+                "book-edition": "Edition 9",
+                "book-title": "Physical Chemistry St Sol Man",
+                "isbn": "1429231289"
+            }
+        },
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Atkins",
+                "book-binding": "Binding None",
+                "book-edition": "Edition 10",
+                "book-title": "Physical Chemistry Package-Text/Sol. Manual",
+                "isbn": "1464196052"
+            }
+        }
+    ],
+    "CH - 322": [
+        {
+            "is_required": false,
+            "stevens-metadata": {
+                "book-author": "Atkins",
+                "book-binding": "Binding Paperback",
+                "book-edition": "Edition 9",
+                "book-title": "Physical Chemistry St Sol Man",
+                "isbn": "1429231289"
+            }
+        },
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Atkins",
+                "book-binding": "Binding None",
+                "book-edition": "Edition 10",
+                "book-title": "Physical Chemistry Package-Text/Sol. Manual",
+                "isbn": "1464196052"
+            }
+        }
+    ],
+    "CH - 382": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Silverthorn",
+                "book-binding": "Binding None",
+                "book-edition": "Edition 7",
+                "book-title": "Human Physiology",
+                "isbn": "0321970330"
+            }
+        }
+    ],
+    "CH - 501": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Shamoo",
+                "book-binding": "Binding None",
+                "book-title": "Responsible Conduct Of Research",
+                "isbn": "0199376026"
+            }
+        }
+    ],
+    "CH - 520": [
+        {
+            "is_required": false,
+            "stevens-metadata": {
+                "book-author": "Atkins",
+                "book-binding": "Binding Paperback",
+                "book-edition": "Edition 9",
+                "book-title": "Physical Chemistry St Sol Man",
+                "isbn": "1429231289"
+            }
+        },
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Atkins",
+                "book-binding": "Binding None",
+                "book-edition": "Edition 10",
+                "book-title": "Physical Chemistry Package-Text/Sol. Manual",
+                "isbn": "1464196052"
+            }
+        }
+    ],
+    "CH - 686": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Owen",
+                "book-binding": "Binding None",
+                "book-edition": "Edition 7",
+                "book-title": "Kuby Immunology-Looseleaf W/Launchpad",
+                "isbn": "1464193363"
+            }
+        }
+    ],
+    "CHE - 210": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Felder",
+                "book-binding": "Binding Looseleaf",
+                "book-edition": "Edition 4",
+                "book-title": "Elementary Prin Of Chem Process Binder Version",
+                "isbn": "1118431227"
+            }
+        }
+    ],
+    "CHE - 234": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Dahm",
+                "book-binding": "Binding Hardback",
+                "book-title": "Fundamentals Of Chemical Engineering Thermodynamics",
+                "isbn": "1111580707"
+            }
+        }
+    ],
+    "CHE - 322": [
+        {
+            "is_required": false,
+            "stevens-metadata": {
+                "book-author": "Seider",
+                "book-binding": "Binding Hardback",
+                "book-edition": "Edition 3",
+                "book-title": "Product & Process Design Principles",
+                "isbn": "0470048956"
+            }
+        }
+    ],
+    "CHE - 345": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Seborg",
+                "book-binding": "Binding Hardback",
+                "book-edition": "Edition 3",
+                "book-title": "Process Dynamics & Control",
+                "isbn": "0470128674"
+            }
+        }
+    ],
+    "CHE - 351": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Fogler",
+                "book-binding": "Binding None",
+                "book-edition": "Edition 5",
+                "book-title": "Elements Of Chemical Reaction Engineering",
+                "isbn": "0133887510"
+            }
+        }
+    ],
+    "CHE - 424": [
+        {
+            "is_required": false,
+            "stevens-metadata": {
+                "book-author": "Seider",
+                "book-binding": "Binding Hardback",
+                "book-edition": "Edition 3",
+                "book-title": "Product & Process Design Principles",
+                "isbn": "0470048956"
+            }
+        }
+    ],
+    "CHE - 560": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Brazel",
+                "book-binding": "Binding Hardback",
+                "book-edition": "Edition 3",
+                "book-title": "Fundamental Principles Of Polymeric Materials",
+                "isbn": "0470505427"
+            }
+        },
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Rempp",
+                "book-binding": "Binding None",
+                "book-edition": "Edition 2",
+                "book-title": "Polymer Synthesis",
+                "isbn": "3857391146"
+            }
+        }
+    ],
+    "CHE - 650": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Fogler",
+                "book-binding": "Binding None",
+                "book-edition": "Edition 5",
+                "book-title": "Elements Of Chemical Reaction Engineering",
+                "isbn": "0133887510"
+            }
+        }
+    ],
+    "CPE - 322": [
+        {
+            "is_required": false,
+            "stevens-metadata": {
+                "book-author": "Dominick",
+                "book-binding": "Binding Paperback",
+                "book-title": "Tools & Tactics Of Design",
+                "isbn": "0471386480"
+            }
+        },
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Dym",
+                "book-binding": "Binding Paperback",
+                "book-edition": "Edition 4",
+                "book-title": "Engineering Design",
+                "isbn": "1118324587"
+            }
+        }
+    ],
+    "CPE - 345": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Banks",
+                "book-binding": "Binding Paperback",
+                "book-edition": "Edition 5",
+                "book-title": "Discrete-Event System Simulation",
+                "isbn": "0136062121"
+            }
+        }
+    ],
+    "CPE - 360": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Weiss",
+                "book-binding": "Binding Hardback",
+                "book-edition": "Edition 3",
+                "book-title": "Data Structures & Algorithm Analysis In C++",
+                "isbn": "032144146X"
+            }
+        }
+    ],
+    "CPE - 390": [
+        {
+            "is_required": false,
+            "stevens-metadata": {
+                "book-author": "Wolf,Wayne",
+                "book-binding": "Binding None",
+                "book-edition": "Edition 1",
+                "book-title": "Computers As Components:Principle Of Embedded...",
+                "isbn": "0123694590"
+            }
+        },
+        {
+            "is_required": false,
+            "stevens-metadata": {
+                "book-author": "Pack",
+                "book-binding": "Binding Hardback",
+                "book-edition": "Edition 2",
+                "book-title": "Microcontroller Theory & Applications Hc12 & S12 (W/Cd)",
+                "isbn": "0136152058"
+            }
+        },
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Huang",
+                "book-binding": "Binding Paperback",
+                "book-edition": "Edition 2",
+                "book-title": "Hcs12/9S12 Intro To Software & Hardware Interfacing (W/Cd Only)",
+                "isbn": "1435427424"
+            }
+        }
+    ],
+    "CPE - 424": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "None",
+                "book-binding": "Binding None",
+                "book-title": "No Text Required"
+            }
+        }
+    ],
+    "CPE - 441": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "None",
+                "book-binding": "Binding None",
+                "book-title": "No Text Required"
+            }
+        }
+    ],
+    "CPE - 462": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Gonzalez",
+                "book-binding": "Binding Hardback",
+                "book-edition": "Edition 3",
+                "book-title": "Digital Image Processing",
+                "isbn": "013168728X"
+            }
+        }
+    ],
+    "CPE - 487": [
+        {
+            "is_required": false,
+            "stevens-metadata": {
+                "book-author": "Bhasker",
+                "book-binding": "Binding Paperback",
+                "book-edition": "Edition 3",
+                "book-title": "Vhdl Primer",
+                "isbn": "0130965758"
+            }
+        },
+        {
+            "is_required": false,
+            "stevens-metadata": {
+                "book-author": "Pedroni",
+                "book-binding": "Binding Hardback",
+                "book-title": "Circuit Design With Vhdl",
+                "isbn": "0262162245"
+            }
+        },
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Yalamanchili",
+                "book-binding": "Binding Paperback",
+                "book-edition": "Edition 2",
+                "book-title": "Vhdl Starter's Guide",
+                "isbn": "0131457357"
+            }
+        }
+    ],
+    "CPE - 490": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Comer",
+                "book-binding": "Binding Hardback",
+                "book-edition": "Edition 6",
+                "book-title": "Internetworking With Tcp/Ip Vol I",
+                "isbn": "013608530X"
+            }
+        }
+    ],
+    "CPE - 517": [
+        {
+            "is_required": false,
+            "stevens-metadata": {
+                "book-author": "Furber",
+                "book-binding": "Binding Paperback",
+                "book-edition": "Edition 2",
+                "book-title": "Arm System-On-Chip Architecture",
+                "isbn": "0201675196"
+            }
+        },
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Hennessy",
+                "book-binding": "Binding Paperback",
+                "book-edition": "Edition 5",
+                "book-title": "Computer Architecture Quantitative Approach",
+                "isbn": "012383872X"
+            }
+        }
+    ],
+    "CPE - 545": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Sridhar",
+                "book-binding": "Binding None",
+                "book-edition": "Edition 1",
+                "book-title": "`Designing Embedded Communications",
+                "isbn": "157820125X"
+            }
+        }
+    ],
+    "CPE - 555": [
+        {
+            "is_required": false,
+            "stevens-metadata": {
+                "book-author": "Bertolotti",
+                "book-binding": "Binding None",
+                "book-edition": "Edition 5",
+                "book-title": "Real Time Embedded Systems",
+                "isbn": "1439841543"
+            }
+        },
+        {
+            "is_required": false,
+            "stevens-metadata": {
+                "book-author": "Patterson",
+                "book-binding": "Binding None",
+                "book-title": "Computer Organization And Design",
+                "isbn": "0128017333"
+            }
+        }
+    ],
+    "CPE - 556": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "None",
+                "book-binding": "Binding None",
+                "book-title": "No Text Required"
+            }
+        }
+    ],
+    "CPE - 593": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Cormen",
+                "book-binding": "Binding Hardback",
+                "book-edition": "Edition 3",
+                "book-title": "Intro To Algorithms",
+                "isbn": "0262033844"
+            }
+        }
+    ],
+    "CPE - 602": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Rosen",
+                "book-binding": "Binding Paperback",
+                "book-edition": "Edition 7",
+                "book-title": "Discrete Math & Its Appl (Loose-Leaf)",
+                "isbn": "0077431448"
+            }
+        }
+    ],
+    "CPE - 604": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Bertsekas",
+                "book-binding": "Binding Paperback",
+                "book-edition": "Edition 2",
+                "book-title": "Data Networks",
+                "isbn": "0132009161"
+            }
+        }
+    ],
+    "CPE - 631": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "None",
+                "book-binding": "Binding None",
+                "book-title": "No Text Required"
+            }
+        }
+    ],
+    "CPE - 640": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "None",
+                "book-binding": "Binding None",
+                "book-title": "No Text Required"
+            }
+        }
+    ],
+    "CPE - 645": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Gonzalez",
+                "book-binding": "Binding Hardback",
+                "book-edition": "Edition 3",
+                "book-title": "Digital Image Processing",
+                "isbn": "013168728X"
+            }
+        }
+    ],
+    "CPE - 654": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Mccabe",
+                "book-binding": "Binding Hardback",
+                "book-edition": "Edition 3",
+                "book-title": "Network Analysis, Architecture & Design",
+                "isbn": "0123704804"
+            }
+        }
+    ],
+    "CPE - 679": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Kurose",
+                "book-binding": "Binding Hardback",
+                "book-edition": "Edition 7",
+                "book-title": "Computer Networking",
+                "isbn": "0133594149"
+            }
+        }
+    ],
+    "CPE - 690": [
+        {
+            "is_required": false,
+            "stevens-metadata": {
+                "book-author": "Yalamanchili",
+                "book-binding": "Binding Hardback",
+                "book-title": "Introductory Vhdl From Simulation To Synthesis",
+                "isbn": "0130809829"
+            }
+        },
+        {
+            "is_required": false,
+            "stevens-metadata": {
+                "book-author": "Baker",
+                "book-binding": "Binding Hardback",
+                "book-edition": "Edition 2",
+                "book-title": "Cmos Circuit Design, Layout & Simulation",
+                "isbn": "047170055X"
+            }
+        },
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Weste",
+                "book-binding": "Binding Hardback",
+                "book-edition": "Edition 4",
+                "book-title": "Cmos Vlsi Design",
+                "isbn": "0321547748"
+            }
+        }
+    ],
+    "CPE - 695": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "None",
+                "book-binding": "Binding None",
+                "book-title": "No Text Required"
+            }
+        }
+    ],
+    "CS - 105": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Chapman",
+                "book-binding": "Binding Paperback",
+                "book-edition": "Edition 2",
+                "book-title": "Essentials Of Matlab Programming",
+                "isbn": "049529568X"
+            }
+        }
+    ],
+    "CS - 115": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "None",
+                "book-binding": "Binding None",
+                "book-title": "No Text Required"
+            }
+        }
+    ],
+    "CS - 135": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Friedman",
+                "book-binding": "Binding Paperback",
+                "book-edition": "Edition 4",
+                "book-title": "Little Schemer",
+                "isbn": "0262560992"
+            }
+        },
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Rosen",
+                "book-binding": "Binding Hardback",
+                "book-edition": "Edition 7",
+                "book-title": "Discrete Math & Its Appl",
+                "isbn": "0073383090"
+            }
+        }
+    ],
+    "CS - 182": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Levitin",
+                "book-binding": "Binding None",
+                "book-edition": "Edition 3",
+                "book-title": "Intro. To The Design And Analysis Of Algorithms",
+                "isbn": "0132316811"
+            }
+        }
+    ],
+    "CS - 347": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "None",
+                "book-binding": "Binding None",
+                "book-title": "No Text Required"
+            }
+        }
+    ],
+    "CS - 370": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "None",
+                "book-binding": "Binding None",
+                "book-title": "No Text Required"
+            }
+        }
+    ],
+    "CS - 385": [
+        {
+            "is_required": false,
+            "stevens-metadata": {
+                "book-author": "Stroustrup",
+                "book-binding": "Binding Paperback",
+                "book-edition": "Edition 2",
+                "book-title": "Programming",
+                "isbn": "0321992784"
+            }
+        },
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Levitin",
+                "book-binding": "Binding None",
+                "book-edition": "Edition 3",
+                "book-title": "Intro. To The Design And Analysis Of Algorithms",
+                "isbn": "0132316811"
+            }
+        }
+    ],
+    "CS - 488": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Hennessy",
+                "book-binding": "Binding Paperback",
+                "book-edition": "Edition 5",
+                "book-title": "Computer Architecture Quantitative Approach",
+                "isbn": "012383872X"
+            }
+        }
+    ],
+    "CS - 492": [
+        {
+            "is_required": false,
+            "stevens-metadata": {
+                "book-author": "Tanenbaum",
+                "book-binding": "Binding None",
+                "book-edition": "Edition 4",
+                "book-title": "Modern Operating Systems",
+                "isbn": "013359162X"
+            }
+        }
+    ],
+    "CS - 501": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Liang",
+                "book-binding": "Binding None",
+                "book-edition": "Edition 10",
+                "book-title": "Intro To Java Programming-Comp. Version",
+                "isbn": "0133761312"
+            }
+        }
+    ],
+    "CS - 505": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Ross",
+                "book-binding": "Binding Hardback",
+                "book-edition": "Edition 9",
+                "book-title": "First Course In Probability",
+                "isbn": "032179477X"
+            }
+        }
+    ],
+    "CS - 524": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Faynberg",
+                "book-binding": "Binding None",
+                "book-edition": "Edition 1",
+                "book-title": "Cloud Computing",
+                "isbn": "1118501217"
+            }
+        }
+    ],
+    "CS - 550": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Englander",
+                "book-binding": "Binding Paperback",
+                "book-edition": "Edition 5",
+                "book-title": "Architecture Of Computer Hardware, Systems Software & Networking",
+                "isbn": "1118322630"
+            }
+        }
+    ],
+    "CS - 561": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Silberschatz",
+                "book-binding": "Binding Hardback",
+                "book-edition": "Edition 6",
+                "book-title": "Database System Concepts",
+                "isbn": "0073523321"
+            }
+        }
+    ],
+    "CS - 579": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Katz",
+                "book-binding": "Binding None",
+                "book-edition": "Edition 2",
+                "book-title": "Intro Tomodern Cryptography",
+                "isbn": "1466570261"
+            }
+        }
+    ],
+    "CS - 593": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Weiss",
+                "book-binding": "Binding None",
+                "book-edition": "Edition 2",
+                "book-title": "Fundamentals Of Predictive Text Mining",
+                "isbn": "144716749X"
+            }
+        }
+    ],
+    "CS - 595": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "None",
+                "book-binding": "Binding None",
+                "book-title": "No Text Required"
+            }
+        }
+    ],
+    "CS - 600": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Goodrich",
+                "book-binding": "Binding Hardback",
+                "book-title": "Algorithm Design & Applications",
+                "isbn": "1118335910"
+            }
+        }
+    ],
+    "CS - 677": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "None",
+                "book-binding": "Binding None",
+                "book-title": "No Text Required"
+            }
+        }
+    ],
+    "CS - 810": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "None",
+                "book-binding": "Binding None",
+                "book-title": "No Text Required"
+            }
+        }
+    ],
+    "E - 126": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Hibbeler",
+                "book-binding": "Binding Hardback",
+                "book-edition": "Edition 4",
+                "book-title": "Statics & Mechanics Of Materials",
+                "isbn": "0133451607"
+            }
+        }
+    ],
+    "E - 232": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Wheeler",
+                "book-binding": "Binding Hardback",
+                "book-edition": "Edition 3",
+                "book-title": "Intro To Engineering Experimentation",
+                "isbn": "0131742760"
+            }
+        }
+    ],
+    "E - 234": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Cengel",
+                "book-binding": "Binding Hardback",
+                "book-edition": "Edition 8",
+                "book-title": "Thermodynamics",
+                "isbn": "0073398179"
+            }
+        }
+    ],
+    "E - 243": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Montgomery",
+                "book-binding": "Binding Hardback",
+                "book-edition": "Edition 6",
+                "book-title": "Applied Statistics & Probability For Engineers",
+                "isbn": "1118539710"
+            }
+        }
+    ],
+    "E - 245": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Hambley",
+                "book-binding": "Binding None",
+                "book-edition": "Edition 6",
+                "book-title": "Electr. Engineer. 8 Chapt. Custom",
+                "isbn": "1323358838"
+            }
+        }
+    ],
+    "E - 344": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Callister",
+                "book-binding": "Binding Paperback",
+                "book-edition": "Edition 5",
+                "book-title": "Fundamentals Of Materials Science & Engr (Loose-Leaf)",
+                "isbn": "1119175488"
+            }
+        }
+    ],
+    "E - 355": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Newnan",
+                "book-binding": "Binding Hardback",
+                "book-edition": "Edition 12",
+                "book-title": "Engineering Econ Analysis (W/Cd)",
+                "isbn": "0199339279"
+            }
+        }
+    ],
+    "E - 580": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Vanek",
+                "book-binding": "Binding None",
+                "book-edition": "Edition 3",
+                "book-title": "Energy Systems Engineering",
+                "isbn": "1259585093"
+            }
+        }
+    ],
+    "EE - 250": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Brown",
+                "book-binding": "Binding Hardback",
+                "book-edition": "Edition 9",
+                "book-title": "Complex Variables & Applications",
+                "isbn": "0073383171"
+            }
+        }
+    ],
+    "EE - 322": [
+        {
+            "is_required": false,
+            "stevens-metadata": {
+                "book-author": "Dominick",
+                "book-binding": "Binding Paperback",
+                "book-title": "Tools & Tactics Of Design",
+                "isbn": "0471386480"
+            }
+        },
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Dym",
+                "book-binding": "Binding Paperback",
+                "book-edition": "Edition 4",
+                "book-title": "Engineering Design",
+                "isbn": "1118324587"
+            }
+        }
+    ],
+    "EE - 348": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Oppenheim",
+                "book-binding": "Binding Hardback",
+                "book-edition": "Edition 2",
+                "book-title": "Signals & Systems",
+                "isbn": "0138147574"
+            }
+        }
+    ],
+    "EE - 359": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Sedra",
+                "book-binding": "Binding Hardback",
+                "book-edition": "Edition 7",
+                "book-title": "Microelectronic Circuits",
+                "isbn": "0199339139"
+            }
+        }
+    ],
+    "EE - 424": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "None",
+                "book-binding": "Binding None",
+                "book-title": "No Text Required"
+            }
+        }
+    ],
+    "EE - 441": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "None",
+                "book-binding": "Binding None",
+                "book-title": "No Text Required"
+            }
+        }
+    ],
+    "EE - 448": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Mitra",
+                "book-binding": "Binding Hardback",
+                "book-edition": "Edition 4",
+                "book-title": "Digital Signal Processing (W/Cd)",
+                "isbn": "007736676X"
+            }
+        }
+    ],
+    "EE - 462": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Gonzalez",
+                "book-binding": "Binding Hardback",
+                "book-edition": "Edition 3",
+                "book-title": "Digital Image Processing",
+                "isbn": "013168728X"
+            }
+        }
+    ],
+    "EE - 465": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Haykin",
+                "book-binding": "Binding Hardback",
+                "book-edition": "Edition 5",
+                "book-title": "Communication Systems",
+                "isbn": "0471697907"
+            }
+        }
+    ],
+    "EE - 471": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Hu",
+                "book-binding": "Binding Hardback",
+                "book-title": "Modern Semiconductor Devices For Integrated Circuits",
+                "isbn": "0136085253"
+            }
+        }
+    ],
+    "EE - 503": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Omar",
+                "book-binding": "Binding Paperback",
+                "book-title": "Elementary Solid State Physics Rev Prtg",
+                "isbn": "0201607336"
+            }
+        }
+    ],
+    "EE - 517": [
+        {
+            "is_required": false,
+            "stevens-metadata": {
+                "book-author": "Furber",
+                "book-binding": "Binding Paperback",
+                "book-edition": "Edition 2",
+                "book-title": "Arm System-On-Chip Architecture",
+                "isbn": "0201675196"
+            }
+        },
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Hennessy",
+                "book-binding": "Binding Paperback",
+                "book-edition": "Edition 5",
+                "book-title": "Computer Architecture Quantitative Approach",
+                "isbn": "012383872X"
+            }
+        }
+    ],
+    "EE - 551": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "None",
+                "book-binding": "Binding None",
+                "book-title": "No Text Required"
+            }
+        }
+    ],
+    "EE - 556": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "None",
+                "book-binding": "Binding None",
+                "book-title": "No Text Required"
+            }
+        }
+    ],
+    "EE - 575": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Franklin",
+                "book-binding": "Binding Hardback",
+                "book-edition": "Edition 7",
+                "book-title": "Feedback Control Of Dynamic Systems",
+                "isbn": "0133496597"
+            }
+        }
+    ],
+    "EE - 585": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "None",
+                "book-binding": "Binding None",
+                "book-title": "No Text Required"
+            }
+        }
+    ],
+    "EE - 590": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Bush",
+                "book-binding": "Binding None",
+                "book-edition": "Edition 1",
+                "book-title": "Smart Grid",
+                "isbn": "1119975808"
+            }
+        }
+    ],
+    "EE - 602": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Lancaster",
+                "book-binding": "Binding Hardback",
+                "book-edition": "Edition 2",
+                "book-title": "Theory Of Matrices",
+                "isbn": "0124355609"
+            }
+        }
+    ],
+    "EE - 603": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Oppenheim",
+                "book-binding": "Binding Hardback",
+                "book-edition": "Edition 2",
+                "book-title": "Signals & Systems",
+                "isbn": "0138147574"
+            }
+        }
+    ],
+    "EE - 605": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Ross",
+                "book-binding": "Binding Hardback",
+                "book-edition": "Edition 9",
+                "book-title": "First Course In Probability",
+                "isbn": "032179477X"
+            }
+        }
+    ],
+    "EE - 609": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Sklar",
+                "book-binding": "Binding Hardback",
+                "book-edition": "Edition 2",
+                "book-title": "Digital Communications (W/Cd)",
+                "isbn": "0130847887"
+            }
+        }
+    ],
+    "EE - 616": [
+        {
+            "is_required": false,
+            "stevens-metadata": {
+                "book-author": "Kay",
+                "book-binding": "Binding None",
+                "book-title": "Fundamentals Of Signal Processing-Estimation Theory",
+                "isbn": "0133457117"
+            }
+        },
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Kay",
+                "book-binding": "Binding Hardback",
+                "book-title": "Fundamentals Of Statistical Signal Processing Vol 2",
+                "isbn": "013504135X"
+            }
+        }
+    ],
+    "EE - 621": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Khalil",
+                "book-binding": "Binding Hardback",
+                "book-edition": "Edition 3",
+                "book-title": "Nonlinear Systems",
+                "isbn": "0130673897"
+            }
+        }
+    ],
+    "EE - 627": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "None",
+                "book-binding": "Binding None",
+                "book-title": "No Text Required"
+            }
+        }
+    ],
+    "EE - 629": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "None",
+                "book-binding": "Binding None",
+                "book-title": "No Text Required"
+            }
+        }
+    ],
+    "EM - 322": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Ulrich",
+                "book-binding": "Binding Hardback",
+                "book-edition": "Edition 6",
+                "book-title": "Product Design & Development",
+                "isbn": "0078029066"
+            }
+        }
+    ],
+    "EM - 345": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "None",
+                "book-binding": "Binding None",
+                "book-title": "No Text Required"
+            }
+        }
+    ],
+    "EM - 357": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Taylor",
+                "book-binding": "Binding Hardback",
+                "book-edition": "Edition 12",
+                "book-title": "Intro To Management Science",
+                "isbn": "0133778843"
+            }
+        }
+    ],
+    "EM - 450": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Chopra",
+                "book-binding": "Binding None",
+                "book-edition": "Edition 5",
+                "book-title": "Supply Chain Mgmt:Strategy,Planning And Operation",
+                "isbn": "0132743957"
+            }
+        }
+    ],
+    "EM - 600": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Park",
+                "book-binding": "Binding Hardback",
+                "book-edition": "Edition 6",
+                "book-title": "Contemporary Engineering Economics",
+                "isbn": "0134105591"
+            }
+        }
+    ],
+    "EM - 605": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Hillier",
+                "book-binding": "Binding None",
+                "book-edition": "Edition 10",
+                "book-title": "Intro To Operations Research-Binder Version",
+                "isbn": "1259287181"
+            }
+        }
+    ],
+    "EM - 612": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Shenhar,Aaron",
+                "book-binding": "Binding None",
+                "book-title": "Reinventing Project Management",
+                "isbn": "1591398002"
+            }
+        }
+    ],
+    "EM - 622": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Tufte",
+                "book-binding": "Binding Paperback",
+                "book-title": "Visual Display Of Quant. Information-Softcover",
+                "isbn": "1930824130"
+            }
+        },
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Tufte",
+                "book-binding": "Binding None",
+                "book-edition": "Edition 1",
+                "book-title": "Beautiful Evidence",
+                "isbn": "1930824165"
+            }
+        }
+    ],
+    "EM - 655": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Schiller",
+                "book-binding": "Binding None",
+                "book-title": "An Intro To Sustainable Transportation",
+                "isbn": "1844076644"
+            }
+        }
+    ],
+    "EM - 680": [
+        {
+            "is_required": false,
+            "stevens-metadata": {
+                "book-author": "Nayak",
+                "book-binding": "Binding None",
+                "book-edition": "Edition 2",
+                "book-title": "Breakthrough!",
+                "isbn": "185252149X"
+            }
+        },
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Reason",
+                "book-binding": "Binding Paperback",
+                "book-title": "Managing The Risks Of Organizational Accidents",
+                "isbn": "1840141050"
+            }
+        },
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Cross",
+                "book-binding": "Binding Hardback",
+                "book-title": "Hidden Power Of Social Networks",
+                "isbn": "1591392705"
+            }
+        }
+    ],
+    "EMT - 606": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Case",
+                "book-binding": "Binding Hardback",
+                "book-edition": "Edition 12",
+                "book-title": "Principles Of Economics",
+                "isbn": "0134078772"
+            }
+        }
+    ],
+    "EN - 322": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Qasim",
+                "book-binding": "Binding Hardback",
+                "book-edition": "Edition 2",
+                "book-title": "Wastewater Treatment Plants",
+                "isbn": "1566766885"
+            }
+        }
+    ],
+    "EN - 377": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Mihelcic",
+                "book-binding": "Binding Hardback",
+                "book-edition": "Edition 2",
+                "book-title": "Environmental Engineering",
+                "isbn": "1118741498"
+            }
+        }
+    ],
+    "EN - 506": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Cooper",
+                "book-binding": "Binding Hardback",
+                "book-edition": "Edition 4",
+                "book-title": "Air Pollution Control",
+                "isbn": "157766678X"
+            }
+        }
+    ],
+    "EN - 530": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Graedel",
+                "book-binding": "Binding Hardback",
+                "book-title": "Industrial Ecology & Sustainable Engineering",
+                "isbn": "0136008062"
+            }
+        }
+    ],
+    "EN - 570": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Brezonik",
+                "book-binding": "Binding Hardback",
+                "book-title": "Water Chemistry",
+                "isbn": "0199730725"
+            }
+        }
+    ],
+    "EN - 571": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Mwh",
+                "book-binding": "Binding Hardback",
+                "book-edition": "Edition 2",
+                "book-title": "Water Treatment (Rev: Crittenden)",
+                "isbn": "0471110183"
+            }
+        }
+    ],
+    "FE - 540": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Rosenthal",
+                "book-binding": "Binding None",
+                "book-edition": "Edition 2",
+                "book-title": "A First Look At Rigorous Probability Theory",
+                "isbn": "9812703705"
+            }
+        }
+    ],
+    "FE - 570": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Schmidt",
+                "book-binding": "Binding None",
+                "book-edition": "Edition 1",
+                "book-title": "Financial Markets And Trading",
+                "isbn": "0470924128"
+            }
+        }
+    ],
+    "FE - 621": [
+        {
+            "is_required": false,
+            "stevens-metadata": {
+                "book-author": "Hirsa",
+                "book-binding": "Binding None",
+                "book-edition": "Edition 1",
+                "book-title": "Computational Methods In France",
+                "isbn": "1439829578"
+            }
+        },
+        {
+            "is_required": false,
+            "stevens-metadata": {
+                "book-author": "Fieller",
+                "book-binding": "Binding None",
+                "book-edition": "Edition 1",
+                "book-title": "Basics Of Matrix Algebra",
+                "isbn": "1498712363"
+            }
+        }
+    ],
+    "FIN - 600": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Easton",
+                "book-binding": "Binding Hardback",
+                "book-edition": "Edition 4",
+                "book-title": "Financial & Managerial Accounting For Mbas",
+                "isbn": "1618531026"
+            }
+        }
+    ],
+    "FIN - 615": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Weygandt",
+                "book-binding": "Binding 3 Ring Binder",
+                "book-edition": "Edition 2",
+                "book-title": "Financial And Managerial Accounting-Binder Version",
+                "isbn": "1119153387"
+            }
+        }
+    ],
+    "FIN - 629": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Fabozzi",
+                "book-binding": "Binding Hardback",
+                "book-edition": "Edition 4",
+                "book-title": "Fixed Income Mathematics",
+                "isbn": "007146073X"
+            }
+        }
+    ],
+    "FIN - 638": [
+        {
+            "is_required": false,
+            "stevens-metadata": {
+                "book-author": "Berk",
+                "book-binding": "Binding None",
+                "book-edition": "Edition 4",
+                "book-title": "Corporate Finance:The Core",
+                "isbn": "0134409272"
+            }
+        }
+    ],
+    "HAR - 280": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Chipp",
+                "book-binding": "Binding Paperback",
+                "book-title": "Theories Of Modern Art",
+                "isbn": "0520052560"
+            }
+        },
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Foster",
+                "book-binding": "Binding Paperback",
+                "book-edition": "Edition 3",
+                "book-title": "Art Since 1900 Vol 2",
+                "isbn": "0500292728"
+            }
+        },
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Foster",
+                "book-binding": "Binding Paperback",
+                "book-edition": "Edition 3",
+                "book-title": "Art Since 1900 Vol 1",
+                "isbn": "050029271X"
+            }
+        },
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Eisenmann",
+                "book-binding": "Binding None",
+                "book-edition": "Edition 4",
+                "book-title": "Nineteenth Century Art",
+                "isbn": "0500288887"
+            }
+        }
+    ],
+    "HAR - 281": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Bolton",
+                "book-binding": "Binding Paperback",
+                "book-title": "Contest Of Meaning",
+                "isbn": "0262521695"
+            }
+        },
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Barthes",
+                "book-binding": "Binding Paperback",
+                "book-title": "Camera Lucida (Foreword: Dyer)",
+                "isbn": "0374532338"
+            }
+        },
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Crary",
+                "book-binding": "Binding Paperback",
+                "book-title": "Techniques Of The Observer",
+                "isbn": "0262531070"
+            }
+        }
+    ],
+    "HHS - 126": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Foner",
+                "book-binding": "Binding Paperback",
+                "book-edition": "Edition 4",
+                "book-title": "Give Me Liberty Seagull Ed Vol Two",
+                "isbn": "0393920313"
+            }
+        }
+    ],
+    "HHS - 130": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Mcclellan",
+                "book-binding": "Binding None",
+                "book-edition": "Edition 3",
+                "book-title": "Science And Technology In World History",
+                "isbn": "1421417758"
+            }
+        }
+    ],
+    "HHS - 280": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Chipp",
+                "book-binding": "Binding Paperback",
+                "book-title": "Theories Of Modern Art",
+                "isbn": "0520052560"
+            }
+        },
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Foster",
+                "book-binding": "Binding Paperback",
+                "book-edition": "Edition 3",
+                "book-title": "Art Since 1900 Vol 2",
+                "isbn": "0500292728"
+            }
+        },
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Foster",
+                "book-binding": "Binding Paperback",
+                "book-edition": "Edition 3",
+                "book-title": "Art Since 1900 Vol 1",
+                "isbn": "050029271X"
+            }
+        },
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Eisenmann",
+                "book-binding": "Binding None",
+                "book-edition": "Edition 4",
+                "book-title": "Nineteenth Century Art",
+                "isbn": "0500288887"
+            }
+        }
+    ],
+    "HHS - 281": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Bolton",
+                "book-binding": "Binding Paperback",
+                "book-title": "Contest Of Meaning",
+                "isbn": "0262521695"
+            }
+        },
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Barthes",
+                "book-binding": "Binding Paperback",
+                "book-title": "Camera Lucida (Foreword: Dyer)",
+                "isbn": "0374532338"
+            }
+        },
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Crary",
+                "book-binding": "Binding Paperback",
+                "book-title": "Techniques Of The Observer",
+                "isbn": "0262531070"
+            }
+        }
+    ],
+    "HHS - 467": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Kennedy",
+                "book-binding": "Binding Paperback",
+                "book-title": "Rise & Fall Of The Great Powers",
+                "isbn": "0679720197"
+            }
+        },
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Friedel",
+                "book-binding": "Binding Paperback",
+                "book-title": "Culture Of Improvement",
+                "isbn": "026251401X"
+            }
+        },
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Billington",
+                "book-binding": "Binding Paperback",
+                "book-title": "Innovators",
+                "isbn": "0471140961"
+            }
+        }
+    ],
+    "HLI - 114": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Hatto",
+                "book-binding": "Binding Paperback",
+                "book-title": "Nibelungenlied",
+                "isbn": "0140441379"
+            }
+        },
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Racine",
+                "book-binding": "Binding Paperback",
+                "book-title": "Phedre",
+                "isbn": "0140445919"
+            }
+        },
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Dante",
+                "book-binding": "Binding Paperback",
+                "book-title": "Inferno Of Dante Bilingual Ed (Trans: Pinsky)",
+                "isbn": "0374524521"
+            }
+        },
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Bechdel",
+                "book-binding": "Binding Paperback",
+                "book-title": "Fun Home",
+                "isbn": "0618871713"
+            }
+        },
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Chretien De Tr",
+                "book-binding": "Binding Paperback",
+                "book-title": "Yvain: Knight Of The Lion (Ed: Raffel)",
+                "isbn": "0300038380"
+            }
+        },
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Milton",
+                "book-binding": "Binding Paperback",
+                "book-title": "Paradise Lost",
+                "isbn": "0140424393"
+            }
+        },
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Kafka",
+                "book-binding": "Binding Paperback",
+                "book-edition": "Edition 2",
+                "book-title": "Metamorphosis (Ed: Corngold)",
+                "isbn": "0393923207"
+            }
+        },
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Wordsworth",
+                "book-binding": "Binding Paperback",
+                "book-title": "Lyrical Ballads (Ed: Schmidt)",
+                "isbn": "0140424628"
+            }
+        }
+    ],
+    "HLI - 118": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Baym",
+                "book-binding": "Binding None",
+                "book-edition": "Edition 7",
+                "book-title": "Norton Anthology Of Amer. Lit.-7Th-Vol.C,D,E",
+                "isbn": "0393929949"
+            }
+        }
+    ],
+    "HLI - 220": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Swift",
+                "book-binding": "Binding Paperback",
+                "book-title": "Gulliver's Travels (Ed: Rivero)",
+                "isbn": "0393957241"
+            }
+        },
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "More",
+                "book-binding": "Binding Paperback",
+                "book-title": "Utopia (New & Updtd)(Trans: Turner)",
+                "isbn": "0140449108"
+            }
+        },
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Huxley",
+                "book-binding": "Binding Paperback",
+                "book-title": "Brave New World P.S. Ed",
+                "isbn": "0060850523"
+            }
+        },
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Orwell",
+                "book-binding": "Binding Paperback",
+                "book-title": "Nineteen Eighty-Four Centennial Ed (W/New Foreword By Pynchon)",
+                "isbn": "0452284236"
+            }
+        },
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Shelley",
+                "book-binding": "Binding None",
+                "book-title": "Frankenstein",
+                "isbn": "019953716X"
+            }
+        }
+    ],
+    "HLI - 318": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Rhys",
+                "book-binding": "Binding Paperback",
+                "book-title": "Collected Short Stories",
+                "isbn": "0393306259"
+            }
+        },
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Mendoza",
+                "book-binding": "Binding Paperback",
+                "book-title": "Crossing Into America",
+                "isbn": "1565848950"
+            }
+        },
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Cesaire",
+                "book-binding": "Binding Paperback",
+                "book-title": "Tempest",
+                "isbn": "1559362103"
+            }
+        },
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Walcott",
+                "book-binding": "Binding Paperback",
+                "book-title": "Dream On Monkey Mountain & Other Plays",
+                "isbn": "0374508607"
+            }
+        },
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Cliff",
+                "book-binding": "Binding None",
+                "book-title": "Everything Is Now:New And Collected",
+                "isbn": "0816655936"
+            }
+        },
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Dandicat",
+                "book-binding": "Binding None",
+                "book-title": "Krik Krak",
+                "isbn": "161695700X"
+            }
+        }
+    ],
+    "HLI - 330": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Morford",
+                "book-binding": "Binding None",
+                "book-title": "Morford-Myth Vs1 Theogony 4V/Pack",
+                "isbn": "0199383685"
+            }
+        }
+    ],
+    "HLI - 331": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Shakespeare",
+                "book-binding": "Binding Paperback",
+                "book-title": "Hamlet (Ed: Braunmuller)",
+                "isbn": "0140714545"
+            }
+        },
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Shakespeare",
+                "book-binding": "Binding Paperback",
+                "book-title": "Midsummer Night's Dream (Ed: Mcdonald)",
+                "isbn": "0140714553"
+            }
+        },
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Shakespeare",
+                "book-binding": "Binding Paperback",
+                "book-title": "Romeo & Juliet (Ed: Holland)",
+                "isbn": "0140714847"
+            }
+        },
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Shakespeare",
+                "book-binding": "Binding Paperback",
+                "book-title": "Henry Iv, Part 1 (Ed: Mceachern)",
+                "isbn": "0140714561"
+            }
+        },
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Shakespeare",
+                "book-binding": "Binding Paperback",
+                "book-title": "Macbeth (Ed: Orgel)",
+                "isbn": "0140714782"
+            }
+        },
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Shakespeare",
+                "book-binding": "Binding Paperback",
+                "book-title": "Much Ado About Nothing (Ed: Holland)",
+                "isbn": "0140714804"
+            }
+        },
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Shakespeare",
+                "book-binding": "Binding Paperback",
+                "book-title": "Henry V (Ed: Mceachern)",
+                "isbn": "0140714588"
+            }
+        },
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Shakespeare",
+                "book-binding": "Binding Paperback",
+                "book-title": "King Lear (Ed: Orgel)",
+                "isbn": "0143128558"
+            }
+        },
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Shakespeare",
+                "book-binding": "Binding Paperback",
+                "book-title": "Coriolanus (Ed: Crewe)",
+                "isbn": "0140714731"
+            }
+        },
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Shakespeare",
+                "book-binding": "Binding None",
+                "book-title": "The Tempest",
+                "isbn": "0143128639"
+            }
+        },
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Shakespeare",
+                "book-binding": "Binding None",
+                "book-title": "Othello",
+                "isbn": "0143128612"
+            }
+        }
+    ],
+    "HLI - 358": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Library Amer",
+                "book-binding": "Binding Hardback",
+                "book-title": "American Poetry Twentieth Century Vol One",
+                "isbn": "1883011779"
+            }
+        }
+    ],
+    "HLI - 413": [
+        {
+            "is_required": false,
+            "stevens-metadata": {
+                "book-author": "Gilbert",
+                "book-binding": "Binding Paperback",
+                "book-edition": "Edition 3",
+                "book-title": "Norton Anthology Of Literature By Women (2 Vol Set)",
+                "isbn": "0393930157"
+            }
+        },
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Satrapi",
+                "book-binding": "Binding Paperback",
+                "book-title": "Persepolis",
+                "isbn": "037571457X"
+            }
+        },
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Lahiri",
+                "book-binding": "Binding Paperback",
+                "book-title": "Interpreter Of Maladies",
+                "isbn": "039592720X"
+            }
+        }
+    ],
+    "HMU - 102": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Burkholder",
+                "book-binding": "Binding None",
+                "book-edition": "Edition 9",
+                "book-title": "A History Of Western Music",
+                "isbn": "0393918297"
+            }
+        }
+    ],
+    "HMU - 221": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Bastien",
+                "book-binding": "Binding None",
+                "book-edition": "Edition 1",
+                "book-title": "Sight Reading Level 3",
+                "isbn": "0849750172"
+            }
+        }
+    ],
+    "HMU - 232": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Huber",
+                "book-binding": "Binding None",
+                "book-edition": "Edition 8",
+                "book-title": "Modern Recording Techniques",
+                "isbn": "0240821572"
+            }
+        }
+    ],
+    "HPL - 111": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Stephens",
+                "book-binding": "Binding Paperback",
+                "book-title": "Person",
+                "isbn": "0131848119"
+            }
+        },
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Wall",
+                "book-binding": "Binding Paperback",
+                "book-title": "On Human Nature",
+                "isbn": "0534624782"
+            }
+        }
+    ],
+    "HPL - 456": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Ciulla",
+                "book-binding": "Binding Paperback",
+                "book-edition": "Edition 3",
+                "book-title": "Honest Work",
+                "isbn": "0199944202"
+            }
+        }
+    ],
+    "HPL - 457": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Paola",
+                "book-binding": "Binding Paperback",
+                "book-title": "Medical Ethics & Humanities",
+                "isbn": "0763760633"
+            }
+        }
+    ],
+    "HPL - 460": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Mcallister",
+                "book-binding": "Binding Paperback",
+                "book-title": "Hypatia's Daughters",
+                "isbn": "0253210607"
+            }
+        }
+    ],
+    "HSS - 128": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Carp",
+                "book-binding": "Binding Paperback",
+                "book-edition": "Edition 9",
+                "book-title": "Judicial Process In America",
+                "isbn": "1452226326"
+            }
+        }
+    ],
+    "HSS - 141": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Henslin",
+                "book-binding": "Binding Paperback",
+                "book-edition": "Edition 14",
+                "book-title": "Down To Earth Sociology",
+                "isbn": "1416536205"
+            }
+        }
+    ],
+    "HSS - 175": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Gleitman",
+                "book-binding": "Binding Hardback",
+                "book-edition": "Edition 8",
+                "book-title": "Psychology",
+                "isbn": "0393932508"
+            }
+        }
+    ],
+    "HSS - 331": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Kalat",
+                "book-binding": "Binding Hardback",
+                "book-edition": "Edition 12",
+                "book-title": "Biological Psychology",
+                "isbn": "1305105400"
+            }
+        }
+    ],
+    "HSS - 376": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Olson",
+                "book-binding": "Binding Hardback",
+                "book-edition": "Edition 8",
+                "book-title": "Intro To Theories Of Personality",
+                "isbn": "0205798780"
+            }
+        }
+    ],
+    "HSS - 479": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Kimmel",
+                "book-binding": "Binding Paperback",
+                "book-edition": "Edition 6",
+                "book-title": "Gendered Society Reader",
+                "isbn": "0190260378"
+            }
+        },
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Kimmel",
+                "book-binding": "Binding Paperback",
+                "book-edition": "Edition 6",
+                "book-title": "Gendered Society",
+                "isbn": "0190260319"
+            }
+        }
+    ],
+    "HSS - 495": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Taylor",
+                "book-binding": "Binding Hardback",
+                "book-edition": "Edition 9",
+                "book-title": "Health Psychology",
+                "isbn": "0077861817"
+            }
+        }
+    ],
+    "HST - 415": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "None",
+                "book-binding": "Binding None",
+                "book-title": "No Text Required"
+            }
+        }
+    ],
+    "MA - 119": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Hoffman",
+                "book-binding": "Binding None",
+                "book-edition": "Edition 11",
+                "book-title": "Calc. For Business,Economics-Binder Version",
+                "isbn": "0077491386"
+            }
+        },
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Goldstein",
+                "book-binding": "Binding Hardback",
+                "book-edition": "Edition 11",
+                "book-title": "Finite Mathematics & Its Appl",
+                "isbn": "0321878051"
+            }
+        }
+    ],
+    "MA - 122": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "None",
+                "book-binding": "Binding None",
+                "book-title": "No Text Required"
+            }
+        }
+    ],
+    "MA - 123": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "None",
+                "book-binding": "Binding None",
+                "book-title": "No Text Required"
+            }
+        }
+    ],
+    "MA - 134": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Epp",
+                "book-binding": "Binding Paperback",
+                "book-edition": "Edition k4",
+                "book-title": "Discrete Math With Applications",
+                "isbn": "1111775788"
+            }
+        }
+    ],
+    "MA - 188": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "None",
+                "book-binding": "Binding None",
+                "book-title": "No Text Required"
+            }
+        }
+    ],
+    "MA - 221": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Zill",
+                "book-binding": "Binding None",
+                "book-edition": "Edition 8",
+                "book-title": "Different. Equat. W/ Boundary Value Problems /Enhanced Web",
+                "isbn": "1133540805"
+            }
+        }
+    ],
+    "MA - 227": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Stewart",
+                "book-binding": "Binding None",
+                "book-edition": "Edition 4",
+                "book-title": "Multivariable Calculus W/Sol. Manual",
+                "isbn": "0495780588"
+            }
+        }
+    ],
+    "MA - 230": [
+        {
+            "is_required": false,
+            "stevens-metadata": {
+                "book-author": "Sydsaeter",
+                "book-binding": "Binding None",
+                "book-edition": "Edition 2",
+                "book-title": "Further Mathematics For Economic Analysis",
+                "isbn": "0273713280"
+            }
+        },
+        {
+            "is_required": false,
+            "stevens-metadata": {
+                "book-author": "Sundaram",
+                "book-binding": "Binding Paperback",
+                "book-title": "First Course In Optimization Theory",
+                "isbn": "0521497701"
+            }
+        }
+    ],
+    "MA - 234": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Mathews",
+                "book-binding": "Binding Hardback",
+                "book-edition": "Edition 6",
+                "book-title": "Complex Analysis For Math & Engineering",
+                "isbn": "1449604455"
+            }
+        }
+    ],
+    "MA - 236": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Jeffrey",
+                "book-binding": "Binding Hardback",
+                "book-edition": "Edition 4",
+                "book-title": "Formal Logic",
+                "isbn": "0872208133"
+            }
+        }
+    ],
+    "MA - 336": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Fraleigh",
+                "book-binding": "Binding Hardback",
+                "book-edition": "Edition 7",
+                "book-title": "First Course In Abstract Algebra",
+                "isbn": "0201763907"
+            }
+        }
+    ],
+    "MA - 361": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Haberman",
+                "book-binding": "Binding Hardback",
+                "book-edition": "Edition 4",
+                "book-title": "Applied Partial Differential Equations, Etc",
+                "isbn": "0321797051"
+            }
+        }
+    ],
+    "MA - 548": [
+        {
+            "is_required": false,
+            "stevens-metadata": {
+                "book-author": "Buck",
+                "book-binding": "Binding None",
+                "book-edition": "Edition 3",
+                "book-title": "Advanced Calculus",
+                "isbn": "1588663027"
+            }
+        }
+    ],
+    "MA - 552": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Serre",
+                "book-binding": "Binding None",
+                "book-edition": "Edition 2",
+                "book-title": "Matrices:Theory And Applications",
+                "isbn": "1441976825"
+            }
+        }
+    ],
+    "MA - 606": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "None",
+                "book-binding": "Binding None",
+                "book-title": "No Text Required"
+            }
+        }
+    ],
+    "MA - 612": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Bickel",
+                "book-binding": "Binding None",
+                "book-edition": "Edition 1",
+                "book-title": "Mathematical Statistics:Basic Ideas....",
+                "isbn": "1498740316"
+            }
+        }
+    ],
+    "MA - 620": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "None",
+                "book-binding": "Binding None",
+                "book-title": "No Text Required"
+            }
+        }
+    ],
+    "MA - 623": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Bhattacharya",
+                "book-binding": "Binding None",
+                "book-edition": "Edition 1",
+                "book-title": "Stochastic Processes With Applications",
+                "isbn": "0898716896"
+            }
+        }
+    ],
+    "MA - 636": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Royden",
+                "book-binding": "Binding Hardback",
+                "book-edition": "Edition 4",
+                "book-title": "Real Analysis",
+                "isbn": "013143747X"
+            }
+        }
+    ],
+    "MA - 649": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Strogatz",
+                "book-binding": "Binding None",
+                "book-edition": "Edition 2",
+                "book-title": "Nonlinear Dynamics And Chaos",
+                "isbn": "0813349109"
+            }
+        }
+    ],
+    "MA - 662": [
+        {
+            "is_required": false,
+            "stevens-metadata": {
+                "book-author": "Shapiro",
+                "book-binding": "Binding None",
+                "book-edition": "Edition 2",
+                "book-title": "Lecture Notes On Stochastic Programming",
+                "isbn": "1611973422"
+            }
+        },
+        {
+            "is_required": false,
+            "stevens-metadata": {
+                "book-author": "Prekopa",
+                "book-binding": "Binding None",
+                "book-edition": "Edition 1",
+                "book-title": "Stochastic Programming",
+                "isbn": "0792334825"
+            }
+        },
+        {
+            "is_required": false,
+            "stevens-metadata": {
+                "book-author": "Ruszczynski",
+                "book-binding": "Binding None",
+                "book-edition": "Edition 1",
+                "book-title": "Stodhastic Programming Handbook",
+                "isbn": "0444508546"
+            }
+        }
+    ],
+    "MA - 681": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Markushevich",
+                "book-binding": "Binding None",
+                "book-title": "Theory Of Functions Of A Complex...",
+                "isbn": "082183780X"
+            }
+        }
+    ],
+    "MA - 810": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Mcneil",
+                "book-binding": "Binding Hardback",
+                "book-title": "Quantitative Risk Management Rev Ed",
+                "isbn": "0691166277"
+            }
+        }
+    ],
+    "ME - 225": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Hibbeler",
+                "book-binding": "Binding Hardback",
+                "book-edition": "Edition 14",
+                "book-title": "Engineering Mech: Dynamics",
+                "isbn": "0133915387"
+            }
+        }
+    ],
+    "ME - 234": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Moran",
+                "book-binding": "Binding Hardback",
+                "book-edition": "Edition 8",
+                "book-title": "Fundamentals Of Engineer. Thermodynamics-Hardcover",
+                "isbn": "1118412931"
+            }
+        }
+    ],
+    "ME - 322": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Ulrich",
+                "book-binding": "Binding Hardback",
+                "book-edition": "Edition 6",
+                "book-title": "Product Design & Development",
+                "isbn": "0078029066"
+            }
+        }
+    ],
+    "ME - 335": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Moran",
+                "book-binding": "Binding Hardback",
+                "book-edition": "Edition 8",
+                "book-title": "Fundamentals Of Engineer. Thermodynamics-Hardcover",
+                "isbn": "1118412931"
+            }
+        }
+    ],
+    "ME - 342": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "White",
+                "book-binding": "Binding None",
+                "book-edition": "Edition 8",
+                "book-title": "Fluid Mechanics-Binder Version",
+                "isbn": "1259169928"
+            }
+        }
+    ],
+    "ME - 354": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Cengel",
+                "book-binding": "Binding None",
+                "book-edition": "Edition 5",
+                "book-title": "Heat And Mass Transfer",
+                "isbn": "0073398187"
+            }
+        }
+    ],
+    "ME - 358": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Norton",
+                "book-binding": "Binding Hardback",
+                "book-edition": "Edition 5",
+                "book-title": "Design Of Machinery-W/Dvd",
+                "isbn": "007742171X"
+            }
+        }
+    ],
+    "ME - 361": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Budynas",
+                "book-binding": "Binding Hardback",
+                "book-edition": "Edition 10",
+                "book-title": "Shigley's Mechanical Engineering Design",
+                "isbn": "0073398209"
+            }
+        }
+    ],
+    "ME - 398": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Norton",
+                "book-binding": "Binding Hardback",
+                "book-edition": "Edition 5",
+                "book-title": "Design Of Machinery (W/Cd)",
+                "isbn": "007742171X"
+            }
+        }
+    ],
+    "ME - 483": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Ogata",
+                "book-binding": "Binding None",
+                "book-edition": "Edition 5",
+                "book-title": "Modern Control Engineering",
+                "isbn": "0136156738"
+            }
+        }
+    ],
+    "ME - 491": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Pessen",
+                "book-binding": "Binding None",
+                "book-title": "Industrial Automation",
+                "isbn": "0471600717"
+            }
+        },
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Kalpakjian",
+                "book-binding": "Binding Hardback",
+                "book-edition": "Edition 6",
+                "book-title": "Manufacturing Processes For Engineering Materials",
+                "isbn": "0134290550"
+            }
+        }
+    ],
+    "ME - 509": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Desilva",
+                "book-binding": "Binding Hardback",
+                "book-title": "Mechatronics",
+                "isbn": "0849312744"
+            }
+        }
+    ],
+    "ME - 515": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Newton",
+                "book-binding": "Binding None",
+                "book-edition": "Edition 13",
+                "book-title": "The Motor Vehicle",
+                "isbn": "0768006392"
+            }
+        }
+    ],
+    "ME - 529": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Ferguson",
+                "book-binding": "Binding Paperback",
+                "book-edition": "Edition 2",
+                "book-title": "Internal Combustion Engines",
+                "isbn": "0471356174"
+            }
+        }
+    ],
+    "ME - 530": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Allen",
+                "book-binding": "Binding Paperback",
+                "book-edition": "Edition 9",
+                "book-title": "Ansel's Pharmaceutical Dosage Forms & Drug Delivery Systems",
+                "isbn": "0781779340"
+            }
+        }
+    ],
+    "ME - 532": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Cooper",
+                "book-binding": "Binding Hardback",
+                "book-edition": "Edition 4",
+                "book-title": "Air Pollution Control",
+                "isbn": "157766678X"
+            }
+        }
+    ],
+    "ME - 535": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Signore",
+                "book-binding": "Binding None",
+                "book-title": "Good Design Practices For Gmp Pharm. Facilities",
+                "isbn": "0824754638"
+            }
+        }
+    ],
+    "ME - 540": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Nash",
+                "book-binding": "Binding None",
+                "book-title": "Pharmaceutical Process Validation",
+                "isbn": "0824708385"
+            }
+        }
+    ],
+    "ME - 545": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Anderson",
+                "book-binding": "Binding Hardback",
+                "book-edition": "Edition 8",
+                "book-title": "Intro To Flight",
+                "isbn": "0078027675"
+            }
+        }
+    ],
+    "ME - 546": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Dixon",
+                "book-binding": "Binding None",
+                "book-edition": "Edition 7",
+                "book-title": "Fluid Mechanics And Thermodynamics Of Turbomachinery",
+                "isbn": "0124159540"
+            }
+        }
+    ],
+    "ME - 566": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Boothroyd",
+                "book-binding": "Binding Hardback",
+                "book-edition": "Edition 3",
+                "book-title": "Product Design For Manufacture & Assembly",
+                "isbn": "1420089277"
+            }
+        }
+    ],
+    "ME - 598": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Spong",
+                "book-binding": "Binding Hardback",
+                "book-title": "Robot Modeling & Control",
+                "isbn": "0471649902"
+            }
+        },
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Siegwart",
+                "book-binding": "Binding None",
+                "book-edition": "Edition 4",
+                "book-title": "Intro To Autonomous Mobile Robots W/Code",
+                "isbn": "0262015358"
+            }
+        }
+    ],
+    "ME - 604": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Nellis",
+                "book-binding": "Binding None",
+                "book-title": "Heat Transfer",
+                "isbn": "110767137X"
+            }
+        }
+    ],
+    "ME - 621": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Ogata",
+                "book-binding": "Binding None",
+                "book-edition": "Edition 5",
+                "book-title": "Modern Control Engineering",
+                "isbn": "0136156738"
+            }
+        }
+    ],
+    "ME - 631": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Rao",
+                "book-binding": "Binding Hardback",
+                "book-edition": "Edition 6",
+                "book-title": "Mechanical Vibrations",
+                "isbn": "013436130X"
+            }
+        }
+    ],
+    "ME - 635": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Close",
+                "book-binding": "Binding None",
+                "book-title": "Modeling And Analysis Of Dynamic Systems",
+                "isbn": "0471394424"
+            }
+        }
+    ],
+    "ME - 641": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Kreyszig",
+                "book-binding": "Binding Spiral",
+                "book-edition": "Edition 10",
+                "book-title": "Advanced Engineering Mathematics-Spiral",
+                "isbn": "0470918942"
+            }
+        }
+    ],
+    "ME - 645": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Groover",
+                "book-binding": "Binding None",
+                "book-edition": "Edition 4",
+                "book-title": "Automation,Production System And Computer Integre..",
+                "isbn": "0133499618"
+            }
+        }
+    ],
+    "ME - 648": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Malvern",
+                "book-binding": "Binding Paperback",
+                "book-title": "Intro To Mechanics Of Continuous Medium",
+                "isbn": "0134876032"
+            }
+        }
+    ],
+    "ME - 652": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Gibson",
+                "book-binding": "Binding None",
+                "book-edition": "Edition 2",
+                "book-title": "Additive Manufacturing Technologies",
+                "isbn": "1493921126"
+            }
+        }
+    ],
+    "ME - 665": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Dhillon",
+                "book-binding": "Binding None",
+                "book-title": "Advanced Design Concepts For Engineers",
+                "isbn": "1566766265"
+            }
+        }
+    ],
+    "MGT - 103": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Maurya",
+                "book-binding": "Binding Hardback",
+                "book-edition": "Edition 2",
+                "book-title": "Running Lean",
+                "isbn": "1449305172"
+            }
+        }
+    ],
+    "MGT - 546": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "None",
+                "book-binding": "Binding None",
+                "book-title": "No Text Required"
+            }
+        }
+    ],
+    "MGT - 606": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Case",
+                "book-binding": "Binding Hardback",
+                "book-edition": "Edition 12",
+                "book-title": "Principles Of Economics",
+                "isbn": "0134078772"
+            }
+        }
+    ],
+    "MGT - 609": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Pmi",
+                "book-binding": "Binding None",
+                "book-edition": "Edition 5",
+                "book-title": "A Guide To Proj. Mgt. Body Of Knowledge",
+                "isbn": "1935589679"
+            }
+        },
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Merideth",
+                "book-binding": "Binding None",
+                "book-edition": "Edition 9",
+                "book-title": "Project Management:A Fundamental Approach",
+                "isbn": "1119071984"
+            }
+        }
+    ],
+    "MGT - 612": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Pinto",
+                "book-binding": "Binding Paperback",
+                "book-title": "Project Leadership From Theory To Practice",
+                "isbn": "1880410109"
+            }
+        },
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Whetten",
+                "book-binding": "Binding None",
+                "book-edition": "Edition 9",
+                "book-title": "Developing Mgmt. Skills",
+                "isbn": "0133127478"
+            }
+        }
+    ],
+    "MGT - 620": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Newbold",
+                "book-binding": "Binding None",
+                "book-edition": "Edition 8",
+                "book-title": "Statistics For Business And Economics-Book Only",
+                "isbn": "0132745658"
+            }
+        }
+    ],
+    "MGT - 635": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Bazerman",
+                "book-binding": "Binding Hardback",
+                "book-edition": "Edition 8",
+                "book-title": "Judgment In Managerial Decision Making",
+                "isbn": "1118065700"
+            }
+        }
+    ],
+    "MGT - 671": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Schilling",
+                "book-binding": "Binding Paperback",
+                "book-edition": "Edition 5",
+                "book-title": "Strategic Management Of Technological Innovation",
+                "isbn": "1259539067"
+            }
+        }
+    ],
+    "MGT - 689": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Daft",
+                "book-binding": "Binding Hardback",
+                "book-edition": "Edition 11",
+                "book-title": "Organization Theory & Design",
+                "isbn": "1111221294"
+            }
+        },
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Robbins",
+                "book-binding": "Binding None",
+                "book-edition": "Edition 13",
+                "book-title": "Essentials Of Organizational Behavior",
+                "isbn": "013392081X"
+            }
+        }
+    ],
+    "MIS - 636": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Kimball",
+                "book-binding": "Binding Paperback",
+                "book-edition": "Edition 2",
+                "book-title": "Data Warehouse Lifecycle Toolkit",
+                "isbn": "0470149779"
+            }
+        },
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Sharda",
+                "book-binding": "Binding Paperback",
+                "book-edition": "Edition 3",
+                "book-title": "Business Intelligence",
+                "isbn": "0133051056"
+            }
+        }
+    ],
+    "MT - 503": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Omar",
+                "book-binding": "Binding Paperback",
+                "book-title": "Elementary Solid State Physics Rev Prtg",
+                "isbn": "0201607336"
+            }
+        }
+    ],
+    "MT - 518": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Goswami",
+                "book-binding": "Binding None",
+                "book-edition": "Edition 3",
+                "book-title": "Principles Of Solar Engineering",
+                "isbn": "1466563788"
+            }
+        }
+    ],
+    "MT - 602": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Porter",
+                "book-binding": "Binding Hardback",
+                "book-edition": "Edition 3",
+                "book-title": "Phase Transformations In Metals And Alloys",
+                "isbn": "1420062107"
+            }
+        }
+    ],
+    "MT - 685": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "None",
+                "book-binding": "Binding None",
+                "book-title": "No Text Required"
+            }
+        }
+    ],
+    "MT - 690": [
+        {
+            "is_required": false,
+            "stevens-metadata": {
+                "book-author": "Yalamanchili",
+                "book-binding": "Binding Hardback",
+                "book-title": "Introductory Vhdl From Simulation To Synthesis",
+                "isbn": "0130809829"
+            }
+        },
+        {
+            "is_required": false,
+            "stevens-metadata": {
+                "book-author": "Baker",
+                "book-binding": "Binding Hardback",
+                "book-edition": "Edition 2",
+                "book-title": "Cmos Circuit Design, Layout & Simulation",
+                "isbn": "047170055X"
+            }
+        },
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Weste",
+                "book-binding": "Binding Hardback",
+                "book-edition": "Edition 4",
+                "book-title": "Cmos Vlsi Design",
+                "isbn": "0321547748"
+            }
+        }
+    ],
+    "NANO - 325": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Rogers",
+                "book-binding": "Binding None",
+                "book-edition": "Edition 3",
+                "book-title": "Understanding Small Systems",
+                "isbn": "1482211726"
+            }
+        }
+    ],
+    "NANO - 503": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Omar",
+                "book-binding": "Binding Paperback",
+                "book-title": "Elementary Solid State Physics Rev Prtg",
+                "isbn": "0201607336"
+            }
+        }
+    ],
+    "NIS - 584": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "None",
+                "book-binding": "Binding None",
+                "book-title": "No Text Required"
+            }
+        }
+    ],
+    "NIS - 593": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Cormen",
+                "book-binding": "Binding Hardback",
+                "book-edition": "Edition 3",
+                "book-title": "Intro To Algorithms",
+                "isbn": "0262033844"
+            }
+        }
+    ],
+    "NIS - 602": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Rosen",
+                "book-binding": "Binding Paperback",
+                "book-edition": "Edition 7",
+                "book-title": "Discrete Math & Its Appl (Loose-Leaf)",
+                "isbn": "0077431448"
+            }
+        }
+    ],
+    "NIS - 604": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Bertsekas",
+                "book-binding": "Binding Paperback",
+                "book-edition": "Edition 2",
+                "book-title": "Data Networks",
+                "isbn": "0132009161"
+            }
+        }
+    ],
+    "NIS - 605": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Ross",
+                "book-binding": "Binding Hardback",
+                "book-edition": "Edition 9",
+                "book-title": "First Course In Probability",
+                "isbn": "032179477X"
+            }
+        }
+    ],
+    "NIS - 609": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Sklar",
+                "book-binding": "Binding Hardback",
+                "book-edition": "Edition 2",
+                "book-title": "Digital Communications (W/Cd)",
+                "isbn": "0130847887"
+            }
+        }
+    ],
+    "NIS - 645": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Gonzalez",
+                "book-binding": "Binding Hardback",
+                "book-edition": "Edition 3",
+                "book-title": "Digital Image Processing",
+                "isbn": "013168728X"
+            }
+        }
+    ],
+    "NIS - 654": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Mccabe",
+                "book-binding": "Binding Hardback",
+                "book-edition": "Edition 3",
+                "book-title": "Network Analysis, Architecture & Design",
+                "isbn": "0123704804"
+            }
+        }
+    ],
+    "NIS - 679": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Kurose",
+                "book-binding": "Binding Hardback",
+                "book-edition": "Edition 7",
+                "book-title": "Computer Networking",
+                "isbn": "0133594149"
+            }
+        }
+    ],
+    "OE - 591": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Wallace",
+                "book-binding": "Binding Hardback",
+                "book-edition": "Edition 2",
+                "book-title": "Atmospheric Science",
+                "isbn": "012732951X"
+            }
+        },
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Holton",
+                "book-binding": "Binding Hardback",
+                "book-edition": "Edition 5",
+                "book-title": "Intro To Dynamic Meteorology",
+                "isbn": "0123848660"
+            }
+        }
+    ],
+    "OE - 592": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Oreskes",
+                "book-binding": "Binding Paperback",
+                "book-title": "Merchants Of Doubt",
+                "isbn": "1608193942"
+            }
+        },
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Dessler",
+                "book-binding": "Binding None",
+                "book-edition": "Edition 2",
+                "book-title": "Intro To Modern Climate Change",
+                "isbn": "1107480671"
+            }
+        },
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Dow",
+                "book-binding": "Binding None",
+                "book-title": "The Atlas Of Climate Change",
+                "isbn": "0520268237"
+            }
+        }
+    ],
+    "OE - 610": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Buckley",
+                "book-binding": "Binding Hardback",
+                "book-edition": "Edition 8",
+                "book-title": "Business Of Shipping",
+                "isbn": "0870335804"
+            }
+        }
+    ],
+    "PEP - 111": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Turning Tech.",
+                "book-binding": "Binding None",
+                "book-title": "Response Card Nxt-Clicker",
+                "isbn": "1934931497"
+            }
+        },
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Serway",
+                "book-binding": "Binding Looseleaf",
+                "book-edition": "Edition 9",
+                "book-title": "Physics For Scientists And Engineers-Binder Version",
+                "isbn": "1305932307"
+            }
+        }
+    ],
+    "PEP - 124": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Giordano",
+                "book-binding": "Binding None",
+                "book-title": "College Physics:Reasoning And Relationships Vol.2",
+                "isbn": "130513785X"
+            }
+        }
+    ],
+    "PEP - 330": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Stowe",
+                "book-binding": "Binding Paperback",
+                "book-edition": "Edition 2",
+                "book-title": "Intro To Thermodynamics And Statistical Mechanics",
+                "isbn": "1107694922"
+            }
+        }
+    ],
+    "PEP - 351": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "None",
+                "book-binding": "Binding None",
+                "book-title": "No Text Required"
+            }
+        }
+    ],
+    "PEP - 503": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Omar",
+                "book-binding": "Binding Paperback",
+                "book-title": "Elementary Solid State Physics Rev Prtg",
+                "isbn": "0201607336"
+            }
+        }
+    ],
+    "PEP - 509": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Hecht",
+                "book-binding": "Binding Hardback",
+                "book-edition": "Edition 5",
+                "book-title": "Optics",
+                "isbn": "0133977226"
+            }
+        },
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Pedrotti",
+                "book-binding": "Binding Paperback",
+                "book-edition": "Edition 3",
+                "book-title": "Intro To Optics",
+                "isbn": "0131499335"
+            }
+        }
+    ],
+    "PEP - 528": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "None",
+                "book-binding": "Binding None",
+                "book-title": "No Text Required"
+            }
+        }
+    ],
+    "PEP - 542": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Griffiths",
+                "book-binding": "Binding Hardback",
+                "book-edition": "Edition 4",
+                "book-title": "Intro To Electrodynamics",
+                "isbn": "0321856562"
+            }
+        }
+    ],
+    "PEP - 642": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Goldstein",
+                "book-binding": "Binding Hardback",
+                "book-edition": "Edition 3",
+                "book-title": "Classical Mechanics",
+                "isbn": "0201657023"
+            }
+        }
+    ],
+    "PEP - 685": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "None",
+                "book-binding": "Binding None",
+                "book-title": "No Text Required"
+            }
+        }
+    ],
+    "PEP - 690": [
+        {
+            "is_required": false,
+            "stevens-metadata": {
+                "book-author": "Yalamanchili",
+                "book-binding": "Binding Hardback",
+                "book-title": "Introductory Vhdl From Simulation To Synthesis",
+                "isbn": "0130809829"
+            }
+        },
+        {
+            "is_required": false,
+            "stevens-metadata": {
+                "book-author": "Baker",
+                "book-binding": "Binding Hardback",
+                "book-edition": "Edition 2",
+                "book-title": "Cmos Circuit Design, Layout & Simulation",
+                "isbn": "047170055X"
+            }
+        },
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Weste",
+                "book-binding": "Binding Hardback",
+                "book-edition": "Edition 4",
+                "book-title": "Cmos Vlsi Design",
+                "isbn": "0321547748"
+            }
+        }
+    ],
+    "PME - 535": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Signore",
+                "book-binding": "Binding None",
+                "book-title": "Good Design Practices For Gmp Pharm. Facilities",
+                "isbn": "0824754638"
+            }
+        }
+    ],
+    "PME - 540": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Nash",
+                "book-binding": "Binding None",
+                "book-title": "Pharmaceutical Process Validation",
+                "isbn": "0824708385"
+            }
+        },
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Lyderson,D'elia",
+                "book-binding": "Binding None",
+                "book-title": "Bioprocess Engineering:Systems,Equipment And Facilities",
+                "isbn": "0471035440"
+            }
+        }
+    ],
+    "PME - 541": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Wingate",
+                "book-binding": "Binding None",
+                "book-edition": "Edition 2",
+                "book-title": "Pharmaceutical Computer System Validation",
+                "isbn": "1420088947"
+            }
+        }
+    ],
+    "PME - 560": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Brassard",
+                "book-binding": "Binding Spiral",
+                "book-title": "Memory Jogger 2 (2Nd)(Pocket)",
+                "isbn": "1576811131"
+            }
+        },
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Imler",
+                "book-binding": "Binding None",
+                "book-title": "Get It Right",
+                "isbn": "0873896688"
+            }
+        }
+    ],
+    "PME - 629": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Akers",
+                "book-binding": "Binding None",
+                "book-title": "Sterile Drug Products",
+                "isbn": "0849339936"
+            }
+        }
+    ],
+    "QF - 402": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "None",
+                "book-binding": "Binding None",
+                "book-title": "No Text Required"
+            }
+        }
+    ],
+    "SSW - 215": [
+        {
+            "is_required": false,
+            "stevens-metadata": {
+                "book-author": "Thomas",
+                "book-binding": "Binding None",
+                "book-title": "Programing Ruby 1.9 & 2.0",
+                "isbn": "1937785491"
+            }
+        },
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Ruby",
+                "book-binding": "Binding Paperback",
+                "book-title": "Agile Web Development With Rails 4",
+                "isbn": "1937785564"
+            }
+        }
+    ],
+    "SSW - 565": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Evans",
+                "book-binding": "Binding None",
+                "book-title": "Domain-Driven Design",
+                "isbn": "0321125215"
+            }
+        },
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Spinellis",
+                "book-binding": "Binding None",
+                "book-title": "Beautiful Architecture",
+                "isbn": "059651798X"
+            }
+        }
+    ],
+    "SYS - 611": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Oracle",
+                "book-binding": "Binding None",
+                "book-title": "Crystal Ball Classroom Edition"
+            }
+        }
+    ],
+    "SYS - 625": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Larson",
+                "book-binding": "Binding None",
+                "book-title": "Applied Space Systems Engineering",
+                "isbn": "0073408867"
+            }
+        },
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Christensen",
+                "book-binding": "Binding None",
+                "book-title": "Innovators Dilemma-New Reprint",
+                "isbn": "1633691780"
+            }
+        }
+    ],
+    "SYS - 660": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Clemen",
+                "book-binding": "Binding None",
+                "book-edition": "Edition 3",
+                "book-title": "Making Hard Decisions W/Decision Tools",
+                "isbn": "0538797576"
+            }
+        },
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Kahneman",
+                "book-binding": "Binding Paperback",
+                "book-title": "Thinking, Fast & Slow",
+                "isbn": "0374533555"
+            }
+        }
+    ],
+    "TM - 584": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "None",
+                "book-binding": "Binding None",
+                "book-title": "No Text Required"
+            }
+        }
+    ],
+    "TM - 605": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Yates",
+                "book-binding": "Binding Paperback",
+                "book-edition": "Edition 3",
+                "book-title": "Probability & Stochastic Processes",
+                "isbn": "1118324560"
+            }
+        }
+    ],
+    "TM - 610": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Stallings",
+                "book-binding": "Binding None",
+                "book-edition": "Edition 9",
+                "book-title": "Data And Computer Comm. W/Simulator",
+                "isbn": "013466227X"
+            }
+        }
+    ],
+    "TM - 617": [
+        {
+            "is_required": true,
+            "stevens-metadata": {s
+                "book-author": "None",
+                "book-binding": "Binding None",
+                "book-title": "No Text Required"
+            }
+        }
+    ],
+    "TM - 650": [
+        {
+            "is_required": true,
+            "stevens-metadata": {
+                "book-author": "Stallings",
+                "book-binding": "Binding None",
+                "book-edition": "Edition 1",
+                "book-title": "The Foundations Of Modern Networking",
+                "isbn": "0134175395"
+            }
+        }
+    ]
+}

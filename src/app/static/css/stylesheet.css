@@ -2,12 +2,43 @@
 Stevens Default Red #9D1535
 Stevens Hover Red #7e102a
 Stevens Grey #BBBCBE
+Stevens Light-Grey #eee
 */
-/* 
-Required for NavBar
-*/
-body { padding-top: 70px; }
 
+/*
+Main page
+*/
+body {
+    /*Required for NavBar*/
+    padding-top: 50px;
+    background-color: #fff;
+}
+
+.navbar-default{
+	/*background-color: #9D1535;
+	color: #BBBCBE;*/
+}
+
+#stv-search .jumbotron{
+	background-color: #eee;
+	color: #9D1535;
+}
+
+.stv-text-red{
+    color: #9D1535;
+}
+
+.stv-text-grey{
+    color: #BBBCBE;
+}
+
+.stv-panel-grey{
+	background-color: #eee;
+}
+
+/*
+Login
+*/
 #login-dp{
     min-width: 250px;
     padding: 14px 14px 0;
@@ -15,7 +46,12 @@ body { padding-top: 70px; }
     background-color:rgba(255,255,255,.8);
 }
 
-#stevens-banner {
-	background-color: #9D1535;
-	color: #BBBCBE;
+/*
+carousel in about us
+*/
+.carousel-inner .item active .carousel-caption{
+	color: #7e102a;
 }
+
+
+
