@@ -1,10 +1,11 @@
 {% extends 'template.html' %}
-{% block title %}Contact the Stevens book marketplace{% endblock %}
+{% block title %}Contact the Stevens Book Marketplace{% endblock %}
 {% block content %}
 <!-- custom scripts -->
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/contact.css') }}">
 <script type="text/javascript " src="{{ url_for( 'static', filename='js/contact.js' ) }} "></script>
 
+<!-- html/bootstrap -->
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-12">
@@ -66,7 +67,7 @@
     </form>
         </div>
     </div>
-    <div class="row">
+    <div class="row stv-panel-grey">
 		<div class="col-md-12">
 			<address>
                 <strong>The Stevens Book Marketplace</strong><br /> Stevens Institute of Technology<br /> 1 Castle Point Terrace<br /> Hoboken, NJ 07030 <br />
@@ -74,6 +75,5 @@
 		</div>
 	</div>
 </div>
-
 {% endblock %}
 

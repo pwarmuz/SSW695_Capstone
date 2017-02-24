@@ -5,9 +5,6 @@
     <title>{% block title %}{% endblock %}</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/stylesheet.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/scrolling-nav.css') }}">
-
     <!-- Static minified Bootstrap CSS -->
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrap-3.3.7-dist/css/bootstrap.min.css') }}">
     <!-- googleapi minified JQuery js -->
@@ -15,11 +12,12 @@
     <!-- Static minified Bootstrap js -->
     <script type="text/javascript " src="{{ url_for( 'static', filename='bootstrap-3.3.7-dist/js/bootstrap.min.js' ) }} "></script>
 
+    <!-- custom stylesheets -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/stylesheet.css') }}">
+
     <!-- custom scripts -->
-    <script type="text/javascript " src="{{ url_for( 'static', filename='js/scripts.js' ) }} "></script>
+    <script type="text/javascript " src="{{ url_for( 'static', filename='js/login_script.js' ) }} "></script>
     <script type="text/javascript " src="{{ url_for( 'static', filename='js/sha256.js' ) }} "></script>
-    <script type="text/javascript " src="{{ url_for( 'static', filename='js/jquery.easing.min.js' ) }} "></script>
-    <script type="text/javascript " src="{{ url_for( 'static', filename='js/scrolling-nav.js' ) }} "></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
