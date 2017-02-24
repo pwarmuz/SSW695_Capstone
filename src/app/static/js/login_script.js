@@ -1,3 +1,15 @@
+/*
+    Let's leave login scripts here to keep it organized
+    and simple to modify
+*/
+
+/* I will remove this in the next version unless someone identifies why this is needed?
+Shouldn't bootstrap automatically take care of the viewport?-Phil
+$('#monitor').html($(window).width());
+$(window).resize(function() {
+    var viewportWidth = $(window).width();
+    $('#monitor').html(viewportWidth);
+});*/
 
 
 function checkPasswordsMatch() {
@@ -26,6 +38,7 @@ function onSignUpSubmit(aForm) {
     //Submitting
     return true;
 }
+
 
 function onLoginSubmit(aForm) {
 	var inputPassword = aForm['password'];
