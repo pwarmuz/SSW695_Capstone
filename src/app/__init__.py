@@ -1,3 +1,5 @@
+__version__ = '0.2'
+
 import os
 
 from flask import Flask, render_template, request, jsonify, session, redirect, url_for
@@ -13,6 +15,8 @@ except ImportError:
 flask_app = Flask(__name__)
 flask_app.config.from_object(config.BaseConfig)
 mongo_client = LocalProxy(get_db)
+print('Stevens Book Marketplace Version: ' + __version__)
+
 
 @flask_app.url_defaults
 def hashed_static_file_url(endpoint, values):
@@ -112,7 +116,7 @@ def submit_form():
     email = request.form['email']
     subject = request.form['subject']
     message = request.form['message']
-    print("contact form message from: {0} and email: {1} and subject: {2} and message {3}" .format(username, email, subject, message))
+    print('contact form message from: {0} and email: {1} and subject: {2} and message {3}' .format(username, email, subject, message))
     return redirect(url_for('home'))
 
 
