@@ -78,3 +78,10 @@ def get_courses_by_departments():
     for node in cursor:
         node["text"] = "{0}: {1}".format(node["text"], DEPARTMENTS.get(node["text"], ""))
         yield node
+
+
+def get_course(letter, number):
+    """ Get courses by departments
+    :return:
+    """
+    return mongo_client.catalog.courses.find_one({"letter": letter.upper(), "number": number})

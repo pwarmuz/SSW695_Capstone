@@ -1,5 +1,5 @@
 {% extends 'template.html' %}
-{% block title %}Welcome to Stevens Book Marketplace{% endblock %}
+{% block title %}Departments{% endblock %}
 {% block content %}
     <style>
         .course-link {
@@ -19,7 +19,7 @@
     </style>
 
     <div class="container">
-        <h2>Categories</h2>
+        <h2>Departments</h2>
         {% for department in departments %}
             <div class="department-section">
                 <div class="row ">
@@ -29,22 +29,21 @@
                     {% set n = (department["children"]|length / 3) | round(method="ceil") | int %}
                     <div class="col-md-4">
                         {% for row in department["children"][0:n] %}
-                            <li class="course-link">{{ row["text"] }}</li>
+                            <a class="course-link" href="{{  url_for("categories.course", letter=row['a_attr']['data-letter'], number= row['a_attr']["data-number"]) }}">{{ row["text"] }}</a>
                         {% endfor %}
                     </div>
                     <div class="col-md-4">
                         {% for row in department["children"][n:n*2] %}
-                            <li class="course-link">{{ row["text"] }}</li>
+                            <a class="course-link" href="{{  url_for("categories.course", letter=row['a_attr']['data-letter'], number= row['a_attr']["data-number"]) }}">{{ row["text"] }}</a>
                         {% endfor %}
                     </div>
                     <div class="col-md-4">
                         {% for row in department["children"][n*2:] %}
-                            <li class="course-link">{{ row["text"] }}</li>
+                            <a class="course-link" href="{{  url_for("categories.course", letter=row['a_attr']['data-letter'], number= row['a_attr']["data-number"]) }}">{{ row["text"] }}</a>
                         {% endfor %}
                     </div>
                 </div>
             </div>
         {% endfor %}
     </div>
-
 {% endblock %}

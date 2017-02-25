@@ -1,14 +1,19 @@
-from flask import Blueprint, render_template
+from flask import Blueprint, render_template, abort
 
 import tools
-blueprint = Blueprint('categories', __name__, url_prefix="/categories")
+blueprint = Blueprint('categories', __name__)
 
 
-@blueprint.route('/')
-def display_categories():
-    return render_template('categories/display_categories.html', departments=tools.get_courses_by_departments())
+@blueprint.route('/departments/')
+def departments():
+    return render_template('categories/departments.html', departments=tools.get_courses_by_departments())
 
 
-@blueprint.route('/<category>')
-def display_category(category):
-   return "display category here"
+@blueprint.route('/course/<letter>-<number>')
+def course(letter, number):
+    course = tools.get_course(letter, number)
+
+    if course is None:
+        abort(404)
+
+    return render_template('categories/course.html', course=course)
