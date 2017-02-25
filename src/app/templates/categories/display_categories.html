@@ -1,0 +1,55 @@
+
+{% extends 'template.html' %}
+{% block title %}Welcome to Stevens Book Marketplace{% endblock %}
+{% block content %}
+
+    <style>
+        .course-link {
+            font-size: 11px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin: 0;
+            padding-left: 0;
+            display: block;
+
+        }
+
+        .department-section{
+            padding: 10px 20px 10px 20px;
+        }
+
+    </style>
+
+    <div class="container">
+        <h2>Categories</h2>
+        {% for department in departments %}
+            <div class="department-section">
+                <div class="row ">
+                    <h4>{{ department['text'] }}</h4>
+                </div>
+                <div class="row ">
+                    {% set n = (department["children"]|length / 3) | round(method="ceil") | int %}
+                    <div class="col-md-4">
+                        {% for row in department["children"][0:n] %}
+                            <li class="course-link">{{ row["text"] }}</li>
+                        {% endfor %}
+                    </div>
+                    <div class="col-md-4">
+                        {% for row in department["children"][n:n*2] %}
+                            <li class="course-link">{{ row["text"] }}</li>
+                        {% endfor %}
+                    </div>
+                    <div class="col-md-4">
+                        {% for row in department["children"][n*2:] %}
+                            <li class="course-link">{{ row["text"] }}</li>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+
+
+{% endblock %}

@@ -14,6 +14,13 @@ flask_app = Flask(__name__)
 flask_app.config.from_object(config.BaseConfig)
 mongo_client = LocalProxy(get_db)
 
+
+import categories
+
+flask_app.register_blueprint(categories.blueprint)
+
+
+
 @flask_app.url_defaults
 def hashed_static_file_url(endpoint, values):
     """
