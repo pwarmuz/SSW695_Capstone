@@ -98,6 +98,10 @@ def parse_book_info(html_doc):
                         book_metadata_elm = book.find("span", {"class": x})
                         if book_metadata_elm is not None:
                             stevens_metadata[x] = book_metadata_elm.text.replace(u"\u00a0", " ")
+
+                    if stevens_metadata.get("book-title") == 'No Text Required':
+                        break
+
                     book_dict["stevens-metadata"] = stevens_metadata
 
                     # Parse Book Pricing
@@ -120,5 +124,23 @@ def update_book_info():
         json.dump(data, f, sort_keys=True, indent=4, separators=(',', ': '))
 
 
+def put_google_book_info_into_database(key = None):
+    # Not Finished
+    from app import mongo_client
+    from google_books import get_info_by_isbn
+    with open('data/stevens_bookstore_info.json') as f:
+        data = json.load(f)
+
+    for k, d in data.iteritems():
+        for b in d:
+            isbn = b['stevens-metadata'].get('isbn')
+            if isbn is not None:
+                info = get_info_by_isbn(isbn, key=None)
+                if info is None:
+                    print isbn, b
+
+
 if __name__ == "__main__":
-    update_book_info()
+    pass
+    #update_book_info()
+    put_google_book_info_into_database()
