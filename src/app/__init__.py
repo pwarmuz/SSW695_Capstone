@@ -118,7 +118,3 @@ def submit_form():
     message = request.form['message']
     print('contact form message from: {0} and email: {1} and subject: {2} and message {3}' .format(username, email, subject, message))
     return redirect(url_for('home'))
-
-
-# set the secret key.
-flask_app.secret_key = flask_app.config.get('secret_key')
