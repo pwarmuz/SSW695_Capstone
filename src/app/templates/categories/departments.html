@@ -29,17 +29,17 @@
                     {% set n = (department["children"]|length / 3) | round(method="ceil") | int %}
                     <div class="col-md-4">
                         {% for row in department["children"][0:n] %}
-                            <a class="course-link" href="{{  url_for("categories.course", letter=row['a_attr']['data-letter'], number= row['a_attr']["data-number"]) }}">{{ row["text"] }}</a>
+                            <a class="course-link" title="{{ row["text"] }}" href="{{  url_for("categories.course", letter=row['a_attr']['data-letter'], number= row['a_attr']["data-number"]) }}">{{ row["text"] }}</a>
                         {% endfor %}
                     </div>
                     <div class="col-md-4">
                         {% for row in department["children"][n:n*2] %}
-                            <a class="course-link" href="{{  url_for("categories.course", letter=row['a_attr']['data-letter'], number= row['a_attr']["data-number"]) }}">{{ row["text"] }}</a>
+                            <a class="course-link" title="{{ row["text"] }}" href="{{  url_for("categories.course", letter=row['a_attr']['data-letter'], number= row['a_attr']["data-number"]) }}">{{ row["text"] }}</a>
                         {% endfor %}
                     </div>
                     <div class="col-md-4">
                         {% for row in department["children"][n*2:] %}
-                            <a class="course-link" href="{{  url_for("categories.course", letter=row['a_attr']['data-letter'], number= row['a_attr']["data-number"]) }}">{{ row["text"] }}</a>
+                            <a class="course-link" title="{{ row["text"] }}"  href="{{  url_for("categories.course", letter=row['a_attr']['data-letter'], number= row['a_attr']["data-number"]) }}">{{ row["text"] }}</a>
                         {% endfor %}
                     </div>
                 </div>
