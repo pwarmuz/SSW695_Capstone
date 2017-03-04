@@ -36,6 +36,11 @@ body {
 	background-color: #eee;
 }
 
+.form-horizontal .control-label.text-left{
+    /*override labels to allow text left*/
+    text-align: left;
+}
+
 /*
 Login
 */
