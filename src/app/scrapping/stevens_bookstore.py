@@ -125,7 +125,6 @@ def update_book_info():
 
 
 def put_stevens_book_info_into_database():
-    # Not Finished
     from app import mongo_client
     dir = os.path.dirname(__file__)
     filename = os.path.join(dir, 'data\stevens_bookstore_info.json')
