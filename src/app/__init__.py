@@ -18,6 +18,13 @@ mongo_client = LocalProxy(get_db)
 print('Stevens Book Marketplace Version: ' + __version__)
 
 
+
+import courses
+
+flask_app.register_blueprint(courses.blueprint)
+
+
+
 @flask_app.url_defaults
 def hashed_static_file_url(endpoint, values):
     """
