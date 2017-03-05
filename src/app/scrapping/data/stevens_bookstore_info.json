@@ -7,6 +7,10 @@
                 "book-binding": "Binding Hardback",
                 "book-title": "Handbook Of Statistical Analysis & Data Mining Appl (W/Cd Only)",
                 "isbn": "0123747651"
+            },
+            "stevens-pricing": {
+                "new": 99.25,
+                "new-rental": 100.5
             }
         },
         {
@@ -17,6 +21,10 @@
                 "book-edition": "Edition 1",
                 "book-title": "Analytics In A Big Data World",
                 "isbn": "1118892704"
+            },
+            "stevens-pricing": {
+                "new": 50.59,
+                "used": 40.5
             }
         }
     ],
@@ -29,6 +37,9 @@
                 "book-edition": "Edition 1",
                 "book-title": "Cognitive Computing",
                 "isbn": "1118896629"
+            },
+            "stevens-pricing": {
+                "new": 50.25
             }
         }
     ],
@@ -40,6 +51,9 @@
                 "book-binding": "Binding Hardback",
                 "book-title": "Dsp First (W/Cd Only)",
                 "isbn": "0132431718"
+            },
+            "stevens-pricing": {
+                "new": 219.0
             }
         },
         {
@@ -50,6 +64,9 @@
                 "book-edition": "Edition 2",
                 "book-title": "Biomedical Engineering Principles",
                 "isbn": "1439812322"
+            },
+            "stevens-pricing": {
+                "new": 117.25
             }
         }
     ],
@@ -62,6 +79,9 @@
                 "book-edition": "Edition 1",
                 "book-title": "Musculoskeletal Biomechenics",
                 "isbn": "1588900800"
+            },
+            "stevens-pricing": {
+                "new": 52.6
             }
         }
     ],
@@ -73,6 +93,10 @@
                 "book-binding": "Binding Hardback",
                 "book-title": "Introductory Biomechanics",
                 "isbn": "0521841127"
+            },
+            "stevens-pricing": {
+                "new": 105.95,
+                "new-rental": 93.7
             }
         }
     ],
@@ -85,6 +109,9 @@
                 "book-edition": "Edition 3",
                 "book-title": "Signal Transduction",
                 "isbn": "0123948037"
+            },
+            "stevens-pricing": {
+                "new": 111.25
             }
         }
     ],
@@ -97,6 +124,10 @@
                 "book-edition": "Edition 10",
                 "book-title": "Fundamentals Of Management",
                 "isbn": "0134237471"
+            },
+            "stevens-pricing": {
+                "new": 237.95,
+                "new-rental": 146.5
             }
         }
     ],
@@ -109,6 +140,9 @@
                 "book-edition": "Edition 1",
                 "book-title": "Business (Swp) Stevens Custom-Bt 200 W/Code",
                 "isbn": "1269819038"
+            },
+            "stevens-pricing": {
+                "new": 169.0
             }
         }
     ],
@@ -122,6 +156,10 @@
                 "book-edition": "Edition 12",
                 "book-title": "Principles Of Macroeconomics",
                 "isbn": "0134078802"
+            },
+            "stevens-pricing": {
+                "new": 243.95,
+                "new-rental": 150.6
             }
         }
     ],
@@ -134,19 +172,14 @@
                 "book-edition": "Edition 12",
                 "book-title": "Principles Of Microeconomics",
                 "isbn": "0134078810"
+            },
+            "stevens-pricing": {
+                "new": 246.95,
+                "new-rental": 150.6
             }
         }
     ],
-    "BT - 310": [
-        {
-            "is_required": true,
-            "stevens-metadata": {
-                "book-author": "None",
-                "book-binding": "Binding None",
-                "book-title": "No Text Required"
-            }
-        }
-    ],
+    "BT - 310": [],
     "BT - 321": [
         {
             "is_required": true,
@@ -156,6 +189,9 @@
                 "book-edition": "Edition 12",
                 "book-title": "Financial Mgmt:Principles... Looseleaf W/Mylab",
                 "isbn": "0133485560"
+            },
+            "stevens-pricing": {
+                "new": 217.0
             }
         }
     ],
@@ -168,6 +204,9 @@
                 "book-edition": "Edition 9",
                 "book-title": "Macroeconomics",
                 "isbn": "013447256X"
+            },
+            "stevens-pricing": {
+                "new": 193.0
             }
         }
     ],
@@ -179,6 +218,10 @@
                 "book-binding": "Binding Hardback",
                 "book-title": "Startup Owner's Manual",
                 "isbn": "0984999302"
+            },
+            "stevens-pricing": {
+                "new": 39.95,
+                "new-rental": 27.8
             }
         }
     ],
@@ -191,6 +234,10 @@
                 "book-edition": "Edition 9",
                 "book-title": "Business Law",
                 "isbn": "0134004000"
+            },
+            "stevens-pricing": {
+                "new": 275.0,
+                "new-rental": 167.95
             }
         }
     ],
@@ -203,6 +250,10 @@
                 "book-edition": "Edition 8",
                 "book-title": "Modern Systems And Design",
                 "isbn": "0134204921"
+            },
+            "stevens-pricing": {
+                "new": 264.0,
+                "new-rental": 163.05
             }
         }
     ],
@@ -215,6 +266,10 @@
                 "book-edition": "Edition 10",
                 "book-title": "Consumer Behavior",
                 "isbn": "0132544369"
+            },
+            "stevens-pricing": {
+                "new": 258.95,
+                "new-rental": 251.8
             }
         }
     ],
@@ -227,6 +282,9 @@
                 "book-edition": "Edition 10",
                 "book-title": "Multinational Financial Management",
                 "isbn": "1118572386"
+            },
+            "stevens-pricing": {
+                "new": 248.0
             }
         },
         {
@@ -237,6 +295,10 @@
                 "book-edition": "Edition 10",
                 "book-title": "International Economics",
                 "isbn": "0133423646"
+            },
+            "stevens-pricing": {
+                "new": 261.95,
+                "used": 150.0
             }
         }
     ],
@@ -249,6 +311,10 @@
                 "book-edition": "Edition 3",
                 "book-title": "They Say I Say: W/Modern Lang. Guide",
                 "isbn": "0393617432"
+            },
+            "stevens-pricing": {
+                "new": 26.5,
+                "new-rental": 17.45
             }
         }
     ],
@@ -261,6 +327,9 @@
                 "book-edition": "Edition 5",
                 "book-title": "Introductory Gelogy Lab Manual",
                 "isbn": "0393937917"
+            },
+            "stevens-pricing": {
+                "new": 72.95
             }
         },
         {
@@ -270,6 +339,9 @@
                 "book-binding": "Binding Hardback",
                 "book-title": "Essentials Of Geology Package",
                 "isbn": "0393572730"
+            },
+            "stevens-pricing": {
+                "new": 151.95
             }
         }
     ],
@@ -282,6 +354,10 @@
                 "book-edition": "Edition 4",
                 "book-title": "Hydrologic Analysis & Design",
                 "isbn": "0134313127"
+            },
+            "stevens-pricing": {
+                "new": 187.75,
+                "new-rental": 115.6
             }
         }
     ],
@@ -294,6 +370,9 @@
                 "book-edition": "Edition 9",
                 "book-title": "Structural Analysis",
                 "isbn": "0133942848"
+            },
+            "stevens-pricing": {
+                "new": 227.0
             }
         }
     ],
@@ -306,6 +385,9 @@
                 "book-edition": "Edition 5",
                 "book-title": "Principles Of Highway Engineering",
                 "isbn": "1118120140"
+            },
+            "stevens-pricing": {
+                "new": 150.0
             }
         }
     ],
@@ -318,6 +400,9 @@
                 "book-edition": "Edition 4",
                 "book-title": "Engineering Properties Of Soils And Their Measurement",
                 "isbn": "0070067783"
+            },
+            "stevens-pricing": {
+                "new": 207.59
             }
         },
         {
@@ -328,6 +413,10 @@
                 "book-edition": "Edition 8",
                 "book-title": "Principles Of Geotechnical Engineering",
                 "isbn": "1133108660"
+            },
+            "stevens-pricing": {
+                "new": 222.75,
+                "used": 178.25
             }
         }
     ],
@@ -340,6 +429,9 @@
                 "book-edition": "Edition 2",
                 "book-title": "Atmospheric Science",
                 "isbn": "012732951X"
+            },
+            "stevens-pricing": {
+                "new": 73.89
             }
         },
         {
@@ -350,6 +442,10 @@
                 "book-edition": "Edition 5",
                 "book-title": "Intro To Dynamic Meteorology",
                 "isbn": "0123848660"
+            },
+            "stevens-pricing": {
+                "new": 96.15,
+                "new-rental": 89.1
             }
         }
     ],
@@ -362,6 +458,10 @@
                 "book-edition": "Edition 7",
                 "book-title": "Principles Of Foundation Engineering",
                 "isbn": "0495668109"
+            },
+            "stevens-pricing": {
+                "new": 197.0,
+                "used": 110.0
             }
         }
     ],
@@ -374,6 +474,9 @@
                 "book-edition": "Edition 3",
                 "book-title": "Bridge Engineering",
                 "isbn": "0071752498"
+            },
+            "stevens-pricing": {
+                "new": 136.75
             }
         }
     ],
@@ -386,6 +489,10 @@
                 "book-edition": "Edition 4",
                 "book-title": "Concepts & Appl Of Finite Element Analysis",
                 "isbn": "0471356050"
+            },
+            "stevens-pricing": {
+                "new": 195.0,
+                "new-rental": 145.8
             }
         }
     ],
@@ -397,6 +504,9 @@
                 "book-binding": "Binding None",
                 "book-title": "Chemistry-A Molecular Approach-Binder Version",
                 "isbn": "0134465652"
+            },
+            "stevens-pricing": {
+                "new": 210.69
             }
         }
     ],
@@ -409,6 +519,9 @@
                 "book-edition": "Edition 10",
                 "book-title": "Berans Lab Manual-Custom",
                 "isbn": "1118975197"
+            },
+            "stevens-pricing": {
+                "new": 75.95
             }
         }
     ],
@@ -421,6 +534,9 @@
                 "book-edition": "Edition 4",
                 "book-title": "Biology:The Dynamic Science Looseleaf Package",
                 "isbn": "1337086924"
+            },
+            "stevens-pricing": {
+                "new": 168.25
             }
         }
     ],
@@ -433,6 +549,9 @@
                 "book-edition": "Edition 4",
                 "book-title": "Lab Manual",
                 "isbn": "1119926343"
+            },
+            "stevens-pricing": {
+                "new": 29.0
             }
         }
     ],
@@ -445,6 +564,9 @@
                 "book-edition": "Edition 9",
                 "book-title": "Physical Chemistry St Sol Man",
                 "isbn": "1429231289"
+            },
+            "stevens-pricing": {
+                "new": 63.25
             }
         },
         {
@@ -455,6 +577,9 @@
                 "book-edition": "Edition 10",
                 "book-title": "Physical Chemistry Package-Text/Sol. Manual",
                 "isbn": "1464196052"
+            },
+            "stevens-pricing": {
+                "new": 239.95
             }
         }
     ],
@@ -467,6 +592,9 @@
                 "book-edition": "Edition 9",
                 "book-title": "Physical Chemistry St Sol Man",
                 "isbn": "1429231289"
+            },
+            "stevens-pricing": {
+                "new": 63.25
             }
         },
         {
@@ -477,6 +605,9 @@
                 "book-edition": "Edition 10",
                 "book-title": "Physical Chemistry Package-Text/Sol. Manual",
                 "isbn": "1464196052"
+            },
+            "stevens-pricing": {
+                "new": 239.95
             }
         }
     ],
@@ -489,6 +620,9 @@
                 "book-edition": "Edition 7",
                 "book-title": "Human Physiology",
                 "isbn": "0321970330"
+            },
+            "stevens-pricing": {
+                "new": 229.0
             }
         }
     ],
@@ -500,6 +634,10 @@
                 "book-binding": "Binding None",
                 "book-title": "Responsible Conduct Of Research",
                 "isbn": "0199376026"
+            },
+            "stevens-pricing": {
+                "new": 40.0,
+                "new-rental": 34.15
             }
         }
     ],
@@ -512,6 +650,9 @@
                 "book-edition": "Edition 9",
                 "book-title": "Physical Chemistry St Sol Man",
                 "isbn": "1429231289"
+            },
+            "stevens-pricing": {
+                "new": 63.25
             }
         },
         {
@@ -522,6 +663,9 @@
                 "book-edition": "Edition 10",
                 "book-title": "Physical Chemistry Package-Text/Sol. Manual",
                 "isbn": "1464196052"
+            },
+            "stevens-pricing": {
+                "new": 239.95
             }
         }
     ],
@@ -534,6 +678,9 @@
                 "book-edition": "Edition 7",
                 "book-title": "Kuby Immunology-Looseleaf W/Launchpad",
                 "isbn": "1464193363"
+            },
+            "stevens-pricing": {
+                "new": 109.49
             }
         }
     ],
@@ -546,6 +693,12 @@
                 "book-edition": "Edition 4",
                 "book-title": "Elementary Prin Of Chem Process Binder Version",
                 "isbn": "1118431227"
+            },
+            "stevens-pricing": {
+                "new": 167.0,
+                "new-rental": 139.4,
+                "used": 133.5,
+                "used-rental": 88.05
             }
         }
     ],
@@ -557,6 +710,12 @@
                 "book-binding": "Binding Hardback",
                 "book-title": "Fundamentals Of Chemical Engineering Thermodynamics",
                 "isbn": "1111580707"
+            },
+            "stevens-pricing": {
+                "new": 195.89,
+                "new-rental": 196.35,
+                "used": 119.95,
+                "used-rental": 136.2
             }
         }
     ],
@@ -569,6 +728,10 @@
                 "book-edition": "Edition 3",
                 "book-title": "Product & Process Design Principles",
                 "isbn": "0470048956"
+            },
+            "stevens-pricing": {
+                "new": 269.75,
+                "used": 135.0
             }
         }
     ],
@@ -581,6 +744,9 @@
                 "book-edition": "Edition 3",
                 "book-title": "Process Dynamics & Control",
                 "isbn": "0470128674"
+            },
+            "stevens-pricing": {
+                "new": 239.25
             }
         }
     ],
@@ -593,6 +759,10 @@
                 "book-edition": "Edition 5",
                 "book-title": "Elements Of Chemical Reaction Engineering",
                 "isbn": "0133887510"
+            },
+            "stevens-pricing": {
+                "new": 151.9,
+                "new-rental": 92.5
             }
         }
     ],
@@ -605,6 +775,10 @@
                 "book-edition": "Edition 3",
                 "book-title": "Product & Process Design Principles",
                 "isbn": "0470048956"
+            },
+            "stevens-pricing": {
+                "new": 269.75,
+                "used": 135.0
             }
         }
     ],
@@ -617,6 +791,12 @@
                 "book-edition": "Edition 3",
                 "book-title": "Fundamental Principles Of Polymeric Materials",
                 "isbn": "0470505427"
+            },
+            "stevens-pricing": {
+                "new": 104.25,
+                "new-rental": 85.45,
+                "used": 83.5,
+                "used-rental": 53.45
             }
         },
         {
@@ -627,6 +807,9 @@
                 "book-edition": "Edition 2",
                 "book-title": "Polymer Synthesis",
                 "isbn": "3857391146"
+            },
+            "stevens-pricing": {
+                "new": 80.95
             }
         }
     ],
@@ -639,6 +822,10 @@
                 "book-edition": "Edition 5",
                 "book-title": "Elements Of Chemical Reaction Engineering",
                 "isbn": "0133887510"
+            },
+            "stevens-pricing": {
+                "new": 151.9,
+                "new-rental": 92.5
             }
         }
     ],
@@ -650,6 +837,9 @@
                 "book-binding": "Binding Paperback",
                 "book-title": "Tools & Tactics Of Design",
                 "isbn": "0471386480"
+            },
+            "stevens-pricing": {
+                "new": 94.95
             }
         },
         {
@@ -660,6 +850,12 @@
                 "book-edition": "Edition 4",
                 "book-title": "Engineering Design",
                 "isbn": "1118324587"
+            },
+            "stevens-pricing": {
+                "new": 83.5,
+                "new-rental": 69.7,
+                "used": 66.75,
+                "used-rental": 44.05
             }
         }
     ],
@@ -672,6 +868,10 @@
                 "book-edition": "Edition 5",
                 "book-title": "Discrete-Event System Simulation",
                 "isbn": "0136062121"
+            },
+            "stevens-pricing": {
+                "new": 188.75,
+                "new-rental": 166.9
             }
         }
     ],
@@ -684,6 +884,10 @@
                 "book-edition": "Edition 3",
                 "book-title": "Data Structures & Algorithm Analysis In C++",
                 "isbn": "032144146X"
+            },
+            "stevens-pricing": {
+                "new": 142.0,
+                "used": 79.95
             }
         }
     ],
@@ -696,6 +900,9 @@
                 "book-edition": "Edition 1",
                 "book-title": "Computers As Components:Principle Of Embedded...",
                 "isbn": "0123694590"
+            },
+            "stevens-pricing": {
+                "new": 83.0
             }
         },
         {
@@ -706,6 +913,10 @@
                 "book-edition": "Edition 2",
                 "book-title": "Microcontroller Theory & Applications Hc12 & S12 (W/Cd)",
                 "isbn": "0136152058"
+            },
+            "stevens-pricing": {
+                "new": 199.25,
+                "new-rental": 171.4
             }
         },
         {
@@ -716,29 +927,17 @@
                 "book-edition": "Edition 2",
                 "book-title": "Hcs12/9S12 Intro To Software & Hardware Interfacing (W/Cd Only)",
                 "isbn": "1435427424"
+            },
+            "stevens-pricing": {
+                "new": 262.59,
+                "new-rental": 255.3,
+                "used": 210.0,
+                "used-rental": 171.6
             }
         }
     ],
-    "CPE - 424": [
-        {
-            "is_required": true,
-            "stevens-metadata": {
-                "book-author": "None",
-                "book-binding": "Binding None",
-                "book-title": "No Text Required"
-            }
-        }
-    ],
-    "CPE - 441": [
-        {
-            "is_required": true,
-            "stevens-metadata": {
-                "book-author": "None",
-                "book-binding": "Binding None",
-                "book-title": "No Text Required"
-            }
-        }
-    ],
+    "CPE - 424": [],
+    "CPE - 441": [],
     "CPE - 462": [
         {
             "is_required": true,
@@ -748,6 +947,9 @@
                 "book-edition": "Edition 3",
                 "book-title": "Digital Image Processing",
                 "isbn": "013168728X"
+            },
+            "stevens-pricing": {
+                "new": 238.5
             }
         }
     ],
@@ -760,6 +962,9 @@
                 "book-edition": "Edition 3",
                 "book-title": "Vhdl Primer",
                 "isbn": "0130965758"
+            },
+            "stevens-pricing": {
+                "new": 66.0
             }
         },
         {
@@ -769,6 +974,9 @@
                 "book-binding": "Binding Hardback",
                 "book-title": "Circuit Design With Vhdl",
                 "isbn": "0262162245"
+            },
+            "stevens-pricing": {
+                "new": 46.5
             }
         },
         {
@@ -779,6 +987,12 @@
                 "book-edition": "Edition 2",
                 "book-title": "Vhdl Starter's Guide",
                 "isbn": "0131457357"
+            },
+            "stevens-pricing": {
+                "new": 113.5,
+                "new-rental": 111.35,
+                "used": 64.95,
+                "used-rental": 77.7
             }
         }
     ],
@@ -791,6 +1005,10 @@
                 "book-edition": "Edition 6",
                 "book-title": "Internetworking With Tcp/Ip Vol I",
                 "isbn": "013608530X"
+            },
+            "stevens-pricing": {
+                "new": 149.95,
+                "new-rental": 133.4
             }
         }
     ],
@@ -803,6 +1021,10 @@
                 "book-edition": "Edition 2",
                 "book-title": "Arm System-On-Chip Architecture",
                 "isbn": "0201675196"
+            },
+            "stevens-pricing": {
+                "new": 73.99,
+                "used": 42.95
             }
         },
         {
@@ -813,6 +1035,12 @@
                 "book-edition": "Edition 5",
                 "book-title": "Computer Architecture Quantitative Approach",
                 "isbn": "012383872X"
+            },
+            "stevens-pricing": {
+                "new": 75.0,
+                "new-rental": 76.4,
+                "used": 43.5,
+                "used-rental": 37.7
             }
         }
     ],
@@ -825,6 +1053,9 @@
                 "book-edition": "Edition 1",
                 "book-title": "`Designing Embedded Communications",
                 "isbn": "157820125X"
+            },
+            "stevens-pricing": {
+                "new": 49.95
             }
         }
     ],
@@ -837,6 +1068,9 @@
                 "book-edition": "Edition 5",
                 "book-title": "Real Time Embedded Systems",
                 "isbn": "1439841543"
+            },
+            "stevens-pricing": {
+                "new": 189.25
             }
         },
         {
@@ -846,19 +1080,14 @@
                 "book-binding": "Binding None",
                 "book-title": "Computer Organization And Design",
                 "isbn": "0128017333"
+            },
+            "stevens-pricing": {
+                "new": 96.25,
+                "new-rental": 69.55
             }
         }
     ],
-    "CPE - 556": [
-        {
-            "is_required": true,
-            "stevens-metadata": {
-                "book-author": "None",
-                "book-binding": "Binding None",
-                "book-title": "No Text Required"
-            }
-        }
-    ],
+    "CPE - 556": [],
     "CPE - 593": [
         {
             "is_required": true,
@@ -868,6 +1097,12 @@
                 "book-edition": "Edition 3",
                 "book-title": "Intro To Algorithms",
                 "isbn": "0262033844"
+            },
+            "stevens-pricing": {
+                "new": 99.95,
+                "new-rental": 70.05,
+                "used": 80.0,
+                "used-rental": 39.0
             }
         }
     ],
@@ -880,6 +1115,10 @@
                 "book-edition": "Edition 7",
                 "book-title": "Discrete Math & Its Appl (Loose-Leaf)",
                 "isbn": "0077431448"
+            },
+            "stevens-pricing": {
+                "new": 206.0,
+                "used": 164.75
             }
         }
     ],
@@ -892,29 +1131,15 @@
                 "book-edition": "Edition 2",
                 "book-title": "Data Networks",
                 "isbn": "0132009161"
+            },
+            "stevens-pricing": {
+                "new": 220.5,
+                "used": 119.95
             }
         }
     ],
-    "CPE - 631": [
-        {
-            "is_required": true,
-            "stevens-metadata": {
-                "book-author": "None",
-                "book-binding": "Binding None",
-                "book-title": "No Text Required"
-            }
-        }
-    ],
-    "CPE - 640": [
-        {
-            "is_required": true,
-            "stevens-metadata": {
-                "book-author": "None",
-                "book-binding": "Binding None",
-                "book-title": "No Text Required"
-            }
-        }
-    ],
+    "CPE - 631": [],
+    "CPE - 640": [],
     "CPE - 645": [
         {
             "is_required": true,
@@ -924,6 +1149,9 @@
                 "book-edition": "Edition 3",
                 "book-title": "Digital Image Processing",
                 "isbn": "013168728X"
+            },
+            "stevens-pricing": {
+                "new": 238.5
             }
         }
     ],
@@ -936,6 +1164,10 @@
                 "book-edition": "Edition 3",
                 "book-title": "Network Analysis, Architecture & Design",
                 "isbn": "0123704804"
+            },
+            "stevens-pricing": {
+                "new": 79.0,
+                "used": 49.95
             }
         }
     ],
@@ -948,6 +1180,10 @@
                 "book-edition": "Edition 7",
                 "book-title": "Computer Networking",
                 "isbn": "0133594149"
+            },
+            "stevens-pricing": {
+                "new": 163.55,
+                "new-rental": 100.8
             }
         }
     ],
@@ -959,6 +1195,9 @@
                 "book-binding": "Binding Hardback",
                 "book-title": "Introductory Vhdl From Simulation To Synthesis",
                 "isbn": "0130809829"
+            },
+            "stevens-pricing": {
+                "new": 220.25
             }
         },
         {
@@ -969,6 +1208,9 @@
                 "book-edition": "Edition 2",
                 "book-title": "Cmos Circuit Design, Layout & Simulation",
                 "isbn": "047170055X"
+            },
+            "stevens-pricing": {
+                "new": 111.5
             }
         },
         {
@@ -979,19 +1221,14 @@
                 "book-edition": "Edition 4",
                 "book-title": "Cmos Vlsi Design",
                 "isbn": "0321547748"
+            },
+            "stevens-pricing": {
+                "new": 171.5,
+                "new-rental": 144.4
             }
         }
     ],
-    "CPE - 695": [
-        {
-            "is_required": true,
-            "stevens-metadata": {
-                "book-author": "None",
-                "book-binding": "Binding None",
-                "book-title": "No Text Required"
-            }
-        }
-    ],
+    "CPE - 695": [],
     "CS - 105": [
         {
             "is_required": true,
@@ -1001,19 +1238,13 @@
                 "book-edition": "Edition 2",
                 "book-title": "Essentials Of Matlab Programming",
                 "isbn": "049529568X"
+            },
+            "stevens-pricing": {
+                "new": 89.95
             }
         }
     ],
-    "CS - 115": [
-        {
-            "is_required": true,
-            "stevens-metadata": {
-                "book-author": "None",
-                "book-binding": "Binding None",
-                "book-title": "No Text Required"
-            }
-        }
-    ],
+    "CS - 115": [],
     "CS - 135": [
         {
             "is_required": true,
@@ -1023,6 +1254,12 @@
                 "book-edition": "Edition 4",
                 "book-title": "Little Schemer",
                 "isbn": "0262560992"
+            },
+            "stevens-pricing": {
+                "new": 39.95,
+                "new-rental": 39.05,
+                "used": 32.0,
+                "used-rental": 26.2
             }
         },
         {
@@ -1033,6 +1270,10 @@
                 "book-edition": "Edition 7",
                 "book-title": "Discrete Math & Its Appl",
                 "isbn": "0073383090"
+            },
+            "stevens-pricing": {
+                "new": 253.0,
+                "new-rental": 164.4
             }
         }
     ],
@@ -1045,29 +1286,17 @@
                 "book-edition": "Edition 3",
                 "book-title": "Intro. To The Design And Analysis Of Algorithms",
                 "isbn": "0132316811"
+            },
+            "stevens-pricing": {
+                "new": 155.7,
+                "new-rental": 95.9,
+                "used": 124.5,
+                "used-rental": 47.7
             }
         }
     ],
-    "CS - 347": [
-        {
-            "is_required": true,
-            "stevens-metadata": {
-                "book-author": "None",
-                "book-binding": "Binding None",
-                "book-title": "No Text Required"
-            }
-        }
-    ],
-    "CS - 370": [
-        {
-            "is_required": true,
-            "stevens-metadata": {
-                "book-author": "None",
-                "book-binding": "Binding None",
-                "book-title": "No Text Required"
-            }
-        }
-    ],
+    "CS - 347": [],
+    "CS - 370": [],
     "CS - 385": [
         {
             "is_required": false,
@@ -1077,6 +1306,9 @@
                 "book-edition": "Edition 2",
                 "book-title": "Programming",
                 "isbn": "0321992784"
+            },
+            "stevens-pricing": {
+                "new": 74.99
             }
         },
         {
@@ -1087,6 +1319,12 @@
                 "book-edition": "Edition 3",
                 "book-title": "Intro. To The Design And Analysis Of Algorithms",
                 "isbn": "0132316811"
+            },
+            "stevens-pricing": {
+                "new": 155.7,
+                "new-rental": 95.9,
+                "used": 124.5,
+                "used-rental": 47.7
             }
         }
     ],
@@ -1099,6 +1337,12 @@
                 "book-edition": "Edition 5",
                 "book-title": "Computer Architecture Quantitative Approach",
                 "isbn": "012383872X"
+            },
+            "stevens-pricing": {
+                "new": 75.0,
+                "new-rental": 76.4,
+                "used": 43.5,
+                "used-rental": 37.7
             }
         }
     ],
@@ -1111,6 +1355,10 @@
                 "book-edition": "Edition 4",
                 "book-title": "Modern Operating Systems",
                 "isbn": "013359162X"
+            },
+            "stevens-pricing": {
+                "new": 202.5,
+                "new-rental": 114.8
             }
         }
     ],
@@ -1123,6 +1371,9 @@
                 "book-edition": "Edition 10",
                 "book-title": "Intro To Java Programming-Comp. Version",
                 "isbn": "0133761312"
+            },
+            "stevens-pricing": {
+                "new": 165.95
             }
         }
     ],
@@ -1135,6 +1386,12 @@
                 "book-edition": "Edition 9",
                 "book-title": "First Course In Probability",
                 "isbn": "032179477X"
+            },
+            "stevens-pricing": {
+                "new": 198.5,
+                "new-rental": 121.55,
+                "used": 119.0,
+                "used-rental": 60.5
             }
         }
     ],
@@ -1147,6 +1404,9 @@
                 "book-edition": "Edition 1",
                 "book-title": "Cloud Computing",
                 "isbn": "1118501217"
+            },
+            "stevens-pricing": {
+                "new": 101.25
             }
         }
     ],
@@ -1159,6 +1419,10 @@
                 "book-edition": "Edition 5",
                 "book-title": "Architecture Of Computer Hardware, Systems Software & Networking",
                 "isbn": "1118322630"
+            },
+            "stevens-pricing": {
+                "new": 158.0,
+                "used": 91.95
             }
         }
     ],
@@ -1171,6 +1435,12 @@
                 "book-edition": "Edition 6",
                 "book-title": "Database System Concepts",
                 "isbn": "0073523321"
+            },
+            "stevens-pricing": {
+                "new": 223.75,
+                "new-rental": 178.55,
+                "used": 179.0,
+                "used-rental": 109.85
             }
         }
     ],
@@ -1183,6 +1453,10 @@
                 "book-edition": "Edition 2",
                 "book-title": "Intro Tomodern Cryptography",
                 "isbn": "1466570261"
+            },
+            "stevens-pricing": {
+                "new": 102.25,
+                "new-rental": 95.55
             }
         }
     ],
@@ -1195,19 +1469,13 @@
                 "book-edition": "Edition 2",
                 "book-title": "Fundamentals Of Predictive Text Mining",
                 "isbn": "144716749X"
+            },
+            "stevens-pricing": {
+                "new": 79.99
             }
         }
     ],
-    "CS - 595": [
-        {
-            "is_required": true,
-            "stevens-metadata": {
-                "book-author": "None",
-                "book-binding": "Binding None",
-                "book-title": "No Text Required"
-            }
-        }
-    ],
+    "CS - 595": [],
     "CS - 600": [
         {
             "is_required": true,
@@ -1216,29 +1484,15 @@
                 "book-binding": "Binding Hardback",
                 "book-title": "Algorithm Design & Applications",
                 "isbn": "1118335910"
+            },
+            "stevens-pricing": {
+                "new": 139.25,
+                "new-rental": 140.7
             }
         }
     ],
-    "CS - 677": [
-        {
-            "is_required": true,
-            "stevens-metadata": {
-                "book-author": "None",
-                "book-binding": "Binding None",
-                "book-title": "No Text Required"
-            }
-        }
-    ],
-    "CS - 810": [
-        {
-            "is_required": true,
-            "stevens-metadata": {
-                "book-author": "None",
-                "book-binding": "Binding None",
-                "book-title": "No Text Required"
-            }
-        }
-    ],
+    "CS - 677": [],
+    "CS - 810": [],
     "E - 126": [
         {
             "is_required": true,
@@ -1248,6 +1502,9 @@
                 "book-edition": "Edition 4",
                 "book-title": "Statics & Mechanics Of Materials",
                 "isbn": "0133451607"
+            },
+            "stevens-pricing": {
+                "new": 226.48
             }
         }
     ],
@@ -1260,6 +1517,12 @@
                 "book-edition": "Edition 3",
                 "book-title": "Intro To Engineering Experimentation",
                 "isbn": "0131742760"
+            },
+            "stevens-pricing": {
+                "new": 239.0,
+                "new-rental": 178.8,
+                "used": 129.95,
+                "used-rental": 102.2
             }
         }
     ],
@@ -1272,6 +1535,12 @@
                 "book-edition": "Edition 8",
                 "book-title": "Thermodynamics",
                 "isbn": "0073398179"
+            },
+            "stevens-pricing": {
+                "new": 284.5,
+                "new-rental": 233.45,
+                "used": 150.0,
+                "used-rental": 123.45
             }
         }
     ],
@@ -1284,6 +1553,12 @@
                 "book-edition": "Edition 6",
                 "book-title": "Applied Statistics & Probability For Engineers",
                 "isbn": "1118539710"
+            },
+            "stevens-pricing": {
+                "new": 241.25,
+                "new-rental": 157.05,
+                "used": 193.0,
+                "used-rental": 79.75
             }
         }
     ],
@@ -1296,6 +1571,9 @@
                 "book-edition": "Edition 6",
                 "book-title": "Electr. Engineer. 8 Chapt. Custom",
                 "isbn": "1323358838"
+            },
+            "stevens-pricing": {
+                "new": 105.95
             }
         }
     ],
@@ -1308,6 +1586,9 @@
                 "book-edition": "Edition 5",
                 "book-title": "Fundamentals Of Materials Science & Engr (Loose-Leaf)",
                 "isbn": "1119175488"
+            },
+            "stevens-pricing": {
+                "new": 177.25
             }
         }
     ],
@@ -1320,6 +1601,9 @@
                 "book-edition": "Edition 12",
                 "book-title": "Engineering Econ Analysis (W/Cd)",
                 "isbn": "0199339279"
+            },
+            "stevens-pricing": {
+                "new": 155.9
             }
         }
     ],
@@ -1332,6 +1616,10 @@
                 "book-edition": "Edition 3",
                 "book-title": "Energy Systems Engineering",
                 "isbn": "1259585093"
+            },
+            "stevens-pricing": {
+                "new": 111.0,
+                "new-rental": 79.25
             }
         }
     ],
@@ -1344,6 +1632,12 @@
                 "book-edition": "Edition 9",
                 "book-title": "Complex Variables & Applications",
                 "isbn": "0073383171"
+            },
+            "stevens-pricing": {
+                "new": 265.0,
+                "new-rental": 254.75,
+                "used": 212.0,
+                "used-rental": 173.4
             }
         }
     ],
@@ -1355,6 +1649,9 @@
                 "book-binding": "Binding Paperback",
                 "book-title": "Tools & Tactics Of Design",
                 "isbn": "0471386480"
+            },
+            "stevens-pricing": {
+                "new": 94.95
             }
         },
         {
@@ -1365,6 +1662,12 @@
                 "book-edition": "Edition 4",
                 "book-title": "Engineering Design",
                 "isbn": "1118324587"
+            },
+            "stevens-pricing": {
+                "new": 83.5,
+                "new-rental": 69.7,
+                "used": 66.75,
+                "used-rental": 44.05
             }
         }
     ],
@@ -1377,6 +1680,12 @@
                 "book-edition": "Edition 2",
                 "book-title": "Signals & Systems",
                 "isbn": "0138147574"
+            },
+            "stevens-pricing": {
+                "new": 170.89,
+                "new-rental": 110.15,
+                "used": 99.95,
+                "used-rental": 57.7
             }
         }
     ],
@@ -1389,29 +1698,17 @@
                 "book-edition": "Edition 7",
                 "book-title": "Microelectronic Circuits",
                 "isbn": "0199339139"
+            },
+            "stevens-pricing": {
+                "new": 202.0,
+                "new-rental": 123.35,
+                "used": 161.5,
+                "used-rental": 60.8
             }
         }
     ],
-    "EE - 424": [
-        {
-            "is_required": true,
-            "stevens-metadata": {
-                "book-author": "None",
-                "book-binding": "Binding None",
-                "book-title": "No Text Required"
-            }
-        }
-    ],
-    "EE - 441": [
-        {
-            "is_required": true,
-            "stevens-metadata": {
-                "book-author": "None",
-                "book-binding": "Binding None",
-                "book-title": "No Text Required"
-            }
-        }
-    ],
+    "EE - 424": [],
+    "EE - 441": [],
     "EE - 448": [
         {
             "is_required": true,
@@ -1421,6 +1718,10 @@
                 "book-edition": "Edition 4",
                 "book-title": "Digital Signal Processing (W/Cd)",
                 "isbn": "007736676X"
+            },
+            "stevens-pricing": {
+                "new": 260.0,
+                "new-rental": 217.05
             }
         }
     ],
@@ -1433,6 +1734,9 @@
                 "book-edition": "Edition 3",
                 "book-title": "Digital Image Processing",
                 "isbn": "013168728X"
+            },
+            "stevens-pricing": {
+                "new": 238.5
             }
         }
     ],
@@ -1445,6 +1749,12 @@
                 "book-edition": "Edition 5",
                 "book-title": "Communication Systems",
                 "isbn": "0471697907"
+            },
+            "stevens-pricing": {
+                "new": 186.0,
+                "new-rental": 145.2,
+                "used": 119.75,
+                "used-rental": 88.05
             }
         }
     ],
@@ -1456,6 +1766,12 @@
                 "book-binding": "Binding Hardback",
                 "book-title": "Modern Semiconductor Devices For Integrated Circuits",
                 "isbn": "0136085253"
+            },
+            "stevens-pricing": {
+                "new": 167.95,
+                "new-rental": 169.2,
+                "used": 134.25,
+                "used-rental": 117.35
             }
         }
     ],
@@ -1467,6 +1783,10 @@
                 "book-binding": "Binding Paperback",
                 "book-title": "Elementary Solid State Physics Rev Prtg",
                 "isbn": "0201607336"
+            },
+            "stevens-pricing": {
+                "new": 240.5,
+                "new-rental": 230.8
             }
         }
     ],
@@ -1479,6 +1799,10 @@
                 "book-edition": "Edition 2",
                 "book-title": "Arm System-On-Chip Architecture",
                 "isbn": "0201675196"
+            },
+            "stevens-pricing": {
+                "new": 73.99,
+                "used": 42.95
             }
         },
         {
@@ -1489,29 +1813,17 @@
                 "book-edition": "Edition 5",
                 "book-title": "Computer Architecture Quantitative Approach",
                 "isbn": "012383872X"
+            },
+            "stevens-pricing": {
+                "new": 75.0,
+                "new-rental": 76.4,
+                "used": 43.5,
+                "used-rental": 37.7
             }
         }
     ],
-    "EE - 551": [
-        {
-            "is_required": true,
-            "stevens-metadata": {
-                "book-author": "None",
-                "book-binding": "Binding None",
-                "book-title": "No Text Required"
-            }
-        }
-    ],
-    "EE - 556": [
-        {
-            "is_required": true,
-            "stevens-metadata": {
-                "book-author": "None",
-                "book-binding": "Binding None",
-                "book-title": "No Text Required"
-            }
-        }
-    ],
+    "EE - 551": [],
+    "EE - 556": [],
     "EE - 575": [
         {
             "is_required": true,
@@ -1521,19 +1833,14 @@
                 "book-edition": "Edition 7",
                 "book-title": "Feedback Control Of Dynamic Systems",
                 "isbn": "0133496597"
+            },
+            "stevens-pricing": {
+                "new": 165.35,
+                "new-rental": 106.9
             }
         }
     ],
-    "EE - 585": [
-        {
-            "is_required": true,
-            "stevens-metadata": {
-                "book-author": "None",
-                "book-binding": "Binding None",
-                "book-title": "No Text Required"
-            }
-        }
-    ],
+    "EE - 585": [],
     "EE - 590": [
         {
             "is_required": true,
@@ -1543,6 +1850,9 @@
                 "book-edition": "Edition 1",
                 "book-title": "Smart Grid",
                 "isbn": "1119975808"
+            },
+            "stevens-pricing": {
+                "new": 115.0
             }
         }
     ],
@@ -1555,6 +1865,9 @@
                 "book-edition": "Edition 2",
                 "book-title": "Theory Of Matrices",
                 "isbn": "0124355609"
+            },
+            "stevens-pricing": {
+                "new": 207.59
             }
         }
     ],
@@ -1567,6 +1880,12 @@
                 "book-edition": "Edition 2",
                 "book-title": "Signals & Systems",
                 "isbn": "0138147574"
+            },
+            "stevens-pricing": {
+                "new": 170.89,
+                "new-rental": 110.15,
+                "used": 99.95,
+                "used-rental": 57.7
             }
         }
     ],
@@ -1579,6 +1898,12 @@
                 "book-edition": "Edition 9",
                 "book-title": "First Course In Probability",
                 "isbn": "032179477X"
+            },
+            "stevens-pricing": {
+                "new": 198.5,
+                "new-rental": 121.55,
+                "used": 119.0,
+                "used-rental": 60.5
             }
         }
     ],
@@ -1591,6 +1916,12 @@
                 "book-edition": "Edition 2",
                 "book-title": "Digital Communications (W/Cd)",
                 "isbn": "0130847887"
+            },
+            "stevens-pricing": {
+                "new": 163.95,
+                "new-rental": 167.25,
+                "used": 131.25,
+                "used-rental": 116.3
             }
         }
     ],
@@ -1602,6 +1933,10 @@
                 "book-binding": "Binding None",
                 "book-title": "Fundamentals Of Signal Processing-Estimation Theory",
                 "isbn": "0133457117"
+            },
+            "stevens-pricing": {
+                "new": 129.95,
+                "new-rental": 118.7
             }
         },
         {
@@ -1611,6 +1946,10 @@
                 "book-binding": "Binding Hardback",
                 "book-title": "Fundamentals Of Statistical Signal Processing Vol 2",
                 "isbn": "013504135X"
+            },
+            "stevens-pricing": {
+                "new": 130.0,
+                "new-rental": 112.6
             }
         }
     ],
@@ -1623,29 +1962,15 @@
                 "book-edition": "Edition 3",
                 "book-title": "Nonlinear Systems",
                 "isbn": "0130673897"
+            },
+            "stevens-pricing": {
+                "new": 236.0,
+                "new-rental": 202.65
             }
         }
     ],
-    "EE - 627": [
-        {
-            "is_required": true,
-            "stevens-metadata": {
-                "book-author": "None",
-                "book-binding": "Binding None",
-                "book-title": "No Text Required"
-            }
-        }
-    ],
-    "EE - 629": [
-        {
-            "is_required": true,
-            "stevens-metadata": {
-                "book-author": "None",
-                "book-binding": "Binding None",
-                "book-title": "No Text Required"
-            }
-        }
-    ],
+    "EE - 627": [],
+    "EE - 629": [],
     "EM - 322": [
         {
             "is_required": true,
@@ -1655,19 +1980,14 @@
                 "book-edition": "Edition 6",
                 "book-title": "Product Design & Development",
                 "isbn": "0078029066"
+            },
+            "stevens-pricing": {
+                "new": 259.95,
+                "new-rental": 186.25
             }
         }
     ],
-    "EM - 345": [
-        {
-            "is_required": true,
-            "stevens-metadata": {
-                "book-author": "None",
-                "book-binding": "Binding None",
-                "book-title": "No Text Required"
-            }
-        }
-    ],
+    "EM - 345": [],
     "EM - 357": [
         {
             "is_required": true,
@@ -1677,6 +1997,12 @@
                 "book-edition": "Edition 12",
                 "book-title": "Intro To Management Science",
                 "isbn": "0133778843"
+            },
+            "stevens-pricing": {
+                "new": 286.95,
+                "new-rental": 217.1,
+                "used": 229.5,
+                "used-rental": 125.25
             }
         }
     ],
@@ -1689,6 +2015,10 @@
                 "book-edition": "Edition 5",
                 "book-title": "Supply Chain Mgmt:Strategy,Planning And Operation",
                 "isbn": "0132743957"
+            },
+            "stevens-pricing": {
+                "new": 249.95,
+                "used": 89.95
             }
         }
     ],
@@ -1701,6 +2031,10 @@
                 "book-edition": "Edition 6",
                 "book-title": "Contemporary Engineering Economics",
                 "isbn": "0134105591"
+            },
+            "stevens-pricing": {
+                "new": 224.25,
+                "new-rental": 140.6
             }
         }
     ],
@@ -1713,6 +2047,9 @@
                 "book-edition": "Edition 10",
                 "book-title": "Intro To Operations Research-Binder Version",
                 "isbn": "1259287181"
+            },
+            "stevens-pricing": {
+                "new": 237.5
             }
         }
     ],
@@ -1724,6 +2061,9 @@
                 "book-binding": "Binding None",
                 "book-title": "Reinventing Project Management",
                 "isbn": "1591398002"
+            },
+            "stevens-pricing": {
+                "new": 38.0
             }
         }
     ],
@@ -1735,6 +2075,9 @@
                 "book-binding": "Binding Paperback",
                 "book-title": "Visual Display Of Quant. Information-Softcover",
                 "isbn": "1930824130"
+            },
+            "stevens-pricing": {
+                "new": 37.0
             }
         },
         {
@@ -1745,6 +2088,9 @@
                 "book-edition": "Edition 1",
                 "book-title": "Beautiful Evidence",
                 "isbn": "1930824165"
+            },
+            "stevens-pricing": {
+                "new": 37.0
             }
         }
     ],
@@ -1756,6 +2102,9 @@
                 "book-binding": "Binding None",
                 "book-title": "An Intro To Sustainable Transportation",
                 "isbn": "1844076644"
+            },
+            "stevens-pricing": {
+                "new": 182.25
             }
         }
     ],
@@ -1768,6 +2117,9 @@
                 "book-edition": "Edition 2",
                 "book-title": "Breakthrough!",
                 "isbn": "185252149X"
+            },
+            "stevens-pricing": {
+                "new": 63.5
             }
         },
         {
@@ -1777,6 +2129,10 @@
                 "book-binding": "Binding Paperback",
                 "book-title": "Managing The Risks Of Organizational Accidents",
                 "isbn": "1840141050"
+            },
+            "stevens-pricing": {
+                "new": 49.95,
+                "new-rental": 57.55
             }
         },
         {
@@ -1786,6 +2142,10 @@
                 "book-binding": "Binding Hardback",
                 "book-title": "Hidden Power Of Social Networks",
                 "isbn": "1591392705"
+            },
+            "stevens-pricing": {
+                "new": 39.95,
+                "used": 32.0
             }
         }
     ],
@@ -1798,6 +2158,10 @@
                 "book-edition": "Edition 12",
                 "book-title": "Principles Of Economics",
                 "isbn": "0134078772"
+            },
+            "stevens-pricing": {
+                "new": 299.95,
+                "new-rental": 275.4
             }
         }
     ],
@@ -1810,6 +2174,10 @@
                 "book-edition": "Edition 2",
                 "book-title": "Wastewater Treatment Plants",
                 "isbn": "1566766885"
+            },
+            "stevens-pricing": {
+                "new": 212.0,
+                "used": 105.5
             }
         }
     ],
@@ -1822,6 +2190,10 @@
                 "book-edition": "Edition 2",
                 "book-title": "Environmental Engineering",
                 "isbn": "1118741498"
+            },
+            "stevens-pricing": {
+                "new": 240.0,
+                "used": 192.0
             }
         }
     ],
@@ -1834,6 +2206,10 @@
                 "book-edition": "Edition 4",
                 "book-title": "Air Pollution Control",
                 "isbn": "157766678X"
+            },
+            "stevens-pricing": {
+                "new": 123.49,
+                "new-rental": 105.7
             }
         }
     ],
@@ -1845,6 +2221,12 @@
                 "book-binding": "Binding Hardback",
                 "book-title": "Industrial Ecology & Sustainable Engineering",
                 "isbn": "0136008062"
+            },
+            "stevens-pricing": {
+                "new": 188.45,
+                "new-rental": 174.0,
+                "used": 107.95,
+                "used-rental": 117.4
             }
         }
     ],
@@ -1856,6 +2238,10 @@
                 "book-binding": "Binding Hardback",
                 "book-title": "Water Chemistry",
                 "isbn": "0199730725"
+            },
+            "stevens-pricing": {
+                "new": 172.0,
+                "new-rental": 144.75
             }
         }
     ],
@@ -1868,6 +2254,9 @@
                 "book-edition": "Edition 2",
                 "book-title": "Water Treatment (Rev: Crittenden)",
                 "isbn": "0471110183"
+            },
+            "stevens-pricing": {
+                "new": 185.0
             }
         }
     ],
@@ -1880,6 +2269,9 @@
                 "book-edition": "Edition 2",
                 "book-title": "A First Look At Rigorous Probability Theory",
                 "isbn": "9812703705"
+            },
+            "stevens-pricing": {
+                "new": 61.75
             }
         }
     ],
@@ -1892,6 +2284,9 @@
                 "book-edition": "Edition 1",
                 "book-title": "Financial Markets And Trading",
                 "isbn": "0470924128"
+            },
+            "stevens-pricing": {
+                "new": 95.0
             }
         }
     ],
@@ -1904,6 +2299,9 @@
                 "book-edition": "Edition 1",
                 "book-title": "Computational Methods In France",
                 "isbn": "1439829578"
+            },
+            "stevens-pricing": {
+                "new": 98.0
             }
         },
         {
@@ -1914,6 +2312,9 @@
                 "book-edition": "Edition 1",
                 "book-title": "Basics Of Matrix Algebra",
                 "isbn": "1498712363"
+            },
+            "stevens-pricing": {
+                "new": 60.0
             }
         }
     ],
@@ -1926,6 +2327,10 @@
                 "book-edition": "Edition 4",
                 "book-title": "Financial & Managerial Accounting For Mbas",
                 "isbn": "1618531026"
+            },
+            "stevens-pricing": {
+                "new": 199.95,
+                "used": 139.95
             }
         }
     ],
@@ -1938,6 +2343,9 @@
                 "book-edition": "Edition 2",
                 "book-title": "Financial And Managerial Accounting-Binder Version",
                 "isbn": "1119153387"
+            },
+            "stevens-pricing": {
+                "new": 170.5
             }
         }
     ],
@@ -1950,6 +2358,9 @@
                 "book-edition": "Edition 4",
                 "book-title": "Fixed Income Mathematics",
                 "isbn": "007146073X"
+            },
+            "stevens-pricing": {
+                "new": 90.0
             }
         }
     ],
@@ -1962,6 +2373,9 @@
                 "book-edition": "Edition 4",
                 "book-title": "Corporate Finance:The Core",
                 "isbn": "0134409272"
+            },
+            "stevens-pricing": {
+                "new": 252.75
             }
         }
     ],
@@ -1973,6 +2387,10 @@
                 "book-binding": "Binding Paperback",
                 "book-title": "Theories Of Modern Art",
                 "isbn": "0520052560"
+            },
+            "stevens-pricing": {
+                "new": 35.95,
+                "new-rental": 36.1
             }
         },
         {
@@ -1983,6 +2401,10 @@
                 "book-edition": "Edition 3",
                 "book-title": "Art Since 1900 Vol 2",
                 "isbn": "0500292728"
+            },
+            "stevens-pricing": {
+                "new": 78.5,
+                "new-rental": 48.45
             }
         },
         {
@@ -1993,6 +2415,10 @@
                 "book-edition": "Edition 3",
                 "book-title": "Art Since 1900 Vol 1",
                 "isbn": "050029271X"
+            },
+            "stevens-pricing": {
+                "new": 72.15,
+                "new-rental": 44.5
             }
         },
         {
@@ -2003,6 +2429,10 @@
                 "book-edition": "Edition 4",
                 "book-title": "Nineteenth Century Art",
                 "isbn": "0500288887"
+            },
+            "stevens-pricing": {
+                "new": 113.95,
+                "new-rental": 95.6
             }
         }
     ],
@@ -2014,6 +2444,10 @@
                 "book-binding": "Binding Paperback",
                 "book-title": "Contest Of Meaning",
                 "isbn": "0262521695"
+            },
+            "stevens-pricing": {
+                "new": 58.75,
+                "new-rental": 60.7
             }
         },
         {
@@ -2023,6 +2457,10 @@
                 "book-binding": "Binding Paperback",
                 "book-title": "Camera Lucida (Foreword: Dyer)",
                 "isbn": "0374532338"
+            },
+            "stevens-pricing": {
+                "new": 14.0,
+                "new-rental": 7.7
             }
         },
         {
@@ -2032,6 +2470,10 @@
                 "book-binding": "Binding Paperback",
                 "book-title": "Techniques Of The Observer",
                 "isbn": "0262531070"
+            },
+            "stevens-pricing": {
+                "new": 27.95,
+                "new-rental": 18.15
             }
         }
     ],
@@ -2044,6 +2486,10 @@
                 "book-edition": "Edition 4",
                 "book-title": "Give Me Liberty Seagull Ed Vol Two",
                 "isbn": "0393920313"
+            },
+            "stevens-pricing": {
+                "new": 63.25,
+                "used": 50.5
             }
         }
     ],
@@ -2056,6 +2502,12 @@
                 "book-edition": "Edition 3",
                 "book-title": "Science And Technology In World History",
                 "isbn": "1421417758"
+            },
+            "stevens-pricing": {
+                "new": 30.25,
+                "new-rental": 21.8,
+                "used": 24.25,
+                "used-rental": 12.45
             }
         }
     ],
@@ -2067,6 +2519,10 @@
                 "book-binding": "Binding Paperback",
                 "book-title": "Theories Of Modern Art",
                 "isbn": "0520052560"
+            },
+            "stevens-pricing": {
+                "new": 35.95,
+                "new-rental": 36.1
             }
         },
         {
@@ -2077,6 +2533,10 @@
                 "book-edition": "Edition 3",
                 "book-title": "Art Since 1900 Vol 2",
                 "isbn": "0500292728"
+            },
+            "stevens-pricing": {
+                "new": 78.5,
+                "new-rental": 48.45
             }
         },
         {
@@ -2087,6 +2547,10 @@
                 "book-edition": "Edition 3",
                 "book-title": "Art Since 1900 Vol 1",
                 "isbn": "050029271X"
+            },
+            "stevens-pricing": {
+                "new": 72.15,
+                "new-rental": 44.5
             }
         },
         {
@@ -2097,6 +2561,10 @@
                 "book-edition": "Edition 4",
                 "book-title": "Nineteenth Century Art",
                 "isbn": "0500288887"
+            },
+            "stevens-pricing": {
+                "new": 113.95,
+                "new-rental": 95.6
             }
         }
     ],
@@ -2108,6 +2576,10 @@
                 "book-binding": "Binding Paperback",
                 "book-title": "Contest Of Meaning",
                 "isbn": "0262521695"
+            },
+            "stevens-pricing": {
+                "new": 58.75,
+                "new-rental": 60.7
             }
         },
         {
@@ -2117,6 +2589,10 @@
                 "book-binding": "Binding Paperback",
                 "book-title": "Camera Lucida (Foreword: Dyer)",
                 "isbn": "0374532338"
+            },
+            "stevens-pricing": {
+                "new": 14.0,
+                "new-rental": 7.7
             }
         },
         {
@@ -2126,6 +2602,10 @@
                 "book-binding": "Binding Paperback",
                 "book-title": "Techniques Of The Observer",
                 "isbn": "0262531070"
+            },
+            "stevens-pricing": {
+                "new": 27.95,
+                "new-rental": 18.15
             }
         }
     ],
@@ -2137,6 +2617,10 @@
                 "book-binding": "Binding Paperback",
                 "book-title": "Rise & Fall Of The Great Powers",
                 "isbn": "0679720197"
+            },
+            "stevens-pricing": {
+                "new": 20.0,
+                "new-rental": 12.4
             }
         },
         {
@@ -2146,6 +2630,12 @@
                 "book-binding": "Binding Paperback",
                 "book-title": "Culture Of Improvement",
                 "isbn": "026251401X"
+            },
+            "stevens-pricing": {
+                "new": 45.95,
+                "new-rental": 43.55,
+                "used": 36.75,
+                "used-rental": 20.4
             }
         },
         {
@@ -2155,6 +2645,9 @@
                 "book-binding": "Binding Paperback",
                 "book-title": "Innovators",
                 "isbn": "0471140961"
+            },
+            "stevens-pricing": {
+                "new": 73.45
             }
         }
     ],
@@ -2166,6 +2659,12 @@
                 "book-binding": "Binding Paperback",
                 "book-title": "Nibelungenlied",
                 "isbn": "0140441379"
+            },
+            "stevens-pricing": {
+                "new": 17.0,
+                "new-rental": 11.05,
+                "used": 13.5,
+                "used-rental": 7.2
             }
         },
         {
@@ -2175,6 +2674,12 @@
                 "book-binding": "Binding Paperback",
                 "book-title": "Phedre",
                 "isbn": "0140445919"
+            },
+            "stevens-pricing": {
+                "new": 15.0,
+                "new-rental": 9.6,
+                "used": 12.0,
+                "used-rental": 10.0
             }
         },
         {
@@ -2184,6 +2689,10 @@
                 "book-binding": "Binding Paperback",
                 "book-title": "Inferno Of Dante Bilingual Ed (Trans: Pinsky)",
                 "isbn": "0374524521"
+            },
+            "stevens-pricing": {
+                "new": 12.0,
+                "used": 9.55
             }
         },
         {
@@ -2193,6 +2702,9 @@
                 "book-binding": "Binding Paperback",
                 "book-title": "Fun Home",
                 "isbn": "0618871713"
+            },
+            "stevens-pricing": {
+                "new": 13.95
             }
         },
         {
@@ -2202,6 +2714,10 @@
                 "book-binding": "Binding Paperback",
                 "book-title": "Yvain: Knight Of The Lion (Ed: Raffel)",
                 "isbn": "0300038380"
+            },
+            "stevens-pricing": {
+                "new": 25.0,
+                "new-rental": 22.3
             }
         },
         {
@@ -2211,6 +2727,10 @@
                 "book-binding": "Binding Paperback",
                 "book-title": "Paradise Lost",
                 "isbn": "0140424393"
+            },
+            "stevens-pricing": {
+                "new": 12.0,
+                "new-rental": 6.25
             }
         },
         {
@@ -2221,6 +2741,10 @@
                 "book-edition": "Edition 2",
                 "book-title": "Metamorphosis (Ed: Corngold)",
                 "isbn": "0393923207"
+            },
+            "stevens-pricing": {
+                "new": 14.5,
+                "new-rental": 10.9
             }
         },
         {
@@ -2230,6 +2754,9 @@
                 "book-binding": "Binding Paperback",
                 "book-title": "Lyrical Ballads (Ed: Schmidt)",
                 "isbn": "0140424628"
+            },
+            "stevens-pricing": {
+                "new": 15.0
             }
         }
     ],
@@ -2242,6 +2769,10 @@
                 "book-edition": "Edition 7",
                 "book-title": "Norton Anthology Of Amer. Lit.-7Th-Vol.C,D,E",
                 "isbn": "0393929949"
+            },
+            "stevens-pricing": {
+                "new": 68.25,
+                "used": 54.5
             }
         }
     ],
@@ -2253,6 +2784,12 @@
                 "book-binding": "Binding Paperback",
                 "book-title": "Gulliver's Travels (Ed: Rivero)",
                 "isbn": "0393957241"
+            },
+            "stevens-pricing": {
+                "new": 18.99,
+                "new-rental": 18.8,
+                "used": 15.25,
+                "used-rental": 13.0
             }
         },
         {
@@ -2262,6 +2799,12 @@
                 "book-binding": "Binding Paperback",
                 "book-title": "Utopia (New & Updtd)(Trans: Turner)",
                 "isbn": "0140449108"
+            },
+            "stevens-pricing": {
+                "new": 12.0,
+                "new-rental": 6.25,
+                "used": 9.5,
+                "used-rental": 6.6
             }
         },
         {
@@ -2271,6 +2814,12 @@
                 "book-binding": "Binding Paperback",
                 "book-title": "Brave New World P.S. Ed",
                 "isbn": "0060850523"
+            },
+            "stevens-pricing": {
+                "new": 15.95,
+                "new-rental": 7.9,
+                "used": 12.75,
+                "used-rental": 3.6
             }
         },
         {
@@ -2280,6 +2829,12 @@
                 "book-binding": "Binding Paperback",
                 "book-title": "Nineteen Eighty-Four Centennial Ed (W/New Foreword By Pynchon)",
                 "isbn": "0452284236"
+            },
+            "stevens-pricing": {
+                "new": 17.0,
+                "new-rental": 10.1,
+                "used": 13.5,
+                "used-rental": 6.0
             }
         },
         {
@@ -2289,6 +2844,12 @@
                 "book-binding": "Binding None",
                 "book-title": "Frankenstein",
                 "isbn": "019953716X"
+            },
+            "stevens-pricing": {
+                "new": 7.95,
+                "new-rental": 5.2,
+                "used": 6.36,
+                "used-rental": 2.75
             }
         }
     ],
@@ -2300,6 +2861,9 @@
                 "book-binding": "Binding Paperback",
                 "book-title": "Collected Short Stories",
                 "isbn": "0393306259"
+            },
+            "stevens-pricing": {
+                "new": 15.95
             }
         },
         {
@@ -2309,6 +2873,10 @@
                 "book-binding": "Binding Paperback",
                 "book-title": "Crossing Into America",
                 "isbn": "1565848950"
+            },
+            "stevens-pricing": {
+                "new": 21.95,
+                "new-rental": 21.05
             }
         },
         {
@@ -2318,6 +2886,12 @@
                 "book-binding": "Binding Paperback",
                 "book-title": "Tempest",
                 "isbn": "1559362103"
+            },
+            "stevens-pricing": {
+                "new": 13.95,
+                "new-rental": 7.4,
+                "used": 11.25,
+                "used-rental": 6.65
             }
         },
         {
@@ -2327,6 +2901,12 @@
                 "book-binding": "Binding Paperback",
                 "book-title": "Dream On Monkey Mountain & Other Plays",
                 "isbn": "0374508607"
+            },
+            "stevens-pricing": {
+                "new": 18.0,
+                "new-rental": 17.05,
+                "used": 14.5,
+                "used-rental": 12.25
             }
         },
         {
@@ -2336,6 +2916,10 @@
                 "book-binding": "Binding None",
                 "book-title": "Everything Is Now:New And Collected",
                 "isbn": "0816655936"
+            },
+            "stevens-pricing": {
+                "new": 24.95,
+                "used": 20.0
             }
         },
         {
@@ -2345,6 +2929,9 @@
                 "book-binding": "Binding None",
                 "book-title": "Krik Krak",
                 "isbn": "161695700X"
+            },
+            "stevens-pricing": {
+                "new": 14.95
             }
         }
     ],
@@ -2356,6 +2943,9 @@
                 "book-binding": "Binding None",
                 "book-title": "Morford-Myth Vs1 Theogony 4V/Pack",
                 "isbn": "0199383685"
+            },
+            "stevens-pricing": {
+                "new": 113.25
             }
         }
     ],
@@ -2367,6 +2957,10 @@
                 "book-binding": "Binding Paperback",
                 "book-title": "Hamlet (Ed: Braunmuller)",
                 "isbn": "0140714545"
+            },
+            "stevens-pricing": {
+                "new": 9.0,
+                "new-rental": 6.0
             }
         },
         {
@@ -2376,6 +2970,10 @@
                 "book-binding": "Binding Paperback",
                 "book-title": "Midsummer Night's Dream (Ed: Mcdonald)",
                 "isbn": "0140714553"
+            },
+            "stevens-pricing": {
+                "new": 8.0,
+                "new-rental": 4.7
             }
         },
         {
@@ -2385,6 +2983,10 @@
                 "book-binding": "Binding Paperback",
                 "book-title": "Romeo & Juliet (Ed: Holland)",
                 "isbn": "0140714847"
+            },
+            "stevens-pricing": {
+                "new": 8.0,
+                "new-rental": 3.95
             }
         },
         {
@@ -2394,6 +2996,10 @@
                 "book-binding": "Binding Paperback",
                 "book-title": "Henry Iv, Part 1 (Ed: Mceachern)",
                 "isbn": "0140714561"
+            },
+            "stevens-pricing": {
+                "new": 8.0,
+                "new-rental": 5.2
             }
         },
         {
@@ -2403,6 +3009,12 @@
                 "book-binding": "Binding Paperback",
                 "book-title": "Macbeth (Ed: Orgel)",
                 "isbn": "0140714782"
+            },
+            "stevens-pricing": {
+                "new": 8.0,
+                "new-rental": 4.7,
+                "used": 6.5,
+                "used-rental": 4.8
             }
         },
         {
@@ -2412,6 +3024,12 @@
                 "book-binding": "Binding Paperback",
                 "book-title": "Much Ado About Nothing (Ed: Holland)",
                 "isbn": "0140714804"
+            },
+            "stevens-pricing": {
+                "new": 8.0,
+                "new-rental": 5.9,
+                "used": 6.5,
+                "used-rental": 4.05
             }
         },
         {
@@ -2421,6 +3039,10 @@
                 "book-binding": "Binding Paperback",
                 "book-title": "Henry V (Ed: Mceachern)",
                 "isbn": "0140714588"
+            },
+            "stevens-pricing": {
+                "new": 8.0,
+                "new-rental": 5.2
             }
         },
         {
@@ -2430,6 +3052,10 @@
                 "book-binding": "Binding Paperback",
                 "book-title": "King Lear (Ed: Orgel)",
                 "isbn": "0143128558"
+            },
+            "stevens-pricing": {
+                "new": 9.0,
+                "new-rental": 7.95
             }
         },
         {
@@ -2439,6 +3065,10 @@
                 "book-binding": "Binding Paperback",
                 "book-title": "Coriolanus (Ed: Crewe)",
                 "isbn": "0140714731"
+            },
+            "stevens-pricing": {
+                "new": 8.0,
+                "new-rental": 6.95
             }
         },
         {
@@ -2448,6 +3078,9 @@
                 "book-binding": "Binding None",
                 "book-title": "The Tempest",
                 "isbn": "0143128639"
+            },
+            "stevens-pricing": {
+                "new": 9.0
             }
         },
         {
@@ -2457,6 +3090,9 @@
                 "book-binding": "Binding None",
                 "book-title": "Othello",
                 "isbn": "0143128612"
+            },
+            "stevens-pricing": {
+                "new": 9.0
             }
         }
     ],
@@ -2468,6 +3104,10 @@
                 "book-binding": "Binding Hardback",
                 "book-title": "American Poetry Twentieth Century Vol One",
                 "isbn": "1883011779"
+            },
+            "stevens-pricing": {
+                "new": 35.0,
+                "new-rental": 26.8
             }
         }
     ],
@@ -2480,6 +3120,10 @@
                 "book-edition": "Edition 3",
                 "book-title": "Norton Anthology Of Literature By Women (2 Vol Set)",
                 "isbn": "0393930157"
+            },
+            "stevens-pricing": {
+                "new": 86.0,
+                "new-rental": 52.45
             }
         },
         {
@@ -2489,6 +3133,12 @@
                 "book-binding": "Binding Paperback",
                 "book-title": "Persepolis",
                 "isbn": "037571457X"
+            },
+            "stevens-pricing": {
+                "new": 13.95,
+                "new-rental": 6.95,
+                "used": 11.25,
+                "used-rental": 7.3
             }
         },
         {
@@ -2498,6 +3148,10 @@
                 "book-binding": "Binding Paperback",
                 "book-title": "Interpreter Of Maladies",
                 "isbn": "039592720X"
+            },
+            "stevens-pricing": {
+                "new": 14.0,
+                "new-rental": 13.95
             }
         }
     ],
@@ -2510,6 +3164,12 @@
                 "book-edition": "Edition 9",
                 "book-title": "A History Of Western Music",
                 "isbn": "0393918297"
+            },
+            "stevens-pricing": {
+                "new": 129.0,
+                "new-rental": 78.65,
+                "used": 103.25,
+                "used-rental": 38.95
             }
         }
     ],
@@ -2522,6 +3182,9 @@
                 "book-edition": "Edition 1",
                 "book-title": "Sight Reading Level 3",
                 "isbn": "0849750172"
+            },
+            "stevens-pricing": {
+                "new": 4.95
             }
         }
     ],
@@ -2534,6 +3197,10 @@
                 "book-edition": "Edition 8",
                 "book-title": "Modern Recording Techniques",
                 "isbn": "0240821572"
+            },
+            "stevens-pricing": {
+                "new": 70.85,
+                "new-rental": 50.9
             }
         }
     ],
@@ -2545,6 +3212,9 @@
                 "book-binding": "Binding Paperback",
                 "book-title": "Person",
                 "isbn": "0131848119"
+            },
+            "stevens-pricing": {
+                "new": 136.0
             }
         },
         {
@@ -2554,6 +3224,10 @@
                 "book-binding": "Binding Paperback",
                 "book-title": "On Human Nature",
                 "isbn": "0534624782"
+            },
+            "stevens-pricing": {
+                "new": 145.5,
+                "new-rental": 147.25
             }
         }
     ],
@@ -2566,6 +3240,10 @@
                 "book-edition": "Edition 3",
                 "book-title": "Honest Work",
                 "isbn": "0199944202"
+            },
+            "stevens-pricing": {
+                "new": 95.0,
+                "new-rental": 63.3
             }
         }
     ],
@@ -2577,6 +3255,10 @@
                 "book-binding": "Binding Paperback",
                 "book-title": "Medical Ethics & Humanities",
                 "isbn": "0763760633"
+            },
+            "stevens-pricing": {
+                "new": 126.95,
+                "used": 74.95
             }
         }
     ],
@@ -2588,6 +3270,9 @@
                 "book-binding": "Binding Paperback",
                 "book-title": "Hypatia's Daughters",
                 "isbn": "0253210607"
+            },
+            "stevens-pricing": {
+                "new": 35.25
             }
         }
     ],
@@ -2600,6 +3285,9 @@
                 "book-edition": "Edition 9",
                 "book-title": "Judicial Process In America",
                 "isbn": "1452226326"
+            },
+            "stevens-pricing": {
+                "new": 82.0
             }
         }
     ],
@@ -2612,6 +3300,12 @@
                 "book-edition": "Edition 14",
                 "book-title": "Down To Earth Sociology",
                 "isbn": "1416536205"
+            },
+            "stevens-pricing": {
+                "new": 28.95,
+                "new-rental": 27.05,
+                "used": 18.95,
+                "used-rental": 18.0
             }
         }
     ],
@@ -2624,6 +3318,10 @@
                 "book-edition": "Edition 8",
                 "book-title": "Psychology",
                 "isbn": "0393932508"
+            },
+            "stevens-pricing": {
+                "new": 170.59,
+                "used": 136.5
             }
         }
     ],
@@ -2636,6 +3334,10 @@
                 "book-edition": "Edition 12",
                 "book-title": "Biological Psychology",
                 "isbn": "1305105400"
+            },
+            "stevens-pricing": {
+                "new": 323.75,
+                "new-rental": 279.2
             }
         }
     ],
@@ -2648,6 +3350,12 @@
                 "book-edition": "Edition 8",
                 "book-title": "Intro To Theories Of Personality",
                 "isbn": "0205798780"
+            },
+            "stevens-pricing": {
+                "new": 235.5,
+                "new-rental": 173.9,
+                "used": 188.5,
+                "used-rental": 118.75
             }
         }
     ],
@@ -2660,6 +3368,10 @@
                 "book-edition": "Edition 6",
                 "book-title": "Gendered Society Reader",
                 "isbn": "0190260378"
+            },
+            "stevens-pricing": {
+                "new": 77.95,
+                "new-rental": 47.85
             }
         },
         {
@@ -2670,6 +3382,10 @@
                 "book-edition": "Edition 6",
                 "book-title": "Gendered Society",
                 "isbn": "0190260319"
+            },
+            "stevens-pricing": {
+                "new": 76.95,
+                "new-rental": 46.9
             }
         }
     ],
@@ -2682,19 +3398,13 @@
                 "book-edition": "Edition 9",
                 "book-title": "Health Psychology",
                 "isbn": "0077861817"
+            },
+            "stevens-pricing": {
+                "new": 253.0
             }
         }
     ],
-    "HST - 415": [
-        {
-            "is_required": true,
-            "stevens-metadata": {
-                "book-author": "None",
-                "book-binding": "Binding None",
-                "book-title": "No Text Required"
-            }
-        }
-    ],
+    "HST - 415": [],
     "MA - 119": [
         {
             "is_required": true,
@@ -2704,6 +3414,9 @@
                 "book-edition": "Edition 11",
                 "book-title": "Calc. For Business,Economics-Binder Version",
                 "isbn": "0077491386"
+            },
+            "stevens-pricing": {
+                "new": 181.0
             }
         },
         {
@@ -2714,29 +3427,15 @@
                 "book-edition": "Edition 11",
                 "book-title": "Finite Mathematics & Its Appl",
                 "isbn": "0321878051"
+            },
+            "stevens-pricing": {
+                "new": 204.19,
+                "used": 163.25
             }
         }
     ],
-    "MA - 122": [
-        {
-            "is_required": true,
-            "stevens-metadata": {
-                "book-author": "None",
-                "book-binding": "Binding None",
-                "book-title": "No Text Required"
-            }
-        }
-    ],
-    "MA - 123": [
-        {
-            "is_required": true,
-            "stevens-metadata": {
-                "book-author": "None",
-                "book-binding": "Binding None",
-                "book-title": "No Text Required"
-            }
-        }
-    ],
+    "MA - 122": [],
+    "MA - 123": [],
     "MA - 134": [
         {
             "is_required": true,
@@ -2746,19 +3445,13 @@
                 "book-edition": "Edition k4",
                 "book-title": "Discrete Math With Applications",
                 "isbn": "1111775788"
+            },
+            "stevens-pricing": {
+                "new": 191.25
             }
         }
     ],
-    "MA - 188": [
-        {
-            "is_required": true,
-            "stevens-metadata": {
-                "book-author": "None",
-                "book-binding": "Binding None",
-                "book-title": "No Text Required"
-            }
-        }
-    ],
+    "MA - 188": [],
     "MA - 221": [
         {
             "is_required": true,
@@ -2768,6 +3461,9 @@
                 "book-edition": "Edition 8",
                 "book-title": "Different. Equat. W/ Boundary Value Problems /Enhanced Web",
                 "isbn": "1133540805"
+            },
+            "stevens-pricing": {
+                "new": 265.5
             }
         }
     ],
@@ -2780,6 +3476,9 @@
                 "book-edition": "Edition 4",
                 "book-title": "Multivariable Calculus W/Sol. Manual",
                 "isbn": "0495780588"
+            },
+            "stevens-pricing": {
+                "new": 329.95
             }
         }
     ],
@@ -2792,6 +3491,9 @@
                 "book-edition": "Edition 2",
                 "book-title": "Further Mathematics For Economic Analysis",
                 "isbn": "0273713280"
+            },
+            "stevens-pricing": {
+                "new": 221.45
             }
         },
         {
@@ -2801,6 +3503,9 @@
                 "book-binding": "Binding Paperback",
                 "book-title": "First Course In Optimization Theory",
                 "isbn": "0521497701"
+            },
+            "stevens-pricing": {
+                "new": 49.99
             }
         }
     ],
@@ -2813,6 +3518,12 @@
                 "book-edition": "Edition 6",
                 "book-title": "Complex Analysis For Math & Engineering",
                 "isbn": "1449604455"
+            },
+            "stevens-pricing": {
+                "new": 199.95,
+                "new-rental": 178.25,
+                "used": 109.95,
+                "used-rental": 138.65
             }
         }
     ],
@@ -2825,6 +3536,10 @@
                 "book-edition": "Edition 4",
                 "book-title": "Formal Logic",
                 "isbn": "0872208133"
+            },
+            "stevens-pricing": {
+                "new": 39.5,
+                "new-rental": 31.45
             }
         }
     ],
@@ -2837,6 +3552,10 @@
                 "book-edition": "Edition 7",
                 "book-title": "First Course In Abstract Algebra",
                 "isbn": "0201763907"
+            },
+            "stevens-pricing": {
+                "new": 183.5,
+                "new-rental": 117.25
             }
         }
     ],
@@ -2849,6 +3568,12 @@
                 "book-edition": "Edition 4",
                 "book-title": "Applied Partial Differential Equations, Etc",
                 "isbn": "0321797051"
+            },
+            "stevens-pricing": {
+                "new": 181.95,
+                "new-rental": 121.2,
+                "used": 145.5,
+                "used-rental": 63.2
             }
         }
     ],
@@ -2861,6 +3586,9 @@
                 "book-edition": "Edition 3",
                 "book-title": "Advanced Calculus",
                 "isbn": "1588663027"
+            },
+            "stevens-pricing": {
+                "new": 103.0
             }
         }
     ],
@@ -2873,19 +3601,13 @@
                 "book-edition": "Edition 2",
                 "book-title": "Matrices:Theory And Applications",
                 "isbn": "1441976825"
+            },
+            "stevens-pricing": {
+                "new": 74.95
             }
         }
     ],
-    "MA - 606": [
-        {
-            "is_required": true,
-            "stevens-metadata": {
-                "book-author": "None",
-                "book-binding": "Binding None",
-                "book-title": "No Text Required"
-            }
-        }
-    ],
+    "MA - 606": [],
     "MA - 612": [
         {
             "is_required": true,
@@ -2895,19 +3617,13 @@
                 "book-edition": "Edition 1",
                 "book-title": "Mathematical Statistics:Basic Ideas....",
                 "isbn": "1498740316"
+            },
+            "stevens-pricing": {
+                "new": 182.0
             }
         }
     ],
-    "MA - 620": [
-        {
-            "is_required": true,
-            "stevens-metadata": {
-                "book-author": "None",
-                "book-binding": "Binding None",
-                "book-title": "No Text Required"
-            }
-        }
-    ],
+    "MA - 620": [],
     "MA - 623": [
         {
             "is_required": true,
@@ -2917,6 +3633,9 @@
                 "book-edition": "Edition 1",
                 "book-title": "Stochastic Processes With Applications",
                 "isbn": "0898716896"
+            },
+            "stevens-pricing": {
+                "new": 109.0
             }
         }
     ],
@@ -2929,6 +3648,9 @@
                 "book-edition": "Edition 4",
                 "book-title": "Real Analysis",
                 "isbn": "013143747X"
+            },
+            "stevens-pricing": {
+                "new": 183.99
             }
         }
     ],
@@ -2941,6 +3663,10 @@
                 "book-edition": "Edition 2",
                 "book-title": "Nonlinear Dynamics And Chaos",
                 "isbn": "0813349109"
+            },
+            "stevens-pricing": {
+                "new": 65.5,
+                "new-rental": 57.15
             }
         }
     ],
@@ -2953,6 +3679,9 @@
                 "book-edition": "Edition 2",
                 "book-title": "Lecture Notes On Stochastic Programming",
                 "isbn": "1611973422"
+            },
+            "stevens-pricing": {
+                "new": 142.0
             }
         },
         {
@@ -2963,6 +3692,9 @@
                 "book-edition": "Edition 1",
                 "book-title": "Stochastic Programming",
                 "isbn": "0792334825"
+            },
+            "stevens-pricing": {
+                "new": 239.0
             }
         },
         {
@@ -2973,6 +3705,9 @@
                 "book-edition": "Edition 1",
                 "book-title": "Stodhastic Programming Handbook",
                 "isbn": "0444508546"
+            },
+            "stevens-pricing": {
+                "new": 258.75
             }
         }
     ],
@@ -2984,6 +3719,9 @@
                 "book-binding": "Binding None",
                 "book-title": "Theory Of Functions Of A Complex...",
                 "isbn": "082183780X"
+            },
+            "stevens-pricing": {
+                "new": 97.0
             }
         }
     ],
@@ -2995,6 +3733,9 @@
                 "book-binding": "Binding Hardback",
                 "book-title": "Quantitative Risk Management Rev Ed",
                 "isbn": "0691166277"
+            },
+            "stevens-pricing": {
+                "new": 90.0
             }
         }
     ],
@@ -3007,6 +3748,10 @@
                 "book-edition": "Edition 14",
                 "book-title": "Engineering Mech: Dynamics",
                 "isbn": "0133915387"
+            },
+            "stevens-pricing": {
+                "new": 222.75,
+                "new-rental": 135.6
             }
         }
     ],
@@ -3019,6 +3764,12 @@
                 "book-edition": "Edition 8",
                 "book-title": "Fundamentals Of Engineer. Thermodynamics-Hardcover",
                 "isbn": "1118412931"
+            },
+            "stevens-pricing": {
+                "new": 268.35,
+                "new-rental": 206.5,
+                "used": 214.75,
+                "used-rental": 124.1
             }
         }
     ],
@@ -3031,6 +3782,10 @@
                 "book-edition": "Edition 6",
                 "book-title": "Product Design & Development",
                 "isbn": "0078029066"
+            },
+            "stevens-pricing": {
+                "new": 259.95,
+                "new-rental": 186.25
             }
         }
     ],
@@ -3043,6 +3798,12 @@
                 "book-edition": "Edition 8",
                 "book-title": "Fundamentals Of Engineer. Thermodynamics-Hardcover",
                 "isbn": "1118412931"
+            },
+            "stevens-pricing": {
+                "new": 268.35,
+                "new-rental": 206.5,
+                "used": 214.75,
+                "used-rental": 124.1
             }
         }
     ],
@@ -3055,6 +3816,9 @@
                 "book-edition": "Edition 8",
                 "book-title": "Fluid Mechanics-Binder Version",
                 "isbn": "1259169928"
+            },
+            "stevens-pricing": {
+                "new": 85.95
             }
         }
     ],
@@ -3067,6 +3831,12 @@
                 "book-edition": "Edition 5",
                 "book-title": "Heat And Mass Transfer",
                 "isbn": "0073398187"
+            },
+            "stevens-pricing": {
+                "new": 299.95,
+                "new-rental": 263.35,
+                "used": 179.95,
+                "used-rental": 162.9
             }
         }
     ],
@@ -3079,6 +3849,10 @@
                 "book-edition": "Edition 5",
                 "book-title": "Design Of Machinery-W/Dvd",
                 "isbn": "007742171X"
+            },
+            "stevens-pricing": {
+                "new": 262.0,
+                "new-rental": 170.75
             }
         }
     ],
@@ -3091,6 +3865,9 @@
                 "book-edition": "Edition 10",
                 "book-title": "Shigley's Mechanical Engineering Design",
                 "isbn": "0073398209"
+            },
+            "stevens-pricing": {
+                "new": 281.95
             }
         }
     ],
@@ -3103,6 +3880,10 @@
                 "book-edition": "Edition 5",
                 "book-title": "Design Of Machinery (W/Cd)",
                 "isbn": "007742171X"
+            },
+            "stevens-pricing": {
+                "new": 262.0,
+                "new-rental": 170.75
             }
         }
     ],
@@ -3115,6 +3896,10 @@
                 "book-edition": "Edition 5",
                 "book-title": "Modern Control Engineering",
                 "isbn": "0136156738"
+            },
+            "stevens-pricing": {
+                "new": 232.75,
+                "new-rental": 152.8
             }
         }
     ],
@@ -3126,6 +3911,10 @@
                 "book-binding": "Binding None",
                 "book-title": "Industrial Automation",
                 "isbn": "0471600717"
+            },
+            "stevens-pricing": {
+                "new": 199.95,
+                "used": 110.0
             }
         },
         {
@@ -3136,6 +3925,10 @@
                 "book-edition": "Edition 6",
                 "book-title": "Manufacturing Processes For Engineering Materials",
                 "isbn": "0134290550"
+            },
+            "stevens-pricing": {
+                "new": 232.75,
+                "new-rental": 145.2
             }
         }
     ],
@@ -3147,6 +3940,10 @@
                 "book-binding": "Binding Hardback",
                 "book-title": "Mechatronics",
                 "isbn": "0849312744"
+            },
+            "stevens-pricing": {
+                "new": 170.0,
+                "new-rental": 171.15
             }
         }
     ],
@@ -3159,6 +3956,9 @@
                 "book-edition": "Edition 13",
                 "book-title": "The Motor Vehicle",
                 "isbn": "0768006392"
+            },
+            "stevens-pricing": {
+                "new": 20.25
             }
         }
     ],
@@ -3171,6 +3971,10 @@
                 "book-edition": "Edition 2",
                 "book-title": "Internal Combustion Engines",
                 "isbn": "0471356174"
+            },
+            "stevens-pricing": {
+                "new": 195.0,
+                "used": 99.95
             }
         }
     ],
@@ -3183,6 +3987,10 @@
                 "book-edition": "Edition 9",
                 "book-title": "Ansel's Pharmaceutical Dosage Forms & Drug Delivery Systems",
                 "isbn": "0781779340"
+            },
+            "stevens-pricing": {
+                "new": 73.75,
+                "used": 29.95
             }
         }
     ],
@@ -3195,6 +4003,10 @@
                 "book-edition": "Edition 4",
                 "book-title": "Air Pollution Control",
                 "isbn": "157766678X"
+            },
+            "stevens-pricing": {
+                "new": 123.49,
+                "new-rental": 105.7
             }
         }
     ],
@@ -3206,6 +4018,9 @@
                 "book-binding": "Binding None",
                 "book-title": "Good Design Practices For Gmp Pharm. Facilities",
                 "isbn": "0824754638"
+            },
+            "stevens-pricing": {
+                "new": 202.5
             }
         }
     ],
@@ -3217,6 +4032,9 @@
                 "book-binding": "Binding None",
                 "book-title": "Pharmaceutical Process Validation",
                 "isbn": "0824708385"
+            },
+            "stevens-pricing": {
+                "new": 236.2
             }
         }
     ],
@@ -3229,6 +4047,10 @@
                 "book-edition": "Edition 8",
                 "book-title": "Intro To Flight",
                 "isbn": "0078027675"
+            },
+            "stevens-pricing": {
+                "new": 299.95,
+                "new-rental": 272.55
             }
         }
     ],
@@ -3241,6 +4063,9 @@
                 "book-edition": "Edition 7",
                 "book-title": "Fluid Mechanics And Thermodynamics Of Turbomachinery",
                 "isbn": "0124159540"
+            },
+            "stevens-pricing": {
+                "new": 96.0
             }
         }
     ],
@@ -3253,6 +4078,12 @@
                 "book-edition": "Edition 3",
                 "book-title": "Product Design For Manufacture & Assembly",
                 "isbn": "1420089277"
+            },
+            "stevens-pricing": {
+                "new": 169.95,
+                "new-rental": 166.95,
+                "used": 99.95,
+                "used-rental": 114.65
             }
         }
     ],
@@ -3264,6 +4095,12 @@
                 "book-binding": "Binding Hardback",
                 "book-title": "Robot Modeling & Control",
                 "isbn": "0471649902"
+            },
+            "stevens-pricing": {
+                "new": 177.75,
+                "new-rental": 155.6,
+                "used": 142.25,
+                "used-rental": 103.15
             }
         },
         {
@@ -3274,6 +4111,12 @@
                 "book-edition": "Edition 4",
                 "book-title": "Intro To Autonomous Mobile Robots W/Code",
                 "isbn": "0262015358"
+            },
+            "stevens-pricing": {
+                "new": 72.5,
+                "new-rental": 64.6,
+                "used": 58.0,
+                "used-rental": 41.95
             }
         }
     ],
@@ -3285,6 +4128,9 @@
                 "book-binding": "Binding None",
                 "book-title": "Heat Transfer",
                 "isbn": "110767137X"
+            },
+            "stevens-pricing": {
+                "new": 101.0
             }
         }
     ],
@@ -3297,6 +4143,10 @@
                 "book-edition": "Edition 5",
                 "book-title": "Modern Control Engineering",
                 "isbn": "0136156738"
+            },
+            "stevens-pricing": {
+                "new": 232.75,
+                "new-rental": 152.8
             }
         }
     ],
@@ -3309,6 +4159,10 @@
                 "book-edition": "Edition 6",
                 "book-title": "Mechanical Vibrations",
                 "isbn": "013436130X"
+            },
+            "stevens-pricing": {
+                "new": 246.5,
+                "new-rental": 153.4
             }
         }
     ],
@@ -3320,6 +4174,10 @@
                 "book-binding": "Binding None",
                 "book-title": "Modeling And Analysis Of Dynamic Systems",
                 "isbn": "0471394424"
+            },
+            "stevens-pricing": {
+                "new": 235.0,
+                "new-rental": 235.8
             }
         }
     ],
@@ -3332,6 +4190,9 @@
                 "book-edition": "Edition 10",
                 "book-title": "Advanced Engineering Mathematics-Spiral",
                 "isbn": "0470918942"
+            },
+            "stevens-pricing": {
+                "new": 199.95
             }
         }
     ],
@@ -3344,6 +4205,10 @@
                 "book-edition": "Edition 4",
                 "book-title": "Automation,Production System And Computer Integre..",
                 "isbn": "0133499618"
+            },
+            "stevens-pricing": {
+                "new": 230.5,
+                "new-rental": 141.45
             }
         }
     ],
@@ -3355,6 +4220,10 @@
                 "book-binding": "Binding Paperback",
                 "book-title": "Intro To Mechanics Of Continuous Medium",
                 "isbn": "0134876032"
+            },
+            "stevens-pricing": {
+                "new": 159.0,
+                "new-rental": 161.5
             }
         }
     ],
@@ -3367,6 +4236,9 @@
                 "book-edition": "Edition 2",
                 "book-title": "Additive Manufacturing Technologies",
                 "isbn": "1493921126"
+            },
+            "stevens-pricing": {
+                "new": 125.0
             }
         }
     ],
@@ -3378,6 +4250,9 @@
                 "book-binding": "Binding None",
                 "book-title": "Advanced Design Concepts For Engineers",
                 "isbn": "1566766265"
+            },
+            "stevens-pricing": {
+                "new": 161.99
             }
         }
     ],
@@ -3390,19 +4265,14 @@
                 "book-edition": "Edition 2",
                 "book-title": "Running Lean",
                 "isbn": "1449305172"
+            },
+            "stevens-pricing": {
+                "new": 24.99,
+                "new-rental": 13.7
             }
         }
     ],
-    "MGT - 546": [
-        {
-            "is_required": true,
-            "stevens-metadata": {
-                "book-author": "None",
-                "book-binding": "Binding None",
-                "book-title": "No Text Required"
-            }
-        }
-    ],
+    "MGT - 546": [],
     "MGT - 606": [
         {
             "is_required": true,
@@ -3412,6 +4282,10 @@
                 "book-edition": "Edition 12",
                 "book-title": "Principles Of Economics",
                 "isbn": "0134078772"
+            },
+            "stevens-pricing": {
+                "new": 299.95,
+                "new-rental": 275.4
             }
         }
     ],
@@ -3424,6 +4298,10 @@
                 "book-edition": "Edition 5",
                 "book-title": "A Guide To Proj. Mgt. Body Of Knowledge",
                 "isbn": "1935589679"
+            },
+            "stevens-pricing": {
+                "new": 49.95,
+                "new-rental": 42.55
             }
         },
         {
@@ -3434,6 +4312,9 @@
                 "book-edition": "Edition 9",
                 "book-title": "Project Management:A Fundamental Approach",
                 "isbn": "1119071984"
+            },
+            "stevens-pricing": {
+                "new": 199.95
             }
         }
     ],
@@ -3445,6 +4326,9 @@
                 "book-binding": "Binding Paperback",
                 "book-title": "Project Leadership From Theory To Practice",
                 "isbn": "1880410109"
+            },
+            "stevens-pricing": {
+                "new": 14.95
             }
         },
         {
@@ -3455,6 +4339,10 @@
                 "book-edition": "Edition 9",
                 "book-title": "Developing Mgmt. Skills",
                 "isbn": "0133127478"
+            },
+            "stevens-pricing": {
+                "new": 236.92,
+                "new-rental": 213.4
             }
         }
     ],
@@ -3467,6 +4355,12 @@
                 "book-edition": "Edition 8",
                 "book-title": "Statistics For Business And Economics-Book Only",
                 "isbn": "0132745658"
+            },
+            "stevens-pricing": {
+                "new": 256.0,
+                "new-rental": 253.6,
+                "used": 159.95,
+                "used-rental": 166.8
             }
         }
     ],
@@ -3479,6 +4373,12 @@
                 "book-edition": "Edition 8",
                 "book-title": "Judgment In Managerial Decision Making",
                 "isbn": "1118065700"
+            },
+            "stevens-pricing": {
+                "new": 117.0,
+                "new-rental": 101.7,
+                "used": 69.95,
+                "used-rental": 79.6
             }
         }
     ],
@@ -3491,6 +4391,12 @@
                 "book-edition": "Edition 5",
                 "book-title": "Strategic Management Of Technological Innovation",
                 "isbn": "1259539067"
+            },
+            "stevens-pricing": {
+                "new": 151.9,
+                "new-rental": 100.6,
+                "used": 121.5,
+                "used-rental": 54.0
             }
         }
     ],
@@ -3503,6 +4409,10 @@
                 "book-edition": "Edition 11",
                 "book-title": "Organization Theory & Design",
                 "isbn": "1111221294"
+            },
+            "stevens-pricing": {
+                "new": 299.95,
+                "used": 159.0
             }
         },
         {
@@ -3513,6 +4423,9 @@
                 "book-edition": "Edition 13",
                 "book-title": "Essentials Of Organizational Behavior",
                 "isbn": "013392081X"
+            },
+            "stevens-pricing": {
+                "new": 177.65
             }
         }
     ],
@@ -3525,6 +4438,10 @@
                 "book-edition": "Edition 2",
                 "book-title": "Data Warehouse Lifecycle Toolkit",
                 "isbn": "0470149779"
+            },
+            "stevens-pricing": {
+                "new": 50.75,
+                "new-rental": 43.6
             }
         },
         {
@@ -3535,6 +4452,9 @@
                 "book-edition": "Edition 3",
                 "book-title": "Business Intelligence",
                 "isbn": "0133051056"
+            },
+            "stevens-pricing": {
+                "new": 108.25
             }
         }
     ],
@@ -3546,6 +4466,10 @@
                 "book-binding": "Binding Paperback",
                 "book-title": "Elementary Solid State Physics Rev Prtg",
                 "isbn": "0201607336"
+            },
+            "stevens-pricing": {
+                "new": 240.5,
+                "new-rental": 230.8
             }
         }
     ],
@@ -3558,6 +4482,10 @@
                 "book-edition": "Edition 3",
                 "book-title": "Principles Of Solar Engineering",
                 "isbn": "1466563788"
+            },
+            "stevens-pricing": {
+                "new": 161.0,
+                "new-rental": 163.6
             }
         }
     ],
@@ -3570,19 +4498,16 @@
                 "book-edition": "Edition 3",
                 "book-title": "Phase Transformations In Metals And Alloys",
                 "isbn": "1420062107"
+            },
+            "stevens-pricing": {
+                "new": 89.0,
+                "new-rental": 81.65,
+                "used": 49.95,
+                "used-rental": 54.25
             }
         }
     ],
-    "MT - 685": [
-        {
-            "is_required": true,
-            "stevens-metadata": {
-                "book-author": "None",
-                "book-binding": "Binding None",
-                "book-title": "No Text Required"
-            }
-        }
-    ],
+    "MT - 685": [],
     "MT - 690": [
         {
             "is_required": false,
@@ -3591,6 +4516,9 @@
                 "book-binding": "Binding Hardback",
                 "book-title": "Introductory Vhdl From Simulation To Synthesis",
                 "isbn": "0130809829"
+            },
+            "stevens-pricing": {
+                "new": 220.25
             }
         },
         {
@@ -3601,6 +4529,9 @@
                 "book-edition": "Edition 2",
                 "book-title": "Cmos Circuit Design, Layout & Simulation",
                 "isbn": "047170055X"
+            },
+            "stevens-pricing": {
+                "new": 111.5
             }
         },
         {
@@ -3611,6 +4542,10 @@
                 "book-edition": "Edition 4",
                 "book-title": "Cmos Vlsi Design",
                 "isbn": "0321547748"
+            },
+            "stevens-pricing": {
+                "new": 171.5,
+                "new-rental": 144.4
             }
         }
     ],
@@ -3623,6 +4558,10 @@
                 "book-edition": "Edition 3",
                 "book-title": "Understanding Small Systems",
                 "isbn": "1482211726"
+            },
+            "stevens-pricing": {
+                "new": 113.5,
+                "new-rental": 95.1
             }
         }
     ],
@@ -3634,19 +4573,14 @@
                 "book-binding": "Binding Paperback",
                 "book-title": "Elementary Solid State Physics Rev Prtg",
                 "isbn": "0201607336"
+            },
+            "stevens-pricing": {
+                "new": 240.5,
+                "new-rental": 230.8
             }
         }
     ],
-    "NIS - 584": [
-        {
-            "is_required": true,
-            "stevens-metadata": {
-                "book-author": "None",
-                "book-binding": "Binding None",
-                "book-title": "No Text Required"
-            }
-        }
-    ],
+    "NIS - 584": [],
     "NIS - 593": [
         {
             "is_required": true,
@@ -3656,6 +4590,12 @@
                 "book-edition": "Edition 3",
                 "book-title": "Intro To Algorithms",
                 "isbn": "0262033844"
+            },
+            "stevens-pricing": {
+                "new": 99.95,
+                "new-rental": 70.05,
+                "used": 80.0,
+                "used-rental": 39.0
             }
         }
     ],
@@ -3668,6 +4608,10 @@
                 "book-edition": "Edition 7",
                 "book-title": "Discrete Math & Its Appl (Loose-Leaf)",
                 "isbn": "0077431448"
+            },
+            "stevens-pricing": {
+                "new": 206.0,
+                "used": 164.75
             }
         }
     ],
@@ -3680,6 +4624,10 @@
                 "book-edition": "Edition 2",
                 "book-title": "Data Networks",
                 "isbn": "0132009161"
+            },
+            "stevens-pricing": {
+                "new": 220.5,
+                "used": 119.95
             }
         }
     ],
@@ -3692,6 +4640,12 @@
                 "book-edition": "Edition 9",
                 "book-title": "First Course In Probability",
                 "isbn": "032179477X"
+            },
+            "stevens-pricing": {
+                "new": 198.5,
+                "new-rental": 121.55,
+                "used": 119.0,
+                "used-rental": 60.5
             }
         }
     ],
@@ -3704,6 +4658,12 @@
                 "book-edition": "Edition 2",
                 "book-title": "Digital Communications (W/Cd)",
                 "isbn": "0130847887"
+            },
+            "stevens-pricing": {
+                "new": 163.95,
+                "new-rental": 167.25,
+                "used": 131.25,
+                "used-rental": 116.3
             }
         }
     ],
@@ -3716,6 +4676,9 @@
                 "book-edition": "Edition 3",
                 "book-title": "Digital Image Processing",
                 "isbn": "013168728X"
+            },
+            "stevens-pricing": {
+                "new": 238.5
             }
         }
     ],
@@ -3728,6 +4691,10 @@
                 "book-edition": "Edition 3",
                 "book-title": "Network Analysis, Architecture & Design",
                 "isbn": "0123704804"
+            },
+            "stevens-pricing": {
+                "new": 79.0,
+                "used": 49.95
             }
         }
     ],
@@ -3740,6 +4707,10 @@
                 "book-edition": "Edition 7",
                 "book-title": "Computer Networking",
                 "isbn": "0133594149"
+            },
+            "stevens-pricing": {
+                "new": 163.55,
+                "new-rental": 100.8
             }
         }
     ],
@@ -3752,6 +4723,9 @@
                 "book-edition": "Edition 2",
                 "book-title": "Atmospheric Science",
                 "isbn": "012732951X"
+            },
+            "stevens-pricing": {
+                "new": 73.89
             }
         },
         {
@@ -3762,6 +4736,10 @@
                 "book-edition": "Edition 5",
                 "book-title": "Intro To Dynamic Meteorology",
                 "isbn": "0123848660"
+            },
+            "stevens-pricing": {
+                "new": 96.15,
+                "new-rental": 89.1
             }
         }
     ],
@@ -3773,6 +4751,10 @@
                 "book-binding": "Binding Paperback",
                 "book-title": "Merchants Of Doubt",
                 "isbn": "1608193942"
+            },
+            "stevens-pricing": {
+                "new": 18.0,
+                "new-rental": 11.8
             }
         },
         {
@@ -3783,6 +4765,10 @@
                 "book-edition": "Edition 2",
                 "book-title": "Intro To Modern Climate Change",
                 "isbn": "1107480671"
+            },
+            "stevens-pricing": {
+                "new": 55.7,
+                "new-rental": 34.05
             }
         },
         {
@@ -3792,6 +4778,10 @@
                 "book-binding": "Binding None",
                 "book-title": "The Atlas Of Climate Change",
                 "isbn": "0520268237"
+            },
+            "stevens-pricing": {
+                "new": 29.95,
+                "new-rental": 20.0
             }
         }
     ],
@@ -3804,6 +4794,10 @@
                 "book-edition": "Edition 8",
                 "book-title": "Business Of Shipping",
                 "isbn": "0870335804"
+            },
+            "stevens-pricing": {
+                "new": 50.0,
+                "new-rental": 36.35
             }
         }
     ],
@@ -3815,6 +4809,9 @@
                 "book-binding": "Binding None",
                 "book-title": "Response Card Nxt-Clicker",
                 "isbn": "1934931497"
+            },
+            "stevens-pricing": {
+                "new": 52.0
             }
         },
         {
@@ -3825,6 +4822,9 @@
                 "book-edition": "Edition 9",
                 "book-title": "Physics For Scientists And Engineers-Binder Version",
                 "isbn": "1305932307"
+            },
+            "stevens-pricing": {
+                "new": 161.95
             }
         }
     ],
@@ -3836,6 +4836,9 @@
                 "book-binding": "Binding None",
                 "book-title": "College Physics:Reasoning And Relationships Vol.2",
                 "isbn": "130513785X"
+            },
+            "stevens-pricing": {
+                "new": 239.25
             }
         }
     ],
@@ -3848,19 +4851,14 @@
                 "book-edition": "Edition 2",
                 "book-title": "Intro To Thermodynamics And Statistical Mechanics",
                 "isbn": "1107694922"
+            },
+            "stevens-pricing": {
+                "new": 70.25,
+                "used": 56.25
             }
         }
     ],
-    "PEP - 351": [
-        {
-            "is_required": true,
-            "stevens-metadata": {
-                "book-author": "None",
-                "book-binding": "Binding None",
-                "book-title": "No Text Required"
-            }
-        }
-    ],
+    "PEP - 351": [],
     "PEP - 503": [
         {
             "is_required": true,
@@ -3869,6 +4867,10 @@
                 "book-binding": "Binding Paperback",
                 "book-title": "Elementary Solid State Physics Rev Prtg",
                 "isbn": "0201607336"
+            },
+            "stevens-pricing": {
+                "new": 240.5,
+                "new-rental": 230.8
             }
         }
     ],
@@ -3881,6 +4883,9 @@
                 "book-edition": "Edition 5",
                 "book-title": "Optics",
                 "isbn": "0133977226"
+            },
+            "stevens-pricing": {
+                "new": 198.75
             }
         },
         {
@@ -3891,19 +4896,14 @@
                 "book-edition": "Edition 3",
                 "book-title": "Intro To Optics",
                 "isbn": "0131499335"
+            },
+            "stevens-pricing": {
+                "new": 205.75,
+                "used": 164.5
             }
         }
     ],
-    "PEP - 528": [
-        {
-            "is_required": true,
-            "stevens-metadata": {
-                "book-author": "None",
-                "book-binding": "Binding None",
-                "book-title": "No Text Required"
-            }
-        }
-    ],
+    "PEP - 528": [],
     "PEP - 542": [
         {
             "is_required": true,
@@ -3913,6 +4913,10 @@
                 "book-edition": "Edition 4",
                 "book-title": "Intro To Electrodynamics",
                 "isbn": "0321856562"
+            },
+            "stevens-pricing": {
+                "new": 170.95,
+                "new-rental": 108.75
             }
         }
     ],
@@ -3925,19 +4929,14 @@
                 "book-edition": "Edition 3",
                 "book-title": "Classical Mechanics",
                 "isbn": "0201657023"
+            },
+            "stevens-pricing": {
+                "new": 208.0,
+                "used": 106.5
             }
         }
     ],
-    "PEP - 685": [
-        {
-            "is_required": true,
-            "stevens-metadata": {
-                "book-author": "None",
-                "book-binding": "Binding None",
-                "book-title": "No Text Required"
-            }
-        }
-    ],
+    "PEP - 685": [],
     "PEP - 690": [
         {
             "is_required": false,
@@ -3946,6 +4945,9 @@
                 "book-binding": "Binding Hardback",
                 "book-title": "Introductory Vhdl From Simulation To Synthesis",
                 "isbn": "0130809829"
+            },
+            "stevens-pricing": {
+                "new": 220.25
             }
         },
         {
@@ -3956,6 +4958,9 @@
                 "book-edition": "Edition 2",
                 "book-title": "Cmos Circuit Design, Layout & Simulation",
                 "isbn": "047170055X"
+            },
+            "stevens-pricing": {
+                "new": 111.5
             }
         },
         {
@@ -3966,6 +4971,10 @@
                 "book-edition": "Edition 4",
                 "book-title": "Cmos Vlsi Design",
                 "isbn": "0321547748"
+            },
+            "stevens-pricing": {
+                "new": 171.5,
+                "new-rental": 144.4
             }
         }
     ],
@@ -3977,6 +4986,9 @@
                 "book-binding": "Binding None",
                 "book-title": "Good Design Practices For Gmp Pharm. Facilities",
                 "isbn": "0824754638"
+            },
+            "stevens-pricing": {
+                "new": 202.5
             }
         }
     ],
@@ -3988,6 +5000,9 @@
                 "book-binding": "Binding None",
                 "book-title": "Pharmaceutical Process Validation",
                 "isbn": "0824708385"
+            },
+            "stevens-pricing": {
+                "new": 236.2
             }
         },
         {
@@ -3997,6 +5012,9 @@
                 "book-binding": "Binding None",
                 "book-title": "Bioprocess Engineering:Systems,Equipment And Facilities",
                 "isbn": "0471035440"
+            },
+            "stevens-pricing": {
+                "new": 262.0
             }
         }
     ],
@@ -4009,6 +5027,9 @@
                 "book-edition": "Edition 2",
                 "book-title": "Pharmaceutical Computer System Validation",
                 "isbn": "1420088947"
+            },
+            "stevens-pricing": {
+                "new": 179.95
             }
         }
     ],
@@ -4020,6 +5041,10 @@
                 "book-binding": "Binding Spiral",
                 "book-title": "Memory Jogger 2 (2Nd)(Pocket)",
                 "isbn": "1576811131"
+            },
+            "stevens-pricing": {
+                "new": 17.95,
+                "new-rental": 12.45
             }
         },
         {
@@ -4029,6 +5054,9 @@
                 "book-binding": "Binding None",
                 "book-title": "Get It Right",
                 "isbn": "0873896688"
+            },
+            "stevens-pricing": {
+                "new": 10.5
             }
         }
     ],
@@ -4040,19 +5068,13 @@
                 "book-binding": "Binding None",
                 "book-title": "Sterile Drug Products",
                 "isbn": "0849339936"
+            },
+            "stevens-pricing": {
+                "new": 185.0
             }
         }
     ],
-    "QF - 402": [
-        {
-            "is_required": true,
-            "stevens-metadata": {
-                "book-author": "None",
-                "book-binding": "Binding None",
-                "book-title": "No Text Required"
-            }
-        }
-    ],
+    "QF - 402": [],
     "SSW - 215": [
         {
             "is_required": false,
@@ -4061,6 +5083,9 @@
                 "book-binding": "Binding None",
                 "book-title": "Programing Ruby 1.9 & 2.0",
                 "isbn": "1937785491"
+            },
+            "stevens-pricing": {
+                "new": 50.0
             }
         },
         {
@@ -4070,6 +5095,9 @@
                 "book-binding": "Binding Paperback",
                 "book-title": "Agile Web Development With Rails 4",
                 "isbn": "1937785564"
+            },
+            "stevens-pricing": {
+                "new": 43.95
             }
         }
     ],
@@ -4081,6 +5109,9 @@
                 "book-binding": "Binding None",
                 "book-title": "Domain-Driven Design",
                 "isbn": "0321125215"
+            },
+            "stevens-pricing": {
+                "new": 74.99
             }
         },
         {
@@ -4090,6 +5121,9 @@
                 "book-binding": "Binding None",
                 "book-title": "Beautiful Architecture",
                 "isbn": "059651798X"
+            },
+            "stevens-pricing": {
+                "new": 44.95
             }
         }
     ],
@@ -4100,6 +5134,9 @@
                 "book-author": "Oracle",
                 "book-binding": "Binding None",
                 "book-title": "Crystal Ball Classroom Edition"
+            },
+            "stevens-pricing": {
+                "new": 99.0
             }
         }
     ],
@@ -4111,6 +5148,9 @@
                 "book-binding": "Binding None",
                 "book-title": "Applied Space Systems Engineering",
                 "isbn": "0073408867"
+            },
+            "stevens-pricing": {
+                "new": 99.75
             }
         },
         {
@@ -4120,6 +5160,9 @@
                 "book-binding": "Binding None",
                 "book-title": "Innovators Dilemma-New Reprint",
                 "isbn": "1633691780"
+            },
+            "stevens-pricing": {
+                "new": 25.0
             }
         }
     ],
@@ -4132,6 +5175,12 @@
                 "book-edition": "Edition 3",
                 "book-title": "Making Hard Decisions W/Decision Tools",
                 "isbn": "0538797576"
+            },
+            "stevens-pricing": {
+                "new": 271.0,
+                "new-rental": 261.6,
+                "used": 145.0,
+                "used-rental": 177.85
             }
         },
         {
@@ -4141,19 +5190,16 @@
                 "book-binding": "Binding Paperback",
                 "book-title": "Thinking, Fast & Slow",
                 "isbn": "0374533555"
+            },
+            "stevens-pricing": {
+                "new": 16.0,
+                "new-rental": 7.9,
+                "used": 12.75,
+                "used-rental": 8.3
             }
         }
     ],
-    "TM - 584": [
-        {
-            "is_required": true,
-            "stevens-metadata": {
-                "book-author": "None",
-                "book-binding": "Binding None",
-                "book-title": "No Text Required"
-            }
-        }
-    ],
+    "TM - 584": [],
     "TM - 605": [
         {
             "is_required": true,
@@ -4163,6 +5209,10 @@
                 "book-edition": "Edition 3",
                 "book-title": "Probability & Stochastic Processes",
                 "isbn": "1118324560"
+            },
+            "stevens-pricing": {
+                "new": 187.35,
+                "new-rental": 123.45
             }
         }
     ],
@@ -4175,19 +5225,13 @@
                 "book-edition": "Edition 9",
                 "book-title": "Data And Computer Comm. W/Simulator",
                 "isbn": "013466227X"
+            },
+            "stevens-pricing": {
+                "new": 289.95
             }
         }
     ],
-    "TM - 617": [
-        {
-            "is_required": true,
-            "stevens-metadata": {s
-                "book-author": "None",
-                "book-binding": "Binding None",
-                "book-title": "No Text Required"
-            }
-        }
-    ],
+    "TM - 617": [],
     "TM - 650": [
         {
             "is_required": true,
@@ -4197,6 +5241,9 @@
                 "book-edition": "Edition 1",
                 "book-title": "The Foundations Of Modern Networking",
                 "isbn": "0134175395"
+            },
+            "stevens-pricing": {
+                "new": 58.99
             }
         }
     ]
