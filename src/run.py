@@ -10,8 +10,10 @@ signal.signal(signal.SIGINT, signal.SIG_DFL)
 
 
 def local_server():
-    """ Launch local server """
-    flask_app.run(host="127.0.0.1", port=5000, threaded=True, debug=True)
+    """ Launch local server
+        DEBUG is set in private configuration
+    """
+    flask_app.run(host="127.0.0.1", port=5000, threaded=True)
     sys.exit(1)
 
 

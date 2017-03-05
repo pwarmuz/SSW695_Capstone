@@ -1,0 +1,38 @@
+{% extends 'template.html' %}
+{% block title %}Departments{% endblock %}
+{% block content %}
+    <style>
+        .course-link {
+            font-size: 11px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin: 0;
+            padding-left: 0;
+            display: block;
+        }
+
+        .department-section{
+            padding: 10px 20px 10px 20px;
+        }
+
+    </style>
+
+    <div class="container">
+        <h2>{{ course["letter"] }}-{{ course["number"] }}: {{ course["name"] }}</h2>
+        <br>
+        <div class="panel panel-default">
+            <div class="panel-heading">Description</div>
+            <div class="panel-body">
+                {{ course["details"] }}
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">Books</div>
+            <div class="panel-body">
+                <strong>No books currently listed</strong>
+            </div>
+        </div>
+
+    </div>
+{% endblock %}
