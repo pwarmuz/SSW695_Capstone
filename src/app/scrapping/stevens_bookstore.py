@@ -4,6 +4,7 @@
 import time
 import pickle
 import json
+import os
 
 # 3rd Party Imports
 import requests
@@ -77,7 +78,6 @@ def parse_book_info(html_doc):
     from bs4 import BeautifulSoup
     d = {}
     soup = BeautifulSoup(html_doc, 'html.parser')
-    books = soup.findAll("tr", {"class": "book"})
     # Parse Course
     for course_elm in (soup.find_all("span", {"id": "course-bookdisplay-coursename"})):
         course = course_elm.text.split(",")[0]
@@ -112,7 +112,7 @@ def parse_book_info(html_doc):
                         book_cost = price_label.text
                         if book_cost != "N/A":
                             stevens_pricing[book_type] = float(book_cost[1:])
-                    book_dict["stevens-metadata"] = stevens_metadata
+                    book_dict["stevens-pricing"] = stevens_pricing
                     d[course].append(book_dict)
     return d
 
@@ -124,23 +124,29 @@ def update_book_info():
         json.dump(data, f, sort_keys=True, indent=4, separators=(',', ': '))
 
 
-def put_google_book_info_into_database(key = None):
+def put_stevens_book_info_into_database():
     # Not Finished
     from app import mongo_client
-    from google_books import get_info_by_isbn
-    with open('data/stevens_bookstore_info.json') as f:
+    dir = os.path.dirname(__file__)
+    filename = os.path.join(dir, 'data\stevens_bookstore_info.json')
+    with open(filename) as f:
         data = json.load(f)
 
+    g = {}
     for k, d in data.iteritems():
-        for b in d:
-            isbn = b['stevens-metadata'].get('isbn')
+        let, num = k.split(" - ")
+        for book in d:
+            isbn = book['stevens-metadata'].get("isbn")
             if isbn is not None:
-                info = get_info_by_isbn(isbn, key=None)
-                if info is None:
-                    print isbn, b
+                if isbn not in g:
+                    g[isbn] = {"courses": []}
+                    g[isbn]["stevens-metadata"] = book['stevens-metadata']
+                    g[isbn]["stevens-pricing"] = book['stevens-pricing']
+                g[isbn]["courses"].append({"letter": let, "number": num, "is_required": book["is_required"]})
+
+    for isbn, data in g.iteritems():
+        mongo_client["ssw695"]["books"].update({"_id": isbn}, data, upsert=True)
 
 
 if __name__ == "__main__":
-    pass
-    #update_book_info()
-    put_google_book_info_into_database()
+    put_stevens_book_info_into_database()
