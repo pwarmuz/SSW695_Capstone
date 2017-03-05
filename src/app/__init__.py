@@ -15,9 +15,9 @@ flask_app.config.from_object(config.BaseConfig)
 mongo_client = LocalProxy(get_db)
 
 
-import categories
+import courses
 
-flask_app.register_blueprint(categories.blueprint)
+flask_app.register_blueprint(courses.blueprint)
 
 
 
