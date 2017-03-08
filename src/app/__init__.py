@@ -122,6 +122,11 @@ def logout():
     return redirect(url_for('home'))
 
 
+@flask_app.route('/profile')
+def profile():
+    return render_template('profile.html')
+
+
 @flask_app.route('/submit_form', methods=['POST'])
 def submit_form():
     username = request.form['username']
