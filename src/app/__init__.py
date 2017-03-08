@@ -62,6 +62,11 @@ def contact():
     return render_template('contact.html')
 
 
+@flask_app.route('/book_details')
+def book_details():
+    return render_template('book_details.html')
+
+
 @flask_app.route('/signup', methods=['POST'])
 def signup():
 
