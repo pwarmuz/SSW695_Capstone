@@ -24,4 +24,9 @@ def display_course(letter, number):
     if course is None:
         abort(404)
 
-    return render_template('courses/course.html', course=course)
+    # TODO: MongoDB Exceptions
+    books = tools.get_books_by_course(letter, number)
+
+    return render_template('courses/course.html', course=course, books = books)
+
+
