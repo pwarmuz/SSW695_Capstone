@@ -30,6 +30,9 @@
         <div class="panel panel-default">
             <div class="panel-heading">Books</div>
             <div class="panel-body">
+                {% for book in books %}
+                    <li>{{ book["stevens-metadata"]['book-title'] }}</li>
+                {% endfor %}
                 <strong>No books currently listed</strong>
             </div>
         </div>
