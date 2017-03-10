@@ -17,8 +17,6 @@ flask_app.config.from_object(config.BaseConfig)
 mongo_client = LocalProxy(get_db)
 print('Stevens Book Marketplace Version: ' + __version__)
 
-
-
 import courses
 
 flask_app.register_blueprint(courses.blueprint)
@@ -56,7 +54,10 @@ def static_file_hash(filename):
 
 @flask_app.route('/')
 def home():
-    return render_template('index.html')
+
+    course_list = courses.tools.get_courses_by_departments()
+    print course_list
+    return render_template('index.html', courses=course_list)
 
 
 @flask_app.route('/about')

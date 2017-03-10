@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, abort
+from flask import Blueprint, render_template, abort, jsonify
 
 import tools
 blueprint = Blueprint('courses', __name__)
@@ -25,3 +25,24 @@ def display_course(letter, number):
         abort(404)
 
     return render_template('courses/course.html', course=course)
+
+@blueprint.route('/api/courses/')
+def get_courses():
+
+    courses = list(tools.get_courses_by_departments())
+
+    for course in courses:
+        children = course.get('children') 
+        for child in children:
+            letter = child.get('a_attr').get('data-letter')
+            number = child.get('a_attr').get('data-number')
+            #books = list(tools.get_books_by_course(letter, number))
+            print books
+            #child.get('a_attr')['books'] = books
+
+    return jsonify(results=courses)
+
+@blueprint.route('/api/books/')
+def get_books():
+
+    return jsonify(results=tools.get_books())

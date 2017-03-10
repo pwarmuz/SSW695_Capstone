@@ -24,100 +24,20 @@
             </ul>
         </nav>
         <div class="col-sm-9 ">
-            <div class="list-group">
-                <a href="#BIA" class="list-group-item active">BIA: Business Intelligence and Analytics - 686</a>
-                <div class="list-group-item">
-                    Handbook Of Statistical Analysis & Data Mining Appl
-                    <span class="badge">ISBN 0123747651</span>
-                    <span class="badge">Required</span>
-                    <span class="badge">2</span>
-                </div>
-                <div class="list-group-item">
-                    Analytics In A Big Data WorldBaesens
-                    <span class="badge">ISBN 1118892704</span>
-                    <span class="badge">Required</span>
-                    <span class="badge">5</span>
-                </div>
-                <a href="#BME" class="list-group-item active">BME: Bio Medical Engineering - 420</a>
-                <div class="list-group-item">
-                    Dsp First
-                    <span class="badge">ISBN 0123747651</span>
-                    <span class="badge">3</span>
-                </div>
-                <div class="list-group-item">
-                    Biomedical Engineering Principles
-                    <span class="badge">ISBN 1118892704</span>
-                    <span class="badge">Required</span>
-                    <span class="badge">0</span>
-                </div>
-                <a href="#BT" class="list-group-item active">BT: Business Technology - 100</a>
-                <div class="list-group-item">
-                    Fundamentals Of Management
-                    <span class="badge">ISBN 0123747651</span>
-                    <span class="badge">1</span>
-                </div>
-                <a href="#BIA" class="list-group-item active">BIA: Business Intelligence and Analytics - 686</a>
-                <div class="list-group-item">
-                    Handbook Of Statistical Analysis & Data Mining Appl
-                    <span class="badge">ISBN 0123747651</span>
-                    <span class="badge">Required</span>
-                    <span class="badge">2</span>
-                </div>
-                <div class="list-group-item">
-                    Analytics In A Big Data WorldBaesens
-                    <span class="badge">ISBN 1118892704</span>
-                    <span class="badge">Required</span>
-                    <span class="badge">5</span>
-                </div>
-                <a href="#BME" class="list-group-item active">BME: Bio Medical Engineering - 420</a>
-                <div class="list-group-item">
-                    Dsp First
-                    <span class="badge">ISBN 0123747651</span>
-                    <span class="badge">3</span>
-                </div>
-                <div class="list-group-item">
-                    Biomedical Engineering Principles
-                    <span class="badge">ISBN 1118892704</span>
-                    <span class="badge">Required</span>
-                    <span class="badge">0</span>
-                </div>
-                <a href="#BT" class="list-group-item active">BT: Business Technology - 100</a>
-                <div class="list-group-item">
-                    Fundamentals Of Management
-                    <span class="badge">ISBN 0123747651</span>
-                    <span class="badge">1</span>
-                </div>
-                <a href="#BIA" class="list-group-item active">BIA: Business Intelligence and Analytics - 686</a>
-                <div class="list-group-item">
-                    Handbook Of Statistical Analysis & Data Mining Appl
-                    <span class="badge">ISBN 0123747651</span>
-                    <span class="badge">Required</span>
-                    <span class="badge">2</span>
-                </div>
-                <div class="list-group-item">
-                    Analytics In A Big Data WorldBaesens
-                    <span class="badge">ISBN 1118892704</span>
-                    <span class="badge">Required</span>
-                    <span class="badge">5</span>
-                </div>
-                <a href="#BME" class="list-group-item active">BME: Bio Medical Engineering - 420</a>
-                <div class="list-group-item">
-                    Dsp First
-                    <span class="badge">ISBN 0123747651</span>
-                    <span class="badge">3</span>
-                </div>
-                <div class="list-group-item">
-                    Biomedical Engineering Principles
-                    <span class="badge">ISBN 1118892704</span>
-                    <span class="badge">Required</span>
-                    <span class="badge">0</span>
-                </div>
-                <a href="#BT" class="list-group-item active">BT: Business Technology - 100</a>
-                <div class="list-group-item">
-                    Fundamentals Of Management
-                    <span class="badge">ISBN 0123747651</span>
-                    <span class="badge">1</span>
-                </div>
+            <div class="list-group container" id="course-container">
+                {% for department in courses %}
+                    {% for class in department.children %}
+                    <a href="#{{ class.text.split()[0] }}" class="list-group-item active">{{ class.text }}</a>
+                        {% for book in class.books %}
+                        <div class="list-group-item">
+                            {{ book.name }}
+                            <span class="badge">{{ book.isbn }}</span>
+                            <span class="badge">{{ book.is_required }}</span>
+                            <span class="badge">{{ books.available }}</span>
+                        </div>
+                        {% endfor %}
+                    {% endfor %}
+                {% endfor %}
             </div>
         </div>
     </div>

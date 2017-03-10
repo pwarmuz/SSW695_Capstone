@@ -85,3 +85,19 @@ def get_course(letter, number):
     :return:
     """
     return mongo_client.catalog.courses.find_one({"letter": letter.upper(), "number": number})
+
+def get_books_by_course(letter, number):
+    return mongo_client.ssw695.books.find({"course.letter": letter.upper(), "course.number": number})
+
+'''
+def get_books():
+    cursor = mongo_client.ssw695.books.aggregate([{"$sort": {"number": 1}},
+                                                  {"$group": {"_id": "$courses.letter",
+                                                              "nodes": {"$
+'''
+
+
+
+
+
+
