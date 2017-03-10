@@ -5,17 +5,6 @@ import tools
 
 blueprint = Blueprint('books', __name__, url_prefix="/books")
 
-'''
-@blueprint.route('/')
-def display_courses_by_departments():
-    """ Display Courses By Departments """
-
-    # TODO: MongoDB Exceptions
-    departments = tools.get_courses_by_departments()
-
-    return render_template('courses/by_department.html', departments=departments)
-'''
-
 
 @blueprint.route('/<isbn>')
 def display_book(isbn):
