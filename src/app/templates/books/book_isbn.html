@@ -6,8 +6,40 @@
 -->
 <div class="container-fluid">
 	<div class="row">
+		{% for volume in book %}
 		<div class="col-md-2">
-			<img alt="Book Name" src="http://lorempixel.com/140/140/" />
+			{% set thumnail_url = volume.get('google-metadata', {}).get('volumeInfo', {}).get('imageLinks', {} ).get("thumbnail") %}
+
+			{% if thumnail_url %}
+				<div class="media-left">
+					<img class="media-object" src="{{ thumnail_url }}" alt="...">
+				</div>
+			{%  endif %}
+		</div>
+		<div class="col-md-4">
+
+			<h3>
+				<strong>{{ volume.get('google-metadata', {}).get('volumeInfo', {}).get('title') | default(volume.get('stevens-metadata', {}).get('book-title'), True) }}</strong>
+			</h3>
+			<dl>
+				<dt>
+					{{ volume.get('google-metadata', {}).get('volumeInfo', {}).get('subtitle', "") }}
+				</dt>
+				<dd>
+					<small> {{ volume.get('google-metadata', {}).get('volumeInfo', {}).get('description', "") }} </small>
+				</dd>
+				<dd>
+					<small> Pages: {{ volume.get('google-metadata', {}).get('volumeInfo', {}).get('pageCount', "") }} </small>
+				</dd>
+                <dd>
+					{{ isbn }}
+				</dd>
+			</dl>
+		</div>
+                {% else %}
+
+		<div class="col-md-2">
+			IMAGE
 		</div>
 		<div class="col-md-4">
 			<h3>
@@ -23,11 +55,12 @@
 				<dd>
 					ISBN
 				</dd>
-                <dd>
+				<dd>
 					The courses that use this book
 				</dd>
 			</dl>
 		</div>
+			{% endfor %}
 		<div class="col-md-6">
 
 			<button type="button" class="btn btn-default">

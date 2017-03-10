@@ -23,6 +23,8 @@ import courses
 
 flask_app.register_blueprint(courses.blueprint)
 
+import books
+flask_app.register_blueprint(books.blueprint)
 
 
 @flask_app.url_defaults
@@ -69,9 +71,10 @@ def contact():
     return render_template('contact.html')
 
 
-@flask_app.route('/book_details')
-def book_details():
-    return render_template('book_details.html')
+@flask_app.route('/profile')
+def profile():
+    # TODO: Temporary profile access to be deleted
+    return render_template('profile.html')
 
 
 @flask_app.route('/signup', methods=['POST'])
@@ -120,11 +123,6 @@ def logout():
     # remove the username from the session if it's there
     session.pop('username', None)
     return redirect(url_for('home'))
-
-
-@flask_app.route('/profile')
-def profile():
-    return render_template('profile.html')
 
 
 @flask_app.route('/submit_form', methods=['POST'])
