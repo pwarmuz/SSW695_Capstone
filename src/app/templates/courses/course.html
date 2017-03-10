@@ -31,9 +31,26 @@
             <div class="panel-heading">Books</div>
             <div class="panel-body">
                 {% for book in books %}
-                    <li>{{ book["stevens-metadata"]['book-title'] }}</li>
+                    <div class="media">
+                        {% set thumnail_url = book.get('google-metadata', {}).get('volumeInfo', {}).get('imageLinks', {} ).get("thumbnail") %}
+
+                        {% if thumnail_url %}
+                            <div class="media-left">
+                                <img class="media-object" src="{{ thumnail_url }}" alt="...">
+                            </div>
+                        {%  endif %}
+
+                        <div class="media-body">
+                            <h4 class="media-heading">
+                                {{ book.get('google-metadata', {}).get('volumeInfo', {}).get("title") | default(book.get('stevens-metadata', {}).get('book-title'), True) }}
+                                <small> {{ book.get('google-metadata', {}).get('volumeInfo', {}).get('subtitle', "") }} </small>
+                            </h4>
+                        </div>
+                    </div>
+
+                {% else %}
+                    <strong>No books currently listed</strong>
                 {% endfor %}
-                <strong>No books currently listed</strong>
             </div>
         </div>
 

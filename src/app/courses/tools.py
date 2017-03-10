@@ -1,5 +1,5 @@
+""" Courtses tools """
 from app import mongo_client
-
 
 DEPARTMENTS = {
     "BIA": "Business Intelligence and Analytics",
