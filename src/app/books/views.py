@@ -11,6 +11,12 @@ def display_book(isbn):
     """ Display a specific book based on isbn Page
     :param isbn: isbn Number (10-digit)
     """
+    # Prevents users from entering none digit values
+    try:
+        assert isbn.isdigit()
+    except TypeError:
+        abort(404)
+
     # TODO: MongoDB Exceptions
     book = tools.get_books(isbn)
 
