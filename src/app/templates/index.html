@@ -8,39 +8,6 @@
 
 <!-- Listing Section -->
 <section id="stv-listing">
-<div class="container ">
-    <div class="row ">
-        <nav class="col-sm-3 " id="myScrollspy ">
-            <ul class="nav nav-pills" role="tablist">
-              <li role="presentation"><a href="#">Course List</a></li>
-                <!-- The reason why I like selling books badged here is because it's a motivator to sell,
-                user has to login to see it, imo -PW -->
-              <li role="presentation"><a href="#">Selling books <span class="badge">3</span></a></li>
-            </ul>
-            <ul class="nav nav-pills nav-stacked " data-spy="affix " data-offset-top="205 ">
-                <li><a href="#BIA">BIA: Business Intelligence and Analytics</a></li>
-                <li><a href="#BME">BME: Biomedical Engineering</a></li>
-                <li><a href="#BT">BT: Business Technology</a></li>
-            </ul>
-        </nav>
-        <div class="col-sm-9 ">
-            <div class="list-group container" id="course-container">
-                {% for department in courses %}
-                    {% for class in department.children %}
-                    <a href="#{{ class.text.split()[0] }}" class="list-group-item active">{{ class.text }}</a>
-                        {% for book in class.books %}
-                        <div class="list-group-item">
-                            {{ book.name }}
-                            <span class="badge">{{ book.isbn }}</span>
-                            <span class="badge">{{ book.is_required }}</span>
-                            <span class="badge">{{ books.available }}</span>
-                        </div>
-                        {% endfor %}
-                    {% endfor %}
-                {% endfor %}
-            </div>
-        </div>
-    </div>
-</div>
+    {% include '/listing/' %}
 </section>
 {% endblock %}

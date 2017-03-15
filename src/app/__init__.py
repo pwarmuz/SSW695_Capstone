@@ -22,6 +22,10 @@ import courses
 flask_app.register_blueprint(courses.blueprint)
 
 
+import listing
+
+flask_app.register_blueprint(listing.blueprint)
+
 
 @flask_app.url_defaults
 def hashed_static_file_url(endpoint, values):
@@ -54,10 +58,7 @@ def static_file_hash(filename):
 
 @flask_app.route('/')
 def home():
-
-    course_list = courses.tools.get_courses_by_departments()
-    print course_list
-    return render_template('index.html', courses=course_list)
+    return render_template('index.html')
 
 
 @flask_app.route('/about')
