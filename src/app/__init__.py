@@ -140,7 +140,9 @@ def submit_form():
 
 @flask_app.route('/jumbo_search', methods=['POST'])
 def jumbo_search():
-    result = request.form['jumbo-search']
-    result = listing.views.get_isbn_item(result)
-    print list(result)
+    interact = request.form['jumbo-search']
+    if interact.isdigit():
+        validate = books.views.validate_by_isbn(interact)
+        if validate:
+            return redirect('/books/' + interact)
     return redirect(url_for('home'))

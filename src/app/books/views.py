@@ -6,6 +6,25 @@ import tools
 blueprint = Blueprint('books', __name__, url_prefix="/books")
 
 
+def validate_by_isbn(isbn):
+    """ Validates the ISBN
+    :param isbn: isbn Number (10-digit)
+    """
+    # Prevents users from entering none digit values
+
+    if not isbn.isdigit():
+        return False
+
+    # TODO: MongoDB Exceptions
+    book = tools.get_books(isbn)
+
+    # Not sure why this is not returning false when book is none
+    if not book:
+        return False
+
+    return True
+
+
 @blueprint.route('/<isbn>')
 def display_book(isbn):
     """ Display a specific book based on isbn Page
@@ -20,7 +39,7 @@ def display_book(isbn):
     # TODO: MongoDB Exceptions
     book = tools.get_books(isbn)
 
-    if book is None:
+    if not book:
         abort(404)
 
     return render_template('books/book_isbn.html', book=book, isbn=isbn)
