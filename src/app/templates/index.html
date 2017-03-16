@@ -3,7 +3,19 @@
 {% block content %}
 <!-- Search Section -->
 <section id="stv-search">
-    {% include 'jumbotron.html' %}
+    <div class="jumbotron text-center">
+        <h1><strong>Stevens Book Marketplace</strong></h1>
+        <form action="/jumbo_search" class="form-inline" method="POST">
+            <div class="input-group ">
+                <input type="search" name="jumbo-search" id="jumbo-search" class="form-control" size="50 " placeholder="Search for books or by class ">
+                <div class="input-group-btn ">
+                    <button class="btn btn-default " type="submit" value="send">
+                        <i class="glyphicon glyphicon-search "></i>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
 </section>
 
 <!-- Listing Section -->

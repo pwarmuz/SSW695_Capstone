@@ -138,3 +138,11 @@ def submit_form():
     message = request.form['message']
     print('contact form message from: {0} and email: {1} and subject: {2} and message {3}' .format(username, email, subject, message))
     return redirect(url_for('home'))
+
+
+@flask_app.route('/jumbo_search', methods=['POST'])
+def jumbo_search():
+    result = request.form['jumbo-search']
+    result = listing.views.get_isbn_item(result)
+    print list(result)
+    return redirect(url_for('home'))
