@@ -18,8 +18,6 @@ def validate_by_isbn(isbn):
     # TODO: MongoDB Exceptions
     book = tools.get_book(isbn)
 
-    print book
-
     # Not sure why this is not returning false when book is none
     if not book:
         return False
