@@ -17,14 +17,16 @@ flask_app.config.from_object(config.BaseConfig)
 mongo_client = LocalProxy(get_db)
 print('Stevens Book Marketplace Version: ' + __version__)
 
-
-
 import courses
 
 flask_app.register_blueprint(courses.blueprint)
 
 import books
 flask_app.register_blueprint(books.blueprint)
+
+import listing
+
+flask_app.register_blueprint(listing.blueprint)
 
 
 @flask_app.url_defaults
@@ -58,7 +60,8 @@ def static_file_hash(filename):
 
 @flask_app.route('/')
 def home():
-    return render_template('index.html')
+    results = listing.views.get_listing()
+    return render_template('index.html', listing=results)
 
 
 @flask_app.route('/about')
@@ -132,4 +135,12 @@ def submit_form():
     subject = request.form['subject']
     message = request.form['message']
     print('contact form message from: {0} and email: {1} and subject: {2} and message {3}' .format(username, email, subject, message))
+    return redirect(url_for('home'))
+
+
+@flask_app.route('/jumbo_search', methods=['POST'])
+def jumbo_search():
+    result = request.form['jumbo-search']
+    result = listing.views.get_isbn_item(result)
+    print list(result)
     return redirect(url_for('home'))

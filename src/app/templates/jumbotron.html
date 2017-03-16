@@ -1,11 +1,11 @@
 <!-- Jumbotron Search Section -->
 <div class="jumbotron text-center">
     <h1><strong>Stevens Book Marketplace</strong></h1>
-    <form class="form-inline ">
+    <form action="/jumbo_search" class="form-inline " method="POST">
         <div class="input-group ">
-            <input type="text " class="form-control " size="50 " placeholder="Search for books or by class ">
+            <input type="search" name="jumbo-search" id="jumbo-search" class="jumbo-search form-control" size="50 " placeholder="Search for books or by class ">
             <div class="input-group-btn ">
-                <button class="btn btn-default " type="submit ">
+                <button class="btn btn-default " type="submit" value="send" >
                     <i class="glyphicon glyphicon-search "></i>
                 </button>
             </div>
