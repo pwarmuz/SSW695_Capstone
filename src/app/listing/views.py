@@ -4,11 +4,10 @@ import tools
 blueprint = Blueprint('listing', __name__)
 
 
-@blueprint.route('/listing/')
 def get_listing():
     """ get first 10 entries of book listing
+    This is redundant as it just returns what was previously created in tools....
     """
-    results = tools.get_ten_list()
-    return render_template('/listing/listing.html', listing=results)
+    return tools.get_ten_list()
 
 

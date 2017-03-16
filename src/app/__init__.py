@@ -58,7 +58,8 @@ def static_file_hash(filename):
 
 @flask_app.route('/')
 def home():
-    return render_template('index.html')
+    results = listing.views.get_listing()
+    return render_template('index.html', listing=results)
 
 
 @flask_app.route('/about')
