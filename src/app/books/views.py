@@ -16,7 +16,9 @@ def validate_by_isbn(isbn):
         return False
 
     # TODO: MongoDB Exceptions
-    book = tools.get_books(isbn)
+    book = tools.get_book(isbn)
+
+    print book
 
     # Not sure why this is not returning false when book is none
     if not book:
@@ -37,7 +39,7 @@ def display_book(isbn):
         abort(404)
 
     # TODO: MongoDB Exceptions
-    book = tools.get_books(isbn)
+    book = tools.get_book(isbn)
 
     if not book:
         abort(404)

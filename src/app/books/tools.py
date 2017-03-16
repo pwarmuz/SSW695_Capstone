@@ -2,8 +2,8 @@
 from app import mongo_client
 
 
-def get_books(number):
+def get_book(isbn):
     """ Get books
     :return:
     """
-    return mongo_client.ssw695.books.find({"_id": number})
+    return mongo_client.ssw695.books.find_one({"_id": isbn})
