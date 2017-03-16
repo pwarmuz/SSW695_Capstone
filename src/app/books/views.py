@@ -18,7 +18,6 @@ def validate_by_isbn(isbn):
     # TODO: MongoDB Exceptions
     book = tools.get_book(isbn)
 
-    # Not sure why this is not returning false when book is none
     if not book:
         return False
 
@@ -31,9 +30,7 @@ def display_book(isbn):
     :param isbn: isbn Number (10-digit)
     """
     # Prevents users from entering none digit values
-    try:
-        assert isbn.isdigit()
-    except TypeError:
+    if not isbn.isdigit():
         abort(404)
 
     # TODO: MongoDB Exceptions
