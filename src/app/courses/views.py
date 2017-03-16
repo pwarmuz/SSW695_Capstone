@@ -1,18 +1,22 @@
+# coding=utf-8
+""" '/courses' Views """
 from flask import Blueprint, render_template, abort
-
 import tools
-blueprint = Blueprint('courses', __name__)
+
+blueprint = Blueprint('courses', __name__, url_prefix="/courses")
 
 
-@blueprint.route('/courses/')
+@blueprint.route('/')
 def display_courses_by_departments():
     """ Display Courses By Departments """
+
     # TODO: MongoDB Exceptions
     departments = tools.get_courses_by_departments()
+
     return render_template('courses/by_department.html', departments=departments)
 
 
-@blueprint.route('/courses/<letter>-<number>')
+@blueprint.route('/<letter>-<number>')
 def display_course(letter, number):
     """ Display Course Page
     :param letter: Course Letters
@@ -24,4 +28,9 @@ def display_course(letter, number):
     if course is None:
         abort(404)
 
-    return render_template('courses/course.html', course=course)
+    # TODO: MongoDB Exceptions
+    books = tools.get_books_by_course(letter, number)
+
+    return render_template('courses/course.html', course=course, books = books)
+
+
