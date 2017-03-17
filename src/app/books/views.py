@@ -11,7 +11,6 @@ def validate_by_isbn(isbn):
     :param isbn: isbn Number (10-digit)
     """
     # Prevents users from entering none digit values
-
     if not isbn.isdigit():
         return False
 
