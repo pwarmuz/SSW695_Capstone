@@ -1,0 +1,207 @@
+{% extends 'template.html' %}
+{% block title %}About the Stevens Book Marketplace{% endblock %}
+{% block content %}
+    <!--    A lot of CSS adjustments need to be made
+            Specifically alignment on the buttons and  pagination
+    -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2">
+                {% set thumnail_url = book.get('google-metadata', {}).get('volumeInfo', {}).get('imageLinks', {} ).get("thumbnail") %}
+
+                {% if thumnail_url %}
+                    <div class="media-left">
+                        <img class="media-object" src="{{ thumnail_url }}" alt="...">
+                    </div>
+                {% endif %}
+            </div>
+            <div class="col-md-4">
+
+                <h3>
+                    <strong>{{ book.get('google-metadata', {}).get('volumeInfo', {}).get('title') | default(book.get('stevens-metadata', {}).get('book-title'), True) }}</strong>
+                </h3>
+                <dl>
+                    <dt>
+                        {{ book.get('google-metadata', {}).get('volumeInfo', {}).get('subtitle', "") }}
+                    </dt>
+                    <dd>
+                        <small> {{ book.get('google-metadata', {}).get('volumeInfo', {}).get('description', "") }} </small>
+                    </dd>
+                    <dd>
+                        <small>
+                            Pages: {{ book.get('google-metadata', {}).get('volumeInfo', {}).get('pageCount', "") }} </small>
+                    </dd>
+                    <dd>
+                        ISBN: {{ isbn }}
+                    </dd>
+                </dl>
+            </div>
+            <div class="col-md-6">
+                <button type="button" class="btn btn-default">
+                    Amazon Link $Price
+                </button>
+                <button type="button" class="btn btn-default">
+                    eBay Link $Price
+                </button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="alert alert-success alert-dismissable">
+
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
+                        ×
+                    </button>
+                    <h4>
+                        Alert!
+                    </h4> <strong>Not sure</strong> Could have some use maybe...
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+                <div class="btn-group">
+                    <button class="btn btn-default">
+                        Selected
+                    </button>
+                    <button data-toggle="dropdown" class="btn btn-default dropdown-toggle">
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="#">10</a>
+                        </li>
+                        <li>
+                            <a href="#">25</a>
+                        </li>
+                        <li>
+                            <a href="#">50</a>
+                        </li>
+                    </ul>
+                    <button class="btn btn-default" type="button" name="refresh" aria-label="refresh" title="Refresh"><i
+                            class="glyphicon glyphicon-refresh icon-refresh"></i></button>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <ul class="pagination pagination-sm bottom-content-end">
+                    <li>
+                        <a href="#">Prev</a>
+                    </li>
+                    <li>
+                        <a href="#">1</a>
+                    </li>
+                    <li>
+                        <a href="#">2</a>
+                    </li>
+                    <li>
+                        <a href="#">3</a>
+                    </li>
+                    <li>
+                        <a href="#">4</a>
+                    </li>
+                    <li>
+                        <a href="#">5</a>
+                    </li>
+                    <li>
+                        <a href="#">Next</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <table id="seller_list" class="table table-bordered table-condensed table-hover" data-toggle="table">
+                    <thead>
+                    <tr>
+                        <th data-field="number" data-sortable="true">
+                            #
+                        </th>
+                        <th data-field="seller" data-sortable="true">
+                            Seller w/ rating
+                        </th>
+                        <th data-field="date" data-sortable="true">
+                            Date listed
+                        </th>
+                        <th data-field="price" data-sortable="true">
+                            Price
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>
+                            1
+                        </td>
+                        <td>
+                            TB - Monthly
+                        </td>
+                        <td>
+                            01/04/2012
+                        </td>
+                        <td>
+                            Default
+                        </td>
+                    </tr>
+                    <tr class="active">
+                        <td>
+                            1
+                        </td>
+                        <td>
+                            TB - Monthly
+                        </td>
+                        <td>
+                            01/04/2012
+                        </td>
+                        <td>
+                            Approved
+                        </td>
+                    </tr>
+                    <tr class="success">
+                        <td>
+                            2
+                        </td>
+                        <td>
+                            TB - Monthly
+                        </td>
+                        <td>
+                            02/04/2012
+                        </td>
+                        <td>
+                            Declined
+                        </td>
+                    </tr>
+                    <tr class="warning">
+                        <td>
+                            3
+                        </td>
+                        <td>
+                            TB - Monthly
+                        </td>
+                        <td>
+                            03/04/2012
+                        </td>
+                        <td>
+                            Pending
+                        </td>
+                    </tr>
+                    <tr class="danger">
+                        <td>
+                            4
+                        </td>
+                        <td>
+                            TB - Monthly
+                        </td>
+                        <td>
+                            04/04/2012
+                        </td>
+                        <td>
+                            Call in to confirm
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock %}

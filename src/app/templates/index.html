@@ -3,121 +3,52 @@
 {% block content %}
 <!-- Search Section -->
 <section id="stv-search">
-    {% include 'jumbotron.html' %}
+    <div class="jumbotron text-center">
+        <h1><strong>Stevens Book Marketplace</strong></h1>
+        <form action="/jumbo_search" class="form-inline" method="POST">
+            <div class="input-group ">
+                <input type="search" name="jumbo-search" id="jumbo-search" class="form-control" size="50 " placeholder="Search for books or by class ">
+                <div class="input-group-btn ">
+                    <button class="btn btn-default " type="submit" value="send">
+                        <i class="glyphicon glyphicon-search "></i>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
 </section>
 
 <!-- Listing Section -->
 <section id="stv-listing">
 <div class="container ">
-    <div class="row ">
-        <nav class="col-sm-3 " id="myScrollspy ">
+    <div class="row">
+        <nav class="col-sm-12" >
             <ul class="nav nav-pills" role="tablist">
               <li role="presentation"><a href="#">Course List</a></li>
                 <!-- The reason why I like selling books badged here is because it's a motivator to sell,
                 user has to login to see it, imo -PW -->
               <li role="presentation"><a href="#">Selling books <span class="badge">3</span></a></li>
             </ul>
-            <ul class="nav nav-pills nav-stacked " data-spy="affix " data-offset-top="205 ">
-                <li><a href="#BIA">BIA: Business Intelligence and Analytics</a></li>
-                <li><a href="#BME">BME: Biomedical Engineering</a></li>
-                <li><a href="#BT">BT: Business Technology</a></li>
-            </ul>
         </nav>
-        <div class="col-sm-9 ">
-            <div class="list-group">
-                <a href="#BIA" class="list-group-item active">BIA: Business Intelligence and Analytics - 686</a>
-                <div class="list-group-item">
-                    Handbook Of Statistical Analysis & Data Mining Appl
-                    <span class="badge">ISBN 0123747651</span>
-                    <span class="badge">Required</span>
-                    <span class="badge">2</span>
-                </div>
-                <div class="list-group-item">
-                    Analytics In A Big Data WorldBaesens
-                    <span class="badge">ISBN 1118892704</span>
-                    <span class="badge">Required</span>
-                    <span class="badge">5</span>
-                </div>
-                <a href="#BME" class="list-group-item active">BME: Bio Medical Engineering - 420</a>
-                <div class="list-group-item">
-                    Dsp First
-                    <span class="badge">ISBN 0123747651</span>
-                    <span class="badge">3</span>
-                </div>
-                <div class="list-group-item">
-                    Biomedical Engineering Principles
-                    <span class="badge">ISBN 1118892704</span>
-                    <span class="badge">Required</span>
-                    <span class="badge">0</span>
-                </div>
-                <a href="#BT" class="list-group-item active">BT: Business Technology - 100</a>
-                <div class="list-group-item">
-                    Fundamentals Of Management
-                    <span class="badge">ISBN 0123747651</span>
-                    <span class="badge">1</span>
-                </div>
-                <a href="#BIA" class="list-group-item active">BIA: Business Intelligence and Analytics - 686</a>
-                <div class="list-group-item">
-                    Handbook Of Statistical Analysis & Data Mining Appl
-                    <span class="badge">ISBN 0123747651</span>
-                    <span class="badge">Required</span>
-                    <span class="badge">2</span>
-                </div>
-                <div class="list-group-item">
-                    Analytics In A Big Data WorldBaesens
-                    <span class="badge">ISBN 1118892704</span>
-                    <span class="badge">Required</span>
-                    <span class="badge">5</span>
-                </div>
-                <a href="#BME" class="list-group-item active">BME: Bio Medical Engineering - 420</a>
-                <div class="list-group-item">
-                    Dsp First
-                    <span class="badge">ISBN 0123747651</span>
-                    <span class="badge">3</span>
-                </div>
-                <div class="list-group-item">
-                    Biomedical Engineering Principles
-                    <span class="badge">ISBN 1118892704</span>
-                    <span class="badge">Required</span>
-                    <span class="badge">0</span>
-                </div>
-                <a href="#BT" class="list-group-item active">BT: Business Technology - 100</a>
-                <div class="list-group-item">
-                    Fundamentals Of Management
-                    <span class="badge">ISBN 0123747651</span>
-                    <span class="badge">1</span>
-                </div>
-                <a href="#BIA" class="list-group-item active">BIA: Business Intelligence and Analytics - 686</a>
-                <div class="list-group-item">
-                    Handbook Of Statistical Analysis & Data Mining Appl
-                    <span class="badge">ISBN 0123747651</span>
-                    <span class="badge">Required</span>
-                    <span class="badge">2</span>
-                </div>
-                <div class="list-group-item">
-                    Analytics In A Big Data WorldBaesens
-                    <span class="badge">ISBN 1118892704</span>
-                    <span class="badge">Required</span>
-                    <span class="badge">5</span>
-                </div>
-                <a href="#BME" class="list-group-item active">BME: Bio Medical Engineering - 420</a>
-                <div class="list-group-item">
-                    Dsp First
-                    <span class="badge">ISBN 0123747651</span>
-                    <span class="badge">3</span>
-                </div>
-                <div class="list-group-item">
-                    Biomedical Engineering Principles
-                    <span class="badge">ISBN 1118892704</span>
-                    <span class="badge">Required</span>
-                    <span class="badge">0</span>
-                </div>
-                <a href="#BT" class="list-group-item active">BT: Business Technology - 100</a>
-                <div class="list-group-item">
-                    Fundamentals Of Management
-                    <span class="badge">ISBN 0123747651</span>
-                    <span class="badge">1</span>
-                </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="list-group container" id="course-container">
+                <!--    Temporary, We need a user database account, where we can query a count of the
+                        top listings based on ISBN. I've created a get first 10 items from the DB to simulate.
+                -->
+                <div class="list-group-item active">Top Ten Listings</div>
+                {% for book in listing %}
+                    <div class="list-group-item">
+                        {{ book.get('google-metadata', {}).get('volumeInfo', {}).get("title") | default(book.get('stevens-metadata', {}).get('book-title'), True) }}
+                        <span class="badge">{{ book._id }}</span>
+                        <!-- Not sure if the below is correct, I had to target it as book.courses.0. in order to get anything -PW -->
+                        <span class="badge">{{ book.courses.0.get('letter', "")+ "-" + book.courses.0.get('number', "NONE") }}</span>
+                        <span class="badge">3</span>
+                         <!-- this 3 above represents book's available, needs new value which queries the count available of the specific book listed -->
+                    </div>
+                {% endfor %}
             </div>
         </div>
     </div>
