@@ -1,5 +1,5 @@
+""" Courtses tools """
 from app import mongo_client
-
 
 DEPARTMENTS = {
     "BIA": "Business Intelligence and Analytics",
@@ -81,23 +81,14 @@ def get_courses_by_departments():
 
 
 def get_course(letter, number):
-    """ Get courses by departments
+    """ Get courses
     :return:
     """
     return mongo_client.catalog.courses.find_one({"letter": letter.upper(), "number": number})
 
+
 def get_books_by_course(letter, number):
-    return mongo_client.ssw695.books.find({"course.letter": letter.upper(), "course.number": number})
-
-'''
-def get_books():
-    cursor = mongo_client.ssw695.books.aggregate([{"$sort": {"number": 1}},
-                                                  {"$group": {"_id": "$courses.letter",
-                                                              "nodes": {"$
-'''
-
-
-
-
-
-
+    """ Get books by course
+    :return:
+    """
+    return mongo_client.ssw695.books.find({"courses.letter": letter.upper(), "courses.number": number})
