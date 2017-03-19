@@ -7,9 +7,9 @@
         <h1><strong>Stevens Book Marketplace</strong></h1>
         <form action="/jumbo_search" class="form-inline" method="POST">
             <div class="input-group ">
-                <input type="search" name="jumbo-search" id="jumbo-search" class="form-control" size="50 " placeholder="Search for books or by class ">
+                <input type="search" name="jumbo-search" onkeyup="frontPageSearch()" id="jumbo-search" class="form-control" size="50 " placeholder="Search for books or by class " >
                 <div class="input-group-btn ">
-                    <button class="btn btn-default " type="submit" value="send">
+                    <button class="btn btn-default " type="submit" value="send" disabled>
                         <i class="glyphicon glyphicon-search "></i>
                     </button>
                 </div>
@@ -29,11 +29,6 @@
                 user has to login to see it, imo -PW -->
               <li role="presentation"><a href="#">Selling books <span class="badge">3</span></a></li>
             </ul>
-            <ul class="nav nav-pills nav-stacked " data-spy="affix " data-offset-top="205 ">
-                <li><a href="#BIA">BIA: Business Intelligence and Analytics</a></li>
-                <li><a href="#BME">BME: Biomedical Engineering</a></li>
-                <li><a href="#BT">BT: Business Technology</a></li>
-            </ul>
         </nav>
     </div>
 
@@ -44,16 +39,18 @@
                         top listings based on ISBN. I've created a get first 10 items from the DB to simulate.
                 -->
                 <div class="list-group-item active">Top Ten Listings</div>
-                {% for book in listing %}
+                <div id="book-list">
+                    {% for book in listing %}
                     <div class="list-group-item">
                         {{ book.get('google-metadata', {}).get('volumeInfo', {}).get("title") | default(book.get('stevens-metadata', {}).get('book-title'), True) }}
                         <span class="badge">{{ book._id }}</span>
                         <!-- Not sure if the below is correct, I had to target it as book.courses.0. in order to get anything -PW -->
                         <span class="badge">{{ book.courses.0.get('letter', "")+ "-" + book.courses.0.get('number', "NONE") }}</span>
                         <span class="badge">3</span>
-                         <!-- this 3 above represents book's available, needs new value which queries the count available of the specific book listed -->
+                        <!-- this 3 above represents book's available, needs new value which queries the count available of the specific book listed -->
                     </div>
-                {% endfor %}
+                    {% endfor %}
+                </div>
             </div>
         </div>
     </div>
