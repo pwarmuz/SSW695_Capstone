@@ -10,17 +10,16 @@ def validate_by_isbn(isbn):
     """ Validates the ISBN
     :param isbn: isbn Number (10-digit)
     """
-    # Prevents users from entering none digit values
+    # Prevents users from entering non-digit values
     if not isbn.isdigit():
         return False
 
-    # TODO: MongoDB Exceptions
     book = tools.get_book(isbn)
 
-    if not book:
-        return False
+    if book:
+        return True
 
-    return True
+    return False
 
 
 @blueprint.route('/<isbn>')
@@ -38,6 +37,6 @@ def display_book(isbn):
     if not book:
         abort(404)
 
-    return render_template('books/book_isbn.html', book=book, isbn=isbn)
+    return render_template('books/book_isbn.html', book=book)
 
 
