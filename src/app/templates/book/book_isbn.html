@@ -31,12 +31,7 @@
                         <small>
                             Pages: {{ book.get('google-metadata', {}).get('volumeInfo', {}).get('pageCount', "") }} </small>
                     </dd>
-                    <dd>
-                        ISBN 10: {{ book.get('google-metadata', {}).get('volumeInfo', {}).get('industryIdentifiers', {}).0.get('identifier', "") }}
-                    </dd>
-                    <dd>
-                        ISBN 13: {{ book.get('google-metadata', {}).get('volumeInfo', {}).get('industryIdentifiers', {}).1.get('identifier', "") }}
-                    </dd>
+
                 </dl>
             </div>
             <div class="col-md-6">
