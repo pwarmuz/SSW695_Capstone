@@ -21,8 +21,10 @@ import courses
 
 flask_app.register_blueprint(courses.blueprint)
 
-import books
-flask_app.register_blueprint(books.blueprint)
+import book
+from book import tools
+flask_app.register_blueprint(book.blueprint)
+book.tools.test_isbn()
 
 import listing
 
@@ -140,7 +142,7 @@ def submit_form():
 
 @flask_app.route('/jumbo_search', methods=['POST'])
 def jumbo_search():
-    interact = request.form['jumbo-search']
-    if books.views.validate_by_isbn(interact):
-        return redirect('/books/' + interact)
+    i = request.form['jumbo-search']
+    if book.tools.validate_by_isbn(i):
+        return redirect('/book/' + i)
     return redirect(url_for('home'))
