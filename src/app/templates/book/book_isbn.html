@@ -31,7 +31,11 @@
                         <small>
                             Pages: {{ book.get('google-metadata', {}).get('volumeInfo', {}).get('pageCount', "") }} </small>
                     </dd>
-
+                    <!--
+                    ISBN Identifiers removed
+                    google-metadata.volumeInfo.industryIdentifiers.0.identifier are not consistent
+                    some alternate incorrectly, book ISBN 0132431718 has a completely incorrect identifier
+                    -->
                 </dl>
             </div>
             <div class="col-md-6">
