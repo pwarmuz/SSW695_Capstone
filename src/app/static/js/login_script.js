@@ -27,12 +27,3 @@ function onSignUpSubmit(aForm) {
 }
 
 
-function onLoginSubmit(aForm) {
-	var inputPassword = aForm['password'];
-
-    //Hashing the values before submitting
-    inputPassword.value = sha256_digest(inputPassword.value);
-
-    //Submitting
-    return true;
-}
