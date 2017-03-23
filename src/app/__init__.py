@@ -3,6 +3,7 @@ __version__ = '0.2'
 import os
 
 from flask import Flask, render_template, request, jsonify, session, redirect, url_for
+
 from werkzeug.local import LocalProxy
 from context import get_db
 
@@ -15,18 +16,24 @@ except ImportError:
 flask_app = Flask(__name__)
 flask_app.config.from_object(config.BaseConfig)
 mongo_client = LocalProxy(get_db)
+
 print('Stevens Book Marketplace Version: ' + __version__)
 
 import courses
-
 flask_app.register_blueprint(courses.blueprint)
 
 import books
 flask_app.register_blueprint(books.blueprint)
 
 import listing
-
 flask_app.register_blueprint(listing.blueprint)
+
+import users
+flask_app.register_blueprint(users.blueprint)
+users.login_manager.init_app(flask_app)
+
+with flask_app.app_context():
+    flask_app.session_interface = users.SessionInterface(mongo_client)
 
 
 @flask_app.url_defaults
@@ -78,54 +85,6 @@ def contact():
 def profile():
     # TODO: Temporary profile access to be deleted
     return render_template('profile.html')
-
-
-@flask_app.route('/signup', methods=['POST'])
-def signup():
-
-    name = request.form.get('name')
-    email = request.form.get('email')
-    password = request.form.get('password')
-    
-    r = mongo_client.ssw695.users.find_one({"email": email},
-                                              {'_id': False})
-
-    if r is not None:
-        return 'already signed up!'
-    
-    user = { 'name' : name,
-             'email' : email,
-             'password' : password }
-
-    mongo_client.ssw695.users.insert_one(user)
-
-    session['username'] = name
-    return redirect(url_for('home'))
-
-
-@flask_app.route('/login', methods=['POST'])
-def login():
-    email = request.form.get('email')
-    password = request.form.get('password')
-    
-    r = mongo_client.ssw695.users.find_one({"email": email},
-                                              {'_id': False})
-
-    if r is not None:
-        if password != r.get('password'):
-            return 'password is not correct.'
-
-        session['username'] = r.get('name')
-        return redirect(url_for('home'))
-
-    return 'User not found.'
-
-
-@flask_app.route('/logout', methods=['POST'])
-def logout():
-    # remove the username from the session if it's there
-    session.pop('username', None)
-    return redirect(url_for('home'))
 
 
 @flask_app.route('/submit_form', methods=['POST'])
