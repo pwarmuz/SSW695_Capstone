@@ -94,7 +94,6 @@ def isbn10_to_isbn13(isbn):
 
 def isbn13_to_isbn10(isbn):
     # Remove 978 prefix and remove isbn13 checksum digit
-    # This is a string
     if not isbn.startswith("978"):
         raise ValueError("Only ISBNs with prefix of 978 can be converted")
     isbn = isbn[3:-1]
@@ -107,9 +106,11 @@ def test_isbn():
         Program would crash if these failed
     """
     if not isbn10_checksum("0140714588") == "8":
-        raise ValueError("8 is not validated")
+        raise ValueError("8 is not validated in ISBN10")
     if not isbn10_checksum("0984999302") == "2":
-        raise ValueError("2 is not validated")
+        raise ValueError("2 is not validated in ISBN10")
+    if not isbn13_checksum("9780140714586") == "6":
+        raise ValueError("6 is not validated in ISBN13")
     if not isbn13_to_isbn10("9780140714586") == "0140714588":
         raise ValueError("9780140714586 is not converted")
     if not isbn13_to_isbn10("9780984999309") == "0984999302":
