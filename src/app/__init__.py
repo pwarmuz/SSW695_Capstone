@@ -24,7 +24,7 @@ flask_app.register_blueprint(courses.blueprint)
 import book
 from book import tools
 flask_app.register_blueprint(book.blueprint)
-book.tools.test_isbn()
+
 
 import listing
 

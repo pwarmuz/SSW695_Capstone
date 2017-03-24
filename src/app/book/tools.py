@@ -2,17 +2,15 @@
 from app import mongo_client
 
 """
-
     ISBN algorithms https://en.wikipedia.org/wiki/International_Standard_Book_Number
 """
 
 
 def get_book(isbn):
     """ Get book by isbn
-    Create better explanation
     :return: book item from db
     """
-    if is_isbn13(isbn):
+    if is_isbn13(isbn) and isbn.startswith("978"):
         isbn = isbn13_to_isbn10(isbn)
 
     if is_isbn10(isbn):
@@ -99,20 +97,4 @@ def isbn13_to_isbn10(isbn):
     isbn = isbn[3:-1]
     return isbn + isbn10_checksum(isbn)
 
-
-def test_isbn():
-    """
-        Simple but ugly test
-        Program would crash if these failed
-    """
-    if not isbn10_checksum("0140714588") == "8":
-        raise ValueError("8 is not validated in ISBN10")
-    if not isbn10_checksum("0984999302") == "2":
-        raise ValueError("2 is not validated in ISBN10")
-    if not isbn13_checksum("9780140714586") == "6":
-        raise ValueError("6 is not validated in ISBN13")
-    if not isbn13_to_isbn10("9780140714586") == "0140714588":
-        raise ValueError("9780140714586 is not converted")
-    if not isbn13_to_isbn10("9780984999309") == "0984999302":
-        raise ValueError("9780984999309 is not converted")
 
