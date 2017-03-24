@@ -22,8 +22,10 @@ print('Stevens Book Marketplace Version: ' + __version__)
 import courses
 flask_app.register_blueprint(courses.blueprint)
 
-import books
-flask_app.register_blueprint(books.blueprint)
+import book
+from book import tools
+flask_app.register_blueprint(book.blueprint)
+
 
 import listing
 flask_app.register_blueprint(listing.blueprint)
@@ -99,7 +101,7 @@ def submit_form():
 
 @flask_app.route('/jumbo_search', methods=['POST'])
 def jumbo_search():
-    interact = request.form['jumbo-search']
-    if books.views.validate_by_isbn(interact):
-        return redirect('/books/' + interact)
+    i = request.form['jumbo-search']
+    if book.tools.validate_by_isbn(i):
+        return redirect('/book/' + i)
     return redirect(url_for('home'))
