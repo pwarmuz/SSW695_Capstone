@@ -24,9 +24,8 @@ def validate_by_isbn(isbn):
 
     if is_isbn(isbn):
         book = get_book(isbn)
-
-    if book:
-        return True
+        if book:
+            return True
 
     return False
 
