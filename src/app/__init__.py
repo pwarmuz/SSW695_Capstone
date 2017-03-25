@@ -101,7 +101,10 @@ def submit_form():
 
 @flask_app.route('/jumbo_search', methods=['POST'])
 def jumbo_search():
-    i = request.form['jumbo-search']
-    if book.tools.validate_by_isbn(i):
-        return redirect('/book/' + i)
-    return redirect(url_for('home'))
+    search_input = request.form['jumbo-search']
+    if book.tools.is_isbn(search_input):
+        if book.tools.validate_by_isbn(search_input):
+            return redirect('/book/' + search_input)
+    else:
+        results = book.tools.search_titles(search_input) 
+        return render_template('search_results.html', search_input=search_input, listing=results)

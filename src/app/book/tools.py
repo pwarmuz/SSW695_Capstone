@@ -97,4 +97,14 @@ def isbn13_to_isbn10(isbn):
     isbn = isbn[3:-1]
     return isbn + isbn10_checksum(isbn)
 
+def search_titles(input):
+    """ Searches all book titles 
+    :param: input - the title to search for
+    :return: list of books matching the search
+    """
+
+    #return mongo_client.ssw695.books.find_one({"$text": {"$search": str(input)}}, {"score": {"$meta": "textScore"}})
+    return mongo_client.ssw695.books.find({"$text": {"$search": str(input)}})
+
+
 
