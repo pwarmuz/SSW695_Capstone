@@ -104,7 +104,7 @@ def search_titles(input):
     """
 
     #return mongo_client.ssw695.books.find_one({"$text": {"$search": str(input)}}, {"score": {"$meta": "textScore"}})
-    return mongo_client.ssw695.books.find({"$text": {"$search": str(input)}})
+    return list(mongo_client.ssw695.books.find({"$text": {"$search": str(input)}}))
 
 
 

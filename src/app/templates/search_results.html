@@ -5,9 +5,9 @@
 <section id="stv-search">
     <div class="jumbotron text-center">
         <h1><strong>Stevens Book Marketplace</strong></h1>
-        <form action="/jumbo_search" class="form-inline" method="POST">
+        <form action="/" class="form-inline" method="POST">
             <div class="input-group ">
-                <input type="search" name="jumbo-search" id="jumbo-search" class="form-control" size="50 " placeholder="Search for books or by class ">
+                <input type="search" name="jumbo-search" id="jumbo-search" class="form-control" size="50 " value="{{ search_input }}">
                 <div class="input-group-btn ">
                     <button class="btn btn-default " type="submit" value="send">
                         <i class="glyphicon glyphicon-search "></i>
@@ -35,12 +35,14 @@
     <div class="row">
         <div class="col-sm-12">
             <div class="list-group container" id="course-container">
-                <!--    Temporary, We need a users database account, where we can query a count of the
-                        top listings based on ISBN. I've created a get first 10 items from the DB to simulate.
-                -->
-                <div class="list-group-item active">Results for "{{ search_input }}"</div>
+                
+                {% if (book_results|count < 1) and (course_results|count < 1) %}
+                <div class="list-group-item active">No results found for "{{ search_input }}"</div>
+                {% endif %}
 
-                {% for book in listing %}
+                {% if book_results|count > 0 %}
+                <div class="list-group-item active">Book results for "{{ search_input }}"</div>
+                {% for book in book_results %}
                     <a class="list-group-item" href="book/{{ book._id }}">
                         {{ book.get('google-metadata', {}).get('volumeInfo', {}).get("title") | default(book.get('stevens-metadata', {}).get('book-title'), True) }}
                         <span class="badge">{{ book._id }}</span>
@@ -50,6 +52,16 @@
                          <!-- this 3 above represents book's available, needs new value which queries the count available of the specific book listed -->
                     </a>
                 {% endfor %}
+                {% endif %}
+
+                {% if course_results|count > 0 %}
+                <div class="list-group-item active">Course results for "{{ search_input }}"</div>
+                {% for course in course_results %}
+                    <a class="list-group-item" href="courses/{{ course.get('letter') }}-{{ course.get('number') }}">
+                        {{ course.get('letter') }}-{{ course.get('number') }}: {{ course.get('name') }}
+                    </a>
+                {% endfor %}
+                {% endif %}
             </div>
         </div>
     </div>
