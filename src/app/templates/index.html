@@ -40,14 +40,14 @@
                 -->
                 <div class="list-group-item active">Top Ten Listings</div>
                 {% for book in listing %}
-                    <div class="list-group-item">
+                    <a class="list-group-item" href="book/{{ book._id }}">
                         {{ book.get('google-metadata', {}).get('volumeInfo', {}).get("title") | default(book.get('stevens-metadata', {}).get('book-title'), True) }}
                         <span class="badge">{{ book._id }}</span>
                         <!-- Not sure if the below is correct, I had to target it as book.courses.0. in order to get anything -PW -->
                         <span class="badge">{{ book.courses.0.get('letter', "")+ "-" + book.courses.0.get('number', "NONE") }}</span>
                         <span class="badge">3</span>
                          <!-- this 3 above represents book's available, needs new value which queries the count available of the specific book listed -->
-                    </div>
+                    </a>
                 {% endfor %}
             </div>
         </div>

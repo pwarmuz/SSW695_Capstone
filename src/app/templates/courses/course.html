@@ -31,7 +31,7 @@
             <div class="panel-heading">Books</div>
             <div class="panel-body">
                 {% for book in books %}
-                    <div class="media">
+                    <a class="media" href="/book/{{ book._id }}" >
                         {% set thumnail_url = book.get('google-metadata', {}).get('volumeInfo', {}).get('imageLinks', {} ).get("thumbnail") %}
 
                         {% if thumnail_url %}
@@ -46,7 +46,7 @@
                                 <small> {{ book.get('google-metadata', {}).get('volumeInfo', {}).get('subtitle', "") }} </small>
                             </h4>
                         </div>
-                    </div>
+                    </a>
 
                 {% else %}
                     <strong>No books currently listed</strong>
