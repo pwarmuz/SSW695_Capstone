@@ -8,9 +8,9 @@ from werkzeug.local import LocalProxy
 from context import get_db
 
 try:
-    from app import config_private as config
+    import config_private as config
 except ImportError:
-    from app import config_public as config
+    import config_public as config
 
 
 flask_app = Flask(__name__)
