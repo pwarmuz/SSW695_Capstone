@@ -108,5 +108,5 @@ def jumbo_search():
     
     book_results = book.tools.search_titles(search_input) 
     course_results = courses.tools.search_courses(search_input)
-    print course_results
+
     return render_template('search_results.html', search_input=search_input, book_results=book_results, course_results=course_results)
