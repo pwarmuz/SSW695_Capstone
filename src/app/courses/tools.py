@@ -1,5 +1,6 @@
 """ Courtses tools """
 from app import mongo_client
+import re
 
 DEPARTMENTS = {
     "BIA": "Business Intelligence and Analytics",
@@ -92,3 +93,19 @@ def get_books_by_course(letter, number):
     :return:
     """
     return mongo_client.ssw695.books.find({"courses.letter": letter.upper(), "courses.number": number})
+
+
+def search_courses(input):
+    """ Search courses 
+    :return: A list of courses matching the input
+    """
+    m = re.match(r"(\w{1,3})[-]*(\d{3})", input)
+    if m:
+        result = get_course(m.group(1), m.group(2))
+        if result:
+            return [result]
+        else:
+            return []
+    else:
+        return list(mongo_client.catalog.courses.find({"$text": {"$search": str(input)}}))
+
