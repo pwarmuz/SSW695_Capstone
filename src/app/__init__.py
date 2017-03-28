@@ -6,6 +6,7 @@ from flask import Flask, render_template, request, jsonify, session, redirect, u
 
 from werkzeug.local import LocalProxy
 from context import get_db
+from flask.ext.tracking import Tracking
 
 try:
     import config_private as config
@@ -16,6 +17,7 @@ except ImportError:
 flask_app = Flask(__name__)
 flask_app.config.from_object(config.BaseConfig)
 mongo_client = LocalProxy(get_db)
+Tracking(flask_app)
 
 print('Stevens Book Marketplace Version: ' + __version__)
 
@@ -102,7 +104,7 @@ def submit_form():
 @flask_app.route('/', methods=['POST'])
 def jumbo_search():
     search_input = request.form['jumbo-search']
-
+    request._tracking_data = {'user_search': 'jumbo_search'}
     if book.tools.validate_by_isbn(search_input):
         return redirect('/book/' + search_input)
     
