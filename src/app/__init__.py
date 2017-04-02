@@ -46,12 +46,14 @@ with flask_app.app_context():
 # LOCAL CONSOLE TESTING
 # analytics = TrackUsage(flask_app, PrintStorage())
 
-analytics = TrackUsage(flask_app, MongoStorage(database=flask_app.config.get("MONGO_AUTH_DB"),
+analytics = TrackUsage(flask_app, MongoStorage(database='ssw695',
                                                collection='analytics',
                                                host=flask_app.config.get("MONGO_HOST"),
                                                port=flask_app.config.get("MONGO_PORT"),
                                                username=flask_app.config.get("MONGO_USER"),
-                                               password=flask_app.config.get("MONGO_PASSWORD")))
+                                               password=flask_app.config.get("MONGO_PASSWORD"),
+                                               auth_db=flask_app.config.get("MONGO_AUTH_DB"),
+                                               auth_mechanism=flask_app.config.get("MONGO_AUTH_MECH")))
 # LOCAL DB TESTING
 # analytics = TrackUsage(flask_app, MongoStorage('local', 'analytics', host='127.0.0.1', port=27017))
 analytics.include_blueprint(courses.blueprint)
@@ -89,7 +91,7 @@ def static_file_hash(filename):
     return int(os.stat(filename).st_mtime)
 
 
-# @analytics.include
+@analytics.include
 @flask_app.route('/')
 def home():
     results = listing.views.get_listing()
