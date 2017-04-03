@@ -6,6 +6,9 @@ from flask import Flask, render_template, request, jsonify, session, redirect, u
 
 from werkzeug.local import LocalProxy
 from context import get_db
+from flask_track_usage import TrackUsage
+from flask_track_usage.storage.printer import PrintStorage
+from flask_track_usage.storage.mongo import MongoStorage
 
 try:
     import config_private as config
@@ -16,6 +19,9 @@ except ImportError:
 flask_app = Flask(__name__)
 flask_app.config.from_object(config.BaseConfig)
 mongo_client = LocalProxy(get_db)
+# Configuration for analytics
+flask_app.config['TRACK_USAGE_USE_FREEGEOIP'] = False
+flask_app.config['TRACK_USAGE_INCLUDE_OR_EXCLUDE_VIEWS'] = 'include'
 
 print('Stevens Book Marketplace Version: ' + __version__)
 
@@ -36,6 +42,24 @@ users.login_manager.init_app(flask_app)
 
 with flask_app.app_context():
     flask_app.session_interface = users.SessionInterface(mongo_client)
+
+# LOCAL CONSOLE TESTING
+# analytics = TrackUsage(flask_app, PrintStorage())
+
+analytics = TrackUsage(flask_app, MongoStorage(database='ssw695',
+                                               collection='analytics',
+                                               host=flask_app.config.get("MONGO_HOST"),
+                                               port=flask_app.config.get("MONGO_PORT"),
+                                               username=flask_app.config.get("MONGO_USER"),
+                                               password=flask_app.config.get("MONGO_PASSWORD"),
+                                               auth_db=flask_app.config.get("MONGO_AUTH_DB"),
+                                               auth_mechanism=flask_app.config.get("MONGO_AUTH_MECH")))
+# LOCAL DB TESTING
+# analytics = TrackUsage(flask_app, MongoStorage('local', 'analytics', host='127.0.0.1', port=27017))
+analytics.include_blueprint(courses.blueprint)
+analytics.include_blueprint(book.blueprint)
+analytics.include_blueprint(listing.blueprint)
+analytics.include_blueprint(users.blueprint)
 
 
 @flask_app.url_defaults
@@ -67,22 +91,26 @@ def static_file_hash(filename):
     return int(os.stat(filename).st_mtime)
 
 
+@analytics.include
 @flask_app.route('/')
 def home():
     results = listing.views.get_listing()
     return render_template('index.html', listing=results)
 
 
+@analytics.include
 @flask_app.route('/about')
 def about():
     return render_template('about.html')
 
 
+@analytics.include
 @flask_app.route('/contact')
 def contact():
     return render_template('contact.html')
 
 
+@analytics.include
 @flask_app.route('/profile')
 def profile():
     # TODO: Temporary profile access to be deleted
@@ -99,6 +127,7 @@ def submit_form():
     return redirect(url_for('home'))
 
 
+@analytics.include
 @flask_app.route('/', methods=['POST'])
 def jumbo_search():
     search_input = request.form['jumbo-search']
