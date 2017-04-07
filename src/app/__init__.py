@@ -7,7 +7,7 @@ from flask import Flask, render_template, request, redirect, url_for
 from werkzeug.local import LocalProxy
 from context import get_db
 from flask_track_usage import TrackUsage
-from flask_track_usage.storage.mongo import MongoStorage
+from flask_track_usage.storage.mongo import MongoPiggybackStorage
 
 try:
     import config_private as config
@@ -39,19 +39,7 @@ users.login_manager.init_app(flask_app)
 
 with flask_app.app_context():
     flask_app.session_interface = users.SessionInterface(mongo_client)
-
-# LOCAL CONSOLE TESTING
-# analytics = TrackUsage(flask_app, PrintStorage())
-
-
-analytics = TrackUsage(flask_app, MongoStorage(database='ssw695',
-                                               collection='analytics',
-                                               host=flask_app.config.get("MONGO_HOST"),
-                                               port=flask_app.config.get("MONGO_PORT"),
-                                               username=flask_app.config.get("MONGO_USER"),
-                                               password=flask_app.config.get("MONGO_PASSWORD"),
-                                               auth_db=flask_app.config.get("MONGO_AUTH_DB"),
-                                               auth_mechanism=flask_app.config.get("MONGO_AUTH_MECH")))
+    analytics = TrackUsage(flask_app, MongoPiggybackStorage(mongo_client['ssw695']['analytics']))
 
 analytics.include_blueprint(courses.blueprint)
 analytics.include_blueprint(book.blueprint)
