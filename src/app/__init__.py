@@ -2,7 +2,7 @@ __version__ = '0.2'
 
 import os
 
-from flask import Flask, render_template, request, jsonify, session, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for
 
 from werkzeug.local import LocalProxy
 from context import get_db
