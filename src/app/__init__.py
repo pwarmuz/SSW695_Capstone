@@ -26,7 +26,6 @@ import courses
 flask_app.register_blueprint(courses.blueprint)
 
 import book
-from book import tools
 flask_app.register_blueprint(book.blueprint)
 
 
