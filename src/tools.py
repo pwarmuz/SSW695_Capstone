@@ -5,7 +5,6 @@ import argparse
 parser = argparse.ArgumentParser(description='')
 parser.add_argument('--add_user', nargs=2)
 
-
 if __name__ == '__main__':
     args = parser.parse_args()
     with flask_app.app_context():
