@@ -2,13 +2,12 @@ __version__ = '0.2'
 
 import os
 
-from flask import Flask, render_template, request, jsonify, session, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for
 
 from werkzeug.local import LocalProxy
 from context import get_db
 from flask_track_usage import TrackUsage
-from flask_track_usage.storage.printer import PrintStorage
-from flask_track_usage.storage.mongo import MongoStorage
+from flask_track_usage.storage.mongo import MongoPiggybackStorage
 
 try:
     import config_private as config
@@ -21,9 +20,7 @@ from flask import abort
 flask_app = Flask(__name__)
 flask_app.config.from_object(config.BaseConfig)
 mongo_client = LocalProxy(get_db)
-# Configuration for analytics
-flask_app.config['TRACK_USAGE_USE_FREEGEOIP'] = False
-flask_app.config['TRACK_USAGE_INCLUDE_OR_EXCLUDE_VIEWS'] = 'include'
+
 
 print('Stevens Book Marketplace Version: ' + __version__)
 
@@ -31,7 +28,6 @@ import courses
 flask_app.register_blueprint(courses.blueprint)
 
 import book
-from book import tools
 flask_app.register_blueprint(book.blueprint)
 
 
@@ -44,20 +40,8 @@ users.login_manager.init_app(flask_app)
 
 with flask_app.app_context():
     flask_app.session_interface = users.SessionInterface(mongo_client)
+    analytics = TrackUsage(flask_app, MongoPiggybackStorage(mongo_client['ssw695']['analytics']))
 
-# LOCAL CONSOLE TESTING
-# analytics = TrackUsage(flask_app, PrintStorage())
-
-analytics = TrackUsage(flask_app, MongoStorage(database='ssw695',
-                                               collection='analytics',
-                                               host=flask_app.config.get("MONGO_HOST"),
-                                               port=flask_app.config.get("MONGO_PORT"),
-                                               username=flask_app.config.get("MONGO_USER"),
-                                               password=flask_app.config.get("MONGO_PASSWORD"),
-                                               auth_db=flask_app.config.get("MONGO_AUTH_DB"),
-                                               auth_mechanism=flask_app.config.get("MONGO_AUTH_MECH")))
-# LOCAL DB TESTING
-# analytics = TrackUsage(flask_app, MongoStorage('local', 'analytics', host='127.0.0.1', port=27017))
 analytics.include_blueprint(courses.blueprint)
 analytics.include_blueprint(book.blueprint)
 analytics.include_blueprint(listing.blueprint)
@@ -67,8 +51,6 @@ analytics.include_blueprint(users.blueprint)
 @flask_app.url_defaults
 def hashed_static_file_url(endpoint, values):
     """
-
-
     :param endpoint:
     :param values:
     :return:
