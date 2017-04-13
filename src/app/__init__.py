@@ -15,6 +15,8 @@ try:
 except ImportError:
     import config_public as config
 
+from flask_login import current_user
+from flask import abort
 
 flask_app = Flask(__name__)
 flask_app.config.from_object(config.BaseConfig)
@@ -114,7 +116,13 @@ def contact():
 @flask_app.route('/profile')
 def profile():
     # TODO: Temporary profile access to be deleted
-    return render_template('profile.html')
+    my_listed = current_user.list_my_books_listed()
+    my_listed_count = current_user.count_my_books_listed()
+    my_sold = current_user.list_my_books_sold()
+    my_sold_count = current_user.count_my_books_sold()
+    return render_template('profile.html', my_listed=my_listed, my_listed_count=my_listed_count
+                                         , my_sold=my_sold, my_sold_count=my_sold_count
+                           )
 
 
 @flask_app.route('/submit_form', methods=['POST'])
@@ -139,3 +147,15 @@ def jumbo_search():
     course_results = courses.tools.search_courses(search_input)
 
     return render_template('search_results.html', search_input=search_input, book_results=book_results, course_results=course_results)
+
+
+@flask_app.route('/set_seller', methods=['POST'])
+def set_seller():
+    isbn = request.form['ins_isbn']
+    if book.tools.validate_by_isbn(isbn):
+        item_price = request.form['ins_price']
+        current_user.list_book(isbn, item_price)
+        return jsonify({'item': isbn + ' has been successfully listed for ' + item_price})
+
+    # abort(404)
+    return jsonify({'error': 'Failed to find book to sell'})

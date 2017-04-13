@@ -1,5 +1,5 @@
 
-from flask import Blueprint, request, redirect, render_template, url_for, flash, session, current_app
+from flask import Blueprint, request, redirect, render_template, url_for, flash, session, current_app, json
 from flask_login import login_user, logout_user
 from manager import User
 from app import mongo_client
@@ -45,3 +45,10 @@ def login():
 def logout():
     session.clear()
     return redirect(url_for('home'))
+
+
+@blueprint.route('/rate', methods=['POST'])
+def rate():
+    rating = request.form['rating_val']
+    User.set_rating(rating)
+

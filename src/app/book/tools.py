@@ -96,6 +96,7 @@ def isbn13_to_isbn10(isbn):
     isbn = isbn[3:-1]
     return isbn + isbn10_checksum(isbn)
 
+
 def search_titles(input):
     """ Searches all book titles 
     :param: input - the title to search for
@@ -106,4 +107,9 @@ def search_titles(input):
     return list(mongo_client.ssw695.books.find({"$text": {"$search": str(input)}}))
 
 
-
+def query_sales_listing(isbn):
+    """ Query the sales listing from the ISBN Sales page
+    :param: isbn - the isbn to search for
+    :return: list of sales transactions matching the search
+    """
+    return list(mongo_client.ssw695.listing.find({"isbn": str(isbn)}))

@@ -117,10 +117,10 @@
                     <thead>
                     <tr>
                         <th data-field="number" data-sortable="true">
-                            #
+                            Seller
                         </th>
                         <th data-field="seller" data-sortable="true">
-                            Seller w/ rating
+                            Rating
                         </th>
                         <th data-field="date" data-sortable="true">
                             Date listed
@@ -131,76 +131,24 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                        <td>
-                            1
-                        </td>
-                        <td>
-                            TB - Monthly
-                        </td>
-                        <td>
-                            01/04/2012
-                        </td>
-                        <td>
-                            Default
-                        </td>
-                    </tr>
+
+                    {% for seller in seller_list %}
                     <tr class="active">
                         <td>
-                            1
+                            {{ seller.get('seller', "") }}
                         </td>
                         <td>
-                            TB - Monthly
+                            {{ seller.seller_rating.get('rating', "") }}
                         </td>
                         <td>
-                            01/04/2012
+                            {{ seller.get('date', "") }}
                         </td>
                         <td>
-                            Approved
+                            {{ seller.get('price', "") }}
                         </td>
                     </tr>
-                    <tr class="success">
-                        <td>
-                            2
-                        </td>
-                        <td>
-                            TB - Monthly
-                        </td>
-                        <td>
-                            02/04/2012
-                        </td>
-                        <td>
-                            Declined
-                        </td>
-                    </tr>
-                    <tr class="warning">
-                        <td>
-                            3
-                        </td>
-                        <td>
-                            TB - Monthly
-                        </td>
-                        <td>
-                            03/04/2012
-                        </td>
-                        <td>
-                            Pending
-                        </td>
-                    </tr>
-                    <tr class="danger">
-                        <td>
-                            4
-                        </td>
-                        <td>
-                            TB - Monthly
-                        </td>
-                        <td>
-                            04/04/2012
-                        </td>
-                        <td>
-                            Call in to confirm
-                        </td>
-                    </tr>
+                    {% endfor %}
+
                     </tbody>
                 </table>
             </div>

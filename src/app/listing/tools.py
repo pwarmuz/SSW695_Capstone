@@ -12,4 +12,3 @@ def get_ten_list():
 
 
 
-
