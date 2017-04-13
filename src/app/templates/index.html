@@ -40,7 +40,7 @@
                 <!--    Temporary, We need a users database account, where we can query a count of the
                         top listings based on ISBN. I've created a get first 10 items from the DB to simulate.
                 -->
-                <div class="list-group-item active">Top Ten Listings</div>
+                <div class="list-group-item active">Top Ten Most Popular Viewed</div>
                 {% for book in listing %}
                     <a class="list-group-item" href="book/{{ book._id }}">
                         {{ book.get('google-metadata', {}).get('volumeInfo', {}).get("title") | default(book.get('stevens-metadata', {}).get('book-title'), True) }}
