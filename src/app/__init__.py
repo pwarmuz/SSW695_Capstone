@@ -15,7 +15,6 @@ except ImportError:
     import config_public as config
 
 from flask_login import current_user
-from flask import abort
 
 flask_app = Flask(__name__)
 flask_app.config.from_object(config.BaseConfig)
@@ -30,10 +29,6 @@ flask_app.register_blueprint(courses.blueprint)
 import book
 flask_app.register_blueprint(book.blueprint)
 
-
-import listing
-flask_app.register_blueprint(listing.blueprint)
-
 import users
 flask_app.register_blueprint(users.blueprint)
 users.login_manager.init_app(flask_app)
@@ -44,7 +39,6 @@ with flask_app.app_context():
 
 analytics.include_blueprint(courses.blueprint)
 analytics.include_blueprint(book.blueprint)
-analytics.include_blueprint(listing.blueprint)
 analytics.include_blueprint(users.blueprint)
 
 
@@ -78,8 +72,7 @@ def static_file_hash(filename):
 @analytics.include
 @flask_app.route('/')
 def home():
-    results = listing.views.get_listing()
-    return render_template('index.html', listing=results)
+    return render_template('index.html', listing=book.tools.get_top_books())
 
 
 @analytics.include
