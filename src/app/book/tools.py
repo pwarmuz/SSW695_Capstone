@@ -1,6 +1,6 @@
 """ '/book' tools """
 from app import mongo_client
-
+import pymongo
 """
     ISBN algorithms https://en.wikipedia.org/wiki/International_Standard_Book_Number
 """
@@ -14,7 +14,12 @@ def get_book(isbn):
         isbn = isbn13_to_isbn10(isbn)
 
     if is_isbn10(isbn):
-        return mongo_client.ssw695.books.find_one({"_id": isbn})
+        return mongo_client.ssw695.books.find_one_and_update({"_id": isbn},
+                                                             {'$inc': {'query_score': 1}})
+
+
+def get_top_books(count=10):
+    return mongo_client.ssw695.books.find().limit(10).sort("query_score", pymongo.DESCENDING)
 
 
 def validate_by_isbn(isbn):
