@@ -162,7 +162,7 @@
 					</div>
 
 					<div class="tab-pane" id="panel-640235">
-						<table id="my_books_listed" class="table table-bordered table-condensed" data-toggle="table">
+						<table id="my_books_listed" class="table table-bordered table-condensed table-hover" data-toggle="table">
 							<thead>
 							<tr>
 								<th data-field="seller" data-sortable="true">
@@ -179,7 +179,7 @@
 							<tbody>
 
 							{% for book in my_listed %}
-							<tr class="active">
+							<tr class="active clickable-row" data-href="book/{{ book.get('isbn') }}">
 								<td>
 									{{ book.get('isbn', "") }}
 								</td>
@@ -196,7 +196,7 @@
 						</table>
 					</div>
 					<div class="tab-pane" id="panel-640236">
-						<table id="my_books_sold" class="table table-bordered table-condensed" data-toggle="table">
+						<table id="my_books_sold" class="table table-bordered table-condensed table-hover" data-toggle="table">
 							<thead>
 							<tr>
 								<th data-field="buyer" data-sortable="true">

@@ -7,6 +7,7 @@ def get_ten_list():
         Demonstrates example, should be replaced with finding a count of top listed books
     :return:
     """
+
     return mongo_client.ssw695.books.find().limit(10)
 
 
