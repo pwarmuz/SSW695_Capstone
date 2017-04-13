@@ -70,6 +70,20 @@
 			</div>
 		</div>
 	</div>
+
+	<div class="row">
+		<div class="col-md-8">
+			<div id="success_alert" class="alert alert-success alert-dismissible" role="alert" style="display:none;">
+				<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+				<strong id="notice_success"> </strong>
+			</div>
+			<div id="error_alert" class="alert alert-danger alert-dismissible" role="alert" style="display:none;">
+				<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+				<strong id="notice_error"> </strong>
+			</div>
+		</div>
+	</div>
+
 	<div class="row">
 		<div class="col-md-8">
 <!--    Panels relevant to book information
@@ -80,14 +94,17 @@
                         <a href="#panel-954142" data-toggle="tab">Sell a book</a>
 					</li>
 					<li>
-						<span class="badge pull-right">3</span><a href="#panel-640235" data-toggle="tab">Books Sold</a>
+						<span class="badge pull-right">{{ my_listed_count }}</span><a href="#panel-640235" data-toggle="tab">Books Listed</a>
+					</li>
+					<li>
+						<span class="badge pull-right">{{ my_sold_count }}</span><a href="#panel-640236" data-toggle="tab">Books Sold</a>
 					</li>
 				</ul>
 				<div class="tab-content">
 					<div class="tab-pane active" id="panel-954142">
 <!--    Drop Downs should get unlocked as you progress with selections
         Drop Downs should not list all entries but rather focus down the tree
--->
+
                         <div class="row">
 		                    <div class="col-md-2">
                                <div class="dropdown">
@@ -122,16 +139,20 @@
                                   </ul>
                                 </div>
                             </div>
-                             <div class="col-md-2">
+-->
 <!--    Search ISBN numbers
         Should also generate warnings if the ISBN is not linked to a course
 -->
-                                <form class="form-inline ">
-                                    <div class="input-group ">
-                                        <input type="text " class="form-control " size="13 " placeholder="Enter ISBN Number">
-                                        <div class="input-group-btn ">
-                                            <button class="btn btn-default " type="submit ">
-                                                <i class="glyphicon glyphicon-search "></i>
+						<div class="row">
+							<div class="col-md-8">
+                                <form class="form-inline">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" size="13" id="ins_isbn" placeholder="Enter ISBN Number">
+										<input type="text" class="form-control" size="6" id="ins_price" placeholder="Enter price">
+
+										<div class="input-group-btn">
+                                            <button class="btn btn-default" id="btn_isbn" type="submit" method="post">
+                                                <i class="glyphicon glyphicon-search"></i>
                                             </button>
                                         </div>
                                     </div>
@@ -139,8 +160,86 @@
                             </div>
                         </div>
 					</div>
-					<div class="tab-pane" id="panel-640235">
 
+					<div class="tab-pane" id="panel-640235">
+						<table id="my_books_listed" class="table table-bordered table-condensed" data-toggle="table">
+							<thead>
+							<tr>
+								<th data-field="seller" data-sortable="true">
+									Book
+								</th>
+								<th data-field="date" data-sortable="true">
+									Date listed
+								</th>
+								<th data-field="price" data-sortable="true">
+									Price
+								</th>
+							</tr>
+							</thead>
+							<tbody>
+
+							{% for book in my_listed %}
+							<tr class="active">
+								<td>
+									{{ book.get('isbn', "") }}
+								</td>
+								<td>
+									{{ book.get('date', "") }}
+								</td>
+								<td>
+									{{ book.get('price', "") }}
+								</td>
+							</tr>
+							{% endfor %}
+
+							</tbody>
+						</table>
+					</div>
+					<div class="tab-pane" id="panel-640236">
+						<table id="my_books_sold" class="table table-bordered table-condensed" data-toggle="table">
+							<thead>
+							<tr>
+								<th data-field="buyer" data-sortable="true">
+									Buyer
+								</th>
+								<th data-field="isbn" data-sortable="true">
+									Book ISBN
+								</th>
+								<th data-field="date_sold" data-sortable="true">
+									Date Sold
+								</th>
+								<th data-field="date_list" data-sortable="true">
+									Date Listed
+								</th>
+								<th data-field="price" data-sortable="true">
+									Price
+								</th>
+							</tr>
+							</thead>
+							<tbody>
+
+							{% for book in my_sold %}
+							<tr class="active">
+								<td>
+									{{ book.get('buyer', "") }}
+								</td>
+								<td>
+									{{ book.get('isbn', "") }}
+								</td>
+								<td>
+									{{ book.get('sold_date', "") }}
+								</td>
+								<td>
+									{{ book.get('list_date', "") }}
+								</td>
+								<td>
+									{{ book.get('price', "") }}
+								</td>
+							</tr>
+							{% endfor %}
+
+							</tbody>
+						</table>
 					</div>
 				</div>
 			</div>
@@ -153,6 +252,16 @@
 				Book listings
 			</h3>
             <span class="badge pull-left">5</span><p><strong>Your Rating</strong></p>
+			<form id="rate_form" class="form-inline" role="form">
+				<div class="input-group ">
+					<input type="text " id="rating_val" class="form-control " size="13 " placeholder="Enter rating">
+					<div class="input-group-btn ">
+						<button class="btn btn-default " id="rate_button" type="submit " method="post">
+							<i class="glyphicon glyphicon-search "></i>
+						</button>
+					</div>
+				</div>
+			</form>
 		</div>
 	</div>
 </div>

@@ -14,10 +14,11 @@ def display_book(isbn):
 
     # TODO: MongoDB Exceptions
     book = tools.get_book(isbn)
+    seller_list = tools.query_sales_listing(isbn)
 
     if not book:
         abort(404)
 
-    return render_template('book/book_isbn.html', book=book)
+    return render_template('book/book_isbn.html', book=book, seller_list=seller_list)
 
 
