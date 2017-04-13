@@ -73,7 +73,7 @@ def isbn10_checksum(isbn):
     """
     :return: the last checksum digit
     """
-    r = 11 - (sum(int(isbn[i]) * (10 - i) for i in xrange(0, 9)) % 11) % 11
+    r = (11 - (sum(int(isbn[i]) * (10 - i) for i in xrange(0, 9)) % 11)) % 11
     return str(r) if r < 10 else "X"
 
 
