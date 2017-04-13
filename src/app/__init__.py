@@ -2,7 +2,7 @@ __version__ = '0.2'
 
 import os
 
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, jsonify, request, redirect, url_for
 
 from werkzeug.local import LocalProxy
 from context import get_db
@@ -97,14 +97,12 @@ def contact():
 @analytics.include
 @flask_app.route('/profile')
 def profile():
-    # TODO: Temporary profile access to be deleted
     my_listed = current_user.list_my_books_listed()
     my_listed_count = current_user.count_my_books_listed()
     my_sold = current_user.list_my_books_sold()
     my_sold_count = current_user.count_my_books_sold()
     return render_template('profile.html', my_listed=my_listed, my_listed_count=my_listed_count
-                                         , my_sold=my_sold, my_sold_count=my_sold_count
-                           )
+                                         , my_sold=my_sold, my_sold_count=my_sold_count)
 
 
 @flask_app.route('/submit_form', methods=['POST'])
@@ -141,3 +139,9 @@ def set_seller():
 
     # abort(404)
     return jsonify({'error': 'Failed to find book to sell'})
+
+
+@flask_app.route('/rate', methods=['POST'])
+def rate():
+    rating = request.form['rating_val']
+    current_user.set_rating(rating)

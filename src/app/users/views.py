@@ -50,9 +50,3 @@ def logout():
     session.clear()
     return redirect(url_for('home'))
 
-
-@blueprint.route('/rate', methods=['POST'])
-def rate():
-    rating = request.form['rating_val']
-    User.set_rating(rating)
-
