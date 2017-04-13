@@ -19,8 +19,8 @@ function onSignUpSubmit(aForm) {
 	} 
 
     //Hashing the value before submitting
-    inputPassword.value = sha256_digest(inputPassword.value);
-    inputReEnterPassword.value = sha256_digest(inputReEnterPassword.value);
+    //inputPassword.value = sha256_digest(inputPassword.value);
+    //inputReEnterPassword.value = sha256_digest(inputReEnterPassword.value);
 
     //Submitting
     return true;
