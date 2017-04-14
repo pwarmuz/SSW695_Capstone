@@ -14,7 +14,7 @@ def display_all_books():
 
 @blueprint.route('/<isbn>')
 def display_book(isbn):
-    """ Display a specific books based on the ISBN number
+    """ Display a specific book based on the ISBN number
     :param isbn: isbn Number (10-digit / 13-digit)
     """
 

@@ -143,7 +143,7 @@ def set_seller():
         return jsonify({'item': isbn + ' has been successfully listed for ' + item_price})
 
     # abort(404)
-    return jsonify({'error': 'Failed to find books to sell'})
+    return jsonify({'error': 'Failed to find book to sell'})
 
 
 @flask_app.route('/rate', methods=['POST'])

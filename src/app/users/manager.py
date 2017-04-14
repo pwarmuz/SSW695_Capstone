@@ -56,7 +56,7 @@ class User(UserMixin):
 
     def list_book(self, isbn, list_price):
         """
-        Set the sellers of an isbn books item onto listing page
+        Set the sellers of an isbn book item onto listing page
         """
         list_date = str(date.today())
         seller_rating = self._collection.find_one({"_id": self.id}, {"_id": 0, "rating": 1})
