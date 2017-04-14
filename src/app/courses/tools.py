@@ -1,65 +1,9 @@
 """ Courtses tools """
 from app import mongo_client
 import re
+import pymongo
 
-DEPARTMENTS = {
-    "BIA": "Business Intelligence and Analytics",
-    "BIO": "Biology",
-    "BME": "Biomedical Engineering",
-    "BT": "Business and Technology",
-    "CAL": "College of Arts & Letters",
-    "CE": "Civil Engineering",
-    "CH": "Chemistry and Chemical Biology",
-    "CHE": "Chemical Engineering",
-    "CM": "Construction Management",
-    "CPE": "Computer Engineering",
-    "CS": "Computer Science",
-    "D": "Dean's Offices",
-    "E": "Interdepartmental Engineering",
-    "EE": "Electrical Engineering",
-    "EM": "Engineering Management",
-    "EN": "Environmental Engineering",
-    "ES": "Enterprise Systems",
-    "FE": "Financial Engineering",
-    "FIN": "Finance",
-    "H": "Honor Program",
-    "HAR": "Humanities/Art",
-    "HHS": "Humanities/History",
-    "HLI": "Humanities/Literature",
-    "HMU": "Humanities/Music",
-    "HPL": "Humanities/Philosophy",
-    "HSS": "Humanities/Social Sciences",
-    "HST": "Humanities/Science and Technology",
-    "HTH": "Humanities/Theater",
-    "IDP": "Integrated Product Development",
-    "LFR": "Language/French",
-    "LSP": "Language/Spanish",
-    "MA": "Mathematics",
-    "ME": "Mechanical Engineering",
-    "MGT": "Management",
-    "MIS": "Information Systems",
-    "MT": "Materials Science and Engineering",
-    "NANO": "Nanotechnology",
-    "NE": "Naval Engineering",
-    "NIS": "Networked Information Systems",
-    "OE": "Ocean Engineering",
-    "PAE": "Product Architecture and Engineering",
-    "PE": "Physical Education",
-    "PEP": "Physics & Engineering Physics",
-    "PIN": "Pinnacle Scholar",
-    "PME": "Pharmaceutical Manufacturing",
-    "PRV": "Provost",
-    "QF": "Quantitative Finance",
-    "REG": "Registrar",
-    "SDOE": "Systems Design and Operational Effectiveness",
-    "SEF": "Science & Engineering Found. for E",
-    "SES": "Systems Engineering Security",
-    "SOC": "Service Oriented Computing",
-    "SSW": "Software Engineering",
-    "SYS": "Systems Engineering",
-    "TG": "Technogenesis",
-    "TM": "Telecommunications Management"
-}
+from constants import DEPARTMENTS
 
 
 def get_courses_by_departments():
@@ -85,7 +29,12 @@ def get_course(letter, number):
     """ Get courses
     :return:
     """
-    return mongo_client.catalog.courses.find_one({"letter": letter.upper(), "number": number})
+    return mongo_client.catalog.courses.find_one_and_update({"letter": letter.upper(), "number": number},
+                                                            {'$inc': {'query_score': 1}})
+
+
+def get_top_courses(count=10):
+    return mongo_client.catalog.courses.find().sort("query_score", pymongo.DESCENDING).limit(count)
 
 
 def get_books_by_course(letter, number):
@@ -104,8 +53,15 @@ def search_courses(input):
         result = get_course(m.group(1), m.group(2))
         if result:
             return [result]
-        else:
-            return []
-    else:
-        return list(mongo_client.catalog.courses.find({"$text": {"$search": str(input)}}))
 
+    ensure_search_index()
+    return list(mongo_client.catalog.courses.find({"$text": {"$search": str(input)}}))
+
+
+def ensure_search_index():
+    from pymongo import TEXT
+    mongo_client.catalog.courses.ensure_index([('name', TEXT),
+                                               ('letter', TEXT),
+                                               ('number', TEXT)],
+                                              default_language='english',
+                                              name="search_index")

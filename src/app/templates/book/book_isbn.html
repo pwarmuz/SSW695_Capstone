@@ -18,7 +18,7 @@
             <div class="col-md-4">
 
                 <h3>
-                    <strong>{{ book.get('google-metadata', {}).get('volumeInfo', {}).get('title') | default(book.get('stevens-metadata', {}).get('book-title'), True) }}</strong>
+                    <strong>{{ book.get('google-metadata', {}).get('volumeInfo', {}).get('title') | default(book.get('stevens-metadata', {}).get('books-title'), True) }}</strong>
                 </h3>
                 <dl>
                     <dt>
@@ -34,7 +34,7 @@
                     <!--
                     ISBN Identifiers removed
                     google-metadata.volumeInfo.industryIdentifiers.0.identifier are not consistent
-                    some alternate incorrectly, book ISBN 0132431718 has a completely incorrect identifier
+                    some alternate incorrectly, books ISBN 0132431718 has a completely incorrect identifier
                     -->
                 </dl>
             </div>

@@ -42,7 +42,7 @@
 
                         <div class="media-body">
                             <h4 class="media-heading">
-                                {{ book.get('google-metadata', {}).get('volumeInfo', {}).get("title") | default(book.get('stevens-metadata', {}).get('book-title'), True) }}
+                                {{ book.get('google-metadata', {}).get('volumeInfo', {}).get("title") | default(book.get('stevens-metadata', {}).get('books-title'), True) }}
                                 <small> {{ book.get('google-metadata', {}).get('volumeInfo', {}).get('subtitle', "") }} </small>
                             </h4>
                         </div>
