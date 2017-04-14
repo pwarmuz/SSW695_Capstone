@@ -27,9 +27,9 @@ import courses
 
 flask_app.register_blueprint(courses.blueprint)
 
-import book
+import books
 
-flask_app.register_blueprint(book.blueprint)
+flask_app.register_blueprint(books.blueprint)
 
 import listing
 
@@ -45,7 +45,7 @@ with flask_app.app_context():
     analytics = TrackUsage(flask_app, MongoPiggybackStorage(mongo_client['ssw695']['analytics']))
 
 analytics.include_blueprint(courses.blueprint)
-analytics.include_blueprint(book.blueprint)
+analytics.include_blueprint(books.blueprint)
 analytics.include_blueprint(listing.blueprint)
 analytics.include_blueprint(users.blueprint)
 
@@ -80,7 +80,22 @@ def static_file_hash(filename):
 @analytics.include
 @flask_app.route('/')
 def home():
-    return render_template('index.html', listing=book.tools.get_top_books())
+    search_input = request.args.get('search', "").strip()
+    if search_input != "":
+
+        if books.tools.validate_by_isbn(search_input):
+            return redirect(url_for("books.display_book", isbn=search_input))
+
+        return render_template('index.html',
+                               search_input=search_input,
+                               books=books.tools.search_titles(search_input),
+                               courses=courses.tools.search_courses(search_input))
+
+    return render_template('index.html',
+                           books=list(books.tools.get_top_books()),
+                           courses=list(courses.tools.get_top_courses()))
+
+
 
 
 @analytics.include
@@ -119,31 +134,16 @@ def submit_form():
     return redirect(url_for('home'))
 
 
-@analytics.include
-@flask_app.route('/', methods=['POST'])
-def jumbo_search():
-    search_input = request.form['jumbo-search']
-
-    if book.tools.validate_by_isbn(search_input):
-        return redirect('/book/' + search_input)
-
-    book_results = book.tools.search_titles(search_input)
-    course_results = courses.tools.search_courses(search_input)
-
-    return render_template('search_results.html', search_input=search_input, book_results=book_results,
-                           course_results=course_results)
-
-
 @flask_app.route('/set_seller', methods=['POST'])
 def set_seller():
     isbn = request.form['ins_isbn']
-    if book.tools.validate_by_isbn(isbn):
+    if books.tools.validate_by_isbn(isbn):
         item_price = request.form['ins_price']
         current_user.list_book(isbn, item_price)
         return jsonify({'item': isbn + ' has been successfully listed for ' + item_price})
 
     # abort(404)
-    return jsonify({'error': 'Failed to find book to sell'})
+    return jsonify({'error': 'Failed to find books to sell'})
 
 
 @flask_app.route('/rate', methods=['POST'])

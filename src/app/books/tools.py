@@ -1,14 +1,15 @@
 """ '/book' tools """
 from app import mongo_client
 import pymongo
+
 """
     ISBN algorithms https://en.wikipedia.org/wiki/International_Standard_Book_Number
 """
 
 
 def get_book(isbn):
-    """ Get book by isbn
-    :return: book item from db
+    """ Get books by isbn
+    :return: books item from db
     """
     if is_isbn13(isbn) and isbn.startswith("978"):
         isbn = isbn13_to_isbn10(isbn)
@@ -19,7 +20,7 @@ def get_book(isbn):
 
 
 def get_top_books(count=10):
-    return mongo_client.ssw695.books.find().limit(10).sort("query_score", pymongo.DESCENDING)
+    return mongo_client.ssw695.books.find().sort("query_score", pymongo.DESCENDING).limit(count)
 
 
 def validate_by_isbn(isbn):
@@ -84,7 +85,7 @@ def isbn13_checksum(isbn):
     x = map(int, list(isbn))
     r = 10 - sum(
         [x[0], 3 * x[1], x[2], 3 * x[3], x[4], 3 * x[5], x[6], 3 * x[7], x[8], 3 * x[9], x[10], 3 * x[11]]
-        ) % 10
+    ) % 10
     return str(r) if r < 10 else "0"
 
 
@@ -103,12 +104,12 @@ def isbn13_to_isbn10(isbn):
 
 
 def search_titles(input):
-    """ Searches all book titles 
+    """ Searches all books titles
     :param: input - the title to search for
     :return: list of books matching the search
     """
 
-    #return mongo_client.ssw695.books.find_one({"$text": {"$search": str(input)}}, {"score": {"$meta": "textScore"}})
+    # return mongo_client.ssw695.books.find_one({"$text": {"$search": str(input)}}, {"score": {"$meta": "textScore"}})
     return list(mongo_client.ssw695.books.find({"$text": {"$search": str(input)}}))
 
 

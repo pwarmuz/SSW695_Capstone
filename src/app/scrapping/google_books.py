@@ -1,11 +1,11 @@
 # coding=utf-8
-""" Code to get info about a specific book using the google books api """
+""" Code to get info about a specific books using the google books api """
 import requests
 from flask import current_app
 
 
 def get_info_by_isbn(isbn, key=current_app.config.get("API_KEY_GOOGLE_BOOKS")):
-    """ Get book info from the google books api by isbn """
+    """ Get books info from the google books api by isbn """
     url = "https://www.googleapis.com/books/v1/volumes?q=isbn:{}".format(isbn)
 
     if key is not None:
@@ -24,7 +24,7 @@ def get_info_by_isbn(isbn, key=current_app.config.get("API_KEY_GOOGLE_BOOKS")):
 
 
 def get_info_by_id(google_books_id):
-    """ Get book info from the google books api by google  """
+    """ Get books info from the google books api by google  """
     url = "https://www.googleapis.com/books/v1/volumes/{}".format(google_books_id)
     r = requests.get(url)
     if r.status_code == 200:

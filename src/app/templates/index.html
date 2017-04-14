@@ -1,59 +1,90 @@
 {% extends 'template.html' %}
 {% block title %}Welcome to Stevens Book Marketplace{% endblock %}
 {% block content %}
-<!-- Search Section -->
-<section id="stv-search">
-    <div class="jumbotron text-center">
-        <h1><strong>Stevens Book Marketplace</strong></h1>
-        <form action="/" class="form-inline" method="POST">
-            <div class="input-group ">
-                <input type="search" name="jumbo-search" id="jumbo-search" class="form-control" size="50 " placeholder="Search for books or by class ">
-                <div class="input-group-btn ">
-                    <button class="btn btn-default " type="submit" value="send">
-                        <i class="glyphicon glyphicon-search "></i>
-                    </button>
+    <!-- Search Section -->
+    <section id="stv-search">
+        <div class="jumbotron text-center">
+            <h1><strong>Stevens Book Marketplace</strong></h1>
+            <form action="/" class="form-inline" method="get">
+                <div class="input-group ">
+                    <input type="search" name="search" id="jumbo-search" class="form-control" size="50 "
+                           placeholder="Search for books or by class " value="{{ search_input }}">
+                    <div class="input-group-btn ">
+                        <button class="btn btn-default " type="submit" value="send">
+                            <i class="glyphicon glyphicon-search "></i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Listing Section -->
+    <section id="stv-listing">
+        <div class="container ">
+
+            <div class="row" >
+                <nav class="col-sm-12">
+                    <ul class="nav nav-pills" role="tablist">
+                        <li role="presentation"><a href="{{ url_for("courses.display_all_courses") }}">All Courses</a></li>
+                        <li role="presentation"><a href="{{ url_for("courses.display_all_courses") }}">All Books</a></li>
+                        {% if current_user.is_authenticated %}
+                            <li role="presentation"><a href="/profile">Profile</a></li>
+                        {% endif %}
+                    </ul>
+                </nav>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="panel panel-stevens">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">
+                                {% if search_input %}
+                                    Course results for "{{ search_input }}"
+                                {% else %}
+                                    Top Viewed Courses
+                                {% endif %}
+                                <span class="badge" style="float:right">{{ courses|count }}</span>
+                            </h3>
+                        </div>
+                        <ul class="list-group">
+                            {% for course in courses %}
+                                <a class="list-group-item"
+                                   href="{{ url_for("courses.display_course", letter = course.letter, number = course.number) }}">
+                                    {{ course.letter }}-{{ course.number }} {{ course.name }}
+                                </a>
+                            {% else %}
+                                <div style="text-align: center;padding: 6px 6px 6px 6px">No courses found...</div>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="panel panel-stevens">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">
+                                {% if search_input %}
+                                    Book results for "{{ search_input }}"
+                                {% else %}
+                                    Top Viewed Books
+                                {% endif %}
+                                <span class="badge" style="float:right">{{ courses|count }}</span>
+                            </h3>
+                        </div>
+                        <ul class="list-group">
+                            {% for book in books %}
+                                <a class="list-group-item" href={{ url_for("books.display_book", isbn = book._id) }}>
+                                    {{ book.get('google-metadata', {}).get('volumeInfo', {}).get("title") | default(book.get('stevens-metadata', {}).get('books-title'), True) }}
+                                    <span class="badge">{{ book._id }}</span>
+                                </a>
+                            {% else %}
+                                <div style="text-align: center;padding: 6px 6px 6px 6px">No books found...</div>
+                            {% endfor %}
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </form>
-    </div>
-</section>
-
-<!-- Listing Section -->
-<section id="stv-listing">
-<div class="container ">
-    <div class="row">
-        <nav class="col-sm-12" >
-            <ul class="nav nav-pills" role="tablist">
-                <li role="presentation"><a href="courses/">Course List</a></li>
-                <!-- The reason why I like selling books badged here is because it's a motivator to sell,
-                users has to login to see it, imo -PW -->
-                {% if current_user.is_authenticated %}
-                <li role="presentation"><a href="/profile">Profile</a></li>
-                {% endif %}
-            </ul>
-        </nav>
-    </div>
-
-    <div class="row">
-        <div class="col-sm-12">
-            <div class="list-group container" id="course-container">
-                <!--    Temporary, We need a users database account, where we can query a count of the
-                        top listings based on ISBN. I've created a get first 10 items from the DB to simulate.
-                -->
-                <div class="list-group-item active">Top Ten Most Popular Viewed</div>
-                {% for book in listing %}
-                    <a class="list-group-item" href="book/{{ book._id }}">
-                        {{ book.get('google-metadata', {}).get('volumeInfo', {}).get("title") | default(book.get('stevens-metadata', {}).get('book-title'), True) }}
-                        <span class="badge">{{ book._id }}</span>
-                        <!-- Not sure if the below is correct, I had to target it as book.courses.0. in order to get anything -PW -->
-                        <span class="badge">{{ book.courses.0.get('letter', "")+ "-" + book.courses.0.get('number', "NONE") }}</span>
-                        <span class="badge">3</span>
-                         <!-- this 3 above represents book's available, needs new value which queries the count available of the specific book listed -->
-                    </a>
-                {% endfor %}
-            </div>
         </div>
-    </div>
-</div>
-</section>
+    </section>
 {% endblock %}

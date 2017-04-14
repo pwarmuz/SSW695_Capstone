@@ -7,8 +7,8 @@ blueprint = Blueprint('courses', __name__, url_prefix="/courses")
 
 
 @blueprint.route('/')
-def display_courses_by_departments():
-    """ Display Courses By Departments """
+def display_all_courses():
+    """ Display All Courses By Departments """
 
     # TODO: MongoDB Exceptions
     departments = tools.get_courses_by_departments()

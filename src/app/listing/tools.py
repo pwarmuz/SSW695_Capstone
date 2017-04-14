@@ -2,7 +2,7 @@ from app import mongo_client
 
 
 def get_ten_list():
-    """ Get book listed top10
+    """ Get books listed top10
         Temp, redundant
         Demonstrates example, should be replaced with finding a count of top listed books
     :return:

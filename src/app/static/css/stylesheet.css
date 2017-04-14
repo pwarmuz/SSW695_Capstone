@@ -21,15 +21,15 @@ body {
 
 #stv-search .jumbotron{
 	background-color: #eee;
-	color: #9D1535;
+	color: #A32638;
 }
 
 .stv-text-red{
-    color: #9D1535;
+    color: #A32638;
 }
 
 .stv-text-grey{
-    color: #BBBCBE;
+    color: #9A989A;
 }
 
 .stv-panel-grey{
@@ -59,4 +59,24 @@ carousel in about us
 }
 
 
+
+/* Custom Bootstrap Panel Color For Stevens*/
+.panel-stevens {
+  border-color: #A32638;
+}
+.panel-stevens > .panel-heading {
+  color: #fff;
+  background-color: #A32638;
+  border-color: #A32638;
+}
+.panel-stevens > .panel-heading + .panel-collapse > .panel-body {
+  border-top-color: #A32638;
+}
+.panel-stevens > .panel-heading .badge {
+  color: #A32638;
+  background-color: #fff;
+}
+.panel-stevens > .panel-footer + .panel-collapse > .panel-body {
+  border-bottom-color: #A32638;
+}
 

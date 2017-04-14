@@ -7,7 +7,7 @@ def update_book_with_google_metadata(isbn):
     r = google_books.get_info_by_isbn(isbn)
     if r["success"]:
         if r["data"] is None:
-            print("book not found in google api")
+            print("books not found in google api")
         else:
             mongo_client["ssw695"]["books"].update_one({"_id": isbn}, {"$set": {"google-metadata": r["data"]}},
                                                        upsert=True)
