@@ -12,7 +12,7 @@
             display: block;
         }
 
-        .department-section{
+        .department-section {
             padding: 10px 20px 10px 20px;
         }
 
@@ -31,14 +31,14 @@
             <div class="panel-heading">Books</div>
             <div class="panel-body">
                 {% for book in books %}
-                    <a class="media" href="/book/{{ book._id }}" >
+                    <a class="media" href="{{ url_for("books.display_book", isbn =  book._id ) }}">
                         {% set thumnail_url = book.get('google-metadata', {}).get('volumeInfo', {}).get('imageLinks', {} ).get("thumbnail") %}
 
                         {% if thumnail_url %}
                             <div class="media-left">
                                 <img class="media-object" src="{{ thumnail_url }}" alt="...">
                             </div>
-                        {%  endif %}
+                        {% endif %}
 
                         <div class="media-body">
                             <h4 class="media-heading">
