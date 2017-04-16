@@ -3,7 +3,8 @@
 {% block content %}
 <div class="container-fluid">
 	<div class="row">
-		<div class="col-md-8">
+		<div class="col-md-1"></div>
+		<div class="col-md-7">
 <!--    Account information panel
         Remember me maybe useless, It's intent to to let people stay logged in when they close the page.
         Disable book notification is an option that allows users to get emails about book prompts
@@ -15,7 +16,7 @@
 						Email
 					</label>
                     <label class="col-sm-10 control-label text-left">
-						{{session['username']}}
+						{{ current_user.id }}
 					</label>
 				</div>
 				<div class="form-group">
@@ -85,83 +86,21 @@
 	</div>
 
 	<div class="row">
-		<div class="col-md-8">
+		<div class="col-md-1"></div>
+		<div class="col-md-7">
 <!--    Panels relevant to books information
 -->
 			<div class="tabbable" id="tabs-844128">
 				<ul class="nav nav-tabs">
 					<li class="active">
-                        <a href="#panel-954142" data-toggle="tab">Sell a book</a>
+						<a href="#panel-640235" data-toggle="tab" class="stv-background"><span class="badge pull-right">{{ my_listed_count }}</span>Books Listed</a>
 					</li>
 					<li>
-						<span class="badge pull-right">{{ my_listed_count }}</span><a href="#panel-640235" data-toggle="tab">Books Listed</a>
-					</li>
-					<li>
-						<span class="badge pull-right">{{ my_sold_count }}</span><a href="#panel-640236" data-toggle="tab">Books Sold</a>
+						<a href="#panel-640236" data-toggle="tab" class="stv-background"><span class="badge pull-right">{{ my_sold_count }}</span>Books Sold </a>
 					</li>
 				</ul>
 				<div class="tab-content">
-					<div class="tab-pane active" id="panel-954142">
-<!--    Drop Downs should get unlocked as you progress with selections
-        Drop Downs should not list all entries but rather focus down the tree
-
-                        <div class="row">
-		                    <div class="col-md-2">
-                               <div class="dropdown">
-                                  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Department
-                                  <span class="caret"></span></button>
-                                  <ul class="dropdown-menu">
-                                    <li><a href="#">Department 1</a></li>
-                                    <li><a href="#">Department 2</a></li>
-                                    <li><a href="#">Department 3</a></li>
-                                  </ul>
-                                </div>
-                            </div>
-                            <div class="col-md-2">
-                               <div class="dropdown">
-                                  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Course
-                                  <span class="caret"></span></button>
-                                  <ul class="dropdown-menu">
-                                    <li><a href="#">Course 1</a></li>
-                                    <li><a href="#">Course 2</a></li>
-                                    <li><a href="#">Course 3</a></li>
-                                  </ul>
-                                </div>
-                            </div>
-                            <div class="col-md-2">
-                               <div class="dropdown">
-                                  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Book
-                                  <span class="caret"></span></button>
-                                  <ul class="dropdown-menu">
-                                    <li><a href="#">Book 1</a></li>
-                                    <li><a href="#">Book 2</a></li>
-                                    <li><a href="#">Book 3</a></li>
-                                  </ul>
-                                </div>
-                            </div>
--->
-<!--    Search ISBN numbers
-        Should also generate warnings if the ISBN is not linked to a course
--->
-						<div class="row">
-							<div class="col-md-8">
-                                <form class="form-inline">
-                                    <div class="input-group">
-                                        <input type="text" class="form-control" size="13" id="ins_isbn" placeholder="Enter ISBN Number">
-										<input type="text" class="form-control" size="6" id="ins_price" placeholder="Enter price">
-
-										<div class="input-group-btn">
-                                            <button class="btn btn-default" id="btn_isbn" type="submit" method="post">
-                                                <i class="glyphicon glyphicon-search"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-					</div>
-
-					<div class="tab-pane" id="panel-640235">
+					<div class="tab-pane active" id="panel-640235">
 						<table id="my_books_listed" class="table table-bordered table-condensed table-hover" data-toggle="table">
 							<thead>
 							<tr>
@@ -251,17 +190,9 @@
 			<h3 class="text-left text-success">
 				Book listings
 			</h3>
-            <span class="badge pull-left">5</span><p><strong>Your Rating</strong></p>
-			<form id="rate_form" class="form-inline" role="form">
-				<div class="input-group ">
-					<input type="text " id="rating_val" class="form-control " size="13 " placeholder="Enter rating">
-					<div class="input-group-btn ">
-						<button class="btn btn-default " id="rate_button" type="submit " method="post">
-							<i class="glyphicon glyphicon-search "></i>
-						</button>
-					</div>
-				</div>
-			</form>
+			<div id="stv-duck">
+			</div>
+            <span class="badge pull-left">{{ current_user.rating }}</span><p><strong>Your Rating</strong></p>
 		</div>
 	</div>
 </div>

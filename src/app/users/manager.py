@@ -60,7 +60,7 @@ class User(UserMixin):
         """
         list_date = str(date.today())
         seller_rating = self._collection.find_one({"_id": self.id}, {"_id": 0, "rating": 1})
-        mongo_client.ssw695.listing.insert({"seller": self.id, "seller_rating": seller_rating, "isbn": isbn, "date": list_date, "price": list_price}, {"unique": 'true'})
+        mongo_client.ssw695.listing.insert({"seller": self.id, "seller_rating": seller_rating, "isbn": isbn, "date": list_date, "price": float(list_price)}, {"unique": 'true'})
 
     def list_my_books_listed(self):
         """

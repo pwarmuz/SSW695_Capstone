@@ -6,6 +6,7 @@
     -->
     <div class="container-fluid">
         <div class="row">
+            <div class="col-md-1"></div>
             <div class="col-md-2">
                 {% set thumnail_url = book.get('google-metadata', {}).get('volumeInfo', {}).get('imageLinks', {} ).get("thumbnail") %}
 
@@ -15,8 +16,7 @@
                     </div>
                 {% endif %}
             </div>
-            <div class="col-md-4">
-
+            <div class="col-md-6">
                 <h3>
                     <strong>{{ book.get('google-metadata', {}).get('volumeInfo', {}).get('title') | default(book.get('stevens-metadata', {}).get('books-title'), True) }}</strong>
                 </h3>
@@ -25,11 +25,11 @@
                         {{ book.get('google-metadata', {}).get('volumeInfo', {}).get('subtitle', "") }}
                     </dt>
                     <dd>
-                        <small> {{ book.get('google-metadata', {}).get('volumeInfo', {}).get('description', "") }} </small>
+                        <small> {{ book.get('google-metadata', {}).get('volumeInfo', {}).get('description', '') }} </small>
                     </dd>
                     <dd>
                         <small>
-                            Pages: {{ book.get('google-metadata', {}).get('volumeInfo', {}).get('pageCount', "") }} </small>
+                            Pages: {{ book.get('google-metadata', {}).get('volumeInfo', {}).get('pageCount', '') }} </small>
                     </dd>
                     <!--
                     ISBN Identifiers removed
@@ -38,83 +38,46 @@
                     -->
                 </dl>
             </div>
-            <div class="col-md-6">
-                <button type="button" class="btn btn-default">
+            <div class="col-md-2">
+                <button type="button" class="btn btn-default btn-lg btn-block">
                     Amazon Link $Price
                 </button>
-                <button type="button" class="btn btn-default">
-                    eBay Link $Price
+                <button type="button" class="btn btn-default btn-lg btn-block">
+                    Stevens Price New: ${{ book.get('stevens-pricing', {}).get('new', '0.00')  }}
                 </button>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <div class="alert alert-success alert-dismissable">
-
-                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
-                        ×
-                    </button>
-                    <h4>
-                        Alert!
-                    </h4> <strong>Not sure</strong> Could have some use maybe...
+                {% if current_user.is_authenticated %}
+                 <form class="form-inline">
+                    <div class="input-group input-lg stv-input-sell">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" id="btn_sell_book" type="submit" method="post">
+                                <strong>SELL </strong><i class="glyphicon glyphicon-thumbs-up"></i> $
+                            </button>
+                        </div>
+                        <input type="number" value="{{ book.get('stevens-pricing', {}).get('new','0.00') - 1.00}}" min="0" step="0.01" data-number-to-fixed="2"
+                           data-number-stepfactor="100" class="form-control currency" id="ins_price">
+                    </div>
+                </form>
+                <div id="success_alert" class="alert alert-success alert-dismissible" role="alert" style="display:none;">
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                    <strong id="notice_success"> </strong>
                 </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-8">
-                <div class="btn-group">
-                    <button class="btn btn-default">
-                        Selected
-                    </button>
-                    <button data-toggle="dropdown" class="btn btn-default dropdown-toggle">
-                        <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li>
-                            <a href="#">10</a>
-                        </li>
-                        <li>
-                            <a href="#">25</a>
-                        </li>
-                        <li>
-                            <a href="#">50</a>
-                        </li>
-                    </ul>
-                    <button class="btn btn-default" type="button" name="refresh" aria-label="refresh" title="Refresh"><i
-                            class="glyphicon glyphicon-refresh icon-refresh"></i></button>
+                <div id="error_alert" class="alert alert-danger alert-dismissible" role="alert" style="display:none;">
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                    <strong id="notice_error"> </strong>
                 </div>
+                {% else %}
+                    <button type="button" class="btn stv-background btn-lg btn-block">
+                        Login to sell yours!
+                    </button>
+                {% endif %}
             </div>
-            <div class="col-md-4">
-                <ul class="pagination pagination-sm bottom-content-end">
-                    <li>
-                        <a href="#">Prev</a>
-                    </li>
-                    <li>
-                        <a href="#">1</a>
-                    </li>
-                    <li>
-                        <a href="#">2</a>
-                    </li>
-                    <li>
-                        <a href="#">3</a>
-                    </li>
-                    <li>
-                        <a href="#">4</a>
-                    </li>
-                    <li>
-                        <a href="#">5</a>
-                    </li>
-                    <li>
-                        <a href="#">Next</a>
-                    </li>
-                </ul>
-            </div>
+            <div class="col-md-1"></div>
         </div>
 
         <div class="row">
             <div class="col-md-12">
-                <table id="seller_list" class="table table-bordered table-condensed table-hover" data-toggle="table">
-                    <thead>
+                <table id="seller_list" class="table table-bordered table-condensed table-hover table-responsive" data-toggle="table">
+                    <thead class="stv-background">
                     <tr>
                         <th data-field="number" data-sortable="true">
                             Seller
@@ -133,20 +96,37 @@
                     <tbody>
 
                     {% for seller in seller_list %}
-                    <tr class="active">
-                        <td>
-                            {{ seller.get('seller', "") }}
-                        </td>
-                        <td>
-                            {{ seller.seller_rating.get('rating', "") }}
-                        </td>
-                        <td>
-                            {{ seller.get('date', "") }}
-                        </td>
-                        <td>
-                            {{ seller.get('price', "") }}
-                        </td>
-                    </tr>
+                        {% if seller.price < book.get('stevens-pricing', {}).get('new', '0.00') %}
+                        <tr class="success">
+                            <td>
+                                {{ seller.get('seller', "") }}
+                            </td>
+                            <td>
+                                {{ seller.seller_rating.get('rating', "") }}
+                            </td>
+                            <td>
+                                {{ seller.get('date', "") }}
+                            </td>
+                            <td>
+                                {{ seller.get('price', "") }}
+                            </td>
+                        </tr>
+                        {% else %}
+                        <tr class="warning">
+                            <td>
+                                {{ seller.get('seller', "") }}
+                            </td>
+                            <td>
+                                {{ seller.seller_rating.get('rating', "") }}
+                            </td>
+                            <td>
+                                {{ seller.get('date', "") }}
+                            </td>
+                            <td>
+                                {{ seller.get('price', "") }}
+                            </td>
+                        </tr>
+                        {% endif %}
                     {% endfor %}
 
                     </tbody>
