@@ -6,3 +6,7 @@ class BaseConfig(object):
     # MongoDB
     MONGO_HOST = 'enptfb55.com'
     MONGO_PORT = 27017
+
+    # Configuration for analytics
+    TRACK_USAGE_USE_FREEGEOIP = False
+    TRACK_USAGE_INCLUDE_OR_EXCLUDE_VIEWS = 'include'

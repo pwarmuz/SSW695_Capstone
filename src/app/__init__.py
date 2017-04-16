@@ -1,28 +1,58 @@
-__version__ = '0.2'
+__version__ = '0.5'
 
 import os
 
-from flask import Flask, render_template, request, jsonify, session, redirect, url_for
+from flask import Flask, render_template, jsonify, request, redirect, url_for, session
+
 from werkzeug.local import LocalProxy
 from context import get_db
+from flask_track_usage import TrackUsage
+from flask_track_usage.storage.mongo import MongoPiggybackStorage
 
 try:
-    from app import config_private as config
+    import config_private as config
 except ImportError:
-    from app import config_public as config
+    import config_public as config
 
+from flask_login import current_user
+from flask import abort
 
 flask_app = Flask(__name__)
 flask_app.config.from_object(config.BaseConfig)
 mongo_client = LocalProxy(get_db)
+
 print('Stevens Book Marketplace Version: ' + __version__)
+
+import courses
+
+flask_app.register_blueprint(courses.blueprint)
+
+import books
+
+flask_app.register_blueprint(books.blueprint)
+
+import listing
+
+flask_app.register_blueprint(listing.blueprint)
+
+import users
+
+flask_app.register_blueprint(users.blueprint)
+users.login_manager.init_app(flask_app)
+
+with flask_app.app_context():
+    flask_app.session_interface = users.SessionInterface(mongo_client)
+    analytics = TrackUsage(flask_app, MongoPiggybackStorage(mongo_client['ssw695']['analytics']))
+
+analytics.include_blueprint(courses.blueprint)
+analytics.include_blueprint(books.blueprint)
+analytics.include_blueprint(listing.blueprint)
+analytics.include_blueprint(users.blueprint)
 
 
 @flask_app.url_defaults
 def hashed_static_file_url(endpoint, values):
     """
-
-
     :param endpoint:
     :param values:
     :return:
@@ -47,67 +77,48 @@ def static_file_hash(filename):
     return int(os.stat(filename).st_mtime)
 
 
+@analytics.include
 @flask_app.route('/')
 def home():
-    return render_template('index.html')
+    search_input = request.args.get('search', "").strip()
+    if search_input != "":
+
+        if books.tools.validate_by_isbn(search_input):
+            return redirect(url_for("books.display_book", isbn=search_input))
+
+        return render_template('index.html',
+                               search_input=search_input,
+                               books=books.tools.search_titles(search_input),
+                               courses=courses.tools.search_courses(search_input))
+
+    return render_template('index.html',
+                           books=list(books.tools.get_top_books()),
+                           courses=list(courses.tools.get_top_courses()))
 
 
+
+
+@analytics.include
 @flask_app.route('/about')
 def about():
     return render_template('about.html')
 
 
+@analytics.include
 @flask_app.route('/contact')
 def contact():
     return render_template('contact.html')
 
 
-@flask_app.route('/signup', methods=['POST'])
-def signup():
-
-    name = request.form.get('name')
-    email = request.form.get('email')
-    password = request.form.get('password')
-    
-    r = mongo_client.ssw695.users.find_one({"email": email},
-                                              {'_id': False})
-
-    if r is not None:
-        return 'already signed up!'
-    
-    user = { 'name' : name,
-             'email' : email,
-             'password' : password }
-
-    mongo_client.ssw695.users.insert_one(user)
-
-    session['username'] = name
-    return redirect(url_for('home'))
-
-
-@flask_app.route('/login', methods=['POST'])
-def login():
-    email = request.form.get('email')
-    password = request.form.get('password')
-    
-    r = mongo_client.ssw695.users.find_one({"email": email},
-                                              {'_id': False})
-
-    if r is not None:
-        if password != r.get('password'):
-            return 'password is not correct.'
-
-        session['username'] = r.get('name')
-        return redirect(url_for('home'))
-
-    return 'User not found.'
-
-
-@flask_app.route('/logout', methods=['POST'])
-def logout():
-    # remove the username from the session if it's there
-    session.pop('username', None)
-    return redirect(url_for('home'))
+@analytics.include
+@flask_app.route('/profile')
+def profile():
+    my_listed = current_user.list_my_books_listed()
+    my_listed_count = current_user.count_my_books_listed()
+    my_sold = current_user.list_my_books_sold()
+    my_sold_count = current_user.count_my_books_sold()
+    return render_template('profile.html', my_listed=my_listed, my_listed_count=my_listed_count
+                           , my_sold=my_sold, my_sold_count=my_sold_count)
 
 
 @flask_app.route('/submit_form', methods=['POST'])
@@ -116,9 +127,27 @@ def submit_form():
     email = request.form['email']
     subject = request.form['subject']
     message = request.form['message']
-    print('contact form message from: {0} and email: {1} and subject: {2} and message {3}' .format(username, email, subject, message))
+    print(
+        'contact form message from: {0} and email: {1} and subject: {2} and message {3}'.format(username,
+                                                                                                email,
+                                                                                                subject,
+                                                                                                message))
     return redirect(url_for('home'))
 
 
-# set the secret key.
-flask_app.secret_key = flask_app.config.get('secret_key')
+@flask_app.route('/set_seller', methods=['POST'])
+def set_seller():
+    isbn = session.get('isbn_value', None)
+    if books.tools.validate_by_isbn(isbn):
+        item_price = request.form['ins_price']
+        current_user.list_book(isbn, item_price)
+        return jsonify({'item': "success"})
+
+    # abort(404)
+    return jsonify({'error': 'Failed to list'})
+
+
+@flask_app.route('/rate', methods=['POST'])
+def rate():
+    rating = request.form['rating_val']
+    current_user.set_rating(rating)

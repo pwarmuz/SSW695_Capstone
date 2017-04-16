@@ -1,0 +1,200 @@
+{% extends 'template.html' %}
+{% block title %}Your profile with Stevens Book Marketplace{% endblock %}
+{% block content %}
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-1"></div>
+		<div class="col-md-7">
+<!--    Account information panel
+        Remember me maybe useless, It's intent to to let people stay logged in when they close the page.
+        Disable book notification is an option that allows users to get emails about book prompts
+-->
+			<form class="form-horizontal" role="form">
+				<div class="form-group">
+
+					<label class="col-sm-2 control-label">
+						Email
+					</label>
+                    <label class="col-sm-10 control-label text-left">
+						{{ current_user.id }}
+					</label>
+				</div>
+				<div class="form-group">
+
+					<label for="changePassword" class="col-sm-2 control-label">
+						Password
+					</label>
+					<div class="col-sm-10">
+						<input type="password" class="form-control" id="changePassword" />
+					</div>
+				</div>
+                <div class="form-group">
+					<div class="col-sm-offset-2 col-sm-10">
+						<button type="submit" class="btn btn-default">
+							Change Password
+						</button>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-offset-2 col-sm-5">
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" /> Remember me
+							</label>
+						</div>
+					</div>
+                    <div class="col-sm-offset-2 col-sm-5">
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" /> Disable Book Notification
+							</label>
+						</div>
+					</div>
+				</div>
+
+			</form>
+		</div>
+		<div class="col-md-4">
+<!--    Top left settings panel, also includes alert prompts
+-->
+			<h3 class="text-left text-success">
+				Your Settings
+			</h3>
+			<div class="alert alert-warning alert-dismissable">
+
+				<button type="button" class="close" data-dismiss="alert" aria-hidden="true">
+					×
+				</button>
+				<h4>
+					Message:
+				</h4> <strong>Suggestion</strong> You may want to re-enable Book Notifications
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-8">
+			<div id="success_alert" class="alert alert-success alert-dismissible" role="alert" style="display:none;">
+				<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+				<strong id="notice_success"> </strong>
+			</div>
+			<div id="error_alert" class="alert alert-danger alert-dismissible" role="alert" style="display:none;">
+				<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+				<strong id="notice_error"> </strong>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-1"></div>
+		<div class="col-md-7">
+<!--    Panels relevant to books information
+-->
+			<div class="tabbable" id="tabs-844128">
+				<ul class="nav nav-tabs">
+					<li class="active">
+						<a href="#panel-640235" data-toggle="tab" class="stv-background"><span class="badge pull-right">{{ my_listed_count }}</span>Books Listed</a>
+					</li>
+					<li>
+						<a href="#panel-640236" data-toggle="tab" class="stv-background"><span class="badge pull-right">{{ my_sold_count }}</span>Books Sold </a>
+					</li>
+				</ul>
+				<div class="tab-content">
+					<div class="tab-pane active" id="panel-640235">
+						<table id="my_books_listed" class="table table-bordered table-condensed table-hover" data-toggle="table">
+							<thead>
+							<tr>
+								<th data-field="seller" data-sortable="true">
+									Book
+								</th>
+								<th data-field="date" data-sortable="true">
+									Date listed
+								</th>
+								<th data-field="price" data-sortable="true">
+									Price
+								</th>
+							</tr>
+							</thead>
+							<tbody>
+
+							{% for book in my_listed %}
+							<tr class="active clickable-row" data-href="books/{{ book.get('isbn') }}">
+								<td>
+									{{ book.get('isbn', "") }}
+								</td>
+								<td>
+									{{ book.get('date', "") }}
+								</td>
+								<td>
+									{{ book.get('price', "") }}
+								</td>
+							</tr>
+							{% endfor %}
+
+							</tbody>
+						</table>
+					</div>
+					<div class="tab-pane" id="panel-640236">
+						<table id="my_books_sold" class="table table-bordered table-condensed table-hover" data-toggle="table">
+							<thead>
+							<tr>
+								<th data-field="buyer" data-sortable="true">
+									Buyer
+								</th>
+								<th data-field="isbn" data-sortable="true">
+									Book ISBN
+								</th>
+								<th data-field="date_sold" data-sortable="true">
+									Date Sold
+								</th>
+								<th data-field="date_list" data-sortable="true">
+									Date Listed
+								</th>
+								<th data-field="price" data-sortable="true">
+									Price
+								</th>
+							</tr>
+							</thead>
+							<tbody>
+
+							{% for book in my_sold %}
+							<tr class="active">
+								<td>
+									{{ book.get('buyer', "") }}
+								</td>
+								<td>
+									{{ book.get('isbn', "") }}
+								</td>
+								<td>
+									{{ book.get('sold_date', "") }}
+								</td>
+								<td>
+									{{ book.get('list_date', "") }}
+								</td>
+								<td>
+									{{ book.get('price', "") }}
+								</td>
+							</tr>
+							{% endfor %}
+
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-md-4">
+<!-- Information specific to books entries
+-->
+			<h3 class="text-left text-success">
+				Book listings
+			</h3>
+			<div id="stv-duck">
+			</div>
+            <span class="badge pull-left">{{ current_user.rating }}</span><p><strong>Your Rating</strong></p>
+		</div>
+	</div>
+</div>
+{% endblock %}
+

@@ -6,11 +6,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Static minified Bootstrap CSS -->
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrap-3.3.7-dist/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" type="text/css"
+          href="{{ url_for('static', filename='bootstrap-3.3.7-dist/css/bootstrap.min.css') }}">
     <!-- googleapi minified JQuery js -->
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js "></script>
     <!-- Static minified Bootstrap js -->
-    <script type="text/javascript " src="{{ url_for( 'static', filename='bootstrap-3.3.7-dist/js/bootstrap.min.js' ) }} "></script>
+    <script type="text/javascript "
+            src="{{ url_for( 'static', filename='bootstrap-3.3.7-dist/js/bootstrap.min.js' ) }} "></script>
+    <script src="//rawgithub.com/stidges/jquery-searchable/master/dist/jquery.searchable-1.0.0.min.js"></script>
 
     <!-- custom stylesheets -->
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/stylesheet.css') }}">
@@ -18,6 +21,7 @@
     <!-- custom scripts -->
     <script type="text/javascript " src="{{ url_for( 'static', filename='js/login_script.js' ) }} "></script>
     <script type="text/javascript " src="{{ url_for( 'static', filename='js/sha256.js' ) }} "></script>
+    <script type="text/javascript " src="{{ url_for( 'static', filename='js/profile.js' ) }} "></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -28,9 +32,9 @@
 </head>
 <!-- The #page-top ID is part of the scrolling feature - the data-spy and data-target are part of the built-in Bootstrap scrollspy function -->
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-  {% include 'nav.html' %}
-  {% block content %}
-  {% endblock %}
+{% include 'nav.html' %}
+{% block content %}
+{% endblock %}
 </body>
 
 </html>
