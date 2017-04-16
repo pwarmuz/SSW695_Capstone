@@ -8,7 +8,7 @@
             <form action="/" class="form-inline" method="get">
                 <div class="input-group ">
                     <input type="search" name="search" id="jumbo-search" class="form-control" size="50 "
-                           placeholder="Search for books or by class " value="{{ search_input }}">
+                           placeholder="Search by book title or by class " value="{{ search_input }}">
                     <div class="input-group-btn ">
                         <button class="btn btn-default " type="submit" value="send">
                             <i class="glyphicon glyphicon-search "></i>
@@ -43,7 +43,7 @@
                                 {% if search_input %}
                                     Course results for "{{ search_input }}"
                                 {% else %}
-                                    Top Viewed Courses
+                                    Most Popular Courses
                                 {% endif %}
                                 <span class="badge" style="float:right">{{ courses|count }}</span>
                             </h3>
@@ -67,7 +67,7 @@
                                 {% if search_input %}
                                     Book results for "{{ search_input }}"
                                 {% else %}
-                                    Top Viewed Books
+                                    Most Popular Books
                                 {% endif %}
                                 <span class="badge" style="float:right">{{ books|count }}</span>
                             </h3>

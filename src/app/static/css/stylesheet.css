@@ -24,6 +24,20 @@ body {
 	color: #A32638;
 }
 
+#stv-duck{
+    background-image: url('/static/img/duck.jpg');
+	background-position: left top;
+	background-repeat: no-repeat;
+	background-size: 307px, 251px;
+	background-color: #FFFFFF;
+	padding-left: 5px;
+	color: #1a6ec5;
+	font-size: 24px;
+	font-weight: bold;
+	height: 251px;
+	width: 307px;
+}
+
 .stv-text-red{
     color: #A32638;
 }
@@ -34,6 +48,20 @@ body {
 
 .stv-panel-grey{
 	background-color: #eee;
+}
+
+.stv-background{
+	background-color: #9D1535;
+	color: #eee;
+}
+
+.stv-input-sell{
+    padding: 10px 42px;
+	background-color: #9D1535;
+	color: #BBBCBE;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-top: 5px;
 }
 
 .form-horizontal .control-label.text-left{

@@ -18,24 +18,21 @@ $(function() {
 });
 
 $(function() {
-    $('#btn_isbn').click(function() {
+    $('#btn_sell_book').click(function() {
         $.ajax({
             url: '/set_seller',
             type: 'POST',
             data: {
-                ins_isbn : $('#ins_isbn').val(),
                 ins_price : $('#ins_price').val()
             }
         })
         .done(function (data){
             if(data.error){
-            $('#error_alert').show();
-            $('#notice_error').text(data.error).show();
-            $('#success_alert').hide();
+                $('#error_alert').show();
+                $('#notice_error').text(data.error).show();
+                $('#success_alert').hide();
             } else {
-            $('#success_alert').show();
-            $('#notice_success').text(data.item).show();
-            $('#error_alert').hide();
+                window.location.reload();
             }
         });
         event.preventDefault();

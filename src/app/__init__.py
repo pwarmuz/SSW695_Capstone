@@ -1,8 +1,8 @@
-__version__ = '0.2'
+__version__ = '0.5'
 
 import os
 
-from flask import Flask, render_template, jsonify, request, redirect, url_for
+from flask import Flask, render_template, jsonify, request, redirect, url_for, session
 
 from werkzeug.local import LocalProxy
 from context import get_db
@@ -128,7 +128,8 @@ def submit_form():
     subject = request.form['subject']
     message = request.form['message']
     print(
-        'contact form message from: {0} and email: {1} and subject: {2} and message {3}'.format(username, email,
+        'contact form message from: {0} and email: {1} and subject: {2} and message {3}'.format(username,
+                                                                                                email,
                                                                                                 subject,
                                                                                                 message))
     return redirect(url_for('home'))
@@ -136,14 +137,14 @@ def submit_form():
 
 @flask_app.route('/set_seller', methods=['POST'])
 def set_seller():
-    isbn = request.form['ins_isbn']
+    isbn = session.get('isbn_value', None)
     if books.tools.validate_by_isbn(isbn):
         item_price = request.form['ins_price']
         current_user.list_book(isbn, item_price)
-        return jsonify({'item': isbn + ' has been successfully listed for ' + item_price})
+        return jsonify({'item': "success"})
 
     # abort(404)
-    return jsonify({'error': 'Failed to find book to sell'})
+    return jsonify({'error': 'Failed to list'})
 
 
 @flask_app.route('/rate', methods=['POST'])
