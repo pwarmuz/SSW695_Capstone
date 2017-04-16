@@ -10,7 +10,7 @@ Main page
 */
 body {
     /*Required for NavBar*/
-    padding-top: 50px;
+    padding-top: 60px;
     background-color: #fff;
 }
 
@@ -21,19 +21,52 @@ body {
 
 #stv-search .jumbotron{
 	background-color: #eee;
-	color: #9D1535;
+	color: #A32638;
+}
+
+#stv-duck{
+    background-image: url('/static/img/duck.jpg');
+	background-position: left top;
+	background-repeat: no-repeat;
+	background-size: 307px, 251px;
+	background-color: #FFFFFF;
+	padding-left: 5px;
+	color: #1a6ec5;
+	font-size: 24px;
+	font-weight: bold;
+	height: 251px;
+	width: 307px;
 }
 
 .stv-text-red{
-    color: #9D1535;
+    color: #A32638;
 }
 
 .stv-text-grey{
-    color: #BBBCBE;
+    color: #9A989A;
 }
 
 .stv-panel-grey{
 	background-color: #eee;
+}
+
+.stv-background{
+	background-color: #9D1535;
+	color: #eee;
+}
+
+.stv-input-sell{
+    padding: 10px 42px;
+	background-color: #9D1535;
+	color: #BBBCBE;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-top: 5px;
+}
+
+.form-horizontal .control-label.text-left{
+    /*override labels to allow text left*/
+    text-align: left;
 }
 
 /*
@@ -54,4 +87,24 @@ carousel in about us
 }
 
 
+
+/* Custom Bootstrap Panel Color For Stevens*/
+.panel-stevens {
+  border-color: #A32638;
+}
+.panel-stevens > .panel-heading {
+  color: #fff;
+  background-color: #A32638;
+  border-color: #A32638;
+}
+.panel-stevens > .panel-heading + .panel-collapse > .panel-body {
+  border-top-color: #A32638;
+}
+.panel-stevens > .panel-heading .badge {
+  color: #A32638;
+  background-color: #fff;
+}
+.panel-stevens > .panel-footer + .panel-collapse > .panel-body {
+  border-bottom-color: #A32638;
+}
 
