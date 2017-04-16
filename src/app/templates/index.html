@@ -22,19 +22,6 @@
     <!-- Listing Section -->
     <section id="stv-listing">
         <div class="container ">
-
-            <div class="row" >
-                <nav class="col-sm-12">
-                    <ul class="nav nav-pills" role="tablist">
-                        <li role="presentation"><a href="{{ url_for("courses.display_all_courses") }}">All Courses</a></li>
-                        <li role="presentation"><a href="{{ url_for("courses.display_all_courses") }}">All Books</a></li>
-                        {% if current_user.is_authenticated %}
-                            <li role="presentation"><a href="/profile">Profile</a></li>
-                        {% endif %}
-                    </ul>
-                </nav>
-            </div>
-            <hr>
             <div class="row">
                 <div class="col-md-6">
                     <div class="panel panel-stevens">
