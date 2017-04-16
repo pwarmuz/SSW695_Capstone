@@ -8,8 +8,8 @@ import pymongo
 
 
 def get_book(isbn):
-    """ Get book by isbn
-    :return: book item from db
+    """ Get books by isbn
+    :return: books item from db
     """
     if is_isbn13(isbn) and isbn.startswith("978"):
         isbn = isbn13_to_isbn10(isbn)
@@ -104,7 +104,7 @@ def isbn13_to_isbn10(isbn):
 
 
 def search_titles(input):
-    """ Searches all book titles
+    """ Searches all books titles
     :param: input - the title to search for
     :return: list of books matching the search
     """

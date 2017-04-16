@@ -1,44 +1,43 @@
 {% extends 'template.html' %}
 {% block title %}Welcome to Stevens Book Marketplace{% endblock %}
 {% block content %}
+    <style>
+        body {
+            padding-top: 50px;
+            padding-bottom: 50px;
+            background-color: #E4E5E6;
+        }
+    </style>
     <!-- Search Section -->
     <section id="stv-search">
         <div class="jumbotron text-center">
-            <h1><strong>Stevens Book Marketplace</strong></h1>
-            <form action="/" class="form-inline" method="get">
-                <div class="input-group ">
-                    <input type="search" name="search" id="jumbo-search" class="form-control" size="50 "
-                           placeholder="Search by book title or by class " value="{{ search_input }}">
-                    <div class="input-group-btn ">
-                        <button class="btn btn-default " type="submit" value="send">
-                            <i class="glyphicon glyphicon-search "></i>
-                        </button>
+            <div class="container">
+                <h1>
+                    <div>Stevens Book</div>
+                    <div>Marketplace</div>
+                </h1>
+                <hr style="border-color: #9A989A; max-width:550px;">
+                <form action="/" class="form-inline" method="get">
+                    <div class="input-group ">
+                        <input type="search" name="search" id="jumbo-search" class="form-control" size="50"
+                               placeholder="Search by book title or by class " value="{{ search_input }}">
+                        <div class="input-group-btn ">
+                            <button class="btn btn-default " type="submit" value="send">
+                                <i class="glyphicon glyphicon-search "></i>
+                            </button>
+                        </div>
                     </div>
-                </div>
-            </form>
+                </form>
+            </div>
         </div>
     </section>
-
     <!-- Listing Section -->
     <section id="stv-listing">
         <div class="container ">
-
-            <div class="row" >
-                <nav class="col-sm-12">
-                    <ul class="nav nav-pills" role="tablist">
-                        <li role="presentation"><a href="{{ url_for("courses.display_all_courses") }}">All Courses</a></li>
-                        <li role="presentation"><a href="{{ url_for("courses.display_all_courses") }}">All Books</a></li>
-                        {% if current_user.is_authenticated %}
-                            <li role="presentation"><a href="/profile">Profile</a></li>
-                        {% endif %}
-                    </ul>
-                </nav>
-            </div>
-            <hr>
             <div class="row">
                 <div class="col-md-6">
                     <div class="panel panel-stevens">
-                        <div class="panel-heading">
+                        <div class="panel-heading bookmark">
                             <h3 class="panel-title">
                                 {% if search_input %}
                                     Course results for "{{ search_input }}"
@@ -62,7 +61,7 @@
                 </div>
                 <div class="col-md-6">
                     <div class="panel panel-stevens">
-                        <div class="panel-heading">
+                        <div class="panel-heading bookmark">
                             <h3 class="panel-title">
                                 {% if search_input %}
                                     Book results for "{{ search_input }}"
@@ -75,7 +74,7 @@
                         <ul class="list-group">
                             {% for book in books %}
                                 <a class="list-group-item" href={{ url_for("books.display_book", isbn = book._id) }}>
-                                    {{ book.get('google-metadata', {}).get('volumeInfo', {}).get("title") | default(book.get('stevens-metadata', {}).get('books-title'), True) }}
+                                    {{ book.get('google-metadata', {}).get('volumeInfo', {})["title"] | default(book.get('stevens-metadata', {})["book-title"], false) }}
                                     <span class="badge">{{ book._id }}</span>
                                 </a>
                             {% else %}

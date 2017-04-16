@@ -14,14 +14,16 @@ body {
     background-color: #fff;
 }
 
-.navbar-default{
-	/*background-color: #9D1535;
-	color: #BBBCBE;*/
-}
 
 #stv-search .jumbotron{
-	background-color: #eee;
-	color: #A32638;
+	background-color:   #F5F1E4  ;
+	color:   #363D45;
+    padding-top: 55px;
+    padding-bottom: 55px;
+}
+
+#stv-search  h1{
+    font-family: Georgia, serif;
 }
 
 #stv-duck{
@@ -88,7 +90,7 @@ carousel in about us
 
 
 
-/* Custom Bootstrap Panel Color For Stevens*/
+/* Custom Bootstrap Panel Color For Stevens */
 .panel-stevens {
   border-color: #A32638;
 }
@@ -108,3 +110,172 @@ carousel in about us
   border-bottom-color: #A32638;
 }
 
+.panel-heading.bookmark {
+    padding-left: 37px;
+}
+
+.panel-heading.bookmark:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 24px;
+    border-width: 0 20px 24px 0;
+    border-style: solid;
+    border-color: #FFF;
+    display: block;
+    width: 0;
+}
+
+.panel-heading.bookmark:after {
+    content: "";
+    position: absolute;
+    top: 14px;
+    left: 24px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #A32638;
+
+}
+
+
+
+
+
+
+
+/* Custom Bootstrap Navbar Collapse Point */
+@media (max-width: 995px) {
+  .navbar-header {
+      float: none;
+  }
+  .navbar-left,.navbar-right {
+      float: none !important;
+  }
+  .navbar-toggle {
+      display: block;
+  }
+  .navbar-collapse {
+      border-top: 1px solid transparent;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+  }
+  .navbar-fixed-top {
+      top: 0;
+      border-width: 0 0 1px;
+  }
+  .navbar-collapse.collapse {
+      display: none!important;
+  }
+  .navbar-nav {
+      float: none!important;
+      margin-top: 7.5px;
+  }
+  .navbar-nav>li {
+      float: none;
+  }
+  .navbar-nav>li>a {
+      padding-top: 10px;
+      padding-bottom: 10px;
+  }
+  .collapse.in{
+      display:block !important;
+  }
+}
+
+/* Custom Bootstrap Navbar Color For Stevens */
+.navbar-default {
+    background-color:  #A32638;
+    border-color:  transparent;
+}
+.navbar-default .navbar-brand {
+  color: #FFF;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  color: #FFF;
+  background-color: transparent;
+}
+.navbar-default .navbar-text {
+  color: #FFFFFF;
+}
+.navbar-default .navbar-nav > li > a {
+  color: #FFFFFF;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: #FFFFFF;
+    background-color: #363D45;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+    color: #FFFFFF;
+    background-color: #363D45;
+}
+
+.navbar-default .navbar-toggle {
+  border-color:  Transparent;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color:  Transparent;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #fff;
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-color: #fff;
+}
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+    color: #FFFFFF;
+    background-color: #363D45;
+}
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #777;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #333;
+    background-color: transparent;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #555;
+    background-color: #e7e7e7;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a,
+  .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:focus {
+    color: #ccc;
+    background-color: transparent;
+  }
+}
+.navbar-default .navbar-link {
+  color: #777;
+}
+.navbar-default .navbar-link:hover {
+  color: #333;
+}
+.navbar-default .btn-link {
+  color: #777;
+}
+.navbar-default .btn-link:hover,
+.navbar-default .btn-link:focus {
+  color: #333;
+}
+.navbar-default .btn-link[disabled]:hover,
+fieldset[disabled] .navbar-default .btn-link:hover,
+.navbar-default .btn-link[disabled]:focus,
+fieldset[disabled] .navbar-default .btn-link:focus {
+  color: #ccc;
+}
+
+.navbar {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}

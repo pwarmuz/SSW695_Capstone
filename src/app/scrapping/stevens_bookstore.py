@@ -85,7 +85,7 @@ def parse_book_info(html_doc):
         table = course_elm.find_next("table", {"class": "data"})
         if table is not None:
             # Parse Course Books
-            for book in table.find_all("tr", {"class": "book"}):
+            for book in table.find_all("tr", {"class": "books"}):
                 _class = book.get('class')
                 is_required = 'course-required' in _class
                 is_optional = 'course-optional' in _class
@@ -94,12 +94,12 @@ def parse_book_info(html_doc):
 
                     # Parse Meta Data
                     stevens_metadata = {}
-                    for x in ["book-title", "book-author", "isbn", "book-edition", "book-binding" ]:
+                    for x in ["books-title", "books-author", "isbn", "books-edition", "books-binding" ]:
                         book_metadata_elm = book.find("span", {"class": x})
                         if book_metadata_elm is not None:
                             stevens_metadata[x] = book_metadata_elm.text.replace(u"\u00a0", " ")
 
-                    if stevens_metadata.get("book-title") == 'No Text Required':
+                    if stevens_metadata.get("books-title") == 'No Text Required':
                         break
 
                     book_dict["stevens-metadata"] = stevens_metadata
