@@ -26,10 +26,13 @@
                 <div class="panel-heading">
                     <h3 class="panel-title">
                         {{ department['text'] }}
+                        {% set number_of_courses  = department["children"]|length %}
+                        <span class="badge" style="float:right">{{ number_of_courses }}</span>
                     </h3>
+
                 </div>
                 <div class="panel-body">
-                    {% set n = (department["children"]|length / 3) | round(method="ceil") | int %}
+                    {% set n = (number_of_courses / 3) | round(method="ceil") | int %}
                     <div class="col-md-4">
                         {% for row in department["children"][0:n] %}
                             <a class="course-link" title="{{ row["text"] }}"
