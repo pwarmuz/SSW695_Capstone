@@ -16,8 +16,14 @@ body {
 
 
 #stv-search .jumbotron{
-	background-color: #eee;
-	color: #A32638;
+	background-color:   #F5F1E4  ;
+	color:   #363D45;
+    padding-top: 55px;
+    padding-bottom: 55px;
+}
+
+#stv-search  h1{
+    font-family: Georgia, serif;
 }
 
 #stv-duck{
@@ -103,6 +109,40 @@ carousel in about us
 .panel-stevens > .panel-footer + .panel-collapse > .panel-body {
   border-bottom-color: #A32638;
 }
+
+.panel-heading.bookmark {
+    padding-left: 37px;
+}
+
+.panel-heading.bookmark:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 24px;
+    border-width: 0 20px 24px 0;
+    border-style: solid;
+    border-color: #FFF;
+    display: block;
+    width: 0;
+}
+
+.panel-heading.bookmark:after {
+    content: "";
+    position: absolute;
+    top: 14px;
+    left: 24px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #A32638;
+
+}
+
+
+
+
+
 
 
 /* Custom Bootstrap Navbar Collapse Point */
