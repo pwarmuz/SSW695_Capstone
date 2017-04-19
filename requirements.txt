@@ -1,0 +1,7 @@
+
+flask >= 0.12.1
+pymongo >= 3.4.0
+flask_login >= 0.4.0
+flask_track_usage >= 1.1.0
+python-amazon-product-api >= 0.2.8
+lxml >= 3.5.0
