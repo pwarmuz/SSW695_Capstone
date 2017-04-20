@@ -115,9 +115,12 @@ def contact():
 def profile():
     my_listed = current_user.list_my_books_listed()
     my_listed_count = current_user.count_my_books_listed()
+    my_negotiation = current_user.list_my_books_negotiation()
+    my_negotiation_count = current_user.count_my_books_negotiation()
     my_sold = current_user.list_my_books_sold()
     my_sold_count = current_user.count_my_books_sold()
     return render_template('profile.html', my_listed=my_listed, my_listed_count=my_listed_count
+                           , my_negotiation=my_negotiation, my_negotiation_count=my_negotiation_count
                            , my_sold=my_sold, my_sold_count=my_sold_count)
 
 
@@ -141,10 +144,24 @@ def set_seller():
     if books.tools.validate_by_isbn(isbn):
         item_price = request.form['ins_price']
         current_user.list_book(isbn, item_price)
-        return jsonify({'item': "success"})
+        return jsonify({'item_price': str(item_price)})
 
     # abort(404)
     return jsonify({'error': 'Failed to list'})
+
+
+@flask_app.route('/negotiate/<transaction_id>', methods=['GET'])
+def negotiate(transaction_id):
+    list = {'trans_id': str(transaction_id), 'cond_id': "good"}
+    return jsonify({'negotiate': list})
+
+
+@flask_app.route('/negotiation/<transaction_id>', methods=['POST'])
+def negotiation(transaction_id):
+    # transaction = request.args.get('data.transaction_id', 0, type=int)
+    # int(transaction_id)
+    current_user.buy_into_negotiation(transaction_id)
+    return jsonify({'transaction': str(transaction_id)})
 
 
 @flask_app.route('/rate', methods=['POST'])

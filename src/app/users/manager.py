@@ -2,6 +2,7 @@ from datetime import date
 from app import mongo_client, flask_app
 from werkzeug.security import check_password_hash
 from flask_login import UserMixin, LoginManager
+from bson.objectid import ObjectId
 
 login_manager = LoginManager()
 login_manager.session_protection = "strong"
@@ -54,37 +55,61 @@ class User(UserMixin):
         """
         mongo_client.ssw695.users.update({"_id": str(self.id)}, {"$set": {"rating": rating}})
 
-    def list_book(self, isbn, list_price):
+    def list_book(self, isbn, list_price, condition="poor"):
         """
-        Set the sellers of an isbn books item onto listing page
+        Set the sellers of an isbn book item onto listing page
         """
-        list_date = str(date.today())
+        date_listed = str(date.today())
+        date_sold = str(date.today())
         seller_rating = self._collection.find_one({"_id": self.id}, {"_id": 0, "rating": 1})
-        mongo_client.ssw695.listing.insert({"seller": self.id, "seller_rating": seller_rating, "isbn": isbn, "date": list_date, "price": float(list_price)}, {"unique": 'true'})
+        # valid transaction phases are listed, negotiation, sold
+        mongo_client.ssw695.listing.insert({"seller": self.id, "buyer": "none",
+                                            "seller_rating": seller_rating, "buyer_rating": 0,
+                                            "date_listed": date_listed, "date_sold": date_sold,
+                                            "isbn": isbn, "condition": condition,
+                                            "price": float(list_price), "transaction": "listed"}, {"unique": 'true'})
 
     def list_my_books_listed(self):
         """
-        lists the users items sold
+        lists the books listed
         """
-        return list(mongo_client.ssw695.listing.find({"seller": self.id}))
+        return list(mongo_client.ssw695.listing.find({"seller": self.id, "transaction": "listed"}))
 
     def count_my_books_listed(self):
         """
-        counts the users items sold
+        counts the books listed
         """
-        return len(list(mongo_client.ssw695.listing.find({"seller": self.id})))
+        return mongo_client.ssw695.listing.find({"seller": self.id, "transaction": "listed"}).count()
+
+    def list_my_books_negotiation(self):
+        """
+        lists the books in negotiation
+        """
+        return list(mongo_client.ssw695.listing.find({"seller": self.id, "transaction": "negotiation"}))
+
+    def count_my_books_negotiation(self):
+        """
+        counts the books in negotiation
+        """
+        return mongo_client.ssw695.listing.find({"seller": self.id, "transaction": "negotiation"}).count()
 
     def list_my_books_sold(self):
         """
-        lists the users items sold
+        lists the books sold
         """
-        return list(mongo_client.ssw695.sold.find({"seller": self.id}))
+        return list(mongo_client.ssw695.listing.find({"seller": self.id, "transaction": "sold"}))
 
     def count_my_books_sold(self):
         """
-        counts the users items sold
+        counts the books sold
         """
-        return len(list(mongo_client.ssw695.sold.find({"seller": self.id})))
+        return mongo_client.ssw695.listing.find({"seller": self.id, "transaction": "sold"}).count()
+
+    def buy_into_negotiation(self, transaction):
+        """
+        The user is buying into the negotiation phase
+        """
+        mongo_client.ssw695.listing.update({"_id": ObjectId(str(transaction))}, {"$set": {"buyer": self.id, "buyer_rating": self.rating, "transaction": "negotiation"}})
 
     @property
     def document(self):

@@ -58,17 +58,30 @@ body {
 }
 
 .stv-input-sell{
-    padding: 10px 42px;
+    padding: 8px 10px 8px 10px;
 	background-color: #9D1535;
 	color: #BBBCBE;
     border: 1px solid #ccc;
     border-radius: 6px;
-    margin-top: 5px;
+}
+form .stv-input-sell{
+    margin: 5px auto;
+}
+
+input.currency {
+    text-align: right;
+    padding-right: 4px;
 }
 
 .form-horizontal .control-label.text-left{
     /*override labels to allow text left*/
     text-align: left;
+}
+
+.stv-btn-text-wrap{
+    white-space:normal !important;
+    word-wrap:break-word;
+    word-wrap:normal;
 }
 
 /*

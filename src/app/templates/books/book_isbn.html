@@ -1,8 +1,7 @@
 {% extends 'template.html' %}
 {% block title %}About the Stevens Book Marketplace{% endblock %}
 {% block content %}
-    <!--    A lot of CSS adjustments need to be made
-            Specifically alignment on the buttons and  pagination
+    <!--    Using http://plentz.github.io/jquery-maskmoney/
     -->
     <div class="container-fluid">
         <div class="row">
@@ -28,8 +27,7 @@
                         <small> {{ book.get('google-metadata', {}).get('volumeInfo', {}).get('description', '') }} </small>
                     </dd>
                     <dd>
-                        <small>
-                            Pages: {{ book.get('google-metadata', {}).get('volumeInfo', {}).get('pageCount', '') }} </small>
+                        <small>Pages: {{ book.get('google-metadata', {}).get('volumeInfo', {}).get('pageCount', '') }} </small>
                     </dd>
                     <!--
                     ISBN Identifiers removed
@@ -42,19 +40,28 @@
                 <a role="button" class="btn btn-default btn-lg btn-block" href="{{ amazon_listing.get('url') }}" target="_blank">
                     Amazon: {{ amazon_listing.get('prices')[0] }}
                 </a>
-                <button type="button" class="btn btn-default btn-lg btn-block">
-                    Stevens Price New: ${{ book.get('stevens-pricing', {}).get('new', '0.00')  }}
+                <button type="button" class="btn btn-default btn-lg btn-block stv-btn-text-wrap">
+                    <small>Stevens Price New: ${{ '{0:0.2f}'.format(book.get('stevens-pricing', {}).get('new', '0.00')) }}</small>
                 </button>
                 {% if current_user.is_authenticated %}
                  <form class="form-inline">
-                    <div class="input-group input-lg stv-input-sell">
+                    <div class="input-group stv-input-sell">
                         <div class="input-group-btn">
-                            <button class="btn btn-default" id="btn_sell_book" type="submit" method="post">
-                                <strong>SELL </strong><i class="glyphicon glyphicon-thumbs-up"></i> $
+                            <button class="btn btn-default btn-md" id="btn_sell_book" type="submit" method="post">
+                                <strong>SELL </strong><i class="glyphicon glyphicon-thumbs-up"></i>$
                             </button>
                         </div>
-                        <input type="number" value="{{ book.get('stevens-pricing', {}).get('new','0.00') - 1.00}}" min="0" step="0.01" data-number-to-fixed="2"
-                           data-number-stepfactor="100" class="form-control currency" id="ins_price">
+                        <input type="text" value="{{ '{0:0.2f}'.format(book.get('stevens-pricing', {}).get('new','0.00') - 1.01) }}" class="form-control currency" id="ins_price">
+                        <div class="dropdown">
+                          <button id="dLabel" data-target="#" href="#" class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Condition
+                          <span class="caret"></span></button>
+                          <ul class="dropdown-menu" aria-labelledby="dLabel">
+                              <li><a href="#">Poor</a></li>
+                              <li><a href="#">Acceptable</a></li>
+                              <li><a href="#">Good</a></li>
+                              <li><a href="#">Excellent</a></li>
+                          </ul>
+                        </div>
                     </div>
                 </form>
                 <div id="success_alert" class="alert alert-success alert-dismissible" role="alert" style="display:none;">
@@ -79,40 +86,39 @@
                 <table id="seller_list" class="table table-bordered table-condensed table-hover table-responsive" data-toggle="table">
                     <thead class="stv-background">
                     <tr>
-                        <th data-field="number" data-sortable="true">
-                            Seller
+                        <th data-field="transaction" data-sortable="true">
+                            Transaction
                         </th>
                         <th data-field="seller" data-sortable="true">
+                            Seller
+                        </th>
+                        <th data-field="rating" data-sortable="true">
                             Rating
                         </th>
-                        <th data-field="date" data-sortable="true">
+                        <th data-field="date_listed" data-sortable="true">
                             Date listed
+                        </th>
+                        <th data-field="condition" data-sortable="true">
+                            Condition
                         </th>
                         <th data-field="price" data-sortable="true">
                             Price
                         </th>
+                        <th data-field="buy">
+                            Purchase
+                        </th>
                     </tr>
                     </thead>
                     <tbody>
-
                     {% for seller in seller_list %}
                         {% if seller.price < book.get('stevens-pricing', {}).get('new', '0.00') %}
                         <tr class="success">
-                            <td>
-                                {{ seller.get('seller', "") }}
-                            </td>
-                            <td>
-                                {{ seller.seller_rating.get('rating', "") }}
-                            </td>
-                            <td>
-                                {{ seller.get('date', "") }}
-                            </td>
-                            <td>
-                                {{ seller.get('price', "") }}
-                            </td>
-                        </tr>
                         {% else %}
                         <tr class="warning">
+                        {% endif %}
+                            <td>
+                                {{ seller.get('_id', "") }}
+                            </td>
                             <td>
                                 {{ seller.get('seller', "") }}
                             </td>
@@ -120,17 +126,43 @@
                                 {{ seller.seller_rating.get('rating', "") }}
                             </td>
                             <td>
-                                {{ seller.get('date', "") }}
+                                {{ seller.get('date_listed', "") }}
+                            </td>
+                            <td>
+                                {{ seller.get('condition', "") }}
                             </td>
                             <td>
                                 {{ seller.get('price', "") }}
                             </td>
+                            <td>
+                                <button type="button" data-id="{{ seller.get('_id', '') }}" class="btn btn-default editButton">Buy!</button>
+                            </td>
                         </tr>
-                        {% endif %}
                     {% endfor %}
-
                     </tbody>
                 </table>
+                <!-- Form -->
+                <form id="userForm" method="post" class="form-horizontal" style="display:none;">
+                    <div class="col-xs-12">
+                        <ul class="list-group">
+                            <li class="list-group-item">You will be in negotiation with the seller. You will need to</li>
+                            <li class="list-group-item">Meet up at the <input type="text" class="form-control" name="email" /> at 5PM on Tomorrow</li>
+                            <li class="list-group-item">Exchange the item</li>
+                            <li class="list-group-item">Log back in to close transaction</li>
+                        </ul>
+                    </div>
+                    <div class="form group">
+                        <label class="col-xs-2 control-label">Transaction</label>
+                        <div class="col-xs-5">
+                            <input type="text" class="form-control" name="name" disabled="disabled" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-xs-4 col-xs-offset-8">
+                            <button type="submit" id="buy_now" class="btn btn-default">Buy!</button>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
