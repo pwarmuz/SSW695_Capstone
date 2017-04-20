@@ -85,13 +85,13 @@ class User(UserMixin):
         """
         lists the books in negotiation
         """
-        return list(mongo_client.ssw695.listing.find({"seller": self.id, "transaction": "negotiation"}))
+        return list(mongo_client.ssw695.listing.find({"buyer": self.id, "transaction": "negotiation"}))
 
     def count_my_books_negotiation(self):
         """
         counts the books in negotiation
         """
-        return mongo_client.ssw695.listing.find({"seller": self.id, "transaction": "negotiation"}).count()
+        return mongo_client.ssw695.listing.find({"buyer": self.id, "transaction": "negotiation"}).count()
 
     def list_my_books_sold(self):
         """
