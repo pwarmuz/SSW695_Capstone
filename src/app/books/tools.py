@@ -1,6 +1,7 @@
 """ '/book' tools """
 from app import mongo_client
 import pymongo
+from amazonproduct import API as AWS_API
 
 """
     ISBN algorithms https://en.wikipedia.org/wiki/International_Standard_Book_Number
@@ -119,3 +120,27 @@ def query_sales_listing(isbn):
     :return: list of sales transactions matching the search
     """
     return list(mongo_client.ssw695.listing.find({"isbn": str(isbn), "transaction": "listed"}))
+
+
+def get_amazon_price(isbn):
+    """ Query amazon for the current listed price
+    :param isbn - the isbn to search for
+    :return dict with url and prices
+    """
+
+    api = AWS_API(locale='us')
+
+    result = api.item_lookup(isbn, SearchIndex='All', IdType='ISBN', ResponseGroup='Offers')
+    if not len (result):
+        return None
+
+    r = {}
+    r['url'] = result.Items.Item.Offers.MoreOffersUrl
+
+    prices = []
+    for offer in result.Items.Item.Offers.Offer:
+        prices.append('%s %s' % (offer.OfferListing.Price.FormattedPrice, offer.OfferListing.Price.CurrencyCode))
+
+    r['prices'] = prices
+
+    return r

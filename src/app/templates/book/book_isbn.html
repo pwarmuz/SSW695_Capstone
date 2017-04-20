@@ -38,9 +38,9 @@
                 </dl>
             </div>
             <div class="col-md-2">
-                <button type="button" class="btn btn-default btn-lg btn-block stv-btn-text-wrap">
-                    <small>Amazon Link $Price</small>
-                </button>
+                <a role="button" class="btn btn-default btn-lg btn-block" href="{{ amazon_listing.get('url') }}" target="_blank">
+                    Amazon: {{ amazon_listing.get('prices')[0] }}
+                </a>
                 <button type="button" class="btn btn-default btn-lg btn-block stv-btn-text-wrap">
                     <small>Stevens Price New: ${{ '{0:0.2f}'.format(book.get('stevens-pricing', {}).get('new', '0.00')) }}</small>
                 </button>
