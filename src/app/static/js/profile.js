@@ -3,7 +3,60 @@ jQuery(document).ready(function($) {
     $(".clickable-row").click(function() {
         window.location = $(this).data("href");
     });
+
+    $('#userForm')
+        .submit(function(e){
+            var $form = $(e.target),
+                transaction_id = $form.find('[name="name"]').val();
+
+            $.ajax({
+                url: '/negotiation/' + transaction_id,
+                type: 'POST',
+                success: function(response, data){
+                    var $button = $('button[data-id="'+ response.transaction +'"]');
+                    $button.closest('tr').remove();
+
+                    $form.parents('.bootbox').modal('hide');
+
+                    bootbox.alert('Successful! Please meet the seller to purchase this book.');
+                }
+            });
+            e.preventDefault();
+    });
+
+    $('.editButton')
+        .click(function(){
+            var transaction_id = $(this).attr('data-id');
+
+            $.ajax({
+                url: '/negotiate/' + transaction_id,
+                type: 'GET',
+                success : function(response){
+                    $('#userForm')
+                        .find('[name="name"]').val(response.negotiate.trans_id).end();
+
+                    bootbox
+                        .dialog({
+                            title: 'Purchase this book',
+                            message: $('#userForm'),
+                            show: false
+                        })
+                        .on('shown.bs.modal', function(){
+                            $('#userForm').show();
+                        })
+                        .on('hide.bs.modal', function(e) {
+                            $('#userForm').hide().appendTo('body');
+                        })
+                        .modal('show');
+                }
+            });
+    });
 });
+
+
+$(function() {
+    $('.currency').maskMoney();
+})
 
 $(function() {
     $('#rate_button').click(function() {

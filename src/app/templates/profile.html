@@ -93,22 +93,28 @@
 			<div class="tabbable" id="tabs-844128">
 				<ul class="nav nav-tabs">
 					<li class="active">
-						<a href="#panel-640235" data-toggle="tab" class="stv-background"><span class="badge pull-right">{{ my_listed_count }}</span>Books Listed</a>
+						<a href="#panel-listed" data-toggle="tab" class="stv-background"><span class="badge pull-right">{{ my_listed_count }}</span>Books Listed</a>
 					</li>
 					<li>
-						<a href="#panel-640236" data-toggle="tab" class="stv-background"><span class="badge pull-right">{{ my_sold_count }}</span>Books Sold </a>
+						<a href="#panel-negotiation" data-toggle="tab" class="stv-background"><span class="badge pull-right">{{ my_negotiation_count }}</span>Current Transaction</a>
+					</li>
+					<li>
+						<a href="#panel-sold" data-toggle="tab" class="stv-background"><span class="badge pull-right">{{ my_sold_count }}</span>Books Sold </a>
 					</li>
 				</ul>
 				<div class="tab-content">
-					<div class="tab-pane active" id="panel-640235">
+					<div class="tab-pane active" id="panel-listed">
 						<table id="my_books_listed" class="table table-bordered table-condensed table-hover" data-toggle="table">
 							<thead>
 							<tr>
 								<th data-field="seller" data-sortable="true">
 									Book
 								</th>
-								<th data-field="date" data-sortable="true">
-									Date listed
+								<th data-field="date_listed" data-sortable="true">
+									Date Listed
+								</th>
+								<th data-field="condition" data-sortable="true">
+									Condition
 								</th>
 								<th data-field="price" data-sortable="true">
 									Price
@@ -123,7 +129,10 @@
 									{{ book.get('isbn', "") }}
 								</td>
 								<td>
-									{{ book.get('date', "") }}
+									{{ book.get('date_listed', "") }}
+								</td>
+								<td>
+									{{ book.get('condition', "") }}
 								</td>
 								<td>
 									{{ book.get('price', "") }}
@@ -134,7 +143,55 @@
 							</tbody>
 						</table>
 					</div>
-					<div class="tab-pane" id="panel-640236">
+
+					<div class="tab-pane" id="panel-negotiation">
+						<table id="my_books_transaction" class="table table-bordered table-condensed table-hover" data-toggle="table">
+							<thead>
+							<tr>
+								<th data-field="buyer" data-sortable="true">
+									Buyer
+								</th>
+								<th data-field="isbn" data-sortable="true">
+									Book ISBN
+								</th>
+								<th data-field="date_listed" data-sortable="true">
+									Date Listed
+								</th>
+								<th data-field="condition" data-sortable="true">
+									Condition
+								</th>
+								<th data-field="price" data-sortable="true">
+									Price
+								</th>
+							</tr>
+							</thead>
+							<tbody>
+
+							{% for book in my_negotiation %}
+							<tr class="active">
+								<td>
+									{{ book.get('seller', "") }}
+								</td>
+								<td>
+									{{ book.get('isbn', "") }}
+								</td>
+								<td>
+									{{ book.get('date_listed', "") }}
+								</td>
+								<td>
+									{{ book.get('condition', "") }}
+								</td>
+								<td>
+									{{ book.get('price', "") }}
+								</td>
+							</tr>
+							{% endfor %}
+
+							</tbody>
+						</table>
+					</div>
+
+					<div class="tab-pane" id="panel-sold">
 						<table id="my_books_sold" class="table table-bordered table-condensed table-hover" data-toggle="table">
 							<thead>
 							<tr>
@@ -147,8 +204,11 @@
 								<th data-field="date_sold" data-sortable="true">
 									Date Sold
 								</th>
-								<th data-field="date_list" data-sortable="true">
+								<th data-field="date_listed" data-sortable="true">
 									Date Listed
+								</th>
+								<th data-field="condition" data-sortable="true">
+									Condition
 								</th>
 								<th data-field="price" data-sortable="true">
 									Price
@@ -166,10 +226,13 @@
 									{{ book.get('isbn', "") }}
 								</td>
 								<td>
-									{{ book.get('sold_date', "") }}
+									{{ book.get('date_sold', "") }}
 								</td>
 								<td>
-									{{ book.get('list_date', "") }}
+									{{ book.get('date_listed', "") }}
+								</td>
+								<td>
+									{{ book.get('condition', "") }}
 								</td>
 								<td>
 									{{ book.get('price', "") }}
