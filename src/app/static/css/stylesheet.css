@@ -80,6 +80,10 @@ input.currency {
     word-wrap:normal;
 }
 
+.profile-tabs{
+    width: 33.33%;
+}
+
 /* Login */
 #login-dp{
     min-width: 250px;
