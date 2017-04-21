@@ -57,7 +57,7 @@
 		<div class="col-md-4">
 <!--    Top left settings panel, also includes alert prompts
 -->
-			<h3 class="text-left text-success">
+			<h3 class="text-left">
 				Your Settings
 			</h3>
 			<div class="alert alert-warning alert-dismissable">
@@ -93,19 +93,19 @@
 			<div class="tabbable" id="tabs-844128">
 				<ul class="nav nav-tabs">
 					<li class="active">
-						<a href="#panel-listed" data-toggle="tab" class="stv-background"><span class="badge pull-right">{{ my_listed_count }}</span>Books Listed</a>
+						<a href="#panel-listed" data-toggle="tab" class="stevens-bg">Books Listed <span class="badge">{{ my_listed_count }}</span></a>
 					</li>
 					<li>
-						<a href="#panel-negotiation" data-toggle="tab" class="stv-background"><span class="badge pull-right">{{ my_negotiation_count }}</span>Current Transaction</a>
+						<a href="#panel-negotiation" data-toggle="tab" class="stevens-bg">Current Transaction <span class="badge">{{ my_negotiation_count }}</span></a>
 					</li>
 					<li>
-						<a href="#panel-sold" data-toggle="tab" class="stv-background"><span class="badge pull-right">{{ my_sold_count }}</span>Books Sold </a>
+						<a href="#panel-sold" data-toggle="tab" class="stevens-bg">Books Sold <span class="badge">{{ my_sold_count }}</span></a>
 					</li>
 				</ul>
 				<div class="tab-content">
 					<div class="tab-pane active" id="panel-listed">
 						<table id="my_books_listed" class="table table-bordered table-condensed table-hover" data-toggle="table">
-							<thead>
+							<thead class="stevens-bg">
 							<tr>
 								<th data-field="seller" data-sortable="true">
 									Book
@@ -146,10 +146,10 @@
 
 					<div class="tab-pane" id="panel-negotiation">
 						<table id="my_books_transaction" class="table table-bordered table-condensed table-hover" data-toggle="table">
-							<thead>
+							<thead class="stevens-bg">
 							<tr>
-								<th data-field="seller" data-sortable="true">
-									Seller
+								<th data-field="buyer" data-sortable="true">
+									Buyer <small>(You as the seller)</small>
 								</th>
 								<th data-field="isbn" data-sortable="true">
 									Book ISBN
@@ -167,7 +167,52 @@
 							</thead>
 							<tbody>
 
-							{% for book in my_negotiation %}
+							{% for book in seller_negotiation %}
+							<tr class="active">
+								<td>
+									{{ book.get('buyer', "") }}
+								</td>
+								<td>
+									{{ book.get('isbn', "") }}
+								</td>
+								<td>
+									{{ book.get('date_listed', "") }}
+								</td>
+								<td>
+									{{ book.get('condition', "") }}
+								</td>
+								<td>
+									{{ book.get('price', "") }}
+								</td>
+							</tr>
+							{% endfor %}
+
+							</tbody>
+						</table>
+						<!-- You as the Buyer -->
+						<table id="my_books_transaction" class="table table-bordered table-condensed table-hover" data-toggle="table">
+							<thead class="stevens-bg">
+							<tr>
+								<th data-field="Seller" data-sortable="true">
+									Seller <small>(You as the buyer)</small>
+								</th>
+								<th data-field="isbn" data-sortable="true">
+									Book ISBN
+								</th>
+								<th data-field="date_listed" data-sortable="true">
+									Date Listed
+								</th>
+								<th data-field="condition" data-sortable="true">
+									Condition
+								</th>
+								<th data-field="price" data-sortable="true">
+									Price
+								</th>
+							</tr>
+							</thead>
+							<tbody>
+
+							{% for book in buyer_negotiation %}
 							<tr class="active">
 								<td>
 									{{ book.get('seller', "") }}
@@ -193,7 +238,7 @@
 
 					<div class="tab-pane" id="panel-sold">
 						<table id="my_books_sold" class="table table-bordered table-condensed table-hover" data-toggle="table">
-							<thead>
+							<thead class="stevens-bg">
 							<tr>
 								<th data-field="buyer" data-sortable="true">
 									Buyer
@@ -250,7 +295,7 @@
 		<div class="col-md-4">
 <!-- Information specific to books entries
 -->
-			<h3 class="text-left text-success">
+			<h3 class="text-left">
 				Book listings
 			</h3>
 			<div id="stv-duck">

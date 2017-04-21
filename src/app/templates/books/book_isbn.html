@@ -17,17 +17,17 @@
             </div>
             <div class="col-md-6">
                 <h3>
-                    <strong>{{ book.get('google-metadata', {}).get('volumeInfo', {}).get('title') | default(book.get('stevens-metadata', {}).get('books-title'), True) }}</strong>
+                    <strong>{{ book.get('google-metadata', {}).get('volumeInfo', {})['title'] | default(book.get('stevens-metadata', {})['book-title'], True) }}</strong>
                 </h3>
                 <dl>
                     <dt>
-                        {{ book.get('google-metadata', {}).get('volumeInfo', {}).get('subtitle', "") }}
+                        {{ book.get('google-metadata', {}).get('volumeInfo', {})['subtitle'] }}
                     </dt>
                     <dd>
-                        <small> {{ book.get('google-metadata', {}).get('volumeInfo', {}).get('description', '') }} </small>
+                        <small> {{ book.get('google-metadata', {}).get('volumeInfo', {})['description'] | default("No Description Available", True)}} </small>
                     </dd>
                     <dd>
-                        <small>Pages: {{ book.get('google-metadata', {}).get('volumeInfo', {}).get('pageCount', '') }} </small>
+                        <small>Pages: {{ book.get('google-metadata', {}).get('volumeInfo', {})['pageCount'] | default("N/A", True) }} </small>
                     </dd>
                     <!--
                     ISBN Identifiers removed
@@ -41,12 +41,12 @@
                 <a role="button" class="btn btn-default btn-lg btn-block" href="{{ amazon_listing.get('url') }}" target="_blank">
                     Amazon: {{ amazon_listing.get('prices')[0] }}
                 </a>
-                <button type="button" class="btn btn-default btn-lg btn-block stv-btn-text-wrap">
+                <button type="button" class="btn btn-default btn-lg btn-block btn-stevens text-wrap">
                     <small>Stevens Price New: ${{ '{0:0.2f}'.format(book.get('stevens-pricing', {}).get('new', '0.00')) }}</small>
                 </button>
                 {% if current_user.is_authenticated %}
                  <form class="form-inline">
-                    <div class="input-group stv-input-sell">
+                    <div class="input-group stevens-sell">
                         <div class="input-group-btn">
                             <button class="btn btn-default btn-md" id="btn_sell_book" type="submit" method="post">
                                 <strong>SELL </strong><i class="glyphicon glyphicon-thumbs-up"></i>$
@@ -74,7 +74,7 @@
                     <strong id="notice_error"> </strong>
                 </div>
                 {% else %}
-                    <button type="button" class="btn stv-background btn-lg btn-block">
+                    <button type="button" class="btn stevens-bg btn-lg btn-block">
                         Login to sell yours!
                     </button>
                 {% endif %}
@@ -85,7 +85,7 @@
         <div class="row">
             <div class="col-md-12">
                 <table id="seller_list" class="table table-bordered table-condensed table-hover table-responsive" data-toggle="table">
-                    <thead class="stv-background">
+                    <thead class="stevens-bg">
                     <tr>
                         <th data-field="transaction" data-sortable="true">
                             Transaction

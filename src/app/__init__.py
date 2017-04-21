@@ -115,12 +115,13 @@ def contact():
 def profile():
     my_listed = current_user.list_my_books_listed()
     my_listed_count = current_user.count_my_books_listed()
-    my_negotiation = current_user.list_my_books_negotiation()
+    buyer_negotiation = current_user.list_my_buyer_negotiation()
+    seller_negotiation = current_user.list_my_seller_negotiation()
     my_negotiation_count = current_user.count_my_books_negotiation()
     my_sold = current_user.list_my_books_sold()
     my_sold_count = current_user.count_my_books_sold()
     return render_template('profile.html', my_listed=my_listed, my_listed_count=my_listed_count
-                           , my_negotiation=my_negotiation, my_negotiation_count=my_negotiation_count
+                           , buyer_negotiation=buyer_negotiation, seller_negotiation=seller_negotiation, my_negotiation_count=my_negotiation_count
                            , my_sold=my_sold, my_sold_count=my_sold_count)
 
 

@@ -1,8 +1,8 @@
 /* 
-Stevens Default Red #9D1535
+Stevens Default Red #A32638
 Stevens Hover Red #7e102a
-Stevens Grey #BBBCBE
-Stevens Light-Grey #eee
+Stevens Grey #9A989A
+Stevens Light-Grey #eee #F3DBB3
 */
 
 /*
@@ -40,31 +40,27 @@ body {
 	width: 307px;
 }
 
-.stv-text-red{
-    color: #A32638;
+btn .stevens-bg{
+	background-color: #A32638;
+	color: #fff;
 }
 
-.stv-text-grey{
-    color: #9A989A;
+thead.stevens-bg{
+	background-color: #A32638;
+	color: #fff;
 }
 
-.stv-panel-grey{
-	background-color: #eee;
+a.stevens-bg{
+	background-color: #A32638;
+	color: #fff;
 }
 
-.stv-background{
-	background-color: #9D1535;
-	color: #eee;
-}
-
-.stv-input-sell{
-    padding: 8px 10px 8px 10px;
-	background-color: #9D1535;
-	color: #BBBCBE;
+.stevens-sell{
+    padding: 6px 8px 6px 8px;
+	background-color: #A32638;
+	color: #9A989A;
     border: 1px solid #ccc;
     border-radius: 6px;
-}
-form .stv-input-sell{
     margin: 5px auto;
 }
 
@@ -78,15 +74,13 @@ input.currency {
     text-align: left;
 }
 
-.stv-btn-text-wrap{
+.btn-stevens.text-wrap{
     white-space:normal !important;
     word-wrap:break-word;
     word-wrap:normal;
 }
 
-/*
-Login
-*/
+/* Login */
 #login-dp{
     min-width: 250px;
     padding: 14px 14px 0;
@@ -94,9 +88,7 @@ Login
     background-color:rgba(255,255,255,.8);
 }
 
-/*
-carousel in about us
-*/
+/* carousel in about us */
 .carousel-inner .item active .carousel-caption{
 	color: #7e102a;
 }
