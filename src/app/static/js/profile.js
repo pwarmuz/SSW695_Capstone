@@ -1,5 +1,11 @@
 
 jQuery(document).ready(function($) {
+
+    $('.book-condition').change(function () {
+    var selectedText = $(this).find("option:selected").text();
+    console.log("selected"+ selectedText);
+});
+
     $(".clickable-row").click(function() {
         window.location = $(this).data("href");
     });
@@ -72,11 +78,14 @@ $(function() {
 
 $(function() {
     $('#btn_sell_book').click(function() {
+    var book_condition = $('.book-condition').find("option:selected").text();
+
         $.ajax({
             url: '/set_seller',
             type: 'POST',
             data: {
-                ins_price : $('#ins_price').val()
+                ins_price : $('#ins_price').val(),
+                book_condition : book_condition
             }
         })
         .done(function (data){

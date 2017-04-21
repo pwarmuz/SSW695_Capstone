@@ -55,7 +55,7 @@ class User(UserMixin):
         """
         mongo_client.ssw695.users.update({"_id": str(self.id)}, {"$set": {"rating": rating}})
 
-    def list_book(self, isbn, list_price, condition="poor"):
+    def list_book(self, isbn, list_price, condition):
         """
         Set the sellers of an isbn book item onto listing page
         """
