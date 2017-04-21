@@ -144,7 +144,8 @@ def set_seller():
     isbn = session.get('isbn_value', None)
     if books.tools.validate_by_isbn(isbn):
         item_price = request.form['ins_price']
-        current_user.list_book(isbn, item_price)
+        book_condition = request.form['book_condition']
+        current_user.list_book(isbn, item_price, book_condition)
         return jsonify({'item_price': str(item_price)})
 
     # abort(404)

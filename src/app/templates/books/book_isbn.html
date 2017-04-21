@@ -53,16 +53,12 @@
                             </button>
                         </div>
                         <input type="text" value="{{ '{0:0.2f}'.format(book.get('stevens-pricing', {}).get('new','0.00') - 1.01) }}" class="form-control currency" id="ins_price">
-                        <div class="dropdown">
-                          <button id="dLabel" data-target="#" href="#" class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown_condition" aria-haspopup="true" aria-expanded="false">Condition
-                          <span class="caret"></span></button>
-                          <ul class="dropdown-menu" aria-labelledby="dLabel">
-                              <li><a href="#">Poor</a></li>
-                              <li><a href="#">Acceptable</a></li>
-                              <li><a href="#">Good</a></li>
-                              <li><a href="#">Excellent</a></li>
-                          </ul>
-                        </div>
+                        <select class="form-control book-condition">
+                            <option>Poor</option>
+                            <option>Acceptable</option>
+                            <option>Good</option>
+                            <option>Excellent</option>
+                        </select>
                     </div>
                 </form>
                 <div id="success_alert" class="alert alert-success alert-dismissible" role="alert" style="display:none;">
