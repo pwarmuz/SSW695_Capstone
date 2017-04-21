@@ -81,17 +81,23 @@ class User(UserMixin):
         """
         return mongo_client.ssw695.listing.find({"seller": self.id, "transaction": "listed"}).count()
 
-    def list_my_books_negotiation(self):
+    def list_my_buyer_negotiation(self):
         """
-        lists the books in negotiation
+        lists the books as a buyer in negotiation
         """
         return list(mongo_client.ssw695.listing.find({"buyer": self.id, "transaction": "negotiation"}))
+
+    def list_my_seller_negotiation(self):
+        """
+        lists the books as a seller in negotiation
+        """
+        return list(mongo_client.ssw695.listing.find({"seller": self.id, "transaction": "negotiation"}))
 
     def count_my_books_negotiation(self):
         """
         counts the books in negotiation
         """
-        return mongo_client.ssw695.listing.find({"buyer": self.id, "transaction": "negotiation"}).count()
+        return mongo_client.ssw695.listing.find({"buyer": self.id, "transaction": "negotiation"}).count() + mongo_client.ssw695.listing.find({"seller": self.id, "transaction": "negotiation"}).count()
 
     def list_my_books_sold(self):
         """
