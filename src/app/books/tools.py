@@ -121,6 +121,7 @@ def query_sales_listing(isbn):
     """
     return list(mongo_client.ssw695.listing.find({"isbn": str(isbn), "transaction": "listed"}))
 
+
 def get_amazon_price(isbn):
     """ Query amazon for the current listed price
     :param isbn - the isbn to search for 
@@ -143,3 +144,11 @@ def get_amazon_price(isbn):
     r['prices'] = prices
 
     return r
+
+
+def get_title_by_isbn(isbn):
+    """" Query the isbn to get the book title
+    :param: isbn - the isbn to search for
+    :return: book title
+    """
+    return mongo_client.ssw695.books.find_one({"_id": str(isbn)}, {"_id": 0, "google-metadata.volumeInfo.title": 1})
