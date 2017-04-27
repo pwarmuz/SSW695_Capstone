@@ -133,31 +133,55 @@
                                 {{ seller.get('price', "") }}
                             </td>
                             <td>
-                                <button type="button" data-id="{{ seller.get('_id', '') }}" class="btn btn-default editButton">Buy!</button>
+                                <button type="button" data-id="{{ seller.get('_id', '') }}" class="btn btn-default buy_button">Buy!</button>
                             </td>
                         </tr>
                     {% endfor %}
                     </tbody>
                 </table>
                 <!-- Form -->
-                <form id="userForm" method="post" class="form-horizontal" style="display:none;">
-                    <div class="col-xs-12">
-                        <ul class="list-group">
-                            <li class="list-group-item">You will be in negotiation with the seller. You will need to</li>
-                            <li class="list-group-item">Meet up at the <input type="text" class="form-control" name="email" /> at 5PM on Tomorrow</li>
+                <form id="negotiation_form" method="post" class="form-horizontal" style="display:none;">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            You will be in negotiation with the seller. You will need to select meeting.
+                            <ul class="list-group">
+                            <li class="list-group-item">Where? <select class="form-control meet-location">
+                                        <option>Library</option>
+                                        <option>Howe Building</option>
+                                        </select>
+                                </li>
+                                <li class="list-group-item">When?
+                                    <select class="form-control meet-day">
+                                        <option>Tomorrow</option>
+                                        <option>Day After</option>
+                                    </select>
+                                </li>
+                                <li class="list-group-item">Time?
+                                <select class="form-control meet-time">
+                                    <option>9 AM</option>
+                                    <option>10 AM</option>
+                                    <option>11 AM</option>
+                                    <option>12 AM</option>
+                                    <option>1 PM</option>
+                                    <option>2 PM</option>
+                                    <option>3 PM</option>
+                                    <option>4 PM</option>
+                                    <option>5 PM</option>
+                                </select>
+                                </li>
                             <li class="list-group-item">Exchange the item</li>
                             <li class="list-group-item">Log back in to close transaction</li>
-                        </ul>
-                    </div>
-                    <div class="form group">
-                        <label class="col-xs-2 control-label">Transaction</label>
+                            </ul>
+                            <div class="form group">
                         <div class="col-xs-5">
-                            <input type="text" class="form-control" name="name" disabled="disabled" />
+                            <input type="text" class="form-control" name="name" disabled="disabled" style="display:none;"/>
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="col-xs-4 col-xs-offset-8">
-                            <button type="submit" id="buy_now" class="btn btn-default">Buy!</button>
+                            <button type="submit" class="btn btn-default">Buy!</button>
+                        </div>
+                    </div>
                         </div>
                     </div>
                 </form>

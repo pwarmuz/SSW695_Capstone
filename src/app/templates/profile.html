@@ -163,6 +163,9 @@
 								<th data-field="price" data-sortable="true">
 									Price
 								</th>
+								<th>
+									Negotiation
+								</th>
 							</tr>
 							</thead>
 							<tbody>
@@ -183,6 +186,9 @@
 								</td>
 								<td>
 									{{ book.get('price', "") }}
+								</td>
+								<td>
+									<button type="button" data-id="{{ book.get('_id', '') }}" class="btn btn-default close_button">Close</button>
 								</td>
 							</tr>
 							{% endfor %}
@@ -208,6 +214,9 @@
 								<th data-field="price" data-sortable="true">
 									Price
 								</th>
+								<th>
+									Negotiation
+								</th>
 							</tr>
 							</thead>
 							<tbody>
@@ -228,6 +237,9 @@
 								</td>
 								<td>
 									{{ book.get('price', "") }}
+								</td>
+								<td>
+									<button type="button" data-id="{{ book.get('_id', '') }}" class="btn btn-default close_button">Close</button>
 								</td>
 							</tr>
 							{% endfor %}
@@ -301,6 +313,34 @@
 			</div>
 		</div>
 	</div>
+	<!-- Form -->
+	<form id="transaction_form" method="post" class="form-horizontal" style="display:none;">
+		<div class="col-xs-12">
+			<ul class="list-group">
+				<li class="list-group-item">Please rate the transaction</li>
+				<li class="list-group-item">
+					<select class="form-control user-rating">
+						<option value="Canceled">Cancel Transaction - Failed to show up</option>
+						<option value="* Duck">* Duck Rating</option>
+						<option value="** Duck">** Duck Rating</option>
+						<option value="*** Duck">*** Duck Rating</option>
+						<option value="**** Duck">**** Duck Rating</option>
+						<option value="***** Duck">Five Duck Rating</option>
+					</select>
+				</li>
+			</ul>
+		</div>
+		<div class="form group">
+			<div class="col-xs-5">
+				<input type="text" class="form-control" name="name" disabled="disabled"  style="display:none;"/>
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="col-xs-4 col-xs-offset-8">
+				<button type="submit" class="btn btn-default">Close Transaction</button>
+			</div>
+		</div>
+	</form>
 </div>
 {% endblock %}
 

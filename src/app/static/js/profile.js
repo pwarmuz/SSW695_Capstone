@@ -10,7 +10,7 @@ jQuery(document).ready(function($) {
         window.location = $(this).data("href");
     });
 
-    $('#userForm')
+    $('#negotiation_form')
         .submit(function(e){
             var $form = $(e.target),
                 transaction_id = $form.find('[name="name"]').val();
@@ -30,7 +30,7 @@ jQuery(document).ready(function($) {
             e.preventDefault();
     });
 
-    $('.editButton')
+    $('.buy_button')
         .click(function(){
             var transaction_id = $(this).attr('data-id');
 
@@ -38,20 +38,67 @@ jQuery(document).ready(function($) {
                 url: '/negotiate/' + transaction_id,
                 type: 'GET',
                 success : function(response){
-                    $('#userForm')
-                        .find('[name="name"]').val(response.negotiate.trans_id).end();
+                    $('#negotiation_form').find('[name="name"]').val(response.negotiate.trans_id).end();
 
                     bootbox
                         .dialog({
                             title: 'Purchase this book',
-                            message: $('#userForm'),
+                            message: $('#negotiation_form'),
                             show: false
                         })
                         .on('shown.bs.modal', function(){
-                            $('#userForm').show();
+                            $('#negotiation_form').show();
                         })
                         .on('hide.bs.modal', function(e) {
-                            $('#userForm').hide().appendTo('body');
+                            $('#negotiation_form').hide().appendTo('body');
+                        })
+                        .modal('show');
+                }
+            });
+    });
+
+    $('#transaction_form')
+        .submit(function(e){
+            var $form = $(e.target),
+                transaction_id = $form.find('[name="name"]').val();
+
+            $.ajax({
+                url: '/transaction/' + transaction_id,
+                type: 'POST',
+                success: function(response, data){
+                    var $button = $('button[data-id="'+ response.transaction +'"]');
+                    $button.closest('tr').remove();
+                    var selectedText = $('.user-rating').find("option:selected").val();
+                    console.log("selected "+ selectedText);
+
+                    $form.parents('.bootbox').modal('hide');
+
+                    bootbox.alert('Transaction closed! Thank you for using Stevens Marketplace.');
+                }
+            });
+            e.preventDefault();
+    });
+    $('.close_button')
+        .click(function(){
+            var transaction_id = $(this).attr('data-id');
+            console.log(transaction_id + "value");
+            $.ajax({
+                url: '/transact/' + transaction_id,
+                type: 'GET',
+                success : function(response){
+                    $('#transaction_form').find('[name="name"]').val(response.negotiate.trans_id).end();
+
+                    bootbox
+                        .dialog({
+                            title: 'Rate transaction',
+                            message: $('#transaction_form'),
+                            show: false
+                        })
+                        .on('shown.bs.modal', function(){
+                            $('#transaction_form').show();
+                        })
+                        .on('hide.bs.modal', function(e) {
+                            $('#transaction_form').hide().appendTo('body');
                         })
                         .modal('show');
                 }
