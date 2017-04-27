@@ -25,6 +25,17 @@ def display_book(isbn):
         abort(404)
 
     seller_list = tools.query_sales_listing(isbn)
-    amazon_listing = tools.get_amazon_price(isbn)
+
+    amazon_listing = None
+
+    try:
+        amazon_listing = tools.get_amazon_price(isbn)
+    except:
+        print "error interfacing with the amazon api"
+
     session['isbn_value'] = isbn
     return render_template('books/book_isbn.html', book=book, seller_list=seller_list, amazon_listing=amazon_listing)
+
+
+
+

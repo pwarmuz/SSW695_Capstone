@@ -8,7 +8,7 @@ DEPARTMENTS = {
     "CH": "Chemistry and Chemical Biology",
     "CHE": "Chemical Engineering",
     "CM": "Construction Management",
-    "CPE": "lComputer Engineering",
+    "CPE": "Computer Engineering",
     "CS": "Computer Science",
     "D": "Dean's Offices",
     "E": "Interdepartmental Engineering",

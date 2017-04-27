@@ -30,10 +30,7 @@ flask_app.register_blueprint(courses.blueprint)
 import books
 
 flask_app.register_blueprint(books.blueprint)
-
-import listing
-
-flask_app.register_blueprint(listing.blueprint)
+flask_app.jinja_env.filters['isbn_to_title'] = books.tools.isbn_to_title
 
 import users
 
@@ -46,7 +43,6 @@ with flask_app.app_context():
 
 analytics.include_blueprint(courses.blueprint)
 analytics.include_blueprint(books.blueprint)
-analytics.include_blueprint(listing.blueprint)
 analytics.include_blueprint(users.blueprint)
 
 
