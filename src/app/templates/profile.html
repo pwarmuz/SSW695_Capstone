@@ -123,22 +123,22 @@
 							</thead>
 							<tbody>
 
-							{% for book in my_listed %}
-							<tr class="active clickable-row" data-href="books/{{ book.get('isbn') }}">
-								<td>
-									{{ book.get('isbn', "") }}
-								</td>
-								<td>
-									{{ book.get('date_listed', "") }}
-								</td>
-								<td>
-									{{ book.get('condition', "") }}
-								</td>
-								<td>
-									{{ book.get('price', "") }}
-								</td>
-							</tr>
-							{% endfor %}
+                            {% for book in my_listed %}
+                                <tr class="active">
+                                    <td>
+                                        <a href="books/{{ book.get('isbn') }}">{{ book.get('isbn', "") | isbn_to_title }}</a> <span class="badge pull-right">{{ book.get('isbn', "") }}</span>
+                                    </td>
+                                    <td>
+                                        {{ book.get('date_listed', "") }}
+                                    </td>
+                                    <td>
+                                        {{ book.get('condition', "") }}
+                                    </td>
+                                    <td>
+                                        {{ book.get('price', "") }}
+                                    </td>
+                                </tr>
+                            {% endfor %}
 
 							</tbody>
 						</table>
@@ -152,7 +152,7 @@
 									Buyer <small>(You as the seller)</small>
 								</th>
 								<th data-field="isbn" data-sortable="true">
-									Book ISBN
+									Book
 								</th>
 								<th data-field="date_listed" data-sortable="true">
 									Date Listed
@@ -172,9 +172,9 @@
 								<td>
 									{{ book.get('buyer', "") }}
 								</td>
-								<td>
-									{{ book.get('isbn', "") }}
-								</td>
+                                <td>
+                                    <a href="books/{{ book.get('isbn') }}">{{ book.get('isbn', "") | isbn_to_title }}</a> <span class="badge pull-right">{{ book.get('isbn', "") }}</span>
+                                </td>
 								<td>
 									{{ book.get('date_listed', "") }}
 								</td>
@@ -197,7 +197,7 @@
 									Seller <small>(You as the buyer)</small>
 								</th>
 								<th data-field="isbn" data-sortable="true">
-									Book ISBN
+									Book
 								</th>
 								<th data-field="date_listed" data-sortable="true">
 									Date Listed
@@ -217,9 +217,9 @@
 								<td>
 									{{ book.get('seller', "") }}
 								</td>
-								<td>
-									{{ book.get('isbn', "") }}
-								</td>
+                                <td>
+                                    <a href="books/{{ book.get('isbn') }}">{{ book.get('isbn', "") | isbn_to_title }}</a> <span class="badge pull-right">{{ book.get('isbn', "") }}</span>
+                                </td>
 								<td>
 									{{ book.get('date_listed', "") }}
 								</td>
@@ -244,7 +244,7 @@
 									Buyer
 								</th>
 								<th data-field="isbn" data-sortable="true">
-									Book ISBN
+									Book
 								</th>
 								<th data-field="date_sold" data-sortable="true">
 									Date Sold
@@ -268,7 +268,7 @@
 									{{ book.get('buyer', "") }}
 								</td>
 								<td>
-									{{ book.get('isbn', "") }}
+                                    <a href="books/{{ book.get('isbn') }}">{{ book.get('isbn', "") | isbn_to_title }}</a> <span class="badge pull-right">{{ book.get('isbn', "") }}</span>
 								</td>
 								<td>
 									{{ book.get('date_sold', "") }}

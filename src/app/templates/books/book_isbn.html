@@ -37,10 +37,11 @@
                 </dl>
             </div>
             <div class="col-md-2">
-
-                <a role="button" class="btn btn-default btn-lg btn-block" href="{{ amazon_listing.get('url') }}" target="_blank">
-                    Amazon: {{ amazon_listing.get('prices')[0] }}
-                </a>
+                {% if amazon_listing %}
+                    <a role="button" class="btn btn-default btn-lg btn-block" href="{{ amazon_listing.get('url') }}" target="_blank">
+                        Amazon: {{ amazon_listing.get('prices')[0] }}
+                    </a>
+                {% endif %}
                 <button type="button" class="btn btn-default btn-lg btn-block btn-stevens text-wrap">
                     <small>Stevens Price New: ${{ '{0:0.2f}'.format(book.get('stevens-pricing', {}).get('new', '0.00')) }}</small>
                 </button>

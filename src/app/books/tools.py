@@ -2,7 +2,6 @@
 from app import mongo_client
 import pymongo
 from amazonproduct import API as AWS_API
-
 """
     ISBN algorithms https://en.wikipedia.org/wiki/International_Standard_Book_Number
 """
@@ -109,8 +108,6 @@ def search_titles(input):
     :param: input - the title to search for
     :return: list of books matching the search
     """
-
-    # return mongo_client.ssw695.books.find_one({"$text": {"$search": str(input)}}, {"score": {"$meta": "textScore"}})
     return list(mongo_client.ssw695.books.find({"$text": {"$search": str(input)}}))
 
 
@@ -120,6 +117,7 @@ def query_sales_listing(isbn):
     :return: list of sales transactions matching the search
     """
     return list(mongo_client.ssw695.listing.find({"isbn": str(isbn), "transaction": "listed"}))
+
 
 def get_amazon_price(isbn):
     """ Query amazon for the current listed price
@@ -143,3 +141,13 @@ def get_amazon_price(isbn):
     r['prices'] = prices
 
     return r
+
+
+def isbn_to_title(isbn):
+    """ Convert ISBN to Stevens Book Title """
+    book = get_book(isbn)
+    if book is not None:
+        title = book.get("stevens-metadata", {}).get("book-title")
+        if title is not None:
+            return title
+    return "No Title Found"
