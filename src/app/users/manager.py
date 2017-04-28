@@ -117,6 +117,20 @@ class User(UserMixin):
         """
         mongo_client.ssw695.listing.update({"_id": ObjectId(str(transaction))}, {"$set": {"buyer": self.id, "buyer_rating": self.rating, "transaction": "negotiation"}})
 
+    def close_transaction(self, transaction_id, transaction_state):
+        if transaction_state == "Cancel":
+            mongo_client.ssw695.listing.update({"_id": ObjectId(str(transaction_id))}, {"$set": {"transaction": "listed"}})
+            return
+        value_buyer = mongo_client.ssw695.listing.find_one({"_id": ObjectId(str(transaction_id))}, {"_id": 0, "buyer": 1})
+        value_seller = mongo_client.ssw695.listing.find_one({"_id": ObjectId(str(transaction_id))}, {"_id": 0, "seller": 1})
+        if value_buyer == self.id:
+            mongo_client.ssw695.users.update({"_id": str(value_seller)}, {"$set": {"rating": int(transaction_state)}})
+            print("Seller: " + str(value_seller) + " rated at: " + str(transaction_state))
+        if value_seller == self.id:
+            mongo_client.ssw695.users.update({"_id": str(value_buyer)}, {"$set": {"rating": int(transaction_state)}})
+            print("Buyer: " + str(value_buyer) + " rated at: " + str(transaction_state))
+        mongo_client.ssw695.listing.update({"_id": ObjectId(str(transaction_id))}, {"$set": {"transaction": "sold"}})
+
     @property
     def document(self):
         return self._collection.find_one({"_id": self.id})

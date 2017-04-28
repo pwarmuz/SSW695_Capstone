@@ -160,15 +160,17 @@ def negotiation(transaction_id):
     return jsonify({'transaction': str(transaction_id)})
 
 
-@flask_app.route('/transact/<transaction_id>', methods=['GET'])
-def transact(transaction_id):
-    list = {'trans_id': str(transaction_id), 'cond_id': "good"}
-    return jsonify({'negotiate': list})
+@flask_app.route('/transact/', methods=['POST'])
+def transact():
+    transaction_id = request.form['transaction_id']
+    return jsonify({'transaction_ID': str(transaction_id)})
 
 
-@flask_app.route('/transaction/<transaction_id>', methods=['POST'])
-def transaction(transaction_id):
-    # current_user.buy_into_negotiation(transaction_id)
+@flask_app.route('/transaction/', methods=['POST'])
+def transaction():
+    transaction_id = request.form['transaction_id']
+    transaction_state = request.form['transaction_state']
+    current_user.close_transaction(transaction_id, transaction_state)
     return jsonify({'transaction': str(transaction_id)})
 
 

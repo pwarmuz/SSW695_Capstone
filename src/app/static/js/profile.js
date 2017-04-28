@@ -6,8 +6,8 @@ jQuery(document).ready(function($) {
     console.log("selected"+ selectedText);
 });
 
-    $(".clickable-row").click(function() {
-        window.location = $(this).data("href");
+    $(".reminderr-row").click(function() {
+        bootbox.alert('Transaction closed! Thank you for using Stevens Marketplace.');
     });
 
     $('#negotiation_form')
@@ -60,16 +60,19 @@ jQuery(document).ready(function($) {
     $('#transaction_form')
         .submit(function(e){
             var $form = $(e.target),
-                transaction_id = $form.find('[name="name"]').val();
-
+                transaction_id = $form.find('[name="transaction_id"]').val(),
+                transaction_state = $('.user-rating').find("option:selected").val();
+            console.log("selected "+ transaction_state);
             $.ajax({
-                url: '/transaction/' + transaction_id,
+                url: '/transaction/',
                 type: 'POST',
+                data: {
+                    transaction_id : transaction_id,
+                    transaction_state : transaction_state
+                },
                 success: function(response, data){
                     var $button = $('button[data-id="'+ response.transaction +'"]');
                     $button.closest('tr').remove();
-                    var selectedText = $('.user-rating').find("option:selected").val();
-                    console.log("selected "+ selectedText);
 
                     $form.parents('.bootbox').modal('hide');
 
@@ -81,28 +84,21 @@ jQuery(document).ready(function($) {
     $('.close_button')
         .click(function(){
             var transaction_id = $(this).attr('data-id');
-            console.log(transaction_id + "value");
-            $.ajax({
-                url: '/transact/' + transaction_id,
-                type: 'GET',
-                success : function(response){
-                    $('#transaction_form').find('[name="name"]').val(response.negotiate.trans_id).end();
+            $('#transaction_form').find('[name="transaction_id"]').val(transaction_id).end();
+            bootbox
+                .dialog({
+                    title: 'Rate transaction',
+                    message: $('#transaction_form'),
+                    show: false
+                })
+                .on('shown.bs.modal', function(){
+                    $('#transaction_form').show();
+                })
+                .on('hide.bs.modal', function(e) {
+                    $('#transaction_form').hide().appendTo('body');
+                })
+                .modal('show');
 
-                    bootbox
-                        .dialog({
-                            title: 'Rate transaction',
-                            message: $('#transaction_form'),
-                            show: false
-                        })
-                        .on('shown.bs.modal', function(){
-                            $('#transaction_form').show();
-                        })
-                        .on('hide.bs.modal', function(e) {
-                            $('#transaction_form').hide().appendTo('body');
-                        })
-                        .modal('show');
-                }
-            });
     });
 });
 
