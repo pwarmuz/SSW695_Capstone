@@ -7,6 +7,15 @@ from amazonproduct import API as AWS_API
 """
 
 
+def get_all_books():
+    """ Get All Books
+    :return:
+    """
+    return mongo_client.ssw695.books.aggregate([{"$project": {"_id": 0, "isbn10": "$_id", "title": {
+        "$ifNull": ["$google-metadata.volumeInfo.title", "$stevens-metadata.book-title"]}}},
+                                                {"$sort": {"title": 1}}])
+
+
 def get_book(isbn):
     """ Get books by isbn
     :return: books item from db
