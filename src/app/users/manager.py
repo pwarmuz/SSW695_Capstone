@@ -49,7 +49,7 @@ class User(UserMixin):
         date_listed = str(date.today())
         date_sold = str(date.today())
         location_day = str(date.today())
-        # valid transaction phases are listed, negotiation, pending, sold
+        # valid transaction phases are listed, negotiation, sold
         mongo_client.ssw695.listing.insert({"seller": self.id, "buyer": "none",
                                             "seller_close": False, "buyer_close": False,
                                             "location": "none", "location_time": "8 AM", "location_day": location_day,
@@ -115,6 +115,12 @@ class User(UserMixin):
             return bool(transaction['seller_close'])
         if transaction['buyer'] == self.id:
             return bool(transaction['buyer_close'])
+
+    def am_i_seller(self, transaction_id):
+        transaction = mongo_client.ssw695.listing.find_one({"_id": ObjectId(str(transaction_id))})
+        if transaction['seller'] == self.id:
+            return True
+        return False
 
     def check_status(self, transaction_id):
         other = mongo_client.ssw695.listing.find_one({"_id": ObjectId(str(transaction_id))})

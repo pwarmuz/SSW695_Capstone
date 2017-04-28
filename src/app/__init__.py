@@ -181,6 +181,11 @@ def transaction():
 
     if transaction_state == "Cancel":
         current_user.close_transaction(transaction_id, transaction_state)
+        if current_user.am_i_seller(transaction_id):
+            detailed = current_user.get_details(transaction_id)
+            title = books.tools.isbn_to_title(detailed['isbn'])
+            details = {'isbn': detailed['isbn'], 'title': title, 'price': detailed['price'], 'date_listed': detailed['date_listed'], 'condition': detailed['condition']}
+            return jsonify({'status': 'My_Cancel', 'transaction': transaction_id, 'details': details})
         return jsonify({'status': 'Cancelled', 'transaction': transaction_id})
 
     if not current_user.check_my_closure(transaction_id):

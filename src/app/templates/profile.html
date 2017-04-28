@@ -104,13 +104,13 @@
 			<div class="tabbable" id="tabs-844128">
 				<ul class="nav nav-tabs">
 					<li class="profile-tabs active">
-						<a href="#panel-listed" data-toggle="tab" class="stevens-bg">Books Listed <span class="badge pull-right">{{ my_listed_count }}</span></a>
+						<a href="#panel-listed" data-toggle="tab" class="stevens-bg">Books Listed <span id="listed-value" class="badge pull-right">{{ my_listed_count }}</span></a>
 					</li>
 					<li class="profile-tabs">
-						<a href="#panel-negotiation" data-toggle="tab" class="stevens-bg">Current Transaction <span class="badge pull-right">{{ my_negotiation_count }}</span></a>
+						<a href="#panel-negotiation" data-toggle="tab" class="stevens-bg">Current Transaction <span id="negotiation-value" class="badge pull-right">{{ my_negotiation_count }}</span></a>
 					</li>
 					<li class="profile-tabs">
-						<a href="#panel-sold" data-toggle="tab" class="stevens-bg">Books Sold <span class="badge pull-right">{{ my_sold_count }}</span></a>
+						<a href="#panel-sold" data-toggle="tab" class="stevens-bg">Books Sold <span id="sold-value" class="badge pull-right">{{ my_sold_count }}</span></a>
 					</li>
 				</ul>
 				<div class="tab-content">
@@ -133,7 +133,6 @@
 							</tr>
 							</thead>
 							<tbody>
-
                             {% for book in my_listed %}
                                 <tr class="active">
                                     <td>
@@ -150,7 +149,6 @@
                                     </td>
                                 </tr>
                             {% endfor %}
-
 							</tbody>
 						</table>
 					</div>
