@@ -59,6 +59,9 @@
 			<h3 class="text-left">
 				Your Settings
 			</h3>
+			<p>
+				Welcome back! {{ current_user.name }}
+			</p>
 			<p><strong>Your Rating</strong>
 				{% if current_user.rating < 2 %}
 					<span class="label pull-right label-danger">{{ current_user.id | current_stars}} Ducks</span>

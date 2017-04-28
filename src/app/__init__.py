@@ -171,13 +171,22 @@ def negotiation():
 
 @flask_app.route('/transaction/', methods=['POST'])
 def transaction():
+    """
+    checks if the user has closed their side of the transaction
+    if both have closed it then it finalizes it as a sold transaction
+    :return:
+    """
     transaction_id = request.form['transaction_id']
     transaction_state = request.form['transaction_state']
-    current_user.close_transaction(transaction_id, transaction_state)
-    return jsonify({'transaction': str(transaction_id)})
 
+    if transaction_state == "Cancel":
+        current_user.close_transaction(transaction_id, transaction_state)
+        return jsonify({'status': 'Cancelled', 'transaction': transaction_id})
 
-@flask_app.route('/rate', methods=['POST'])
-def rate():
-    rating = request.form['rating_val']
-    current_user.set_rating(rating)
+    if not current_user.check_my_closure(transaction_id):
+        current_user.close_transaction(transaction_id, transaction_state)
+
+    if current_user.check_status(transaction_id):
+        return jsonify({'status': 'Closed', 'transaction': transaction_id})
+
+    return jsonify({'status': 'Pending', 'transaction': transaction_id})
