@@ -59,8 +59,9 @@ jQuery(document).ready(function($) {
         .submit(function(e){
             var $form = $(e.target),
                 transaction_id = $form.find('[name="transaction_id"]').val(),
-                transaction_state = $('.user-rating').find("option:selected").val();
-
+                transaction_state = $('.user-rating').find("option:selected").val(),
+                listed_value = $('#listed-value').text();
+                negotiation_value = $('#negotiation-value').text();
             $.ajax({
                 url: '/transaction/',
                 type: 'POST',
@@ -72,6 +73,16 @@ jQuery(document).ready(function($) {
                     if (response.status == 'Cancelled'){
                         var $button = $('button[data-id="'+ response.transaction +'"]');
                         $button.closest('tr').remove();
+                        $('#negotiation-value').text(negotiation_value - 1);
+                        $form.parents('.bootbox').modal('hide');
+                        bootbox.alert('Transaction Cancelled! Thank you for using Stevens Marketplace.');
+                    }
+                    if (response.status == 'My_Cancel'){
+                        var $button = $('button[data-id="'+ response.transaction +'"]');
+                        $button.closest('tr').remove();
+                        $('#negotiation-value').text(negotiation_value - 1);
+                        $('#listed-value').text(function(i,listed_value){ return +listed_value + 1});
+                        $('#my_books_listed > tbody:last-child').append('<tr class="active"><td><a href="/books/' + response.details.isbn + '">' + response.details.title  + '</a> <span class="badge pull-right">' + response.details.isbn + '</span></td><td>'+ response.details.date_listed +'</td><td>'+ response.details.condition +'</td><td>'+ response.details.price +'</td></tr>');
                         $form.parents('.bootbox').modal('hide');
                         bootbox.alert('Transaction Cancelled! Thank you for using Stevens Marketplace.');
                     }
