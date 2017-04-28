@@ -45,3 +45,9 @@ def current_rating(email):
         if user_rating is not None:
             return user_rating
     return "User Not Rated"
+
+
+def current_stars(email):
+    """ Retrieve rating for filter """
+    stars = int(round(current_rating(email), 0))
+    return '*' * stars

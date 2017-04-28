@@ -59,7 +59,15 @@
 			<h3 class="text-left">
 				Your Settings
 			</h3>
-			<p><strong>Your Rating</strong><span class="badge pull-right">{{ current_user.rating }}</span></p>
+			<p><strong>Your Rating</strong>
+				{% if current_user.rating < 2 %}
+					<span class="label pull-right label-danger">{{ current_user.id | current_stars}} Ducks</span>
+				{% elif current_user.rating > 3 %}
+					<span class="label pull-right label-success">{{ current_user.id | current_stars}} Ducks</span>
+				{% else %}
+					<span class="label pull-right label-warning">{{ current_user.id | current_stars}} Ducks</span>
+				{% endif %}
+			</p>
 			<div class="alert alert-warning alert-dismissable">
 
 				<button type="button" class="close" data-dismiss="alert" aria-hidden="true">
@@ -157,13 +165,13 @@
 								<th data-field="date_listed" data-sortable="true">
 									Date Listed
 								</th>
-								<th data-field="condition" data-sortable="true">
-									Condition
-								</th>
 								<th data-field="price" data-sortable="true">
 									Price
 								</th>
-								<th>
+								<th data-field="details" data-sortable="false">
+									Details
+								</th>
+								<th data-field="negotiation" data-sortable="false">
 									Negotiation
 								</th>
 							</tr>
@@ -171,7 +179,7 @@
 							<tbody>
 
 							{% for book in seller_negotiation %}
-							<tr class="active reminder-row">
+							<tr class="active">
 								<td>
 									{{ book.get('buyer', "") }}
 								</td>
@@ -182,10 +190,10 @@
 									{{ book.get('date_listed', "") }}
 								</td>
 								<td>
-									{{ book.get('condition', "") }}
+									{{ book.get('price', "") }}
 								</td>
 								<td>
-									{{ book.get('price', "") }}
+									<button type="button" data-id="{{ book.get('_id', '') }}" class="btn btn-default details_button">Details</button>
 								</td>
 								<td>
 									<button type="button" data-id="{{ book.get('_id', '') }}" class="btn btn-default close_button">Close</button>
@@ -208,13 +216,13 @@
 								<th data-field="date_listed" data-sortable="true">
 									Date Listed
 								</th>
-								<th data-field="condition" data-sortable="true">
-									Condition
-								</th>
 								<th data-field="price" data-sortable="true">
 									Price
 								</th>
-								<th>
+								<th data-field="details" data-sortable="false">
+									Details
+								</th>
+								<th data-field="negotiation" data-sortable="false">
 									Negotiation
 								</th>
 							</tr>
@@ -222,7 +230,7 @@
 							<tbody>
 
 							{% for book in buyer_negotiation %}
-							<tr class="active reminder-row">
+							<tr class="active">
 								<td>
 									{{ book.get('seller', "") }}
 								</td>
@@ -233,10 +241,10 @@
 									{{ book.get('date_listed', "") }}
 								</td>
 								<td>
-									{{ book.get('condition', "") }}
+									{{ book.get('price', "") }}
 								</td>
 								<td>
-									{{ book.get('price', "") }}
+									<button type="button" data-id="{{ book.get('_id', '') }}" class="btn btn-default details_button">Details</button>
 								</td>
 								<td>
 									<button type="button" data-id="{{ book.get('_id', '') }}" class="btn btn-default close_button">Close</button>
@@ -341,6 +349,20 @@
 			<div class="col-xs-4 col-xs-offset-8">
 				<button type="submit" class="btn btn-default">Close Transaction</button>
 			</div>
+		</div>
+	</form>
+	<!-- Form -->
+	<form id="details_form" method="post" class="form-horizontal" style="display:none;">
+		<div class="col-xs-12">
+			<ul class="list-group">
+				<li class="list-group-item">Transaction: <input type="text" class="form-control" name="transaction_id" disabled="disabled" /></li>
+				<li class="list-group-item">Location:<input type="text" class="form-control" name="location" disabled="disabled" /></li>
+				<li class="list-group-item">Meet Data:<input type="text" class="form-control" name="meet_date" disabled="disabled" /></li>
+				<li class="list-group-item">Meet Time:<input type="text" class="form-control" name="time" disabled="disabled" /></li>
+				<li class="list-group-item">Condition:<input type="text" class="form-control" name="condition" disabled="disabled" /></li>
+			</ul>
+		</div>
+		<div class="form-group">
 		</div>
 	</form>
 </div>

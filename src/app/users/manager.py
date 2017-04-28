@@ -21,13 +21,6 @@ def load_user(userid):
     return User.get(userid)
 
 
-def poll_user_rating(user_name):
-    """
-    polls the usernames of a listing to get rating
-    """
-    return mongo_client.ssw695.listing.find_one({"_id": user_name}, {"_id": 0, "rating": 1})
-
-
 class User(UserMixin):
     """
     User Class for flask-Login
@@ -48,12 +41,6 @@ class User(UserMixin):
         """
         doc = cls._collection.find_one({"_id": id})
         return User(id) if doc is not None else None
-
-    def set_rating(self, rating):
-        """
-        Set rating for user
-        """
-        mongo_client.ssw695.users.update({"_id": str(self.id)}, {"$set": {"rating": rating}})
 
     def list_book(self, isbn, list_price, condition):
         """
@@ -109,15 +96,16 @@ class User(UserMixin):
         """
         counts the books sold
         """
-        return mongo_client.ssw695.listing.find({"seller": self.id, "transaction": "sold"}).count()
+        return mongo_client.ssw695.listing.find({"seller": self.id, "transaction": "sold"}).count() + mongo_client.ssw695.listing.find({"buyer": self.id, "transaction": "sold"}).count()
 
     def buy_into_negotiation(self, transaction, transaction_location, transaction_day, transaction_time):
         """
         The user is buying into the negotiation phase
         """
-        meet_date = date.today() + timedelta(days=transaction_day)
+        meet_date = date.today() + timedelta(days=int(transaction_day))
+        print("meet data" + str(meet_date))
         mongo_client.ssw695.listing.update({"_id": ObjectId(str(transaction))}, {"$set": {"buyer": self.id,
-                                                                                          "location": str(transaction_location), "location_time": str(transaction_time), "location_day": meet_date,
+                                                                                          "location": str(transaction_location), "location_time": str(transaction_time), "location_day": str(meet_date),
                                                                                           "transaction": "negotiation"}})
 
     def close_transaction(self, transaction_id, transaction_state):
@@ -126,10 +114,19 @@ class User(UserMixin):
             return
         other = mongo_client.ssw695.listing.find_one({"_id": ObjectId(str(transaction_id))}, {"_id": 0, "buyer": 1, "seller": 1})
         if other['buyer'] == self.id:
-            mongo_client.ssw695.users.update({"_id": str(other['seller'])}, {"$set": {"rating": int(transaction_state)}})
+            user = mongo_client.ssw695.users.find_one({"_id": str(other['seller'])})
+            update_rating = user.get("rating")
+            update_rating = (update_rating + int(transaction_state)) / 2
+            mongo_client.ssw695.users.update({"_id": str(other['seller'])}, {"$set": {"rating": float(update_rating)}})
         if other['seller'] == self.id:
-            mongo_client.ssw695.users.update({"_id": str(other['buyer'])}, {"$set": {"rating": int(transaction_state)}})
+            user = mongo_client.ssw695.users.find_one({"_id": str(other['seller'])})
+            update_rating = user.get("rating")
+            update_rating = (update_rating + int(transaction_state)) / 2
+            mongo_client.ssw695.users.update({"_id": str(other['buyer'])}, {"$set": {"rating": float(update_rating)}})
         mongo_client.ssw695.listing.update({"_id": ObjectId(str(transaction_id))}, {"$set": {"transaction": "sold"}})
+
+    def get_details(self, transaction_id):
+        return mongo_client.ssw695.listing.find_one({"_id": ObjectId(str(transaction_id))})
 
     @property
     def document(self):

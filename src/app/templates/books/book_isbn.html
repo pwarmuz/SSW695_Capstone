@@ -84,9 +84,6 @@
                 <table id="seller_list" class="table table-bordered table-condensed table-hover table-responsive" data-toggle="table">
                     <thead class="stevens-bg">
                     <tr>
-                        <th data-field="transaction" data-sortable="true">
-                            Transaction
-                        </th>
                         <th data-field="seller" data-sortable="true">
                             Seller
                         </th>
@@ -115,13 +112,10 @@
                         <tr class="warning">
                         {% endif %}
                             <td>
-                                {{ seller.get('_id', "") }}
-                            </td>
-                            <td>
                                 {{ seller.get('seller', "") }}
                             </td>
                             <td>
-                                {{ seller.get('seller', "") | current_rating }}
+                                {{ seller.get('seller', "") | current_stars }}
                             </td>
                             <td>
                                 {{ seller.get('date_listed', "") }}
@@ -174,7 +168,7 @@
                             <li class="list-group-item">Log back in to close transaction</li>
                             </ul>
                             <div class="form group">
-                        <div class="col-xs-5">
+                        <div class="col-xs-6">
                             <input type="text" class="form-control" name="transaction_id" disabled="disabled"/>
                         </div>
                     </div>

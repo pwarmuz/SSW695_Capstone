@@ -37,7 +37,7 @@ import users
 
 flask_app.register_blueprint(users.blueprint)
 users.login_manager.init_app(flask_app)
-flask_app.jinja_env.filters['current_rating'] = users.tools.current_rating
+flask_app.jinja_env.filters['current_stars'] = users.tools.current_stars
 
 with flask_app.app_context():
     flask_app.session_interface = users.SessionInterface(mongo_client)
@@ -148,6 +148,15 @@ def set_seller():
 
     # abort(404)
     return jsonify({'error': 'Failed to list'})
+
+
+@flask_app.route('/details/', methods=['POST'])
+def details():
+    transaction_id = request.form['transaction_id']
+    detailed = current_user.get_details(transaction_id)
+    details = {'location': detailed['location'], 'location_day': detailed['location_day'],
+               'location_time': detailed['location_time'], 'condition': detailed['condition']}
+    return jsonify({'details': details})
 
 
 @flask_app.route('/negotiation/', methods=['POST'])

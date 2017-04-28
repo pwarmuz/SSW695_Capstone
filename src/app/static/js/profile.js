@@ -6,10 +6,6 @@ jQuery(document).ready(function($) {
     console.log("selected"+ selectedText);
     });
 
-    $(".reminderr-row").click(function() {
-        bootbox.alert('Transaction closed! Thank you for using Stevens Marketplace.');
-    });
-
     $('#negotiation_form')
         .submit(function(e){
             var $form = $(e.target),
@@ -102,6 +98,39 @@ jQuery(document).ready(function($) {
                 .modal('show');
 
     });
+
+    $('.details_button')
+        .click(function(){
+            var transaction_id = $(this).attr('data-id');
+
+            $.ajax({
+                url: '/details/',
+                type: 'POST',
+                data: {
+                    transaction_id : transaction_id
+                },
+                success: function(response, data){
+                    $('#details_form').find('[name="transaction_id"]').val(transaction_id).end(),
+                    $('#details_form').find('[name="location"]').val(response.details.location).end(),
+                    $('#details_form').find('[name="meet_date"]').val(response.details.location_day).end(),
+                    $('#details_form').find('[name="time"]').val(response.details.location_time).end(),
+                    $('#details_form').find('[name="condition"]').val(response.details.condition).end();
+                    bootbox
+                        .dialog({
+                            title: 'Details for this negotiation',
+                            message: $('#details_form'),
+                            show: false
+                        })
+                        .on('shown.bs.modal', function(){
+                            $('#details_form').show();
+                        })
+                        .on('hide.bs.modal', function(e) {
+                            $('#details_form').hide().appendTo('body');
+                        })
+                        .modal('show');
+                }
+            });
+    });
 });
 
 
@@ -109,17 +138,6 @@ $(function() {
     $('.currency').maskMoney();
 })
 
-$(function() {
-    $('#rate_button').click(function() {
-        $.ajax({
-            url: '/rate',
-            type: 'POST',
-            data: {
-                rating_val : $('#rating_val').val()
-            }
-        });
-    });
-});
 
 $(function() {
     $('#btn_sell_book').click(function() {
