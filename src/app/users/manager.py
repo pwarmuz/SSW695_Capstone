@@ -49,8 +49,9 @@ class User(UserMixin):
         date_listed = str(date.today())
         date_sold = str(date.today())
         location_day = str(date.today())
-        # valid transaction phases are listed, negotiation, sold
+        # valid transaction phases are listed, negotiation, pending, sold
         mongo_client.ssw695.listing.insert({"seller": self.id, "buyer": "none",
+                                            "seller_close": False, "buyer_close": False,
                                             "location": "none", "location_time": "8 AM", "location_day": location_day,
                                             "date_listed": date_listed, "date_sold": date_sold,
                                             "isbn": isbn, "condition": condition,
@@ -108,22 +109,41 @@ class User(UserMixin):
                                                                                           "location": str(transaction_location), "location_time": str(transaction_time), "location_day": str(meet_date),
                                                                                           "transaction": "negotiation"}})
 
+    def check_my_closure(self, transaction_id):
+        transaction = mongo_client.ssw695.listing.find_one({"_id": ObjectId(str(transaction_id))})
+        if transaction['seller'] == self.id:
+            return bool(transaction['seller_close'])
+        if transaction['buyer'] == self.id:
+            return bool(transaction['buyer_close'])
+
+    def check_status(self, transaction_id):
+        other = mongo_client.ssw695.listing.find_one({"_id": ObjectId(str(transaction_id))})
+        if other['buyer_close'] == True and other['seller_close'] == True:
+            return True
+        return False
+
     def close_transaction(self, transaction_id, transaction_state):
         if transaction_state == "Cancel":
             mongo_client.ssw695.listing.update({"_id": ObjectId(str(transaction_id))}, {"$set": {"transaction": "listed"}})
-            return
-        other = mongo_client.ssw695.listing.find_one({"_id": ObjectId(str(transaction_id))}, {"_id": 0, "buyer": 1, "seller": 1})
-        if other['buyer'] == self.id:
+            return False
+        other = mongo_client.ssw695.listing.find_one({"_id": ObjectId(str(transaction_id))})
+        if other['buyer'] == self.id and other['buyer_close'] == False:
             user = mongo_client.ssw695.users.find_one({"_id": str(other['seller'])})
             update_rating = user.get("rating")
             update_rating = (update_rating + int(transaction_state)) / 2
             mongo_client.ssw695.users.update({"_id": str(other['seller'])}, {"$set": {"rating": float(update_rating)}})
-        if other['seller'] == self.id:
+            mongo_client.ssw695.listing.update({"_id": ObjectId(str(transaction_id))}, {"$set": {"buyer_close": True}})
+        if other['seller'] == self.id and other['seller_close'] == False:
             user = mongo_client.ssw695.users.find_one({"_id": str(other['seller'])})
             update_rating = user.get("rating")
             update_rating = (update_rating + int(transaction_state)) / 2
             mongo_client.ssw695.users.update({"_id": str(other['buyer'])}, {"$set": {"rating": float(update_rating)}})
-        mongo_client.ssw695.listing.update({"_id": ObjectId(str(transaction_id))}, {"$set": {"transaction": "sold"}})
+            mongo_client.ssw695.listing.update({"_id": ObjectId(str(transaction_id))}, {"$set": {"seller_close": True}})
+        other = mongo_client.ssw695.listing.find_one({"_id": ObjectId(str(transaction_id))})
+        if bool(other['buyer_close']) and bool(other['buyer_close']):
+            mongo_client.ssw695.listing.update({"_id": ObjectId(str(transaction_id))}, {"$set": {"transaction": "sold"}})
+            return True
+        return False
 
     def get_details(self, transaction_id):
         return mongo_client.ssw695.listing.find_one({"_id": ObjectId(str(transaction_id))})
@@ -135,6 +155,10 @@ class User(UserMixin):
     @property
     def rating(self):
         return self.document.get("rating")
+
+    @property
+    def name(self):
+        return self.document.get("name")
 
     def check_password(self, password):
         doc = self.document

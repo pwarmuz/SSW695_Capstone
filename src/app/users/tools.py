@@ -16,7 +16,7 @@ def generate_password(pw_length=12, valid_chars=string.ascii_letters + string.di
     return "".join(random.choice(valid_chars) for i in range(pw_length))
 
 
-def create_new_user(email, password=None, is_admin=False):
+def create_new_user(email, name, password=None, is_admin=False):
     """ Create new users
 
     """
@@ -27,7 +27,7 @@ def create_new_user(email, password=None, is_admin=False):
 
     # Insert the users in the DB
     try:
-        mongo_client.ssw695.users.insert({"_id": email, "password": password_hash, "is_admin": is_admin, "rating": 3})
+        mongo_client.ssw695.users.insert({"_id": email, "name": name, "password": password_hash, "is_admin": is_admin, "rating": 3.0})
     except pymongo.errors.DuplicateKeyError:
         return {"success": False, "message": "Email already exists"}
     return {"success": True, "message": "User created successfully"}

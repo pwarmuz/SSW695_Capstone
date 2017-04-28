@@ -68,13 +68,28 @@ jQuery(document).ready(function($) {
                     transaction_id : transaction_id,
                     transaction_state : transaction_state
                 },
-                success: function(response, data){
-                    var $button = $('button[data-id="'+ response.transaction +'"]');
-                    $button.closest('tr').remove();
-
-                    $form.parents('.bootbox').modal('hide');
-
-                    bootbox.alert('Transaction closed! Thank you for using Stevens Marketplace.');
+                success: function(response){
+                    if (response.status == 'Cancelled'){
+                        var $button = $('button[data-id="'+ response.transaction +'"]');
+                        $button.closest('tr').remove();
+                        $form.parents('.bootbox').modal('hide');
+                        bootbox.alert('Transaction Cancelled! Thank you for using Stevens Marketplace.');
+                    }
+                    if (response.status == 'Closed'){
+                        $form.parents('.bootbox').modal('hide');
+                        bootbox.alert('Transaction Closed! Thank you for using Stevens Marketplace.');
+                        window.location.reload();
+                    }
+                    if (response.status == 'Pending'){
+                        var $button = $('button[data-id="'+ response.transaction +'"]');
+                        $button.prop("disabled",true);
+                        $form.parents('.bootbox').modal('hide');
+                        bootbox.alert('Transaction Pending! Thank you for using Stevens Marketplace.');
+                    }
+                    if (response.status == 'Unknown'){
+                        $form.parents('.bootbox').modal('hide');
+                        bootbox.alert('Something Bad happened');
+                    }
                 }
             });
             e.preventDefault();

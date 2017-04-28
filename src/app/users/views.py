@@ -23,10 +23,11 @@ def signup():
 
     print 'adding email: {0} password: {1}'.format(email, password)
 
-    ret = tools.create_new_user(email=email, 
+    ret = tools.create_new_user(email=email,
+                                name=name,
                                 password=password)
 
-    if ret.get('success') == True:
+    if ret.get('success'):
         user = User(email)
         login_user(user)
 
