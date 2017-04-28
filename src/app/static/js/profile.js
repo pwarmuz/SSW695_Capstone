@@ -4,7 +4,7 @@ jQuery(document).ready(function($) {
     $('.book-condition').change(function () {
     var selectedText = $(this).find("option:selected").text();
     console.log("selected"+ selectedText);
-});
+    });
 
     $(".reminderr-row").click(function() {
         bootbox.alert('Transaction closed! Thank you for using Stevens Marketplace.');
@@ -13,11 +13,20 @@ jQuery(document).ready(function($) {
     $('#negotiation_form')
         .submit(function(e){
             var $form = $(e.target),
-                transaction_id = $form.find('[name="name"]').val();
+                transaction_id = $form.find('[name="transaction_id"]').val(),
+                transaction_location = $('.meet-location').find("option:selected").text(),
+                transaction_day = $('.meet-day').find("option:selected").val(),
+                transaction_time = $('.meet-time').find("option:selected").text();
 
             $.ajax({
-                url: '/negotiation/' + transaction_id,
+                url: '/negotiation/',
                 type: 'POST',
+                data: {
+                    transaction_id : transaction_id,
+                    transaction_location : transaction_location,
+                    transaction_day : transaction_day,
+                    transaction_time : transaction_time
+                },
                 success: function(response, data){
                     var $button = $('button[data-id="'+ response.transaction +'"]');
                     $button.closest('tr').remove();
@@ -33,28 +42,21 @@ jQuery(document).ready(function($) {
     $('.buy_button')
         .click(function(){
             var transaction_id = $(this).attr('data-id');
+            $('#negotiation_form').find('[name="transaction_id"]').val(transaction_id).end();
 
-            $.ajax({
-                url: '/negotiate/' + transaction_id,
-                type: 'GET',
-                success : function(response){
-                    $('#negotiation_form').find('[name="name"]').val(response.negotiate.trans_id).end();
-
-                    bootbox
-                        .dialog({
-                            title: 'Purchase this book',
-                            message: $('#negotiation_form'),
-                            show: false
-                        })
-                        .on('shown.bs.modal', function(){
-                            $('#negotiation_form').show();
-                        })
-                        .on('hide.bs.modal', function(e) {
-                            $('#negotiation_form').hide().appendTo('body');
-                        })
-                        .modal('show');
-                }
-            });
+            bootbox
+                .dialog({
+                    title: 'Purchase this book',
+                    message: $('#negotiation_form'),
+                    show: false
+                })
+                .on('shown.bs.modal', function(){
+                    $('#negotiation_form').show();
+                })
+                .on('hide.bs.modal', function(e) {
+                    $('#negotiation_form').hide().appendTo('body');
+                })
+                .modal('show');
     });
 
     $('#transaction_form')
@@ -62,7 +64,7 @@ jQuery(document).ready(function($) {
             var $form = $(e.target),
                 transaction_id = $form.find('[name="transaction_id"]').val(),
                 transaction_state = $('.user-rating').find("option:selected").val();
-            console.log("selected "+ transaction_state);
+
             $.ajax({
                 url: '/transaction/',
                 type: 'POST',

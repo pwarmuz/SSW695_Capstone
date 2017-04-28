@@ -32,10 +32,12 @@ import books
 flask_app.register_blueprint(books.blueprint)
 flask_app.jinja_env.filters['isbn_to_title'] = books.tools.isbn_to_title
 
+
 import users
 
 flask_app.register_blueprint(users.blueprint)
 users.login_manager.init_app(flask_app)
+flask_app.jinja_env.filters['current_rating'] = users.tools.current_rating
 
 with flask_app.app_context():
     flask_app.session_interface = users.SessionInterface(mongo_client)
@@ -148,22 +150,14 @@ def set_seller():
     return jsonify({'error': 'Failed to list'})
 
 
-@flask_app.route('/negotiate/<transaction_id>', methods=['GET'])
-def negotiate(transaction_id):
-    list = {'trans_id': str(transaction_id), 'cond_id': "good"}
-    return jsonify({'negotiate': list})
-
-
-@flask_app.route('/negotiation/<transaction_id>', methods=['POST'])
-def negotiation(transaction_id):
-    current_user.buy_into_negotiation(transaction_id)
-    return jsonify({'transaction': str(transaction_id)})
-
-
-@flask_app.route('/transact/', methods=['POST'])
-def transact():
+@flask_app.route('/negotiation/', methods=['POST'])
+def negotiation():
     transaction_id = request.form['transaction_id']
-    return jsonify({'transaction_ID': str(transaction_id)})
+    transaction_location = request.form['transaction_location']
+    transaction_day = request.form['transaction_day']
+    transaction_time = request.form['transaction_time']
+    current_user.buy_into_negotiation(transaction_id, transaction_location, transaction_day, transaction_time)
+    return jsonify({'transaction': str(transaction_id)})
 
 
 @flask_app.route('/transaction/', methods=['POST'])

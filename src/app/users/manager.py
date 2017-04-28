@@ -1,4 +1,4 @@
-from datetime import date
+from datetime import date, timedelta
 from app import mongo_client, flask_app
 from werkzeug.security import check_password_hash
 from flask_login import UserMixin, LoginManager
@@ -61,10 +61,10 @@ class User(UserMixin):
         """
         date_listed = str(date.today())
         date_sold = str(date.today())
-        seller_rating = self._collection.find_one({"_id": self.id}, {"_id": 0, "rating": 1})
+        location_day = str(date.today())
         # valid transaction phases are listed, negotiation, sold
         mongo_client.ssw695.listing.insert({"seller": self.id, "buyer": "none",
-                                            "seller_rating": seller_rating, "buyer_rating": 0,
+                                            "location": "none", "location_time": "8 AM", "location_day": location_day,
                                             "date_listed": date_listed, "date_sold": date_sold,
                                             "isbn": isbn, "condition": condition,
                                             "price": float(list_price), "transaction": "listed"}, {"unique": 'true'})
@@ -111,11 +111,14 @@ class User(UserMixin):
         """
         return mongo_client.ssw695.listing.find({"seller": self.id, "transaction": "sold"}).count()
 
-    def buy_into_negotiation(self, transaction):
+    def buy_into_negotiation(self, transaction, transaction_location, transaction_day, transaction_time):
         """
         The user is buying into the negotiation phase
         """
-        mongo_client.ssw695.listing.update({"_id": ObjectId(str(transaction))}, {"$set": {"buyer": self.id, "buyer_rating": self.rating, "transaction": "negotiation"}})
+        meet_date = date.today() + timedelta(days=transaction_day)
+        mongo_client.ssw695.listing.update({"_id": ObjectId(str(transaction))}, {"$set": {"buyer": self.id,
+                                                                                          "location": str(transaction_location), "location_time": str(transaction_time), "location_day": meet_date,
+                                                                                          "transaction": "negotiation"}})
 
     def close_transaction(self, transaction_id, transaction_state):
         if transaction_state == "Cancel":

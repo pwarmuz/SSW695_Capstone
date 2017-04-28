@@ -121,7 +121,7 @@
                                 {{ seller.get('seller', "") }}
                             </td>
                             <td>
-                                {{ seller.seller_rating.get('rating', "") }}
+                                {{ seller.get('seller', "") | current_rating }}
                             </td>
                             <td>
                                 {{ seller.get('date_listed', "") }}
@@ -143,7 +143,7 @@
                 <form id="negotiation_form" method="post" class="form-horizontal" style="display:none;">
                     <div class="row">
                         <div class="col-xs-12">
-                            You will be in negotiation with the seller. You will need to select meeting.
+                            You will be in negotiation with the seller. You will need to select the meeting.
                             <ul class="list-group">
                             <li class="list-group-item">Where? <select class="form-control meet-location">
                                         <option>Library</option>
@@ -152,8 +152,9 @@
                                 </li>
                                 <li class="list-group-item">When?
                                     <select class="form-control meet-day">
-                                        <option>Tomorrow</option>
-                                        <option>Day After</option>
+                                        <option value="0">Today</option>
+                                        <option value="1">Tomorrow</option>
+                                        <option value="2">Day After</option>
                                     </select>
                                 </li>
                                 <li class="list-group-item">Time?
@@ -174,7 +175,7 @@
                             </ul>
                             <div class="form group">
                         <div class="col-xs-5">
-                            <input type="text" class="form-control" name="name" disabled="disabled" style="display:none;"/>
+                            <input type="text" class="form-control" name="transaction_id" disabled="disabled"/>
                         </div>
                     </div>
                     <div class="form-group">
