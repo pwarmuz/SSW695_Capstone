@@ -4,20 +4,25 @@ jQuery(document).ready(function($) {
     $('.book-condition').change(function () {
     var selectedText = $(this).find("option:selected").text();
     console.log("selected"+ selectedText);
-});
-
-    $(".clickable-row").click(function() {
-        window.location = $(this).data("href");
     });
 
     $('#negotiation_form')
         .submit(function(e){
             var $form = $(e.target),
-                transaction_id = $form.find('[name="name"]').val();
+                transaction_id = $form.find('[name="transaction_id"]').val(),
+                transaction_location = $('.meet-location').find("option:selected").text(),
+                transaction_day = $('.meet-day').find("option:selected").val(),
+                transaction_time = $('.meet-time').find("option:selected").text();
 
             $.ajax({
-                url: '/negotiation/' + transaction_id,
+                url: '/negotiation/',
                 type: 'POST',
+                data: {
+                    transaction_id : transaction_id,
+                    transaction_location : transaction_location,
+                    transaction_day : transaction_day,
+                    transaction_time : transaction_time
+                },
                 success: function(response, data){
                     var $button = $('button[data-id="'+ response.transaction +'"]');
                     $button.closest('tr').remove();
@@ -33,43 +38,39 @@ jQuery(document).ready(function($) {
     $('.buy_button')
         .click(function(){
             var transaction_id = $(this).attr('data-id');
+            $('#negotiation_form').find('[name="transaction_id"]').val(transaction_id).end();
 
-            $.ajax({
-                url: '/negotiate/' + transaction_id,
-                type: 'GET',
-                success : function(response){
-                    $('#negotiation_form').find('[name="name"]').val(response.negotiate.trans_id).end();
-
-                    bootbox
-                        .dialog({
-                            title: 'Purchase this book',
-                            message: $('#negotiation_form'),
-                            show: false
-                        })
-                        .on('shown.bs.modal', function(){
-                            $('#negotiation_form').show();
-                        })
-                        .on('hide.bs.modal', function(e) {
-                            $('#negotiation_form').hide().appendTo('body');
-                        })
-                        .modal('show');
-                }
-            });
+            bootbox
+                .dialog({
+                    title: 'Purchase this book',
+                    message: $('#negotiation_form'),
+                    show: false
+                })
+                .on('shown.bs.modal', function(){
+                    $('#negotiation_form').show();
+                })
+                .on('hide.bs.modal', function(e) {
+                    $('#negotiation_form').hide().appendTo('body');
+                })
+                .modal('show');
     });
 
     $('#transaction_form')
         .submit(function(e){
             var $form = $(e.target),
-                transaction_id = $form.find('[name="name"]').val();
+                transaction_id = $form.find('[name="transaction_id"]').val(),
+                transaction_state = $('.user-rating').find("option:selected").val();
 
             $.ajax({
-                url: '/transaction/' + transaction_id,
+                url: '/transaction/',
                 type: 'POST',
+                data: {
+                    transaction_id : transaction_id,
+                    transaction_state : transaction_state
+                },
                 success: function(response, data){
                     var $button = $('button[data-id="'+ response.transaction +'"]');
                     $button.closest('tr').remove();
-                    var selectedText = $('.user-rating').find("option:selected").val();
-                    console.log("selected "+ selectedText);
 
                     $form.parents('.bootbox').modal('hide');
 
@@ -81,24 +82,50 @@ jQuery(document).ready(function($) {
     $('.close_button')
         .click(function(){
             var transaction_id = $(this).attr('data-id');
-            console.log(transaction_id + "value");
-            $.ajax({
-                url: '/transact/' + transaction_id,
-                type: 'GET',
-                success : function(response){
-                    $('#transaction_form').find('[name="name"]').val(response.negotiate.trans_id).end();
+            $('#transaction_form').find('[name="transaction_id"]').val(transaction_id).end();
+            bootbox
+                .dialog({
+                    title: 'Rate transaction',
+                    message: $('#transaction_form'),
+                    show: false
+                })
+                .on('shown.bs.modal', function(){
+                    $('#transaction_form').show();
+                })
+                .on('hide.bs.modal', function(e) {
+                    $('#transaction_form').hide().appendTo('body');
+                })
+                .modal('show');
 
+    });
+
+    $('.details_button')
+        .click(function(){
+            var transaction_id = $(this).attr('data-id');
+
+            $.ajax({
+                url: '/details/',
+                type: 'POST',
+                data: {
+                    transaction_id : transaction_id
+                },
+                success: function(response, data){
+                    $('#details_form').find('[name="transaction_id"]').val(transaction_id).end(),
+                    $('#details_form').find('[name="location"]').val(response.details.location).end(),
+                    $('#details_form').find('[name="meet_date"]').val(response.details.location_day).end(),
+                    $('#details_form').find('[name="time"]').val(response.details.location_time).end(),
+                    $('#details_form').find('[name="condition"]').val(response.details.condition).end();
                     bootbox
                         .dialog({
-                            title: 'Rate transaction',
-                            message: $('#transaction_form'),
+                            title: 'Details for this negotiation',
+                            message: $('#details_form'),
                             show: false
                         })
                         .on('shown.bs.modal', function(){
-                            $('#transaction_form').show();
+                            $('#details_form').show();
                         })
                         .on('hide.bs.modal', function(e) {
-                            $('#transaction_form').hide().appendTo('body');
+                            $('#details_form').hide().appendTo('body');
                         })
                         .modal('show');
                 }
@@ -111,17 +138,6 @@ $(function() {
     $('.currency').maskMoney();
 })
 
-$(function() {
-    $('#rate_button').click(function() {
-        $.ajax({
-            url: '/rate',
-            type: 'POST',
-            data: {
-                rating_val : $('#rating_val').val()
-            }
-        });
-    });
-});
 
 $(function() {
     $('#btn_sell_book').click(function() {

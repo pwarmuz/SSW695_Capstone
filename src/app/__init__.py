@@ -32,10 +32,12 @@ import books
 flask_app.register_blueprint(books.blueprint)
 flask_app.jinja_env.filters['isbn_to_title'] = books.tools.isbn_to_title
 
+
 import users
 
 flask_app.register_blueprint(users.blueprint)
 users.login_manager.init_app(flask_app)
+flask_app.jinja_env.filters['current_stars'] = users.tools.current_stars
 
 with flask_app.app_context():
     flask_app.session_interface = users.SessionInterface(mongo_client)
@@ -148,27 +150,30 @@ def set_seller():
     return jsonify({'error': 'Failed to list'})
 
 
-@flask_app.route('/negotiate/<transaction_id>', methods=['GET'])
-def negotiate(transaction_id):
-    list = {'trans_id': str(transaction_id), 'cond_id': "good"}
-    return jsonify({'negotiate': list})
+@flask_app.route('/details/', methods=['POST'])
+def details():
+    transaction_id = request.form['transaction_id']
+    detailed = current_user.get_details(transaction_id)
+    details = {'location': detailed['location'], 'location_day': detailed['location_day'],
+               'location_time': detailed['location_time'], 'condition': detailed['condition']}
+    return jsonify({'details': details})
 
 
-@flask_app.route('/negotiation/<transaction_id>', methods=['POST'])
-def negotiation(transaction_id):
-    current_user.buy_into_negotiation(transaction_id)
+@flask_app.route('/negotiation/', methods=['POST'])
+def negotiation():
+    transaction_id = request.form['transaction_id']
+    transaction_location = request.form['transaction_location']
+    transaction_day = request.form['transaction_day']
+    transaction_time = request.form['transaction_time']
+    current_user.buy_into_negotiation(transaction_id, transaction_location, transaction_day, transaction_time)
     return jsonify({'transaction': str(transaction_id)})
 
 
-@flask_app.route('/transact/<transaction_id>', methods=['GET'])
-def transact(transaction_id):
-    list = {'trans_id': str(transaction_id), 'cond_id': "good"}
-    return jsonify({'negotiate': list})
-
-
-@flask_app.route('/transaction/<transaction_id>', methods=['POST'])
-def transaction(transaction_id):
-    # current_user.buy_into_negotiation(transaction_id)
+@flask_app.route('/transaction/', methods=['POST'])
+def transaction():
+    transaction_id = request.form['transaction_id']
+    transaction_state = request.form['transaction_state']
+    current_user.close_transaction(transaction_id, transaction_state)
     return jsonify({'transaction': str(transaction_id)})
 
 

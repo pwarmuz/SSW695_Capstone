@@ -31,3 +31,23 @@ def create_new_user(email, password=None, is_admin=False):
     except pymongo.errors.DuplicateKeyError:
         return {"success": False, "message": "Email already exists"}
     return {"success": True, "message": "User created successfully"}
+
+
+def get_user(email):
+    return mongo_client.ssw695.users.find_one({"_id": email})
+
+
+def current_rating(email):
+    """ Retrieve rating for filter """
+    user = get_user(email)
+    if user is not None:
+        user_rating = user.get("rating")
+        if user_rating is not None:
+            return user_rating
+    return "User Not Rated"
+
+
+def current_stars(email):
+    """ Retrieve rating for filter """
+    stars = int(round(current_rating(email), 0))
+    return '*' * stars
