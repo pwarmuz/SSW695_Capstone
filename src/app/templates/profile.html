@@ -197,7 +197,12 @@
 									<button type="button" data-id="{{ book.get('_id', '') }}" class="btn btn-default details_button">Details</button>
 								</td>
 								<td>
+									{% if current_user.check_my_closure(book.get('_id')) %}
+									<button type="button" data-id="{{ book.get('_id', '') }}" class="btn btn-default" disabled>Close</button>
+									{% else %}
 									<button type="button" data-id="{{ book.get('_id', '') }}" class="btn btn-default close_button">Close</button>
+									{% endif %}
+
 								</td>
 							</tr>
 							{% endfor %}
