@@ -9,7 +9,7 @@ blueprint = Blueprint('books', __name__, url_prefix="/books")
 @blueprint.route('/')
 def display_all_books():
     """ Display All Books """
-    return render_template('books/all.html')
+    return render_template('books/all.html', books=list(tools.get_all_books()))
 
 
 @blueprint.route('/<isbn>')

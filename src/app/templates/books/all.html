@@ -1,8 +1,49 @@
 {% extends 'template.html' %}
 {% block title %}Books{% endblock %}
 {% block content %}
+        <style>
+        .book-link {
+            font-size: 11px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin: 0;
+            padding-left: 0;
+            display: block;
+        }
+    </style>
     <div class="container">
         <h2>Books</h2>
         <hr>
+
+        <div class="panel panel-stevens">
+            <div class="panel-heading">
+                <h3 class="panel-title">
+                    &nbsp;
+                    {% set number_of_books  = books|length %}
+                    <span class="badge" style="float:right">{{ number_of_books }}</span>
+                </h3>
+            </div>
+            <div class="panel-body">
+                {% set n = (number_of_books / 3) | round(method="ceil") | int %}
+                <div class="col-md-4">
+                    {% for book in books[0:n] %}
+                        <a class="book-link" title="{{ book["title"] }}" href="./{{ book["isbn10"] }}">{{ book["title"] }}</a>
+                    {% endfor %}
+                </div>
+                <div class="col-md-4">
+                    {% for book in books[n:n*2] %}
+                        <a class="book-link" title="{{ book["title"] }}" href="./{{ book["isbn10"] }}">{{ book["title"] }}</a>
+                    {% endfor %}
+                </div>
+                <div class="col-md-4">
+                    {% for book in books[n*2:] %}
+                        <a class="book-link" title="{{ book["title"] }}" href="./{{ book["isbn10"] }}">{{ book["title"] }}</a>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+
     </div>
 {% endblock %}
