@@ -103,7 +103,7 @@ class User(UserMixin):
         """
         lists the books sold
         """
-        return list(mongo_client.ssw695.listing.find({"seller": self.id, "transaction": "sold"}))
+        return list(mongo_client.ssw695.listing.find({"seller": self.id, "transaction": "sold"})) + list(mongo_client.ssw695.listing.find({"buyer": self.id, "transaction": "sold"}))
 
     def count_my_books_sold(self):
         """
@@ -121,14 +121,11 @@ class User(UserMixin):
         if transaction_state == "Cancel":
             mongo_client.ssw695.listing.update({"_id": ObjectId(str(transaction_id))}, {"$set": {"transaction": "listed"}})
             return
-        value_buyer = mongo_client.ssw695.listing.find_one({"_id": ObjectId(str(transaction_id))}, {"_id": 0, "buyer": 1})
-        value_seller = mongo_client.ssw695.listing.find_one({"_id": ObjectId(str(transaction_id))}, {"_id": 0, "seller": 1})
-        if value_buyer == self.id:
-            mongo_client.ssw695.users.update({"_id": str(value_seller)}, {"$set": {"rating": int(transaction_state)}})
-            print("Seller: " + str(value_seller) + " rated at: " + str(transaction_state))
-        if value_seller == self.id:
-            mongo_client.ssw695.users.update({"_id": str(value_buyer)}, {"$set": {"rating": int(transaction_state)}})
-            print("Buyer: " + str(value_buyer) + " rated at: " + str(transaction_state))
+        other = mongo_client.ssw695.listing.find_one({"_id": ObjectId(str(transaction_id))}, {"_id": 0, "buyer": 1, "seller": 1})
+        if other['buyer'] == self.id:
+            mongo_client.ssw695.users.update({"_id": str(other['seller'])}, {"$set": {"rating": int(transaction_state)}})
+        if other['seller'] == self.id:
+            mongo_client.ssw695.users.update({"_id": str(other['buyer'])}, {"$set": {"rating": int(transaction_state)}})
         mongo_client.ssw695.listing.update({"_id": ObjectId(str(transaction_id))}, {"$set": {"transaction": "sold"}})
 
     @property

@@ -255,6 +255,9 @@
 								<th data-field="buyer" data-sortable="true">
 									Buyer
 								</th>
+								<th data-field="seller" data-sortable="true">
+									Seller
+								</th>
 								<th data-field="isbn" data-sortable="true">
 									Book
 								</th>
@@ -278,6 +281,9 @@
 							<tr class="active">
 								<td>
 									{{ book.get('buyer', "") }}
+								</td>
+								<td>
+									{{ book.get('seller', "") }}
 								</td>
 								<td>
                                     <a href="books/{{ book.get('isbn') }}">{{ book.get('isbn', "") | isbn_to_title }}</a> <span class="badge pull-right">{{ book.get('isbn', "") }}</span>
