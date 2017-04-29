@@ -93,7 +93,7 @@ jQuery(document).ready(function($) {
                     }
                     if (response.status == 'Pending'){
                         var $button = $('button[data-id="'+ response.transaction +'"]');
-                        $button.prop("disabled",true);
+                        $button.closest('.close_button').prop("disabled",true);
                         $form.parents('.bootbox').modal('hide');
                         bootbox.alert('Transaction Pending! Thank you for using Stevens Marketplace.');
                     }

@@ -146,7 +146,7 @@ class User(UserMixin):
             mongo_client.ssw695.users.update({"_id": str(other['buyer'])}, {"$set": {"rating": float(update_rating)}})
             mongo_client.ssw695.listing.update({"_id": ObjectId(str(transaction_id))}, {"$set": {"seller_close": True}})
         other = mongo_client.ssw695.listing.find_one({"_id": ObjectId(str(transaction_id))})
-        if bool(other['buyer_close']) and bool(other['buyer_close']):
+        if bool(other['buyer_close']) and bool(other['seller_close']):
             mongo_client.ssw695.listing.update({"_id": ObjectId(str(transaction_id))}, {"$set": {"transaction": "sold"}})
             return True
         return False
