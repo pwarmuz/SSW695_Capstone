@@ -116,7 +116,7 @@ def query_sales_listing(isbn):
     :param: isbn - the isbn to search for
     :return: list of sales transactions matching the search
     """
-    return list(mongo_client.ssw695.listing.find({"isbn": str(isbn), "transaction": "listed"}))
+    return list(mongo_client.ssw695.listing.find({"isbn": str(isbn), "transaction": "listed"}).sort('price', 1))
 
 
 def get_amazon_price(isbn):
