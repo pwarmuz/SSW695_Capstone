@@ -30,15 +30,14 @@ flask_app.register_blueprint(courses.blueprint)
 import books
 
 flask_app.register_blueprint(books.blueprint)
+flask_app.jinja_env.filters['isbn_to_title'] = books.tools.isbn_to_title
 
-import listing
-
-flask_app.register_blueprint(listing.blueprint)
 
 import users
 
 flask_app.register_blueprint(users.blueprint)
 users.login_manager.init_app(flask_app)
+flask_app.jinja_env.filters['current_stars'] = users.tools.current_stars
 
 with flask_app.app_context():
     flask_app.session_interface = users.SessionInterface(mongo_client)
@@ -46,7 +45,6 @@ with flask_app.app_context():
 
 analytics.include_blueprint(courses.blueprint)
 analytics.include_blueprint(books.blueprint)
-analytics.include_blueprint(listing.blueprint)
 analytics.include_blueprint(users.blueprint)
 
 
@@ -115,9 +113,13 @@ def contact():
 def profile():
     my_listed = current_user.list_my_books_listed()
     my_listed_count = current_user.count_my_books_listed()
+    buyer_negotiation = current_user.list_my_buyer_negotiation()
+    seller_negotiation = current_user.list_my_seller_negotiation()
+    my_negotiation_count = current_user.count_my_books_negotiation()
     my_sold = current_user.list_my_books_sold()
     my_sold_count = current_user.count_my_books_sold()
     return render_template('profile.html', my_listed=my_listed, my_listed_count=my_listed_count
+                           , buyer_negotiation=buyer_negotiation, seller_negotiation=seller_negotiation, my_negotiation_count=my_negotiation_count
                            , my_sold=my_sold, my_sold_count=my_sold_count)
 
 
@@ -140,14 +142,56 @@ def set_seller():
     isbn = session.get('isbn_value', None)
     if books.tools.validate_by_isbn(isbn):
         item_price = request.form['ins_price']
-        current_user.list_book(isbn, item_price)
-        return jsonify({'item': "success"})
+        book_condition = request.form['book_condition']
+        current_user.list_book(isbn, item_price, book_condition)
+        return jsonify({'item_price': str(item_price)})
 
     # abort(404)
     return jsonify({'error': 'Failed to list'})
 
 
-@flask_app.route('/rate', methods=['POST'])
-def rate():
-    rating = request.form['rating_val']
-    current_user.set_rating(rating)
+@flask_app.route('/details/', methods=['POST'])
+def details():
+    transaction_id = request.form['transaction_id']
+    detailed = current_user.get_details(transaction_id)
+    details = {'location': detailed['location'], 'location_day': detailed['location_day'],
+               'location_time': detailed['location_time'], 'condition': detailed['condition']}
+    return jsonify({'details': details})
+
+
+@flask_app.route('/negotiation/', methods=['POST'])
+def negotiation():
+    transaction_id = request.form['transaction_id']
+    transaction_location = request.form['transaction_location']
+    transaction_day = request.form['transaction_day']
+    transaction_time = request.form['transaction_time']
+    current_user.buy_into_negotiation(transaction_id, transaction_location, transaction_day, transaction_time)
+    return jsonify({'transaction': str(transaction_id)})
+
+
+@flask_app.route('/transaction/', methods=['POST'])
+def transaction():
+    """
+    checks if the user has closed their side of the transaction
+    if both have closed it then it finalizes it as a sold transaction
+    :return:
+    """
+    transaction_id = request.form['transaction_id']
+    transaction_state = request.form['transaction_state']
+
+    if transaction_state == "Cancel":
+        current_user.close_transaction(transaction_id, transaction_state)
+        if current_user.am_i_seller(transaction_id):
+            detailed = current_user.get_details(transaction_id)
+            title = books.tools.isbn_to_title(detailed['isbn'])
+            details = {'isbn': detailed['isbn'], 'title': title, 'price': detailed['price'], 'date_listed': detailed['date_listed'], 'condition': detailed['condition']}
+            return jsonify({'status': 'My_Cancel', 'transaction': transaction_id, 'details': details})
+        return jsonify({'status': 'Cancelled', 'transaction': transaction_id})
+
+    if not current_user.check_my_closure(transaction_id):
+        current_user.close_transaction(transaction_id, transaction_state)
+
+    if current_user.check_status(transaction_id):
+        return jsonify({'status': 'Closed', 'transaction': transaction_id})
+
+    return jsonify({'status': 'Pending', 'transaction': transaction_id})

@@ -7,7 +7,7 @@
 		<div class="col-md-7">
 <!--    Account information panel
         Remember me maybe useless, It's intent to to let people stay logged in when they close the page.
-        Disable book notification is an option that allows users to get emails about book prompts
+        Disable books notification is an option that allows users to get emails about books prompts
 -->
 			<form class="form-horizontal" role="form">
 				<div class="form-group">
@@ -55,11 +55,22 @@
 			</form>
 		</div>
 		<div class="col-md-4">
-<!--    Top left settings panel, also includes alert prompts
--->
-			<h3 class="text-left text-success">
+<!--    Top left settings panel, also includes alert prompts-->
+			<h3 class="text-left">
 				Your Settings
 			</h3>
+			<p>
+				Welcome back! {{ current_user.name }}
+			</p>
+			<p><strong>Your Rating</strong>
+				{% if current_user.rating < 2 %}
+					<span class="label pull-right label-danger">{{ current_user.id | current_stars}} Ducks</span>
+				{% elif current_user.rating > 3 %}
+					<span class="label pull-right label-success">{{ current_user.id | current_stars}} Ducks</span>
+				{% else %}
+					<span class="label pull-right label-warning">{{ current_user.id | current_stars}} Ducks</span>
+				{% endif %}
+			</p>
 			<div class="alert alert-warning alert-dismissable">
 
 				<button type="button" class="close" data-dismiss="alert" aria-hidden="true">
@@ -92,23 +103,29 @@
 -->
 			<div class="tabbable" id="tabs-844128">
 				<ul class="nav nav-tabs">
-					<li class="active">
-						<a href="#panel-640235" data-toggle="tab" class="stv-background"><span class="badge pull-right">{{ my_listed_count }}</span>Books Listed</a>
+					<li class="profile-tabs active">
+						<a href="#panel-listed" data-toggle="tab" class="stevens-bg">Books Listed <span id="listed-value" class="badge pull-right">{{ my_listed_count }}</span></a>
 					</li>
-					<li>
-						<a href="#panel-640236" data-toggle="tab" class="stv-background"><span class="badge pull-right">{{ my_sold_count }}</span>Books Sold </a>
+					<li class="profile-tabs">
+						<a href="#panel-negotiation" data-toggle="tab" class="stevens-bg">Current Transaction <span id="negotiation-value" class="badge pull-right">{{ my_negotiation_count }}</span></a>
+					</li>
+					<li class="profile-tabs">
+						<a href="#panel-sold" data-toggle="tab" class="stevens-bg">Books Sold <span id="sold-value" class="badge pull-right">{{ my_sold_count }}</span></a>
 					</li>
 				</ul>
 				<div class="tab-content">
-					<div class="tab-pane active" id="panel-640235">
+					<div class="tab-pane active" id="panel-listed">
 						<table id="my_books_listed" class="table table-bordered table-condensed table-hover" data-toggle="table">
-							<thead>
+							<thead class="stevens-bg">
 							<tr>
 								<th data-field="seller" data-sortable="true">
 									Book
 								</th>
-								<th data-field="date" data-sortable="true">
-									Date listed
+								<th data-field="date_listed" data-sortable="true">
+									Date Listed
+								</th>
+								<th data-field="condition" data-sortable="true">
+									Condition
 								</th>
 								<th data-field="price" data-sortable="true">
 									Price
@@ -116,17 +133,131 @@
 							</tr>
 							</thead>
 							<tbody>
+                            {% for book in my_listed %}
+                                <tr class="active">
+                                    <td>
+                                        <a href="books/{{ book.get('isbn') }}">{{ book.get('isbn', "") | isbn_to_title }}</a> <span class="badge pull-right">{{ book.get('isbn', "") }}</span>
+                                    </td>
+                                    <td>
+                                        {{ book.get('date_listed', "") }}
+                                    </td>
+                                    <td>
+                                        {{ book.get('condition', "") }}
+                                    </td>
+                                    <td>
+                                        {{ book.get('price', "") }}
+                                    </td>
+                                </tr>
+                            {% endfor %}
+							</tbody>
+						</table>
+					</div>
 
-							{% for book in my_listed %}
-							<tr class="active clickable-row" data-href="books/{{ book.get('isbn') }}">
+					<div class="tab-pane" id="panel-negotiation">
+						<table id="my_books_transaction" class="table table-bordered table-condensed table-hover" data-toggle="table">
+							<thead class="stevens-bg">
+							<tr>
+								<th data-field="buyer" data-sortable="true">
+									Buyer <small>(You as the seller)</small>
+								</th>
+								<th data-field="isbn" data-sortable="true">
+									Book
+								</th>
+								<th data-field="date_listed" data-sortable="true">
+									Date Listed
+								</th>
+								<th data-field="price" data-sortable="true">
+									Price
+								</th>
+								<th data-field="details" data-sortable="false">
+									Details
+								</th>
+								<th data-field="negotiation" data-sortable="false">
+									Negotiation
+								</th>
+							</tr>
+							</thead>
+							<tbody>
+
+							{% for book in seller_negotiation %}
+							<tr class="active">
 								<td>
-									{{ book.get('isbn', "") }}
+									{{ book.get('buyer', "") }}
 								</td>
+                                <td>
+                                    <a href="books/{{ book.get('isbn') }}">{{ book.get('isbn', "") | isbn_to_title }}</a> <span class="badge pull-right">{{ book.get('isbn', "") }}</span>
+                                </td>
 								<td>
-									{{ book.get('date', "") }}
+									{{ book.get('date_listed', "") }}
 								</td>
 								<td>
 									{{ book.get('price', "") }}
+								</td>
+								<td>
+									<button type="button" data-id="{{ book.get('_id', '') }}" class="btn btn-default details_button">Details</button>
+								</td>
+								<td>
+									{% if current_user.check_my_closure(book.get('_id')) %}
+									<button type="button" data-id="{{ book.get('_id', '') }}" class="btn btn-default" disabled>Close</button>
+									{% else %}
+									<button type="button" data-id="{{ book.get('_id', '') }}" class="btn btn-default close_button">Close</button>
+									{% endif %}
+
+								</td>
+							</tr>
+							{% endfor %}
+
+							</tbody>
+						</table>
+						<!-- You as the Buyer -->
+						<table id="my_books_transaction" class="table table-bordered table-condensed table-hover" data-toggle="table">
+							<thead class="stevens-bg">
+							<tr>
+								<th data-field="Seller" data-sortable="true">
+									Seller <small>(You as the buyer)</small>
+								</th>
+								<th data-field="isbn" data-sortable="true">
+									Book
+								</th>
+								<th data-field="date_listed" data-sortable="true">
+									Date Listed
+								</th>
+								<th data-field="price" data-sortable="true">
+									Price
+								</th>
+								<th data-field="details" data-sortable="false">
+									Details
+								</th>
+								<th data-field="negotiation" data-sortable="false">
+									Negotiation
+								</th>
+							</tr>
+							</thead>
+							<tbody>
+
+							{% for book in buyer_negotiation %}
+							<tr class="active">
+								<td>
+									{{ book.get('seller', "") }}
+								</td>
+                                <td>
+                                    <a href="books/{{ book.get('isbn') }}">{{ book.get('isbn', "") | isbn_to_title }}</a> <span class="badge pull-right">{{ book.get('isbn', "") }}</span>
+                                </td>
+								<td>
+									{{ book.get('date_listed', "") }}
+								</td>
+								<td>
+									{{ book.get('price', "") }}
+								</td>
+								<td>
+									<button type="button" data-id="{{ book.get('_id', '') }}" class="btn btn-default details_button">Details</button>
+								</td>
+								<td>
+									{% if current_user.check_my_closure(book.get('_id')) %}
+									<button type="button" data-id="{{ book.get('_id', '') }}" class="btn btn-default" disabled>Close</button>
+									{% else %}
+									<button type="button" data-id="{{ book.get('_id', '') }}" class="btn btn-default close_button">Close</button>
+									{% endif %}
 								</td>
 							</tr>
 							{% endfor %}
@@ -134,21 +265,28 @@
 							</tbody>
 						</table>
 					</div>
-					<div class="tab-pane" id="panel-640236">
+
+					<div class="tab-pane" id="panel-sold">
 						<table id="my_books_sold" class="table table-bordered table-condensed table-hover" data-toggle="table">
-							<thead>
+							<thead class="stevens-bg">
 							<tr>
 								<th data-field="buyer" data-sortable="true">
 									Buyer
 								</th>
+								<th data-field="seller" data-sortable="true">
+									Seller
+								</th>
 								<th data-field="isbn" data-sortable="true">
-									Book ISBN
+									Book
 								</th>
 								<th data-field="date_sold" data-sortable="true">
 									Date Sold
 								</th>
-								<th data-field="date_list" data-sortable="true">
+								<th data-field="date_listed" data-sortable="true">
 									Date Listed
+								</th>
+								<th data-field="condition" data-sortable="true">
+									Condition
 								</th>
 								<th data-field="price" data-sortable="true">
 									Price
@@ -163,13 +301,19 @@
 									{{ book.get('buyer', "") }}
 								</td>
 								<td>
-									{{ book.get('isbn', "") }}
+									{{ book.get('seller', "") }}
 								</td>
 								<td>
-									{{ book.get('sold_date', "") }}
+                                    <a href="books/{{ book.get('isbn') }}">{{ book.get('isbn', "") | isbn_to_title }}</a> <span class="badge pull-right">{{ book.get('isbn', "") }}</span>
 								</td>
 								<td>
-									{{ book.get('list_date', "") }}
+									{{ book.get('date_sold', "") }}
+								</td>
+								<td>
+									{{ book.get('date_listed', "") }}
+								</td>
+								<td>
+									{{ book.get('condition', "") }}
 								</td>
 								<td>
 									{{ book.get('price', "") }}
@@ -185,16 +329,52 @@
 		</div>
 
 		<div class="col-md-4">
-<!-- Information specific to books entries
--->
-			<h3 class="text-left text-success">
+<!-- Information specific to books entries-->
+			<h3 class="text-left">
 				Book listings
 			</h3>
 			<div id="stv-duck">
 			</div>
-            <span class="badge pull-left">{{ current_user.rating }}</span><p><strong>Your Rating</strong></p>
 		</div>
 	</div>
+	<!-- Form -->
+	<form id="transaction_form" method="post" class="form-horizontal" style="display:none;">
+		<div class="col-xs-12">
+			<ul class="list-group">
+				<li class="list-group-item">Please rate the transaction</li>
+				<li class="list-group-item"><input type="text" class="form-control" name="transaction_id" disabled="disabled" /></li>
+				<li class="list-group-item">
+					<select class="form-control user-rating">
+						<option value="Cancel">Cancel Transaction - Failed to show up</option>
+						<option value="1">* Duck Rating</option>
+						<option value="2">** Duck Rating</option>
+						<option value="3">*** Duck Rating</option>
+						<option value="4">**** Duck Rating</option>
+						<option value="5">***** Duck Rating</option>
+					</select>
+				</li>
+			</ul>
+		</div>
+		<div class="form-group">
+			<div class="col-xs-4 col-xs-offset-8">
+				<button type="submit" class="btn btn-default">Close Transaction</button>
+			</div>
+		</div>
+	</form>
+	<!-- Form -->
+	<form id="details_form" method="post" class="form-horizontal" style="display:none;">
+		<div class="col-xs-12">
+			<ul class="list-group">
+				<li class="list-group-item">Transaction: <input type="text" class="form-control" name="transaction_id" disabled="disabled" /></li>
+				<li class="list-group-item">Location:<input type="text" class="form-control" name="location" disabled="disabled" /></li>
+				<li class="list-group-item">Meet Data:<input type="text" class="form-control" name="meet_date" disabled="disabled" /></li>
+				<li class="list-group-item">Meet Time:<input type="text" class="form-control" name="time" disabled="disabled" /></li>
+				<li class="list-group-item">Condition:<input type="text" class="form-control" name="condition" disabled="disabled" /></li>
+			</ul>
+		</div>
+		<div class="form-group">
+		</div>
+	</form>
 </div>
 {% endblock %}
 

@@ -1,15 +1,24 @@
 """ '/book' tools """
 from app import mongo_client
 import pymongo
-
+from amazonproduct import API as AWS_API
 """
     ISBN algorithms https://en.wikipedia.org/wiki/International_Standard_Book_Number
 """
 
 
+def get_all_books():
+    """ Get All Books
+    :return:
+    """
+    return mongo_client.ssw695.books.aggregate([{"$project": {"_id": 0, "isbn10": "$_id", "title": {
+        "$ifNull": ["$google-metadata.volumeInfo.title", "$stevens-metadata.book-title"]}}},
+                                                {"$sort": {"title": 1}}])
+
+
 def get_book(isbn):
-    """ Get book by isbn
-    :return: book item from db
+    """ Get books by isbn
+    :return: books item from db
     """
     if is_isbn13(isbn) and isbn.startswith("978"):
         isbn = isbn13_to_isbn10(isbn)
@@ -104,12 +113,10 @@ def isbn13_to_isbn10(isbn):
 
 
 def search_titles(input):
-    """ Searches all book titles
+    """ Searches all books titles
     :param: input - the title to search for
     :return: list of books matching the search
     """
-
-    # return mongo_client.ssw695.books.find_one({"$text": {"$search": str(input)}}, {"score": {"$meta": "textScore"}})
     return list(mongo_client.ssw695.books.find({"$text": {"$search": str(input)}}))
 
 
@@ -118,4 +125,38 @@ def query_sales_listing(isbn):
     :param: isbn - the isbn to search for
     :return: list of sales transactions matching the search
     """
-    return list(mongo_client.ssw695.listing.find({"isbn": str(isbn)}))
+    return list(mongo_client.ssw695.listing.find({"isbn": str(isbn), "transaction": "listed"}).sort('price', 1))
+
+
+def get_amazon_price(isbn):
+    """ Query amazon for the current listed price
+    :param isbn - the isbn to search for 
+    :return dict with url and prices
+    """
+
+    api = AWS_API(locale='us')
+
+    result = api.item_lookup(isbn, SearchIndex='All', IdType='ISBN', ResponseGroup='Offers')
+    if not len (result):
+        return None
+
+    r = {}
+    r['url'] = result.Items.Item.Offers.MoreOffersUrl
+
+    prices = []
+    for offer in result.Items.Item.Offers.Offer:
+        prices.append('%s %s' % (offer.OfferListing.Price.FormattedPrice, offer.OfferListing.Price.CurrencyCode))
+
+    r['prices'] = prices
+
+    return r
+
+
+def isbn_to_title(isbn):
+    """ Convert ISBN to Stevens Book Title """
+    book = get_book(isbn)
+    if book is not None:
+        title = book.get("stevens-metadata", {}).get("book-title")
+        if title is not None:
+            return title
+    return "No Title Found"

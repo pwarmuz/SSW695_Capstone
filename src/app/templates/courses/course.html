@@ -1,23 +1,6 @@
 {% extends 'template.html' %}
 {% block title %}Departments{% endblock %}
 {% block content %}
-    <style>
-        .course-link {
-            font-size: 11px;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            margin: 0;
-            padding-left: 0;
-            display: block;
-        }
-
-        .department-section {
-            padding: 10px 20px 10px 20px;
-        }
-
-    </style>
-
     <div class="container">
         <h2>{{ course["letter"] }}-{{ course["number"] }}: {{ course["name"] }}</h2>
         <br>
@@ -42,7 +25,7 @@
 
                         <div class="media-body">
                             <h4 class="media-heading">
-                                {{ book.get('google-metadata', {}).get('volumeInfo', {}).get("title") | default(book.get('stevens-metadata', {}).get('book-title'), True) }}
+                                {{ book.get('google-metadata', {}).get('volumeInfo', {}).get("title") | default(book.get('stevens-metadata', {}).get('books-title'), True) }}
                                 <small> {{ book.get('google-metadata', {}).get('volumeInfo', {}).get('subtitle', "") }} </small>
                             </h4>
                         </div>
